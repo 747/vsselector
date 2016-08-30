@@ -1,0 +1,7 @@
+{"t": 2, "n": "CJK COMPATIBILITY IDEOGRAPH-2F94C", "V": [{"i": 16534, "t": 0, "c": "Parent",
+      "n": "CJK UNIFIED IDEOGRAPH-4096"}, {"i": 65024, "t": 2, "c": "Standardized",
+      "n": "CJK COMPATIBILITY IDEOGRAPH-2F94C"}, {"i": 917760, "t": 1, "c": "Hanyo-Denshi",
+      "n": "IA0512"}, {"i": 917760, "t": 1, "c": "Moji_Joho", "n": "MJ002936"}, {
+      "i": 917761, "t": 1, "c": "Hanyo-Denshi", "n": "JTB670"}, {"i": 917761, "t": 1,
+      "c": "Moji_Joho", "n": "MJ002934"}, {"i": 917762, "t": 1, "c": "Hanyo-Denshi",
+      "n": "KS268410"}, {"i": 917762, "t": 1, "c": "Moji_Joho", "n": "MJ002935"}]}

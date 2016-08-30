@@ -1,0 +1,6 @@
+{"t": 2, "n": "CJK COMPATIBILITY IDEOGRAPH-2F8BE", "V": [{"i": 65024, "t": 2, "c": "Standardized",
+      "n": "CJK COMPATIBILITY IDEOGRAPH-2F8BE"}, {"i": 142321, "t": 0, "c": "Parent",
+      "n": "CJK UNIFIED IDEOGRAPH-22BF1"}, {"i": 917760, "t": 1, "c": "Hanyo-Denshi",
+      "n": "KS138800"}, {"i": 917760, "t": 1, "c": "Moji_Joho", "n": "MJ036872"},
+    {"i": 917761, "t": 1, "c": "Hanyo-Denshi", "n": "KS139680"}, {"i": 917761, "t": 1,
+      "c": "Moji_Joho", "n": "MJ057562"}]}

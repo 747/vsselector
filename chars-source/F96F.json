@@ -1,0 +1,6 @@
+{"t": 2, "n": "CJK COMPATIBILITY IDEOGRAPH-F96F", "V": [{"i": 35498, "t": 0, "c": "Parent",
+      "n": "CJK UNIFIED IDEOGRAPH-8AAA"}, {"i": 65024, "t": 2, "c": "Standardized",
+      "n": "CJK COMPATIBILITY IDEOGRAPH-F96F"}, {"i": 65025, "t": 2, "c": "Standardized",
+      "n": "CJK COMPATIBILITY IDEOGRAPH-F9A1"}, {"i": 917760, "t": 1, "c": "Adobe-Japan1",
+      "n": "CID+13880"}, {"i": 917761, "t": 1, "c": "Hanyo-Denshi", "n": "JT8AAA"},
+    {"i": 917762, "t": 1, "c": "Hanyo-Denshi", "n": "KS402930"}]}

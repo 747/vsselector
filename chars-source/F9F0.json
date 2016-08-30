@@ -1,0 +1,7 @@
+{"t": 2, "n": "CJK COMPATIBILITY IDEOGRAPH-F9F0", "V": [{"i": 34298, "t": 0, "c": "Parent",
+      "n": "CJK UNIFIED IDEOGRAPH-85FA"}, {"i": 65024, "t": 2, "c": "Standardized",
+      "n": "CJK COMPATIBILITY IDEOGRAPH-F9F0"}, {"i": 917760, "t": 1, "c": "Adobe-Japan1",
+      "n": "CID+6473"}, {"i": 917761, "t": 1, "c": "Hanyo-Denshi", "n": "JA7334"},
+    {"i": 917761, "t": 1, "c": "Moji_Joho", "n": "MJ023123"}, {"i": 917762, "t": 1,
+      "c": "Hanyo-Denshi", "n": "KS368230"}, {"i": 917762, "t": 1, "c": "Moji_Joho",
+      "n": "MJ023124"}]}
