@@ -4,13 +4,15 @@ layout: ivd
 ---
 
 #about
-  h4 異体字検索・入力
+  h4#about-title 異体字検索・入力
   p 
-  h5 バージョン
+  h5#about-version バージョン
   - ver = data.versions
-  p 最終更新: #{ver.generated}
+  p
+    span#last-build 最終ビルド:
+    = ver.generated
   p StandardizedVariants.txt: #{ver.standardized}
   p IVD_Sequences.txt: #{ver.ideographic}
   p emoji-sequences.txt: #{ver.emojisequences}
-  h5 ライセンス
+  h5#about-license ライセンス
   p 

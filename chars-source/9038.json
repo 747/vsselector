@@ -1,13 +1,1 @@
-{"t": 1, "n": "CJK UNIFIED IDEOGRAPH-9038", "V": [{"i": 65024, "t": 2, "c": "Standardized",
-      "n": "CJK COMPATIBILITY IDEOGRAPH-FA25"}, {"i": 65025, "t": 2, "c": "Standardized",
-      "n": "CJK COMPATIBILITY IDEOGRAPH-FA67"}, {"i": 917760, "t": 1, "c": "Adobe-Japan1",
-      "n": "CID+1203"}, {"i": 917761, "t": 1, "c": "Adobe-Japan1", "n": "CID+13320"},
-    {"i": 917762, "t": 1, "c": "Adobe-Japan1", "n": "CID+8633"}, {"i": 917763, "t": 1,
-      "c": "Hanyo-Denshi", "n": "JA1679"}, {"i": 917763, "t": 1, "c": "Moji_Joho",
-      "n": "MJ025993"}, {"i": 917764, "t": 1, "c": "Hanyo-Denshi", "n": "JTBCE7S"},
-    {"i": 917764, "t": 1, "c": "Moji_Joho", "n": "MJ025996"}, {"i": 917765, "t": 1,
-      "c": "Hanyo-Denshi", "n": "JTBCB3S"}, {"i": 917765, "t": 1, "c": "Moji_Joho",
-      "n": "MJ025995"}, {"i": 917766, "t": 1, "c": "Hanyo-Denshi", "n": "JTBC9FS"},
-    {"i": 917766, "t": 1, "c": "Moji_Joho", "n": "MJ025994"}, {"i": 917767, "t": 1,
-      "c": "Hanyo-Denshi", "n": "JC9257"}, {"i": 917768, "t": 1, "c": "Hanyo-Denshi",
-      "n": "JTFA25S"}, {"i": 917769, "t": 1, "c": "Hanyo-Denshi", "n": "TK01089600"}]}
+{"t":1,"n":"CJK UNIFIED IDEOGRAPH-9038","V":[{"i":65024,"t":2,"c":3,"n":"CJK COMPATIBILITY IDEOGRAPH-FA25"},{"i":65025,"t":2,"c":3,"n":"CJK COMPATIBILITY IDEOGRAPH-FA67"},{"i":917760,"t":1,"c":0,"n":"CID+1203"},{"i":917761,"t":1,"c":0,"n":"CID+13320"},{"i":917762,"t":1,"c":0,"n":"CID+8633"},{"i":917763,"t":1,"c":0,"n":"JA1679"},{"i":917763,"t":1,"c":0,"n":"MJ025993"},{"i":917764,"t":1,"c":0,"n":"JTBCE7S"},{"i":917764,"t":1,"c":0,"n":"MJ025996"},{"i":917765,"t":1,"c":0,"n":"JTBCB3S"},{"i":917765,"t":1,"c":0,"n":"MJ025995"},{"i":917766,"t":1,"c":0,"n":"JTBC9FS"},{"i":917766,"t":1,"c":0,"n":"MJ025994"},{"i":917767,"t":1,"c":0,"n":"JC9257"},{"i":917768,"t":1,"c":0,"n":"JTFA25S"},{"i":917769,"t":1,"c":0,"n":"TK01089600"}]}

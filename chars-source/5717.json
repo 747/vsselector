@@ -1,6 +1,1 @@
-{"t": 1, "n": "CJK UNIFIED IDEOGRAPH-5717", "V": [{"i": 65024, "t": 2, "c": "Standardized",
-      "n": "CJK COMPATIBILITY IDEOGRAPH-2F84D"}, {"i": 917760, "t": 1, "c": "Hanyo-Denshi",
-      "n": "IP5717"}, {"i": 917760, "t": 1, "c": "Moji_Joho", "n": "MJ008882"}, {
-      "i": 917761, "t": 1, "c": "Hanyo-Denshi", "n": "KS055250"}, {"i": 917761, "t": 1,
-      "c": "Moji_Joho", "n": "MJ008883"}, {"i": 917762, "t": 1, "c": "Hanyo-Denshi",
-      "n": "TK01016200"}]}
+{"t":1,"n":"CJK UNIFIED IDEOGRAPH-5717","V":[{"i":65024,"t":2,"c":3,"n":"CJK COMPATIBILITY IDEOGRAPH-2F84D"},{"i":917760,"t":1,"c":0,"n":"IP5717"},{"i":917760,"t":1,"c":0,"n":"MJ008882"},{"i":917761,"t":1,"c":0,"n":"KS055250"},{"i":917761,"t":1,"c":0,"n":"MJ008883"},{"i":917762,"t":1,"c":0,"n":"TK01016200"}]}

@@ -4,8 +4,12 @@ html lang='ja'
     meta charset='utf-8'
     title = current_page.data.title
     javascript:
-      var typenames = [#{data.types.map{|t|%Q("#{t}")}.join(',')}];
-    = javascript_include_tag "jquery-1.12.1.min", "jquery-ui.min", "sprintf.min", "controller"
+      TYPES = [#{data.types.categories.map{|t|%Q("#{t}")}.join(',')}];
+      COLLS = [#{data.types.collections.map{|t|%Q("#{t}")}.join(',')}];
+      BASE_IDX = COLLS.indexOf("base");
+    / = javascript_include_tag "jquery-1.12.1.min", "jquery-ui.min", "sprintf.min", "controller"
+    = javascript_include_tag("jquery-1.12.1.min", "jquery-ui.min", "sprintf.min", "controller").gsub('src="/', 'src="./')
+    / ^ very dirty, need work
   body#view
     #viewer
       textarea#bigbox
@@ -28,7 +32,8 @@ html lang='ja'
           li id="fitz-#{n}": img title="" alt="Fitz #{n}"
     #query
       input#searchbox type='text' name='char' placeholder="character or code..."
-      button#search type='submit' value='search' 検索
+      button#search type='submit' value='search'
+        span#searchlabel 検索
     #entries
       p#notfound 見つかりませんでした
       table#found
@@ -39,6 +44,6 @@ html lang='ja'
             th#variation セレクタ
             th#image 画像
             th#collection コレクション
-            th#internal 識別番号
+            th#internal 識別名
         tbody#charlist
-    = yield
+    == yield

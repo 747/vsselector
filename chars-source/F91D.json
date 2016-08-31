@@ -1,6 +1,1 @@
-{"t": 2, "n": "CJK COMPATIBILITY IDEOGRAPH-F91D", "V": [{"i": 27396, "t": 0, "c": "Parent",
-      "n": "CJK UNIFIED IDEOGRAPH-6B04"}, {"i": 65024, "t": 2, "c": "Standardized",
-      "n": "CJK COMPATIBILITY IDEOGRAPH-F91D"}, {"i": 917760, "t": 1, "c": "Adobe-Japan1",
-      "n": "CID+13392"}, {"i": 917761, "t": 1, "c": "Adobe-Japan1", "n": "CID+3933"},
-    {"i": 917762, "t": 1, "c": "Hanyo-Denshi", "n": "JA4583"}, {"i": 917763, "t": 1,
-      "c": "Hanyo-Denshi", "n": "JC8627"}]}
+{"t":2,"n":"CJK COMPATIBILITY IDEOGRAPH-F91D","V":[{"i":27396,"t":0,"c":0,"n":"CJK UNIFIED IDEOGRAPH-6B04"},{"i":65024,"t":2,"c":3,"n":"CJK COMPATIBILITY IDEOGRAPH-F91D"},{"i":917760,"t":1,"c":0,"n":"CID+13392"},{"i":917761,"t":1,"c":0,"n":"CID+3933"},{"i":917762,"t":1,"c":0,"n":"JA4583"},{"i":917763,"t":1,"c":0,"n":"JC8627"}]}

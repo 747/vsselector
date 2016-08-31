@@ -1,11 +1,14 @@
-require 'yaml'
+require 'json'
 
-DATAPATH = "source/data"
+DATAPATH = "data"
 CHARPATH = "chars-source"
 FINALPATH = "build/ivd/chars"
-TYPES = YAML.load_file("#{DATAPATH}/types.json").map(&:intern)
-UNTYPES = TYPES.map { |e| [e, TYPES.index(e)] }.to_h
 
+TYPESJSON = JSON.load(File.open("#{DATAPATH}/types.json", "r:utf-8").read)
+TYPES = TYPESJSON["categories"].map(&:intern)
+UNTYPES = TYPES.map { |e| [e, TYPES.index(e)] }.to_h
+COLLS = TYPESJSON["collections"].map(&:intern)
+UNCOLLS = COLLS.map { |e| [e, COLLS.index(e)] }.to_h
 
 class Variant
   attr_accessor :id, :type, :collection, :name
@@ -15,11 +18,17 @@ class Variant
   end
 
   def serialize
-    {'i' => @id, 't' => UNTYPES[@type] || UNTYPES[:unknown], 'c' => @collection, 'n' => @name}
+    {
+      'i' => @id,
+      't' => UNTYPES[@type] || UNTYPES[:unknown],
+      'c' => UNCOLLS[@collection] || (@collection.is_a?(String) && @collection.empty? ? @collection : UNCOLLS[:unknown]),
+      'n' => @name
+    }
   end
 
   def deserialize(h)
-    @id, @type, @collection, @name = h['i'], TYPES[h['t']], h['c'], h['n']
+    @id, @type, @name = h['i'], TYPES[h['t']], h['n']
+    @collection = h['c'].is_a?(Integer) ? COLLS[h['c']] : h['c']
     self
   end
 end
@@ -45,12 +54,12 @@ class Character
     raise "ID-less output - #{self.inspect}!" unless @id
     hash = {'t' => UNTYPES[@type] || UNTYPES[:unknown], 'n' => @name, 'V' => []}
     @var.sort_by(&:id).each { |v| hash["V"].push v.serialize }
-    open(dest, "w:utf-8") { |io| io.write YAML.to_json(hash)}
+    open(dest, "w:utf-8") { |io| JSON.dump(hash, io) }
   end
 
   def read(num)
     return nil unless File.exist?(dest(num))
-    obj = YAML.load_file(dest(num))
+    obj = JSON.load(open(dest(num), "r:utf-8").read)
     @id = num
     @type, @name = TYPES[obj['t']], obj['n']
     obj['V'].each { |v| var(Variant.new.deserialize(v)) }
@@ -103,7 +112,7 @@ end
 
 open("#{DATAPATH}/StandardizedVariants.txt", "r:utf-8") do |svs|
   category = :unknown
-  collection = "Standardized"
+  collection = :standardized
   svs.each.with_index(1) { |line, lnum|
     report["STD", lnum]
     case line
@@ -126,7 +135,7 @@ open("#{DATAPATH}/StandardizedVariants.txt", "r:utf-8") do |svs|
         char.var Variant.new(var, category, collection, desc)
         compid = desc.split('-')[1].to_i(16)
         comp = Character.new(compid, category, desc)
-        comp.var Variant.new(base, :parent, "Parent", cjku[base])
+        comp.var Variant.new(base, :parent, UNCOLLS[:parent], cjku[base])
         compats.push comp
       when :emoji
         char.type = :plain
@@ -160,11 +169,11 @@ open("#{DATAPATH}/emoji-sequences.txt", "r:utf-8") do |emj|
       seq, data = line.splip(';')
       base, var = seq.spliph
       type, data1 = data.splip('#')
-      data2, names = data1.splip('   ')
+      data2, names = data1.splip('      ') # Is there a better way?
       bname, mname = names.splip(',')
-p base, var, type, bname, mname
+      # p [base, var, type, data1, data2, bname, mname].join("\t")
       char = get_char[base, category, bname]
-      char.var Variant.new(var, category, "Emoji Modifier", mname)
+      char.var Variant.new(var, category, :modifier, mname)
       char.output
     end
   }
@@ -178,10 +187,10 @@ compats.each do |co|
 end
 
 open("#{DATAPATH}/versions.json", "w:utf-8") do |ver|
-  ver.write YAML.to_json({
+  JSON.dump({
     "standardized" => versions[:std],
     "ideographic" => versions[:ivd],
     "emojisequences" => versions[:emo],
     "generated" => Time.now.strftime("%Y/%m/%d %R %Z")
-  })
+  }, ver)
 end

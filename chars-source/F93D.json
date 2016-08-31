@@ -1,5 +1,1 @@
-{"t": 2, "n": "CJK COMPATIBILITY IDEOGRAPH-F93D", "V": [{"i": 32160, "t": 0, "c": "Parent",
-      "n": "CJK UNIFIED IDEOGRAPH-7DA0"}, {"i": 65024, "t": 2, "c": "Standardized",
-      "n": "CJK COMPATIBILITY IDEOGRAPH-F93D"}, {"i": 917760, "t": 1, "c": "Adobe-Japan1",
-      "n": "CID+8594"}, {"i": 917761, "t": 1, "c": "Moji_Joho", "n": "MJ020170"},
-    {"i": 917762, "t": 1, "c": "Moji_Joho", "n": "MJ020171"}]}
+{"t":2,"n":"CJK COMPATIBILITY IDEOGRAPH-F93D","V":[{"i":32160,"t":0,"c":0,"n":"CJK UNIFIED IDEOGRAPH-7DA0"},{"i":65024,"t":2,"c":3,"n":"CJK COMPATIBILITY IDEOGRAPH-F93D"},{"i":917760,"t":1,"c":0,"n":"CID+8594"},{"i":917761,"t":1,"c":0,"n":"MJ020170"},{"i":917762,"t":1,"c":0,"n":"MJ020171"}]}

@@ -1,6 +1,1 @@
-{"t": 2, "n": "CJK COMPATIBILITY IDEOGRAPH-2F84A", "V": [{"i": 21954, "t": 0, "c": "Parent",
-      "n": "CJK UNIFIED IDEOGRAPH-55C2"}, {"i": 65024, "t": 2, "c": "Standardized",
-      "n": "CJK COMPATIBILITY IDEOGRAPH-2F84A"}, {"i": 917760, "t": 1, "c": "Hanyo-Denshi",
-      "n": "IP55C2"}, {"i": 917760, "t": 1, "c": "Moji_Joho", "n": "MJ008507"}, {
-      "i": 917761, "t": 1, "c": "Hanyo-Denshi", "n": "KS047450"}, {"i": 917761, "t": 1,
-      "c": "Moji_Joho", "n": "MJ008508"}]}
+{"t":2,"n":"CJK COMPATIBILITY IDEOGRAPH-2F84A","V":[{"i":21954,"t":0,"c":0,"n":"CJK UNIFIED IDEOGRAPH-55C2"},{"i":65024,"t":2,"c":3,"n":"CJK COMPATIBILITY IDEOGRAPH-2F84A"},{"i":917760,"t":1,"c":0,"n":"IP55C2"},{"i":917760,"t":1,"c":0,"n":"MJ008507"},{"i":917761,"t":1,"c":0,"n":"KS047450"},{"i":917761,"t":1,"c":0,"n":"MJ008508"}]}

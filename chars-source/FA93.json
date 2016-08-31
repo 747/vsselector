@@ -1,16 +1,1 @@
-{"t": 2, "n": "CJK COMPATIBILITY IDEOGRAPH-FA93", "V": [{"i": 26395, "t": 0, "c": "Parent",
-      "n": "CJK UNIFIED IDEOGRAPH-671B"}, {"i": 65024, "t": 2, "c": "Standardized",
-      "n": "CJK COMPATIBILITY IDEOGRAPH-FA93"}, {"i": 65025, "t": 2, "c": "Standardized",
-      "n": "CJK COMPATIBILITY IDEOGRAPH-2F8D9"}, {"i": 917760, "t": 1, "c": "Adobe-Japan1",
-      "n": "CID+3692"}, {"i": 917761, "t": 1, "c": "Adobe-Japan1", "n": "CID+14036"},
-    {"i": 917762, "t": 1, "c": "Adobe-Japan1", "n": "CID+14037"}, {"i": 917763, "t": 1,
-      "c": "Hanyo-Denshi", "n": "JA4330"}, {"i": 917763, "t": 1, "c": "Moji_Joho",
-      "n": "MJ013550"}, {"i": 917764, "t": 1, "c": "Hanyo-Denshi", "n": "JTB2E8"},
-    {"i": 917764, "t": 1, "c": "Moji_Joho", "n": "MJ013554"}, {"i": 917765, "t": 1,
-      "c": "Hanyo-Denshi", "n": "JTB2E7"}, {"i": 917765, "t": 1, "c": "Moji_Joho",
-      "n": "MJ013553"}, {"i": 917766, "t": 1, "c": "Hanyo-Denshi", "n": "JTB2E6"},
-    {"i": 917766, "t": 1, "c": "Moji_Joho", "n": "MJ013552"}, {"i": 917767, "t": 1,
-      "c": "Hanyo-Denshi", "n": "JTB2E5"}, {"i": 917767, "t": 1, "c": "Moji_Joho",
-      "n": "MJ013549"}, {"i": 917768, "t": 1, "c": "Hanyo-Denshi", "n": "TK01042170"},
-    {"i": 917769, "t": 1, "c": "Hanyo-Denshi", "n": "TK01058220"}, {"i": 917770, "t": 1,
-      "c": "Moji_Joho", "n": "MJ013551"}]}
+{"t":2,"n":"CJK COMPATIBILITY IDEOGRAPH-FA93","V":[{"i":26395,"t":0,"c":0,"n":"CJK UNIFIED IDEOGRAPH-671B"},{"i":65024,"t":2,"c":3,"n":"CJK COMPATIBILITY IDEOGRAPH-FA93"},{"i":65025,"t":2,"c":3,"n":"CJK COMPATIBILITY IDEOGRAPH-2F8D9"},{"i":917760,"t":1,"c":0,"n":"CID+3692"},{"i":917761,"t":1,"c":0,"n":"CID+14036"},{"i":917762,"t":1,"c":0,"n":"CID+14037"},{"i":917763,"t":1,"c":0,"n":"JA4330"},{"i":917763,"t":1,"c":0,"n":"MJ013550"},{"i":917764,"t":1,"c":0,"n":"JTB2E8"},{"i":917764,"t":1,"c":0,"n":"MJ013554"},{"i":917765,"t":1,"c":0,"n":"JTB2E7"},{"i":917765,"t":1,"c":0,"n":"MJ013553"},{"i":917766,"t":1,"c":0,"n":"JTB2E6"},{"i":917766,"t":1,"c":0,"n":"MJ013552"},{"i":917767,"t":1,"c":0,"n":"JTB2E5"},{"i":917767,"t":1,"c":0,"n":"MJ013549"},{"i":917768,"t":1,"c":0,"n":"TK01042170"},{"i":917769,"t":1,"c":0,"n":"TK01058220"},{"i":917770,"t":1,"c":0,"n":"MJ013551"}]}

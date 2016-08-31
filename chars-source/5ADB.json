@@ -1,4 +1,1 @@
-{"t": 1, "n": "CJK UNIFIED IDEOGRAPH-5ADB", "V": [{"i": 917760, "t": 1, "c": "Hanyo-Denshi",
-      "n": "IP5ADB"}, {"i": 917760, "t": 1, "c": "Moji_Joho", "n": "MJ009923"}, {
-      "i": 917761, "t": 1, "c": "Hanyo-Denshi", "n": "KS076280"}, {"i": 917761, "t": 1,
-      "c": "Moji_Joho", "n": "MJ009924"}]}
+{"t":1,"n":"CJK UNIFIED IDEOGRAPH-5ADB","V":[{"i":917760,"t":1,"c":0,"n":"IP5ADB"},{"i":917760,"t":1,"c":0,"n":"MJ009923"},{"i":917761,"t":1,"c":0,"n":"KS076280"},{"i":917761,"t":1,"c":0,"n":"MJ009924"}]}

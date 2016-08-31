@@ -1,3 +1,1 @@
-{"t": 1, "n": "CJK UNIFIED IDEOGRAPH-9F8E", "V": [{"i": 65024, "t": 2, "c": "Standardized",
-      "n": "CJK COMPATIBILITY IDEOGRAPH-FAD9"}, {"i": 917760, "t": 1, "c": "Hanyo-Denshi",
-      "n": "IP9F8E"}, {"i": 917761, "t": 1, "c": "Hanyo-Denshi", "n": "TK01013040"}]}
+{"t":1,"n":"CJK UNIFIED IDEOGRAPH-9F8E","V":[{"i":65024,"t":2,"c":3,"n":"CJK COMPATIBILITY IDEOGRAPH-FAD9"},{"i":917760,"t":1,"c":0,"n":"IP9F8E"},{"i":917761,"t":1,"c":0,"n":"TK01013040"}]}

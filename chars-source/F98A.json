@@ -1,4 +1,1 @@
-{"t": 2, "n": "CJK COMPATIBILITY IDEOGRAPH-F98A", "V": [{"i": 21147, "t": 0, "c": "Parent",
-      "n": "CJK UNIFIED IDEOGRAPH-529B"}, {"i": 65024, "t": 2, "c": "Standardized",
-      "n": "CJK COMPATIBILITY IDEOGRAPH-F98A"}, {"i": 917760, "t": 1, "c": "Adobe-Japan1",
-      "n": "CID+3991"}]}
+{"t":2,"n":"CJK COMPATIBILITY IDEOGRAPH-F98A","V":[{"i":21147,"t":0,"c":0,"n":"CJK UNIFIED IDEOGRAPH-529B"},{"i":65024,"t":2,"c":3,"n":"CJK COMPATIBILITY IDEOGRAPH-F98A"},{"i":917760,"t":1,"c":0,"n":"CID+3991"}]}

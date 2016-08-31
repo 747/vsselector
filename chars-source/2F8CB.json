@@ -1,7 +1,1 @@
-{"t": 2, "n": "CJK COMPATIBILITY IDEOGRAPH-2F8CB", "V": [{"i": 26083, "t": 0, "c": "Parent",
-      "n": "CJK UNIFIED IDEOGRAPH-65E3"}, {"i": 65024, "t": 2, "c": "Standardized",
-      "n": "CJK COMPATIBILITY IDEOGRAPH-2F8CB"}, {"i": 917760, "t": 1, "c": "Adobe-Japan1",
-      "n": "CID+13701"}, {"i": 917761, "t": 1, "c": "Hanyo-Denshi", "n": "IP65E3"},
-    {"i": 917761, "t": 1, "c": "Moji_Joho", "n": "MJ013149"}, {"i": 917762, "t": 1,
-      "c": "Hanyo-Denshi", "n": "JT65E3S"}, {"i": 917762, "t": 1, "c": "Moji_Joho",
-      "n": "MJ013148"}]}
+{"t":2,"n":"CJK COMPATIBILITY IDEOGRAPH-2F8CB","V":[{"i":26083,"t":0,"c":0,"n":"CJK UNIFIED IDEOGRAPH-65E3"},{"i":65024,"t":2,"c":3,"n":"CJK COMPATIBILITY IDEOGRAPH-2F8CB"},{"i":917760,"t":1,"c":0,"n":"CID+13701"},{"i":917761,"t":1,"c":0,"n":"IP65E3"},{"i":917761,"t":1,"c":0,"n":"MJ013149"},{"i":917762,"t":1,"c":0,"n":"JT65E3S"},{"i":917762,"t":1,"c":0,"n":"MJ013148"}]}

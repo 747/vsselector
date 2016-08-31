@@ -10,7 +10,7 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 
 # With alternative layout
-# page "/ivd/*", layout: :ivd
+# page "/*", layout: :ivd
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
@@ -21,11 +21,6 @@ page '/*.txt', layout: false
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
-end
-
-configure :build do
-  ignore 'ivd/chars/*'
-  ignore 'images/e1/*'
 end
 
 ###
@@ -42,8 +37,19 @@ end
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
-  activate :minify_css
+  # activate :minify_css
 
   # Minify Javascript on build
-  activate :minify_javascript
+  # activate :minify_javascript
+  ignore 'ivd/chars/*'
+  ignore 'images/e1/*'
+end
+
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+  # Optional Settings
+  # deploy.remote   = 'custom-remote' # remote name or git url, default: origin
+  # deploy.branch   = 'custom-branch' # default: gh-pages
+  # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
+  # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
 end

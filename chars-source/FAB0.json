@@ -1,8 +1,1 @@
-{"t": 2, "n": "CJK COMPATIBILITY IDEOGRAPH-FAB0", "V": [{"i": 32244, "t": 0, "c": "Parent",
-      "n": "CJK UNIFIED IDEOGRAPH-7DF4"}, {"i": 65024, "t": 2, "c": "Standardized",
-      "n": "CJK COMPATIBILITY IDEOGRAPH-F996"}, {"i": 65025, "t": 2, "c": "Standardized",
-      "n": "CJK COMPATIBILITY IDEOGRAPH-FA57"}, {"i": 65026, "t": 2, "c": "Standardized",
-      "n": "CJK COMPATIBILITY IDEOGRAPH-FAB0"}, {"i": 917760, "t": 1, "c": "Adobe-Japan1",
-      "n": "CID+13399"}, {"i": 917761, "t": 1, "c": "Adobe-Japan1", "n": "CID+4037"},
-    {"i": 917762, "t": 1, "c": "Hanyo-Denshi", "n": "JA4693"}, {"i": 917763, "t": 1,
-      "c": "Hanyo-Denshi", "n": "JC9014"}]}
+{"t":2,"n":"CJK COMPATIBILITY IDEOGRAPH-FAB0","V":[{"i":32244,"t":0,"c":0,"n":"CJK UNIFIED IDEOGRAPH-7DF4"},{"i":65024,"t":2,"c":3,"n":"CJK COMPATIBILITY IDEOGRAPH-F996"},{"i":65025,"t":2,"c":3,"n":"CJK COMPATIBILITY IDEOGRAPH-FA57"},{"i":65026,"t":2,"c":3,"n":"CJK COMPATIBILITY IDEOGRAPH-FAB0"},{"i":917760,"t":1,"c":0,"n":"CID+13399"},{"i":917761,"t":1,"c":0,"n":"CID+4037"},{"i":917762,"t":1,"c":0,"n":"JA4693"},{"i":917763,"t":1,"c":0,"n":"JC9014"}]}

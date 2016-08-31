@@ -1,10 +1,1 @@
-{"t": 2, "n": "CJK COMPATIBILITY IDEOGRAPH-FAA6", "V": [{"i": 30410, "t": 0, "c": "Parent",
-      "n": "CJK UNIFIED IDEOGRAPH-76CA"}, {"i": 65024, "t": 2, "c": "Standardized",
-      "n": "CJK COMPATIBILITY IDEOGRAPH-FA17"}, {"i": 65025, "t": 2, "c": "Standardized",
-      "n": "CJK COMPATIBILITY IDEOGRAPH-FAA6"}, {"i": 917760, "t": 1, "c": "Adobe-Japan1",
-      "n": "CID+1273"}, {"i": 917761, "t": 1, "c": "Adobe-Japan1", "n": "CID+8571"},
-    {"i": 917762, "t": 1, "c": "Hanyo-Denshi", "n": "JA1755"}, {"i": 917762, "t": 1,
-      "c": "Moji_Joho", "n": "MJ018079"}, {"i": 917763, "t": 1, "c": "Hanyo-Denshi",
-      "n": "JTFA17"}, {"i": 917764, "t": 1, "c": "Hanyo-Denshi", "n": "KS386420"},
-    {"i": 917764, "t": 1, "c": "Moji_Joho", "n": "MJ058674"}, {"i": 917765, "t": 1,
-      "c": "Moji_Joho", "n": "MJ059934"}]}
+{"t":2,"n":"CJK COMPATIBILITY IDEOGRAPH-FAA6","V":[{"i":30410,"t":0,"c":0,"n":"CJK UNIFIED IDEOGRAPH-76CA"},{"i":65024,"t":2,"c":3,"n":"CJK COMPATIBILITY IDEOGRAPH-FA17"},{"i":65025,"t":2,"c":3,"n":"CJK COMPATIBILITY IDEOGRAPH-FAA6"},{"i":917760,"t":1,"c":0,"n":"CID+1273"},{"i":917761,"t":1,"c":0,"n":"CID+8571"},{"i":917762,"t":1,"c":0,"n":"JA1755"},{"i":917762,"t":1,"c":0,"n":"MJ018079"},{"i":917763,"t":1,"c":0,"n":"JTFA17"},{"i":917764,"t":1,"c":0,"n":"KS386420"},{"i":917764,"t":1,"c":0,"n":"MJ058674"},{"i":917765,"t":1,"c":0,"n":"MJ059934"}]}

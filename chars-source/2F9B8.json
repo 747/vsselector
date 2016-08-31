@@ -1,7 +1,1 @@
-{"t": 2, "n": "CJK COMPATIBILITY IDEOGRAPH-2F9B8", "V": [{"i": 34440, "t": 0, "c": "Parent",
-      "n": "CJK UNIFIED IDEOGRAPH-8688"}, {"i": 65024, "t": 2, "c": "Standardized",
-      "n": "CJK COMPATIBILITY IDEOGRAPH-2F9B8"}, {"i": 917760, "t": 1, "c": "Adobe-Japan1",
-      "n": "CID+22425"}, {"i": 917761, "t": 1, "c": "Hanyo-Denshi", "n": "JB5877"},
-    {"i": 917761, "t": 1, "c": "Moji_Joho", "n": "MJ023338"}, {"i": 917762, "t": 1,
-      "c": "Hanyo-Denshi", "n": "KS373630"}, {"i": 917762, "t": 1, "c": "Moji_Joho",
-      "n": "MJ023337"}]}
+{"t":2,"n":"CJK COMPATIBILITY IDEOGRAPH-2F9B8","V":[{"i":34440,"t":0,"c":0,"n":"CJK UNIFIED IDEOGRAPH-8688"},{"i":65024,"t":2,"c":3,"n":"CJK COMPATIBILITY IDEOGRAPH-2F9B8"},{"i":917760,"t":1,"c":0,"n":"CID+22425"},{"i":917761,"t":1,"c":0,"n":"JB5877"},{"i":917761,"t":1,"c":0,"n":"MJ023338"},{"i":917762,"t":1,"c":0,"n":"KS373630"},{"i":917762,"t":1,"c":0,"n":"MJ023337"}]}
