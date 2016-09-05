@@ -15,7 +15,7 @@ gem 'middleman-livereload'
 # =========================
 
 # app-specific
-gem 'stylus'
+# gem 'stylus'
 gem 'coffee-script'
 gem 'slim'
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'

@@ -3,6 +3,7 @@ html lang='ja'
   head
     meta charset='utf-8'
     title = current_page.data.title
+    / = stylesheet_link_tag "layout"
     javascript:
       TYPES = [#{data.types.categories.map{|t|%Q("#{t}")}.join(',')}];
       COLLS = [#{data.types.collections.map{|t|%Q("#{t}")}.join(',')}];
@@ -26,7 +27,7 @@ html lang='ja'
       ul#fvs
         - (1..3).each do |n|
           li id="fvs-#{n}": img title="" alt="FVS#{n}"
-      ul#skin
+      ul#emod
         li id="fitz-12": img title="" alt="Fitz 1-2"
         - (3..6).each do |n|
           li id="fitz-#{n}": img title="" alt="Fitz #{n}"

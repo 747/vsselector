@@ -1,4 +1,6 @@
 require 'json'
+require 'active_support'
+require 'active_support/core_ext'
 
 DATAPATH = "data"
 CHARPATH = "chars-source"
@@ -21,7 +23,7 @@ class Variant
     {
       'i' => @id,
       't' => UNTYPES[@type] || UNTYPES[:unknown],
-      'c' => UNCOLLS[@collection] || (@collection.is_a?(String) && @collection.empty? ? @collection : UNCOLLS[:unknown]),
+      'c' => UNCOLLS[@collection] || (@collection.is_a?(String) && @collection.present? ? @collection : UNCOLLS[:unknown]),
       'n' => @name
     }
   end
@@ -116,7 +118,7 @@ open("#{DATAPATH}/StandardizedVariants.txt", "r:utf-8") do |svs|
   svs.each.with_index(1) { |line, lnum|
     report["STD", lnum]
     case line
-    when /^# StandardizedVariants-([\d\.]*\d)\.txt/
+    when /^# StandardizedVariants-(\d[\d\.]*\d|\d)\.txt/
       versions[:std] = $1
     when /^# (?:CJK )*(Math|Myanmar|Phags-pa|Manichaean|Mongolian|Emoji|compat)/
       category = $1.gsub('-', '').downcase.intern
@@ -135,13 +137,13 @@ open("#{DATAPATH}/StandardizedVariants.txt", "r:utf-8") do |svs|
         char.var Variant.new(var, category, collection, desc)
         compid = desc.split('-')[1].to_i(16)
         comp = Character.new(compid, category, desc)
-        comp.var Variant.new(base, :parent, UNCOLLS[:parent], cjku[base])
+        comp.var Variant.new(base, :parent, :parent, cjku[base])
         compats.push comp
       when :emoji
         char.type = :plain
         char.var Variant.new(var, category, collection, desc)
       when :mongolian, :manichaean
-        xdesc = desc << " (#{context})"
+        xdesc = context.present? ? desc << " (#{context})" : desc
         char.var Variant.new(var, category, collection, xdesc)
       else
         char.var Variant.new(var, category, collection, desc)
@@ -157,7 +159,7 @@ open("#{DATAPATH}/emoji-sequences.txt", "r:utf-8") do |emj|
   emj.each.with_index(1) { |line, lnum|
     report["EMOJI", lnum]
     case line
-    when /^#\s*Date:\s*(\d{4}-\d{2}-\d{2})/
+    when /^#\s*Version:\s*(\d[\d\.]*\d|\d)*/
       versions[:emo] = $1
     when /^#\s*Emoji Modifier Sequence/
       inrange = true
@@ -166,12 +168,22 @@ open("#{DATAPATH}/emoji-sequences.txt", "r:utf-8") do |emj|
     when /^\s*$|^#/; next
     else
       next unless inrange
-      seq, data = line.splip(';')
-      base, var = seq.spliph
-      type, data1 = data.splip('#')
-      data2, names = data1.splip('      ') # Is there a better way?
-      bname, mname = names.splip(',')
-      # p [base, var, type, data1, data2, bname, mname].join("\t")
+
+      case versions[:emo]
+      when "3.0"
+        seq, data = line.splip(';')
+        base, var = seq.spliph
+        type, data1 = data.splip('#')
+        data2, names = data1.splip('      ') # Is there a better way?
+        bname, mname = names.splip(',')
+        # p [base, var, type, data1, data2, bname, mname].join("\t")
+      when "4.0"
+        seq, type, desc = line.splip(';')
+        base, var = seq.spliph
+        bname, mname = desc.splip(',')
+      else; next
+      end
+
       char = get_char[base, category, bname]
       char.var Variant.new(var, category, :modifier, mname)
       char.output
@@ -183,6 +195,7 @@ compats.each do |co|
   pa = co.vars.find { |v| v.type == :parent }
   main = get_char[pa.id, :ideograph, pa.name]
   main.vars.each { |v| co.var v } if main
+  pa.type = :ideograph
   co.output
 end
 
