@@ -238,7 +238,9 @@ end
 compats.each do |co|
   pa = co.vars.find { |v| v.type == :parent }
   main = get_char[pa.id, :ideograph, pa.name]
-  main.vars.each { |v| co.var v } if main
+  comp = get_char[co.id, co.type, co.name]
+  comp.var pa
+  main.vars.each { |v| comp.var v } if main
   pa.type = :ideograph
   # co.output
 end

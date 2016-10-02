@@ -24,7 +24,10 @@ jQuery ($)->
   rowmaker = (id, type, name, coll, base)->
     row = $("<tr/>")
     tid = TYPES[type]
-    if tid == 'ideograph' or tid == 'compat'
+    cid = COLLS[coll]
+    if cid == 'parent'
+      src = "http://glyphwiki.org/glyph/u#{id.toLowerU()}.svg"
+    else if tid == 'ideograph' or tid == 'compat'
       src = "http://glyphwiki.org/glyph/u#{if base then "#{base.toLowerU()}-u" else ""}#{id.toLowerU()}.svg"
     else if tid == 'emoji'
       src = "./images/e1/#{if base then "#{base.toLowerU()}-" else ""}#{id.toLowerU()}.svg"
@@ -37,7 +40,7 @@ jQuery ($)->
       collstr = coll
 
     cols = [
-      $("<td><input type=\"text\" class=\"autocopy\" value=\"#{if base then base.toUcs2() else ""}#{id.toUcs2()}\"></td>")
+      $("<td><input type=\"text\" class=\"autocopy\" value=\"#{if base and (cid != 'parent') then base.toUcs2() else ""}#{id.toUcs2()}\"></td>")
       $("<td>#{"U+#{if base then base.toUpperU() else id.toUpperU()}"}</td>")
       $("<td>#{if base then "U+#{id.toUpperU()}" else "-"}</td>")
       $("<td><img class=\"glyph\" src=\"#{src}\"></td>")
