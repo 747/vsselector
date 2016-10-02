@@ -3,7 +3,8 @@ html lang='ja'
   head
     meta charset='utf-8'
     title = current_page.data.title
-    / = stylesheet_link_tag "layout"
+    = stylesheet_link_tag("layout").gsub('href="/', 'href="./')
+    / ^ very dirty, need work
     javascript:
       TYPES = [#{data.types.categories.map{|t|%Q("#{t}")}.join(',')}];
       COLLS = [#{data.types.collections.map{|t|%Q("#{t}")}.join(',')}];
