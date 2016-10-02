@@ -50,12 +50,15 @@ jQuery ($)->
     cp = $("#searchbox").val().toString().getFirstCodePoint()
 
     if cp?
+      uhex = cp.toUpperU()
+      [chunk, key] = [uhex.slice(0, uhex.length-2), uhex.slice(-2)]
       $.ajax {
         type: "get"
-        url: "./chars/#{cp.toUpperU()}.json"
+        url: "./chars/#{chunk}.json"
         contentType: 'application/json'
         dataType: 'json'
-        success: (r)->
+        success: (hash)->
+          r = hash[key]
           [id, type, name, vars, coll] = ["i", "t", "n", r["V"], "c"]
           list = $("#charlist").empty()
           list.append rowmaker(cp, r[type], r[name], BASE_IDX)

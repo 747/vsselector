@@ -1,6 +1,7 @@
 require 'json'
 require 'active_support'
 require 'active_support/core_ext'
+require 'singleton'
 
 DATAPATH = "data"
 CHARPATH = "chars-source"
@@ -11,6 +12,8 @@ TYPES = TYPESJSON["categories"].map(&:intern)
 UNTYPES = TYPES.map { |e| [e, TYPES.index(e)] }.to_h
 COLLS = TYPESJSON["collections"].map(&:intern)
 UNCOLLS = COLLS.map { |e| [e, COLLS.index(e)] }.to_h
+
+RUN_AT = Time.now
 
 class Variant
   attr_accessor :id, :type, :collection, :name
@@ -36,7 +39,6 @@ class Variant
 end
 
 class Character
-  @@path = CHARPATH
   attr_accessor :id, :type, :name
 
   def initialize(id=nil, type=nil, name=nil)
@@ -52,16 +54,14 @@ class Character
     @var
   end
 
-  def output
+  def serialize
     raise "ID-less output - #{self.inspect}!" unless @id
     hash = {'t' => UNTYPES[@type] || UNTYPES[:unknown], 'n' => @name, 'V' => []}
     @var.sort_by(&:id).each { |v| hash["V"].push v.serialize }
-    open(dest, "w:utf-8") { |io| JSON.dump(hash, io) }
+    hash
   end
 
-  def read(num)
-    return nil unless File.exist?(dest(num))
-    obj = JSON.load(open(dest(num), "r:utf-8").read)
+  def read(num, obj)
     @id = num
     @type, @name = TYPES[obj['t']], obj['n']
     obj['V'].each { |v| var(Variant.new.deserialize(v)) }
@@ -70,7 +70,50 @@ class Character
 
   private
   def hex(id=@id); id ? id.hex4 : "ff9d"; end
-  def dest(id=@id); "#{@@path}/#{hex(id)}.json"; end
+end
+
+class Chunks < Hash
+  include Singleton
+
+  @@working_chunk = nil
+  @@path = CHARPATH
+
+  def lookup(num, cat, name)
+    chunk = num.hex4.to(-3)
+    unless chunk == @@working_chunk
+      save
+      load chunk
+    end
+    access num, cat, name
+  end
+
+  def save
+    return nil unless @@working_chunk
+    hash = {}
+    self.sort.each { |k, v| hash[k] = v.serialize }
+    open(dest, "w:utf-8") { |io| JSON.dump(hash, io) }
+    self.clear
+  end
+
+  def load(chunk)
+    path = dest(chunk)
+    if File.exist?(path) && File.mtime(path) >= RUN_AT
+      obj = JSON.load(open(dest(chunk), "r:utf-8").read)
+      obj.each_pair { |k, v| self[k] = Character.new.read(k, v) }
+    end
+    @@working_chunk = chunk
+  end
+
+  private
+  def access(num, cat, name)
+    key = num.hex4.last(2)
+    unless self[key]
+      char = Character.new(num, cat, name)
+      self[key] = char
+    end
+    self[key]
+  end
+  def dest(id=@@working_chunk); "#{@@path}/#{id}.json"; end
 end
 
 class Integer
@@ -82,8 +125,9 @@ class String
 end
 
 versions = {std: 0, ivd: 0, emo: 0}
+chunks = Chunks.instance
 get_char = -> num, cat, name {
-  char = Character.new.read(num) || char = Character.new(num, cat, name)
+  char = chunks.lookup(num, cat, name)
   return char
 }
 cjku = -> n { "CJK UNIFIED IDEOGRAPH-#{n.hex4.upcase}" }
@@ -107,7 +151,7 @@ open("#{DATAPATH}/IVD_Sequences.txt", "r:utf-8") do |ivs|
 
       char = get_char[base, category, cjku[base]]
       char.var Variant.new(var, category, coll, orig)
-      char.output
+      # char.output
     end
   }
 end
@@ -148,7 +192,7 @@ open("#{DATAPATH}/StandardizedVariants.txt", "r:utf-8") do |svs|
       else
         char.var Variant.new(var, category, collection, desc)
       end
-      char.output
+      # char.output
     end
   }
 end
@@ -186,7 +230,7 @@ open("#{DATAPATH}/emoji-sequences.txt", "r:utf-8") do |emj|
 
       char = get_char[base, category, bname]
       char.var Variant.new(var, category, :modifier, mname)
-      char.output
+      # char.output
     end
   }
 end
@@ -196,8 +240,10 @@ compats.each do |co|
   main = get_char[pa.id, :ideograph, pa.name]
   main.vars.each { |v| co.var v } if main
   pa.type = :ideograph
-  co.output
+  # co.output
 end
+
+chunks.save
 
 open("#{DATAPATH}/versions.json", "w:utf-8") do |ver|
   JSON.dump({
