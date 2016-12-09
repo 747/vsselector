@@ -222,10 +222,11 @@ open("#{DATAPATH}/emoji-sequences.txt", "r:utf-8") do |emj|
         bname, mname = names.splip(',')
         # p [base, var, type, data1, data2, bname, mname].join("\t")
       when "4.0"
-        seq, type, desc = line.splip(';')
+        record, comment = line.splip('#')
+        seq, type, desc = record.splip(';')
         base, var = seq.spliph
-        bname, mname = desc.splip(',')
-      else; next
+        bname, mname = desc.splip(':')
+      else; abort("EMOJI unrecognized version!")
       end
 
       char = get_char[base, category, bname]
@@ -235,7 +236,8 @@ open("#{DATAPATH}/emoji-sequences.txt", "r:utf-8") do |emj|
   }
 end
 
-compats.each do |co|
+compats.each.with_index(1) do |co, ci|
+  report["COMPAT", ci]
   pa = co.vars.find { |v| v.type == :parent }
   main = get_char[pa.id, :ideograph, pa.name]
   comp = get_char[co.id, co.type, co.name]
@@ -252,6 +254,9 @@ open("#{DATAPATH}/versions.json", "w:utf-8") do |ver|
     "standardized" => versions[:std],
     "ideographic" => versions[:ivd],
     "emojisequences" => versions[:emo],
-    "generated" => Time.now.strftime("%Y/%m/%d %R %Z")
+    "generated" => Time.now.strftime("%Y/%m/%d %R %Z"),
+    # "ivd-range" => [],
+    # "compat-range" => [],
+    # "emoji-range" => [],
   }, ver)
 end

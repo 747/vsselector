@@ -1,3 +1,8 @@
+# Pre-defined variables
+# TYPES = (index-to-type name mapping)
+# COLLS = (index-to-collection name mapping)
+# BASE_IDX = COLLS.indexOf("base")
+
 Number::toUcs2 = ->
   if 0 <= @ <= 0xFFFD
     return String.fromCharCode(@)
@@ -23,24 +28,22 @@ String::getFirstCodePoint = ->
 jQuery ($)->
   rowmaker = (id, type, name, coll, base)->
     row = $("<tr/>")
-    tid = TYPES[type]
-    cid = COLLS[coll]
-    if cid == 'parent'
-      src = "http://glyphwiki.org/glyph/u#{id.toLowerU()}.svg"
-    else if tid == 'ideograph' or tid == 'compat'
-      src = "http://glyphwiki.org/glyph/u#{if base then "#{base.toLowerU()}-u" else ""}#{id.toLowerU()}.svg"
+    [tid, cid] = [TYPES[type], COLLS[coll]]
+    cpa = cid == 'parent'
+    if tid == 'ideograph' or tid == 'compat'
+      src = "http://glyphwiki.org/glyph/u#{if base and !cpa then "#{base.toLowerU()}-u" else ""}#{id.toLowerU()}.svg"
     else if tid == 'emoji'
       src = "./images/e1/#{if base then "#{base.toLowerU()}-" else ""}#{id.toLowerU()}.svg"
     else
       src = "./images/noimage.png"
 
-    if $.type(coll) == 'number' and coll >= 0
-      collstr = "<span class=\"#{COLLS[coll]}\">#{COLLS[coll]}</span>"
+    if cid
+      collstr = "<span class=\"#{cid}\">#{cid}</span>"
     else
       collstr = coll
 
     cols = [
-      $("<td><input type=\"text\" class=\"autocopy\" value=\"#{if base and (cid != 'parent') then base.toUcs2() else ""}#{id.toUcs2()}\"></td>")
+      $("<td><input type=\"text\" class=\"autocopy\" value=\"#{if base and !cpa then base.toUcs2() else ""}#{id.toUcs2()}\"></td>")
       $("<td>#{"U+#{if base then base.toUpperU() else id.toUpperU()}"}</td>")
       $("<td>#{if base then "U+#{id.toUpperU()}" else "-"}</td>")
       $("<td><img class=\"glyph\" src=\"#{src}\"></td>")
@@ -62,20 +65,36 @@ jQuery ($)->
         dataType: 'json'
         success: (hash)->
           r = hash[key]
-          [id, type, name, vars, coll] = ["i", "t", "n", r["V"], "c"]
-          list = $("#charlist").empty()
-          list.append rowmaker(cp, r[type], r[name], BASE_IDX)
-          basechar = if TYPES[r[type]] == "compat" then vars[0][id] else cp
-          list.append rowmaker(v[id], v[type], v[name], v[coll], basechar) for v in vars
-          $("#notfound").hide()
-          $("#found").show()
+          $("#initial").hide()
+          if r?
+            [id, type, name, vars, coll] = ["i", "t", "n", r["V"], "c"]
+            list = $("#charlist").empty()
+            list.append rowmaker(cp, r[type], r[name], BASE_IDX)
+            basechar = if TYPES[r[type]] == "compat" then vars[0][id] else cp
+            list.append rowmaker(v[id], v[type], v[name], v[coll], basechar) for v in vars
+            $("#notfound").hide()
+            $("#found").show()
+          else
+            $("#found").hide()
+            $("#notfound").show()
         error: ->
+          $("#initial").hide()
           $("#found").hide()
           $("#notfound").show()
       }
 
   $("#search").click -> fetchChar()
+
   $("#searchbox").keypress (key)->
     if key.which == 13
       fetchChar()
       return false
+
+  $(".modality").click ->
+    modal = $(this).data("target")
+    $(modal).addClass("is-active")
+    return false
+
+  $(".modal-background, .modal-close").click ->
+    $(this).closest(".modal").removeClass("is-active")
+    return false

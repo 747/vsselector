@@ -1,19 +1,30 @@
 @charset "utf-8"
 
-$radius-small: 0px
-$radius: 0px
-$radius-large: 0px
+// $radius-small: 0px
+// $radius: 0px
+// $radius-large: 0px
 
 // /*
-//    Bulma 0.1.2
-//    (c) 2016 Jeremy Thomas. Code released under the MIT license.
-//    https://github.com/jgthms/bulma
+//     Bulma 0.1.2
+//     (c) 2016 Jeremy Thomas. Code released under the MIT license.
+//     https://github.com/jgthms/bulma
 // */
 @import "_bulma"
-// /* end Bulma */
+/* end Bulma */
 
 #bigbox
   font-size: 2rem
+  width: 100% // temporary
+  height: 80% // temporary
 .glyph
   height: 2.4em
   width: auto
+#picker> ul
+  height: 20rem
+  display: none
+  overflow-y: scroll
+  & > li
+    display: inline-block
+    padding: 2px
+#found, #notfound
+  display: none
