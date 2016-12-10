@@ -98,3 +98,20 @@ jQuery ($)->
   $(".modal-background, .modal-close").click ->
     $(this).closest(".modal").removeClass("is-active")
     return false
+
+  $(".toggler").click ->
+    tab = $(this).data("tab")
+    $("#picker > ul:not(#{tab})").hide()
+    $(tab).show()
+    $(".toggler").each ->
+      $(this).closest("li").removeClass("is-active")
+    $(this).closest("li").addClass("is-active")
+    return false
+
+  $(".pick").click ->
+    cpdata = + $(this).data("char")
+    $("#bigbox").selection('replace', {
+      text: cpdata.toUcs2(),
+      caret: 'end'
+    })
+    return false

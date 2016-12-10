@@ -10,7 +10,7 @@ html lang='ja'
       COLLS = [#{data.types.collections.map{|t|%Q("#{t}")}.join(',')}];
       BASE_IDX = COLLS.indexOf("base");
     / = javascript_include_tag "jquery-1.12.1.min", "jquery-ui.min", "sprintf.min", "controller"
-    = javascript_include_tag("jquery-1.12.1.min", "jquery-ui.min", "sprintf.min", "controller").gsub('src="/', 'src="./')
+    = javascript_include_tag("jquery-1.12.1.min", "jquery-ui.min", "sprintf.min", "jquery.selection", "controller").gsub('src="/', 'src="./')
     / ^ very dirty, need work
   body#view
     .hero.is-dark
@@ -27,26 +27,30 @@ html lang='ja'
         #breakdown
       #picker.column.is-4
         ul#ivs style="display:block"
+          - ivsn = 0xE0100
           - (17..256).each do |n|
-            li id="ivs-#{n}": img title="VS#{n}" alt="VS#{n}"
+            li id="ivs-#{n}": a.pick data-char="#{ivsn + n-17}": img title="VS#{n}" alt="VS#{n}"
         ul#vs
+          - svsn = 0xFE00
           - (1..14).each do |n|
-            li id="vs-#{n}": img title="VS#{n}" alt="VS#{n}"
-          li id="vs-15": img title="VS15 (text style)" alt="VS15"
-          li id="vs-16": img title="VS16 (emoji style)" alt="VS16"
+            li id="vs-#{n}": a.pick data-char="#{svsn + n-1}": img title="VS#{n}" alt="VS#{n}"
+          li id="vs-15": a.pick data-char="#{svsn + 0xE}": img title="VS15 (text style)" alt="VS15"
+          li id="vs-16": a.pick data-char="#{svsn + 0xF}": img title="VS16 (emoji style)" alt="VS16"
         ul#fvs
+          - fvsn = 0x180B
           - (1..3).each do |n|
-            li id="fvs-#{n}": img title="" alt="FVS#{n}"
+            li id="fvs-#{n}": a.pick data-char="#{fvsn + n-1}": img title="" alt="FVS#{n}"
         ul#emod
-          li id="fitz-12": img title="" alt="Fitz 1-2"
+          - emon = 0x1F3FB
+          li id="fitz-12": a.pick data-char="#{emon}": img title="" alt="Fitz 1-2"
           - (3..6).each do |n|
-            li id="fitz-#{n}": img title="" alt="Fitz #{n}"
+            li id="fitz-#{n}": a.pick data-char="#{emon + n-2}": img title="" alt="Fitz #{n}"
         #groups.tabs.is-centered.is-toggle
           ul
-            li.is-active: a IVS
-            li: a VS
-            li: a FVS
-            li: a Fitz.
+            li.is-active: a.toggler data-tab="#ivs" IVS
+            li: a.toggler data-tab="#vs" VS
+            li: a.toggler data-tab="#fvs" FVS
+            li: a.toggler data-tab="#emod" Fitz.
     hr
     #query.level
       p.level-item.control.has-addons.has-addons-centered
