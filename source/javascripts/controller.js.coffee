@@ -51,7 +51,7 @@ jQuery ($)->
       collstr = coll
 
     cols = [
-      $("<td><input type=\"text\" class=\"autocopy\" value=\"#{if base and !cpa then base.toUcs2() else ""}#{id.toUcs2()}\"></td>")
+      $("<td class=\"control has-addons has-addons-centered\"><button class=\"button is-dark insert\">上へ</button><input type=\"text\" class=\"autocopy input has-text-centered\" value=\"#{if base and !cpa then base.toUcs2() else ""}#{id.toUcs2()}\"><button class=\"button clipboard is-primary\">コピー</button></td>")
       $("<td>#{"U+#{if base then base.toUpperU() else id.toUpperU()}"}</td>")
       $("<td>#{if base then "U+#{id.toUpperU()}" else "-"}</td>")
       $("<td><img class=\"glyph\" src=\"#{src}\"></td>")
@@ -80,6 +80,10 @@ jQuery ($)->
             list.append rowmaker(cp, r[type], r[name], BASE_IDX)
             basechar = if TYPES[r[type]] == "compat" then vars[0][id] else cp
             list.append rowmaker(v[id], v[type], v[name], v[coll], basechar) for v in vars
+            new Clipboard '.clipboard', {
+              target: (trigger)->
+                trigger.previousElementSibling
+            }
             $("#notfound").hide()
             $("#found").show()
           else
@@ -109,6 +113,13 @@ jQuery ($)->
       pos += width
     $("#breakdown-body").html tags.join("+")
     return
+  insertToBox = (string)->
+    $("#bigbox").selection('replace', {
+      text: string,
+      caret: 'end'
+    })
+    $("#bigbox").change()
+    undefined
 
   $("#search").click -> fetchChar()
 
@@ -137,11 +148,7 @@ jQuery ($)->
 
   $(".pick").click ->
     cpdata = + $(this).data("char") # string read as int
-    $("#bigbox").selection('replace', {
-      text: cpdata.toUcs2(),
-      caret: 'end'
-    })
-    $("#bigbox").change()
+    insertToBox cpdata.toUcs2()
     return false
 
   $(document).on 'click', '.delete-char', ->
@@ -150,6 +157,11 @@ jQuery ($)->
       str = $("#bigbox").val()
       $("#bigbox").val str.slice(0, tagdata['pos']) + str.slice(tagdata['pos'] + tagdata['width'])
       $("#bigbox").change()
+    return false
+
+  $(document).on 'click', '.insert', ->
+    variant = $(this).next().val()
+    insertToBox variant
     return false
 
   former = $("#bigbox").val()
