@@ -15,15 +15,23 @@ Number::toUcs2 = ->
     return '\uFFFD'
 Number::toLowerU = -> sprintf "%04x", @
 Number::toUpperU = -> sprintf "%04X", @
+Number::isFunctionalCodePoint = ->
+  if 0xFE00 <= @ <= 0xFE0F or 0xE0100 <= @ <= 0xE01EF or 0x180B <= @ <= 0x180D or 0x1F3FB <= @ <= 0x1F3FF
+    return true
+  else
+    return false
 String::getFirstCodePoint = ->
   if /^[\uD800-\uDBFF][\uDC00-\uDFFF]/.test(@)
     return 0x10000 + (@charCodeAt(0) - 0xD800 << 0xA) + @charCodeAt(1) - 0xDC00
-  else if matched = /^\s*(?:U[-+])*([0-9A-F]{4,8})/i.exec(@)
-    return parseInt(matched[1], 16)
   else if /^[\u0000-\uD799\uE000-\uFFFD]/.test(@)
     return @charCodeAt(0)
   else
     return undefined
+String::searchCodePoint = ->
+  if matched = /^\s*(?:U[-+])*([0-9A-F]{4,8})/i.exec(@)
+    return parseInt(matched[1], 16)
+  else
+    return @getFirstCodePoint()
 
 jQuery ($)->
   rowmaker = (id, type, name, coll, base)->
@@ -53,7 +61,7 @@ jQuery ($)->
     row.append col for col in cols
     row
   fetchChar = ->
-    cp = $("#searchbox").val().toString().getFirstCodePoint()
+    cp = $("#searchbox").val().toString().searchCodePoint()
 
     if cp?
       uhex = cp.toUpperU()
@@ -82,6 +90,25 @@ jQuery ($)->
           $("#found").hide()
           $("#notfound").show()
       }
+  analyze = (id)->
+    text = $(id).val()
+    split = []
+    while text.length > 0
+      first = text.getFirstCodePoint()
+      range = if first and first > 0xFFFF then 2 else 1
+      split.push first
+      text = text.substring(range)
+    return split
+  charlistmaker = (seq)->
+    tags = []
+    pos = 0
+    for code in seq
+      width = if code > 0xFFFF then 2 else 1
+      color = if code.isFunctionalCodePoint() then 'is-success' else 'is-info'
+      tags.push "<span class=\"tag #{color}\" data-pos=\"#{pos}\" data-width=\"#{width}\">#{code.toUpperU()}<button class=\"delete delete-char\"></button></span>"
+      pos += width
+    $("#breakdown-body").html tags.join("+")
+    return
 
   $("#search").click -> fetchChar()
 
@@ -109,9 +136,25 @@ jQuery ($)->
     return false
 
   $(".pick").click ->
-    cpdata = + $(this).data("char")
+    cpdata = + $(this).data("char") # string read as int
     $("#bigbox").selection('replace', {
       text: cpdata.toUcs2(),
       caret: 'end'
     })
+    $("#bigbox").change()
     return false
+
+  $(document).on 'click', '.delete-char', ->
+    tagdata = $(this).closest(".tag").data()
+    if tagdata['pos'] and tagdata['width']
+      str = $("#bigbox").val()
+      $("#bigbox").val str.slice(0, tagdata['pos']) + str.slice(tagdata['pos'] + tagdata['width'])
+      $("#bigbox").change()
+    return false
+
+  former = $("#bigbox").val()
+  $("#bigbox").on "change keyup paste", ->
+    current = $(this).val()
+    return if current == former
+    former = current
+    charlistmaker analyze("#bigbox")

@@ -18,14 +18,16 @@ html lang='ja'
         .nav
           .container
             .nav-left
-              p.nav-item = current_page.data.title
-            .nav-right
+              p.nav-item.is-brand = current_page.data.title
+            .nav-right.nav-menu
               a.nav-item.modality data-target="#about" このページについて
-    #workspace.columns
+              a.nav-item href="https://github.com/747/vsselector" GitHub
+    #workspace.columns.section.transparent
       #viewer.column.is-7
         textarea#bigbox.control
-        #breakdown
-      #picker.column.is-4
+        #breakdown.message.is-warning
+          p#breakdown-body.message-body
+      #picker.column.is-5
         ul#ivs style="display:block"
           - ivsn = 0xE0100
           - (17..256).each do |n|
@@ -51,7 +53,7 @@ html lang='ja'
             li: a.toggler data-tab="#vs" VS
             li: a.toggler data-tab="#fvs" FVS
             li: a.toggler data-tab="#emod" Fitz.
-    hr
+    / hr
     #query.level
       p.level-item.control.has-addons.has-addons-centered
         input#searchbox type='text' name='char' placeholder="character or code..."
