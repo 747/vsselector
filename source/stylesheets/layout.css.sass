@@ -16,10 +16,9 @@
   min-height: 300px
 #bigbox
   font-size: 3rem
-  width: 100%
   height: 16rem
 #picker> ul
-  height: 20rem
+  height: 18rem
   display: none
   overflow-y: scroll
   & > li
@@ -29,8 +28,26 @@
   margin-top: 1rem
 #found, #notfound
   display: none
+
+table td, table th
+  vertical-align: middle
+// why .sass syntax no multiline maps
+$cols-group: (1 center, 2 center, 3 center, 4 center, 5 left, 6 left)
+@each $col in $cols-group
+  #found th:nth-child(#{nth($col, 1)}),
+  #found td:nth-child(#{nth($col, 1)})
+    text-align: nth($col, 2)
+
+// button alignment fix
+table .control:not(:last-child)
+  margin: 5px auto
+#about .button
+  vertical-align: baseline
+
 .glyph
   height: 2.4em
   width: auto
 .transparent
   background: transparent
+.autocopy
+  width: 4em !important
