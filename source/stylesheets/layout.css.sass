@@ -4,11 +4,9 @@
 // $radius: 0px
 // $radius-large: 0px
 
-// /*
-//     Bulma 0.1.2
-//     (c) 2016 Jeremy Thomas. Code released under the MIT license.
-//     https://github.com/jgthms/bulma
-// */
+/*  Bulma 0.1.2
+    (c) 2016 Jeremy Thomas. Code released under the MIT license.
+    https://github.com/jgthms/bulma */
 @import "_bulma"
 /* end Bulma */
 
@@ -44,6 +42,12 @@ table .control:not(:last-child)
 #about .button
   vertical-align: baseline
 
+// definition style fix
+dt
+  font-weight: bold
+.content dl:not(:last-child)
+  margin-bottom: 1em
+
 .glyph
   height: 2.4em
   width: auto
@@ -51,3 +55,5 @@ table .control:not(:last-child)
   background: transparent
 .autocopy
   width: 4em !important
+.is-brand
+  font-weight: bold
