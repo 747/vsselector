@@ -153,7 +153,7 @@ jQuery ($)->
 
   $(document).on 'click', '.delete-char', ->
     tagdata = $(this).closest(".tag").data()
-    if tagdata['pos'] and tagdata['width']
+    if $.isNumeric(tagdata['pos']) and $.isNumeric(tagdata['width'])
       str = $("#bigbox").val()
       $("#bigbox").val str.slice(0, tagdata['pos']) + str.slice(tagdata['pos'] + tagdata['width'])
       $("#bigbox").change()
