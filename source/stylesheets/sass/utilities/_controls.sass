@@ -1,52 +1,41 @@
+$control-radius: $radius !default
+$control-radius-small: $radius-small !default
+
+$control-padding-vertical: calc(0.375em - 1px) !default
+$control-padding-horizontal: calc(0.625em - 1px) !default
+
 =control
   -moz-appearance: none
   -webkit-appearance: none
   align-items: center
-  background-color: $control-background
-  border: 1px solid $control-border
-  border-radius: $radius
-  color: $control
+  border: 1px solid transparent
+  border-radius: $control-radius
+  box-shadow: none
   display: inline-flex
   font-size: $size-normal
-  height: 32px
+  height: 2.25em
   justify-content: flex-start
-  line-height: 24px
-  padding-left: 8px
-  padding-right: 8px
+  line-height: 1.5
+  padding-bottom: $control-padding-vertical
+  padding-left: $control-padding-horizontal
+  padding-right: $control-padding-horizontal
+  padding-top: $control-padding-vertical
   position: relative
   vertical-align: top
-  &:hover
-    border-color: $control-hover-border
-  &:active,
+  // States
   &:focus,
+  &.is-focused,
+  &:active,
   &.is-active
-    border-color: $control-active-border
     outline: none
-  &[disabled],
-  &.is-disabled
-    background-color: $background
-    border-color: $control-border
+  &[disabled]
     cursor: not-allowed
-    pointer-events: none
-    +placeholder
-      color: rgba($control, 0.3)
 
+// The controls sizes use mixins so they can be used at different breakpoints
 =control-small
-  border-radius: $radius-small
-  font-size: 11px
-  height: 24px
-  line-height: 16px
-  padding-left: 6px
-  padding-right: 6px
+  border-radius: $control-radius-small
+  font-size: $size-small
 =control-medium
-  font-size: 18px
-  height: 40px
-  line-height: 32px
-  padding-left: 10px
-  padding-right: 10px
+  font-size: $size-medium
 =control-large
-  font-size: 24px
-  height: 48px
-  line-height: 40px
-  padding-left: 12px
-  padding-right: 12px
+  font-size: $size-large

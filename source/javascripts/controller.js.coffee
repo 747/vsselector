@@ -50,8 +50,15 @@ jQuery ($)->
     else
       collstr = coll
 
+    if coll is 'Adobe-Japan1'
+      fontclass = 'ivs-aj1'
+    else if coll is 'Moji_Joho'
+      fontclass = 'ivs-mj'
+    else if coll is 'Hanyo-Denshi' or coll is 'MSARG'
+      fontclass = 'ivs-etc'
+
     cols = [
-      $("<td class=\"control has-addons has-addons-centered\"><button class=\"button is-dark insert\">上へ</button><input type=\"text\" class=\"autocopy input has-text-centered\" value=\"#{if base and !cpa then base.toUcs2() else ""}#{id.toUcs2()}\"><button class=\"button clipboard is-primary\">コピー</button></td>")
+      $("<td class=\"control has-addons has-addons-centered\"><button class=\"button is-dark insert\">↑挿入</button><input type=\"text\" class=\"autocopy input has-text-centered #{fontclass}\" value=\"#{if base and !cpa then base.toUcs2() else ""}#{id.toUcs2()}\"><button class=\"button clipboard is-primary\">コピー</button></td>")
       $("<td>#{"U+#{if base then base.toUpperU() else id.toUpperU()}"}</td>")
       $("<td>#{if base then "U+#{id.toUpperU()}" else "-"}</td>")
       $("<td><img class=\"glyph\" src=\"#{src}\"></td>")
@@ -153,7 +160,7 @@ jQuery ($)->
 
   $(document).on 'click', '.delete-char', ->
     tagdata = $(this).closest(".tag").data()
-    if tagdata['pos'] and tagdata['width']
+    if $.isNumeric(tagdata['pos']) and $.isNumeric(tagdata['width'])
       str = $("#bigbox").val()
       $("#bigbox").val str.slice(0, tagdata['pos']) + str.slice(tagdata['pos'] + tagdata['width'])
       $("#bigbox").change()
