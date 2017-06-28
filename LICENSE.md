@@ -42,12 +42,6 @@ written authorization of the copyright holder.
 
 ---
 
-Emoji provided free by http://emojione.com
-
-http://emojione.com/licensing/
-
----
-
 Copyright 2017 Twitter, Inc and other contributors
 
 Code licensed under the MIT License: http://opensource.org/licenses/MIT
