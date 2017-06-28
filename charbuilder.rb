@@ -20,20 +20,32 @@ class Variant
 
   def initialize(id=nil, type=nil, collection=nil, name=nil)
     @id, @type, @collection, @name = id, type, collection, name
+    @seq = []
   end
 
+  def seq(sequence)
+    sequence.is_a?(Sequence) ? @seq.push(sequence) : raise("Tried to set #{sequence.inspect} as a sequence of '#{name}'!")
+  end
+  def seqs; @seq; end
+
   def serialize
-    {
+    hash = {
       'i' => @id,
       't' => UNTYPES[@type] || UNTYPES[:unknown],
       'c' => UNCOLLS[@collection] || (@collection.is_a?(String) && @collection.present? ? @collection : UNCOLLS[:unknown]),
       'n' => @name
     }
+    if @seq.present?
+      hash['S'] ||= []
+      @seq.sort_by(&:seq).each { |s| hash["S"].push s.serialize }
+    end
+    hash
   end
 
   def deserialize(h)
     @id, @type, @name = h['i'], TYPES[h['t']], h['n']
     @collection = h['c'].is_a?(Integer) ? COLLS[h['c']] : h['c']
+    h['S'].each { |s| seq(Sequence.new.deserialize(s)) } if h['S'].present?
     self
   end
 end
@@ -44,20 +56,32 @@ class Character
   def initialize(id=nil, type=nil, name=nil)
     @id, @type, @name = id, type, name
     @var = []
+    @seq = []
   end
 
   def var(variant)
     variant.is_a?(Variant) ? @var.push(variant) : raise("Tried to set #{variant.inspect} as a variant of U+#{hex.upcase}!")
   end
+  def vars; @var; end
 
-  def vars
-    @var
+  # return a variant of it or nil
+  def get_var(code)
+    @var.find { |v| v.id == code }
   end
+
+  def seq(sequence)
+    sequence.is_a?(Sequence) ? @seq.push(sequence) : raise("Tried to set #{sequence.inspect} as a sequence of U+#{hex.upcase}!")
+  end
+  def seqs; @seq; end
 
   def serialize
     raise "ID-less output - #{self.inspect}!" unless @id
     hash = {'t' => UNTYPES[@type] || UNTYPES[:unknown], 'n' => @name, 'V' => []}
     @var.sort_by(&:id).each { |v| hash["V"].push v.serialize }
+    if @seq.present?
+      hash['S'] ||= []
+      @seq.sort_by(&:seq).each { |s| hash["S"].push s.serialize }
+    end
     hash
   end
 
@@ -65,11 +89,29 @@ class Character
     @id = num
     @type, @name = TYPES[obj['t']], obj['n']
     obj['V'].each { |v| var(Variant.new.deserialize(v)) }
+    obj['S'].each { |s| seq(Sequence.new.deserialize(s)) } if obj['S'].present?
     self
   end
 
   private
   def hex(id=@id); id ? id.hex4 : "ff9d"; end
+end
+
+class Sequence
+  attr_accessor :seq, :name
+
+  def initialize(seq=[], name=nil)
+    @seq, @name = seq, name
+  end
+
+  def serialize
+    { 'q' => @seq, 'n' => @name }
+  end
+
+  def deserialize(h)
+    @seq, @name = h['q'], h['n']
+    self
+  end
 end
 
 class Chunks < Hash
@@ -124,7 +166,7 @@ class String
   def spliph(sep=' '); self.splip(sep).map { |e| e.to_i(16) }; end
 end
 
-versions = {std: 0, ivd: 0, emo: 0}
+versions = {std: 0, ivd: 0, emo: 0, evs: 0, ezs: 0}
 chunks = Chunks.instance
 get_char = -> num, cat, name {
   char = chunks.lookup(num, cat, name)
@@ -133,6 +175,7 @@ get_char = -> num, cat, name {
 cjku = -> n { "CJK UNIFIED IDEOGRAPH-#{n.hex4.upcase}" }
 report = -> l, n { puts "#{l}: passing #{n}" if n % 100 == 0 }
 compats = []
+ivdcols = []
 
 open("#{DATAPATH}/IVD_Sequences.txt", "r:utf-8") do |ivs|
   version_got = false
@@ -151,7 +194,7 @@ open("#{DATAPATH}/IVD_Sequences.txt", "r:utf-8") do |ivs|
 
       char = get_char[base, category, cjku[base]]
       char.var Variant.new(var, category, coll, orig)
-      # char.output
+      ivdcols << coll unless ivdcols.include? coll
     end
   }
 end
@@ -185,7 +228,8 @@ open("#{DATAPATH}/StandardizedVariants.txt", "r:utf-8") do |svs|
         compats.push comp
       when :emoji
         char.type = :plain
-        char.var Variant.new(var, category, collection, desc)
+        vartype = desc.start_with?('emoji') ? :emoji : :plain
+        char.var Variant.new(var, vartype, collection, desc)
       when :mongolian, :manichaean
         xdesc = context.present? ? desc << " (#{context})" : desc
         char.var Variant.new(var, category, collection, xdesc)
@@ -197,18 +241,51 @@ open("#{DATAPATH}/StandardizedVariants.txt", "r:utf-8") do |svs|
   }
 end
 
+# Manually define REGIONAL INDICATOR SYMBOLs
+('A'..'Z').each do |letter|
+  # 0x1F1A5 = 0x1F1E6 - "A".ord
+  get_char[0x1F1A5 + letter.ord, :emoji, "REGIONAL INDICATOR SYMBOL LETTER #{letter}"]
+end
+
+# In current logic, some emoji non-variant sequences depend on the product of this file
+# So this MUST be processed first!
+open("#{DATAPATH}/emoji-variation-sequences.txt", "r:utf-8") do |evs|
+  evs.each.with_index(1) { |line, lnum|
+    report["EVS", lnum]
+    case line
+    when /^#\s*Version:\s*(\d[\d\.]*\d|\d)*/
+      versions[:evs] = $1
+    when /^\s*$|^#/; next
+    else
+      seq, desc, third = line.splip(';')
+      base, var = seq.spliph
+      third =~ /# \((\d+\.\d)\) (.*)$/
+      ver_at, name = $1, $2
+
+      char = get_char[base, :plain, name]
+      vartype = desc.start_with?('emoji') ? :emoji : :plain
+      char.var Variant.new(var, vartype, :standardized, desc)
+    end
+  }
+end
+
+# Some emoji zwj sequences depend on the product of this file for now
+# This MUST be processed before emoji-zwj-sequences.txt!
 open("#{DATAPATH}/emoji-sequences.txt", "r:utf-8") do |emj|
   inrange = false
+  trailing = false # false -> variant mode, true -> sequence mode
   category = :emoji
   emj.each.with_index(1) { |line, lnum|
     report["EMOJI", lnum]
     case line
     when /^#\s*Version:\s*(\d[\d\.]*\d|\d)*/
       versions[:emo] = $1
-    when /^#\s*Emoji Modifier Sequence/
+    when /^#\s*Emoji (Keycap|Flag|Modifier) Sequence/
+      trailing = true if %w(Keycap Flag).include? $1
       inrange = true
     when /^#\s*={5,}/
       inrange = false
+      trailing = false
     when /^\s*$|^#/; next
     else
       next unless inrange
@@ -216,22 +293,63 @@ open("#{DATAPATH}/emoji-sequences.txt", "r:utf-8") do |emj|
       case versions[:emo]
       when "3.0"
         seq, data = line.splip(';')
-        base, var = seq.spliph
+        base, var, *extra = seq.spliph # Expect possible longer sequence
         type, data1 = data.splip('#')
-        data2, names = data1.splip('      ') # Is there a better way?
-        bname, mname = names.splip(',')
+        data2, desc = data1.splip('      ') # Is there a better way?
+        bname, mname = desc.splip(',')
         # p [base, var, type, data1, data2, bname, mname].join("\t")
-      when "4.0"
+      when "4.0", "5.0"
         record, comment = line.splip('#')
         seq, type, desc = record.splip(';')
-        base, var = seq.spliph
+        base, var, *extra = seq.spliph # Expect possible longer sequence
         bname, mname = desc.splip(':')
       else; abort("EMOJI unrecognized version!")
       end
 
       char = get_char[base, category, bname]
-      char.var Variant.new(var, category, :modifier, mname)
+
+      if trailing
+        the_var = char.get_var(var)
+        adopter = the_var || char
+        extra.unshift var unless adopter
+        adopter.seq Sequence.new(extra, desc)
+      else
+        char.var Variant.new(var, category, :modifier, mname)
+      end
       # char.output
+    end
+  }
+end
+
+open("#{DATAPATH}/emoji-zwj-sequences.txt", "r:utf-8") do |ezs|
+  ezs.each.with_index(1) { |line, lnum|
+    report["EZWJ", lnum]
+    case line
+    when /^#\s*Version:\s*(\d[\d\.]*\d|\d)*/
+      versions[:ezs] = $1
+    when /^\s*$|^#/; next
+    else
+      case versions[:emo]
+      when "3.0"
+        seq, data = line.splip(';')
+        base, var, *extra = seq.spliph
+        type, data1 = data.splip('#')
+        data2, desc = data1.splip(/\s{3,}/)
+        # bname, mname = desc.splip(',')
+      when "4.0", "5.0"
+        record, comment = line.splip('#')
+        seq, type, desc = record.splip(';')
+        base, var, *extra = seq.spliph
+        # bname, mname = desc.splip(':')
+      else; abort("EZWJ unrecognized version!")
+      end
+
+      char = get_char[base, :plain, desc] # in case an unknown character -> :plain
+
+      the_var = char.get_var(var)
+      adopter = the_var || char
+      extra.unshift var unless adopter
+      adopter.seq Sequence.new(extra, desc)
     end
   }
 end
@@ -253,10 +371,18 @@ open("#{DATAPATH}/versions.json", "w:utf-8") do |ver|
   JSON.dump({
     "standardized" => versions[:std],
     "ideographic" => versions[:ivd],
+    "emojivs" => versions[:evs],
     "emojisequences" => versions[:emo],
+    "emojizwj" => versions[:ezs],
     "generated" => Time.now.strftime("%Y/%m/%d %R %Z"),
     # "ivd-range" => [],
     # "compat-range" => [],
     # "emoji-range" => [],
   }, ver)
+end
+
+open("#{DATAPATH}/knownnames.json", "w:utf-8") do |kno|
+  JSON.dump({
+    "ivdcollections" => ivdcols.sort
+  }, kno)
 end
