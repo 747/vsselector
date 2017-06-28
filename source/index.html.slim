@@ -1,5 +1,5 @@
 ---
-title: 異体字セレクタセレクタ (α)
+title: 異体字セレクタセレクタ (α v0.2)
 layout: ivd
 ---
 
@@ -24,7 +24,7 @@ dl
       li.control
         span.button.is-primary コピー
         | を押すと、文字をコピーして他の場所に貼り付けできるようにします。
-      li: markdown: **表示**欄にあるものが実際の文字で、**画像**欄にあるのが字形サンプルです。
+      li: markdown: **表示**欄にあるものが実際の文字で、**画像**欄にあるのがサンプル画像です。
 
 h5#about-env 動作環境
 markdown:
@@ -38,17 +38,18 @@ ul
   li
     | このページの内容を利用する場合は、
     a> href="https://creativecommons.org/licenses/by/4.0/deed.ja" CC BY 4.0
-    | に従ってください。ただし、生成した文字列をグリフとして使用する場合出典の明記は必要ありません。
+    | に従ってください。ただし、生成した文字列のコードポイントデータのみを使用する場合出典の明記は必要ありません。
   li
     | このページのソースコードを利用する場合は、
     a href="https://github.com/747/vsselector/tree/master/LICENSE.md" GitHubページのライセンス情報
     | を参照してください。
   li
     | 字形のサンプル画像は、
-    a> href="http://glyphwiki.org/" GlyphWiki
+    a href="http://glyphwiki.org/" GlyphWiki
     | および
-    a<> href="http://emojione.com/" EmojiOne
+    a> href="https://twitter.github.io/twemoji/" Twemoji
     | に由来します。
+a href="https://twitter.com/meso_cacase/status/322522301608382464": img src="images/shihi.png"
 
 h5#about-version バージョン情報
 - ver = data.versions
@@ -62,5 +63,11 @@ p
   ' IVD_Sequences.txt:
   a href="http://www.unicode.org/ivd/data/#{ver.ideographic}/IVD_Sequences.txt" = ver.ideographic
 p
+  ' emoji-variation-sequences.txt:
+  a href="http://unicode.org/Public/emoji/#{ver.emojivs}/emoji-variation-sequences.txt" = ver.emojivs
+p
   ' emoji-sequences.txt:
   a href="http://unicode.org/Public/emoji/#{ver.emojisequences}/emoji-sequences.txt" = ver.emojisequences
+p
+  ' emoji-zwj-sequences.txt:
+  a href="http://unicode.org/Public/emoji/#{ver.emojizwj}/emoji-zwj-sequences.txt" = ver.emojizwj

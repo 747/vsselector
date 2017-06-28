@@ -9,6 +9,60 @@ html lang='ja'
       TYPES = [#{data.types.categories.map{|t|%Q("#{t}")}.join(',')}];
       COLLS = [#{data.types.collections.map{|t|%Q("#{t}")}.join(',')}];
       BASE_IDX = COLLS.indexOf("base");
+    | <script type="text/x-jsrender" id="rowMaker">
+        <tr{{if isSeq}} class="is-small"{{/if}}>
+          {{* cpa = cid === "parent"; }}
+          <td class="control has-addons has-addons-centered">
+            <button class="button is-dark insert">↑挿入</button>
+            <input type="text" class="autocopy input has-text-centered
+            {{if coll === "Adobe-Japan1"}}
+              ivs-aj1
+            {{else coll === "Moji_Joho"}}
+              ivs-mj
+            {{else coll === "Hanyo-Denshi" || coll === "MSARG"}}
+              ivs-etc
+            {{/if}}"
+            {{if isSeq}}
+            value="{{:seq.map(function(e){return e.toUcs2();}).join('')}}"
+            {{else}}
+            value="{{if base && !cpa}}{{:base.toUcs2()}}{{/if}}{{:id.toUcs2()}}"
+            {{/if}}
+            >
+            <button class="button clipboard is-primary">コピー</button>
+          </td>
+          {{if isSeq}}
+          <td colspan="2">U+{{:seq.map(function(e){return e.toUpperU();}).join(' ')}}</td>
+          <td><img class="glyph" src="./images/te/{{:seq.map(function(e){return e.toString(16);}).join('-')}}.svg"></td>
+          <td colspan="2">{{>name}}</td>
+          {{else}}
+          <td>U+{{if base}}{{>base.toUpperU()}}{{else}}{{>id.toUpperU()}}{{/if}}</td>
+          <td>{{if base}}U+{{>id.toUpperU()}}{{else}}-{{/if}}</td>
+          <td>
+            <img class="glyph" src="
+            {{if tid === "ideograph" || tid === "compat"}}
+              http://glyphwiki.org/glyph/u{{if base and !cpa}}{{:base.toLowerU()}}-u{{/if}} {{:id.toLowerU()}}.svg
+            {{else tid === "emoji"}}
+              ./images/te/{{if base}}{{:base.toLowerU()}}-{{/if}}{{:id.toLowerU()}}.svg
+            {{else}}
+              ./images/noimage.png
+            {{/if}}">
+          </td>
+          <td>
+            {{if cid}}
+            <span class="{{:cid}}">{{>cid}}</span>
+            {{else}}
+            {{>cid}}
+            {{/if}}
+          </td>
+          <td>{{>name}}</td>
+          {{/if}}
+        </tr>
+      </script>
+    | <script type="text/x-jsrender" id="SequencesHeader">
+        <tr class="is-small">
+          <td colspan="6" class="seq-header">この字から始まるシークエンス</td>
+        </tr>
+      </script>
     / = javascript_include_tag "jquery-1.12.1.min", "jquery-ui.min", "sprintf.min", "controller"
     = javascript_include_tag("jquery-1.12.1.min", "jquery-ui.min", "jsrender.min", "sprintf.min", "jquery.selection", "clipboard.min", "controller").gsub('src="/', 'src="./')
     / ^ very dirty, need work
@@ -36,35 +90,47 @@ html lang='ja'
             li id="ivs-#{n}": a.pick data-char="#{ivsn + n-17}": img title="VS#{n} (#{u[ivsn + n-17]})" alt="VS#{n}"
         ul#vs
           - svsn = 0xFE00
-          - (1..14).each do |n|
-            li id="vs-#{n}": a.pick data-char="#{svsn + n-1}": img title="VS#{n} (#{u[svsn + n-1]})" alt="VS#{n}"
-          li id="vs-15": a.pick data-char="#{svsn + 0xE}": img title="VS15 (text style)" alt="VS15"
-          li id="vs-16": a.pick data-char="#{svsn + 0xF}": img title="VS16 (emoji style)" alt="VS16"
-        ul#fvs
+          - (1..16).each do |n|
+            - note = n == 15 ? "; text style" : n == 16 ? "; emoji style" : ""
+            li id="vs-#{n}": a.pick data-char="#{svsn + n-1}": img title="VS#{n} (#{u[svsn + n-1]}#{note})" alt="VS#{n}"
           - fvsn = 0x180B
           - (1..3).each do |n|
-            li id="fvs-#{n}": a.pick data-char="#{fvsn + n-1}": img title="FVS#{n} (#{u[fvsn + n-1]})" alt="FVS#{n}"
+            li id="fvs-#{n}": a.pick data-char="#{fvsn + n-1}": img title="Mongolian FVS#{n} (#{u[fvsn + n-1]})" alt="FVS#{n}"
         ul#emod
+          - risn = 0x1F1E6
+          - (0..25).each do |n|
+            li id="region-#{n}": a.pick data-char="#{risn + n}": img title="Regional letter #{(n+65).chr}" alt="RIS #{(n+65).chr}" src="./images/te/#{"%04x" % (risn + n)}.svg"
           - emon = 0x1F3FB
-          li id="fitz-12": a.pick data-char="#{emon}": img title="" alt="Fitz 1-2"
-          - (3..6).each do |n|
-            li id="fitz-#{n}": a.pick data-char="#{emon + n-2}": img title="" alt="Fitz #{n}" src="./images/e1/#{"%04x" % (emon + n-2)}.svg"
+          - (2..6).each do |n|
+            - sc = n == 2 ? "1-2" : n
+            li id="fitz-#{n}": a.pick data-char="#{emon + n-2}": img title="Fitzgerald #{sc}" alt="Fitz #{sc}" src="./images/te/#{"%04x" % (emon + n-2)}.svg"
+        ul#util
+          li id="zwj": a.pick data-char="#{0x200D}": img title="ZERO WIDTH JOINER" alt="ZWJ"
+          / U+E001 is still deprecated
+          - tagn = 0xE0020
+          - (1..0x5E).each do |n|
+            - t = n == 0 ? ["SPACE", "SP"] : n == 0x5F ? ["END", "END"] : ["\xab#{(n+32).chr}\xbb", (n+32).chr]
+            li id="tags-#{n}": a.pick data-char="#{tagn + n}": img title="Tag #{t[0]}" alt="Tag #{t[1]}"
         #groups.tabs.is-centered.is-toggle
           ul
             li.is-active: a.toggler data-tab="#ivs" IVS
-            li: a.toggler data-tab="#vs" VS
-            li: a.toggler data-tab="#fvs" FVS
-            li: a.toggler data-tab="#emod" Fitz.
+            li: a.toggler data-tab="#vs" (F)VS
+            li: a.toggler data-tab="#emod" Emoji
+            li: a.toggler data-tab="#util" Utils
     / hr
     #query.level
       p.level-item.control.has-addons.has-addons-centered
         input#searchbox.input type='text' name='char' placeholder="例：邊、270B…"
         button#search.button.is-primary type='submit' value='search'
-          span#searchlabel 検索
+          span#searchlabel 登録済の異体字を検索
+        - data.knownnames.ivdcollections.each do |ivd|
+          label.checkbox
+            input type='checkbox' class='search-filter' name=ivd checked=true
+            =< ivd
     #entries
       #initial.message.is-info: p.has-text-centered.message-body 以下に検索結果が表示されます
       #notfound.message.is-warning: p.has-text-centered.message-body 見つかりませんでした
-      table#found.is-striped
+      table#found.table
         / colgroup
         /   col.col-input span="1"
         /   col.col-data span="2"
