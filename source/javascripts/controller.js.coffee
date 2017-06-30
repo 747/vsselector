@@ -34,6 +34,12 @@ String::searchCodePoint = ->
     return @getFirstCodePoint()
 
 jQuery ($)->
+  $.views.settings.debugMode true
+  $.views.helpers
+    eachToUcs2: (arr) -> arr.map( (e) -> e.toUcs2 )
+    eachToHex: (arr) -> arr.map( (e) -> e.toString(16) )
+    eachToUpperU: (arr) -> arr.map( (e) -> e.toUpperU )
+
   # rowmaker = (id, type, name, coll, base)->
   #   row = $("<tr/>")
   #   [tid, cid] = [TYPES[type], COLLS[coll]]
@@ -72,7 +78,7 @@ jQuery ($)->
     results = []
     results.push $("#SequencesHeader").render({'id': genid})
     for s in seqs
-      q = {'seq': bases.concat(s['q']), 'name': s['n'], 'class': genid, 'isSeq': true}
+      q = {'seq': bases.concat(s['q']), 'name': s['n'], 'klass': genid, 'isSeq': true} # 'class' will break JsRender?
       results.push $("#rowMaker").render(q)
     results
   fetchChar = ->
@@ -82,7 +88,7 @@ jQuery ($)->
     if cp?
       uhex = cp.toUpperU()
       [chunk, key] = [uhex.slice(0, uhex.length-2), uhex.slice(-2)]
-      $.ajax {
+      $.ajax
         type: "get"
         url: "./chars/#{chunk}.json"
         contentType: 'application/json'
@@ -93,17 +99,26 @@ jQuery ($)->
           if r?
             [id, type, name, vars, coll, seq] = ["i", "t", "n", r["V"], "c", "S"]
             list = $("#charlist").empty()
-            list.append $("#rowMaker").render({'id': cp, 'type': r[type], 'name': r[name], 'coll': BASE_IDX})
-            list.append.apply(this, renderSeq(r[seq], [cp])) if r[seq]
+            list.append $("#rowMaker").render
+              'id': cp
+              'type': TYPES[r[type]] or r[type]
+              'name': r[name]
+              'cid': "base"
+            list.append renderSeq(r[seq], [cp]).join('') if r[seq]
             basechar = if TYPES[r[type]] == "compat" then vars[0][id] else cp
             for v in vars
               continue if $.inArray(v[coll], filters) >= 0
-              list.append rowmaker({'id': v[id], 'type': v[type], 'name': v[name], 'coll': v[coll], 'base': basechar})
-              list.append.apply(this, renderSeq(v[seq], [cp, v[id]]) ) if v[seq]
-            new Clipboard '.clipboard', {
+              list.append $("#rowMaker").render
+                'id': v[id]
+                'type': TYPES[v[type]] or v[type]
+                'name': v[name]
+                'cid': COLLS[v[coll]]
+                'coll': v[coll]
+                'base': basechar
+              list.append renderSeq(v[seq], [cp, v[id]]).join('') if v[seq]
+            new Clipboard '.clipboard',
               target: (trigger)->
                 trigger.previousElementSibling
-            }
             $("#notfound").hide()
             $("#found").show()
           else
@@ -113,7 +128,6 @@ jQuery ($)->
           $("#initial").hide()
           $("#found").hide()
           $("#notfound").show()
-      }
   analyze = (id)->
     text = $(id).val()
     split = []
@@ -134,10 +148,9 @@ jQuery ($)->
     $("#breakdown-body").html tags.join("+")
     return
   insertToBox = (string)->
-    $("#bigbox").selection('replace', {
+    $("#bigbox").selection 'replace',
       text: string,
       caret: 'end'
-    })
     $("#bigbox").change()
     undefined
 
@@ -184,7 +197,7 @@ jQuery ($)->
     insertToBox variant
     return false
 
-  $(document).on 'click', '.seq-header' ->
+  $(document).on 'click', '.seq-header', ->
     $(this).nextUntil(":not(.collapsible)").slideToggle()
 
   former = $("#bigbox").val()
