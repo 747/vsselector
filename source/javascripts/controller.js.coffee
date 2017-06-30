@@ -184,6 +184,9 @@ jQuery ($)->
     insertToBox variant
     return false
 
+  $(document).on 'click', '.seq-header' ->
+    $(this).nextUntil(":not(.collapsible)").slideToggle()
+
   former = $("#bigbox").val()
   $("#bigbox").on "change keyup paste", ->
     current = $(this).val()

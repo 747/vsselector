@@ -5,7 +5,7 @@ require 'singleton'
 
 DATAPATH = "data"
 CHARPATH = "chars-source"
-FINALPATH = "build/ivd/chars"
+FINALPATH = "build/chars"
 
 TYPESJSON = JSON.load(File.open("#{DATAPATH}/types.json", "r:utf-8").read)
 TYPES = TYPESJSON["categories"].map(&:intern)
