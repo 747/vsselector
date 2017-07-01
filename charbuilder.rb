@@ -246,6 +246,8 @@ end
   # 0x1F1A5 = 0x1F1E6 - "A".ord
   get_char[0x1F1A5 + letter.ord, :emoji, "REGIONAL INDICATOR SYMBOL LETTER #{letter}"]
 end
+# And FLAG
+get_char[0x1F3F4, :emoji, "WAVING BLACK FLAG"]
 
 # In current logic, some emoji non-variant sequences depend on the product of this file
 # So this MUST be processed first!
@@ -280,8 +282,8 @@ open("#{DATAPATH}/emoji-sequences.txt", "r:utf-8") do |emj|
     case line
     when /^#\s*Version:\s*(\d[\d\.]*\d|\d)*/
       versions[:emo] = $1
-    when /^#\s*Emoji (Keycap|Flag|Modifier) Sequence/
-      trailing = true if %w(Keycap Flag).include? $1
+    when /^#\s*Emoji (Keycap|Flag|Tag|Modifier) Sequence/
+      trailing = true if %w(Keycap Flag Tag).include? $1
       inrange = true
     when /^#\s*={5,}/
       inrange = false

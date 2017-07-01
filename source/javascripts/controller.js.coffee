@@ -16,7 +16,7 @@ Number::toUcs2 = ->
 Number::toLowerU = -> sprintf "%04x", @
 Number::toUpperU = -> sprintf "%04X", @
 Number::isFunctionalCodePoint = ->
-  if 0xFE00 <= @ <= 0xFE0F or 0xE0100 <= @ <= 0xE01EF or 0x180B <= @ <= 0x180D or 0x1F3FB <= @ <= 0x1F3FF
+  if 0xFE00 <= @ <= 0xFE0F or 0xE0100 <= @ <= 0xE01EF or 0x180B <= @ <= 0x180D or 0x1F3FB <= @ <= 0x1F3FF or `this == 0x200D` # force JS '=='
     return true
   else
     return false
@@ -118,7 +118,7 @@ jQuery ($)->
               list.append renderSeq(v[seq], [cp, v[id]]).join('') if v[seq]
             new Clipboard '.clipboard',
               target: (trigger)->
-                trigger.previousElementSibling
+                $(trigger).parent().prev().children("input").first().get(0)
             $("#notfound").hide()
             $("#found").show()
           else
@@ -193,7 +193,7 @@ jQuery ($)->
     return false
 
   $(document).on 'click', '.insert', ->
-    variant = $(this).next().val()
+    variant = $(this).parent().next().children("input").first().val()
     insertToBox variant
     return false
 
