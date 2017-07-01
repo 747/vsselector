@@ -36,9 +36,9 @@ String::searchCodePoint = ->
 jQuery ($)->
   $.views.settings.debugMode true
   $.views.helpers
-    eachToUcs2: (arr) -> arr.map( (e) -> e.toUcs2 )
+    eachToUcs2: (arr) -> arr.map( (e) -> e.toUcs2() )
     eachToHex: (arr) -> arr.map( (e) -> e.toString(16) )
-    eachToUpperU: (arr) -> arr.map( (e) -> e.toUpperU )
+    eachToUpperU: (arr) -> arr.map( (e) -> e.toUpperU() )
 
   # rowmaker = (id, type, name, coll, base)->
   #   row = $("<tr/>")

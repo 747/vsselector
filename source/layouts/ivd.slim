@@ -10,26 +10,32 @@ html lang='ja'
       COLLS = [#{data.types.collections.map{|t|%Q("#{t}")}.join(',')}];
       // BASE_IDX = COLLS.indexOf("base");
     | <script type="text/x-jsrender" id="rowMaker">
-        <tr{{if isSeq}} class="is-small collapsible {{>klass}}"{{/if}}>
+        <tr{{if isSeq}} class="content message is-small is-warning collapsible {{>klass}}"{{/if}}>
           {{* cpa = cid === "parent"; }}
-          <td class="field has-addons has-addons-centered">
-            <div class="control">
-              <button class="button is-dark insert">↑挿入</button>
-              <input type="text" class="autocopy input has-text-centered
-              {{if coll === "Adobe-Japan1"}}
-                ivs-aj1
-              {{else coll === "Moji_Joho"}}
-                ivs-mj
-              {{else coll === "Hanyo-Denshi" || coll === "MSARG"}}
-                ivs-etc
-              {{/if}}"
-              {{if isSeq}}
-              value="{{:~eachToUcs2(seq).join('')}}"
-              {{else}}
-              value="{{if base && !cpa}}{{:base.toUcs2()}}{{/if}}{{:id.toUcs2()}}"
-              {{/if}}
-              >
-              <button class="button clipboard is-primary">コピー</button>
+          <td>
+            <div class="field has-addons has-addons-centered">
+              <div class="control">
+                <button class="button is-dark insert{{if isSeq}} is-small{{/if}}">↑挿入</button>
+              </div>
+              <div class="control">
+                <input type="text" class="autocopy input has-text-centered{{if isSeq}} is-small{{/if}}
+                {{if coll === "Adobe-Japan1"}}
+                  ivs-aj1
+                {{else coll === "Moji_Joho"}}
+                  ivs-mj
+                {{else coll === "Hanyo-Denshi" || coll === "MSARG"}}
+                  ivs-etc
+                {{/if}}"
+                {{if isSeq}}
+                value="{{:~eachToUcs2(seq).join('')}}"
+                {{else}}
+                value="{{if base && !cpa}}{{:base.toUcs2()}}{{/if}}{{:id.toUcs2()}}"
+                {{/if}}
+                >
+              </div>
+              <div class="control">
+                <button class="button clipboard is-primary{{if isSeq}} is-small{{/if}}">コピー</button>
+              </div>
             </div>
           </td>
           {{if isSeq}}
@@ -42,7 +48,7 @@ html lang='ja'
           <td>
             <img class="glyph" src="
             {{if type === "ideograph" || type === "compat"}}
-              http://glyphwiki.org/glyph/u{{if base and !cpa}}{{:base.toLowerU()}}-u{{/if}} {{:id.toLowerU()}}.svg
+              http://glyphwiki.org/glyph/u{{if base and !cpa}}{{:base.toLowerU()}}-u{{/if}}{{:id.toLowerU()}}.svg
             {{else type === "emoji"}}
               ./images/te/{{if base}}{{:base.toLowerU()}}-{{/if}}{{:id.toLowerU()}}.svg
             {{else}}
@@ -61,8 +67,8 @@ html lang='ja'
         </tr>
       </script>
     | <script type="text/x-jsrender" id="SequencesHeader">
-        <tr class="is-small">
-          <td colspan="6" id="{{>id}}" class="seq-header">この字から始まるシークエンス</td>
+        <tr id="{{>id}}" class="content message is-small is-warning seq-header">
+          <td colspan="6" class="message-header">この字から始まるシークエンス</td>
         </tr>
       </script>
     / = javascript_include_tag "jquery-1.12.1.min", "jquery-ui.min", "sprintf.min", "controller"
@@ -128,14 +134,21 @@ html lang='ja'
             li: a.toggler data-tab="#util" Utils
     / hr
     #query.level
-      p.level-item.control.has-addons.has-addons-centered
-        input#searchbox.input type='text' name='char' placeholder="例：邊、270B…"
-        button#search.button.is-primary type='submit' value='search'
-          span#searchlabel 登録済の異体字を検索
-        - data.knownnames.ivdcollections.each do |ivd|
-          label.checkbox
-            input type='checkbox' class='search-filter' name=ivd checked=true
-            =< ivd
+      .level-item
+        .field.has-addons
+          p.control
+            input#searchbox.input type='text' name='char' placeholder="例：邊、270B…"
+          p.control
+            button#search.button.is-primary type='submit' value='search'
+              span#searchlabel 登録済の異体字を検索
+      .field.level-item.is-horizontal
+        .field-label: label.label: span#selectcol コレクションを指定
+        .field-body
+          .field.is-grouped
+            - data.knownnames.ivdcollections.each do |ivd|
+              label.control.checkbox
+                input type='checkbox' class='search-filter' name=ivd checked=true
+                =< ivd
     #entries
       #initial.message.is-info: p.has-text-centered.message-body 以下に検索結果が表示されます
       #notfound.message.is-warning: p.has-text-centered.message-body 見つかりませんでした

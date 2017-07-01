@@ -26,8 +26,13 @@
 #found, #notfound, .collapsible
   display: none
 
+// table style fix
 table td, table th
-  vertical-align: middle
+  vertical-align: middle !important
+table .message, table .message-header, table .message-body
+  border-radius: 0
+td.message-header
+  display: table-cell
 // why .sass syntax no multiline maps
 $cols-group: (1 center, 2 center, 3 center, 4 center, 5 left, 6 left)
 @each $col in $cols-group
@@ -36,8 +41,8 @@ $cols-group: (1 center, 2 center, 3 center, 4 center, 5 left, 6 left)
     text-align: nth($col, 2)
 
 // button alignment fix
-table .control:not(:last-child)
-  margin: 5px auto
+td field:not(:last-child)
+  margin-bottom: auto
 #about .button
   vertical-align: baseline
 
@@ -50,6 +55,8 @@ dt
 .glyph
   height: 2.4em
   width: auto
+  .is-small &
+    height: 1.8em
 .transparent
   background: transparent
 .autocopy
