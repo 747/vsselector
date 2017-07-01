@@ -311,7 +311,7 @@ open("#{DATAPATH}/emoji-sequences.txt", "r:utf-8") do |emj|
       if trailing
         the_var = char.get_var(var)
         adopter = the_var || char
-        extra.unshift var unless adopter
+        extra.unshift var unless the_var
         adopter.seq Sequence.new(extra, desc)
       else
         char.var Variant.new(var, category, :modifier, mname)
@@ -348,7 +348,7 @@ open("#{DATAPATH}/emoji-zwj-sequences.txt", "r:utf-8") do |ezs|
 
       the_var = char.get_var(var)
       adopter = the_var || char
-      extra.unshift var unless adopter
+      extra.unshift var unless the_var
       adopter.seq Sequence.new(extra, desc)
     end
   }

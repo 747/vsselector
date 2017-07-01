@@ -48,7 +48,7 @@ html lang='ja'
           <td>
             <img class="glyph" src="
             {{if type === "ideograph" || type === "compat"}}
-              http://glyphwiki.org/glyph/u{{if base and !cpa}}{{:base.toLowerU()}}-u{{/if}}{{:id.toLowerU()}}.svg
+              http://glyphwiki.org/glyph/u{{if base && !cpa}}{{:base.toLowerU()}}-u{{/if}}{{:id.toLowerU()}}.svg
             {{else type === "emoji"}}
               ./images/te/{{if base}}{{:base.toLowerU()}}-{{/if}}{{:id.toLowerU()}}.svg
             {{else}}
