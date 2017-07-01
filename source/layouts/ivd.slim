@@ -11,7 +11,6 @@ html lang='ja'
       // BASE_IDX = COLLS.indexOf("base");
     | <script type="text/x-jsrender" id="rowMaker">
         <tr{{if isSeq}} class="content message is-small is-warning collapsible {{>klass}}"{{/if}}>
-          {{* cpa = cid === "parent"; }}
           <td>
             <div class="field has-addons has-addons-centered">
               <div class="control">
@@ -29,7 +28,7 @@ html lang='ja'
                 {{if isSeq}}
                 value="{{:~eachToUcs2(seq).join('')}}"
                 {{else}}
-                value="{{if base && !cpa}}{{:base.toUcs2()}}{{/if}}{{:id.toUcs2()}}"
+                value="{{if base && base !== id}}{{:base.toUcs2()}}{{/if}}{{:id.toUcs2()}}"
                 {{/if}}
                 >
               </div>
@@ -48,9 +47,9 @@ html lang='ja'
           <td>
             <img class="glyph" src="
             {{if type === "ideograph" || type === "compat"}}
-              http://glyphwiki.org/glyph/u{{if base && !cpa}}{{:base.toLowerU()}}-u{{/if}}{{:id.toLowerU()}}.svg
+              http://glyphwiki.org/glyph/u{{if base && base !== id}}{{:base.toLowerU()}}-u{{/if}}{{:id.toLowerU()}}.svg
             {{else type === "emoji"}}
-              ./images/te/{{if base}}{{:base.toLowerU()}}-{{/if}}{{:id.toLowerU()}}.svg
+              ./images/te/{{if base}}{{:base.toString(16)}}-{{/if}}{{:id.toString(16)}}.svg
             {{else}}
               ./images/noimage.png
             {{/if}}">
