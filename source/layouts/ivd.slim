@@ -70,6 +70,9 @@ html lang='ja'
           <td colspan="6" class="message-header">この字から始まるシークエンス</td>
         </tr>
       </script>
+    | <script type="text/x-jsrender" id="CharTag">
+        <span class="tag {{:color}}" data-pos="{{:pos}}" data-width="{{:width}}">{{>cp}}<button class="delete delete-char"></button></span>
+      </script>
     / = javascript_include_tag "jquery-1.12.1.min", "jquery-ui.min", "sprintf.min", "controller"
     = javascript_include_tag("jquery-1.12.1.min", "jquery-ui.min", "jsrender.min", "sprintf.min", "jquery.selection", "clipboard.min", "controller").gsub('src="/', 'src="./')
     / ^ very dirty, need work
@@ -88,6 +91,12 @@ html lang='ja'
         textarea#bigbox.textarea.is-fullwidth placeholder="#{"\u{1F4DD}"}..."
         #breakdown.message.is-warning.is-fullwidth
           p#breakdown-body.message-body
+        .level
+          .level-left
+          p#shares.content.is-small.level-right
+            span#to_share.level-item 内容をシェア
+            a#twitter-share.level-item: img.glyph src="images/Twitter_Social_Icon_Circle_Color.svg" alt="Twitter"
+            a#line-it.level-item: img.glyph src="images/share-d.png" alt="LINE"
       #picker.column.is-5.message.is-success
         - u = -> cp { "U+#{"%04X" % cp}" }
         p.message-header ←クリックで挿入

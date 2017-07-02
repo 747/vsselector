@@ -16,7 +16,11 @@ Number::toUcs2 = ->
 Number::toLowerU = -> sprintf "%04x", @
 Number::toUpperU = -> sprintf "%04X", @
 Number::isFunctionalCodePoint = ->
-  if 0xFE00 <= @ <= 0xFE0F or 0xE0100 <= @ <= 0xE01EF or 0x180B <= @ <= 0x180D or 0x1F3FB <= @ <= 0x1F3FF or `this == 0x200D` # force JS '=='
+  if 0xFE00 <= @ <= 0xFE0F or
+     0xE0100 <= @ <= 0xE01EF or
+     0x180B <= @ <= 0x180D or
+     0x1F3FB <= @ <= 0x1F3FF or
+     `this == 0x200D` or `this == 0xE007F` # force JS '=='
     return true
   else
     return false
@@ -34,45 +38,12 @@ String::searchCodePoint = ->
     return @getFirstCodePoint()
 
 jQuery ($)->
-  $.views.settings.debugMode true
+  # $.views.settings.debugMode true
   $.views.helpers
     eachToUcs2: (arr) -> arr.map( (e) -> e.toUcs2() )
     eachToHex: (arr) -> arr.map( (e) -> e.toString(16) )
     eachToUpperU: (arr) -> arr.map( (e) -> e.toUpperU() )
 
-  # rowmaker = (id, type, name, coll, base)->
-  #   row = $("<tr/>")
-  #   [tid, cid] = [TYPES[type], COLLS[coll]]
-  #   cpa = cid == 'parent'
-  #   if tid == 'ideograph' or tid == 'compat'
-  #     src = "http://glyphwiki.org/glyph/u#{if base and !cpa then "#{base.toLowerU()}-u" else ""}#{id.toLowerU()}.svg"
-  #   else if tid == 'emoji'
-  #     src = "./images/e1/#{if base then "#{base.toLowerU()}-" else ""}#{id.toLowerU()}.svg"
-  #   else
-  #     src = "./images/noimage.png"
-  #
-  #   if cid
-  #     collstr = "<span class=\"#{cid}\">#{cid}</span>"
-  #   else
-  #     collstr = coll
-  #
-  #   if coll is 'Adobe-Japan1'
-  #     fontclass = 'ivs-aj1'
-  #   else if coll is 'Moji_Joho'
-  #     fontclass = 'ivs-mj'
-  #   else if coll is 'Hanyo-Denshi' or coll is 'MSARG'
-  #     fontclass = 'ivs-etc'
-  #
-  #   cols = [
-  #     $("<td class=\"control has-addons has-addons-centered\"><button class=\"button is-dark insert\">↑挿入</button><input type=\"text\" class=\"autocopy input has-text-centered #{fontclass}\" value=\"#{if base and !cpa then base.toUcs2() else ""}#{id.toUcs2()}\"><button class=\"button clipboard is-primary\">コピー</button></td>")
-  #     $("<td>#{"U+#{if base then base.toUpperU() else id.toUpperU()}"}</td>")
-  #     $("<td>#{if base then "U+#{id.toUpperU()}" else "-"}</td>")
-  #     $("<td><img class=\"glyph\" src=\"#{src}\"></td>")
-  #     $("<td>#{collstr}</td>")
-  #     $("<td>#{name}</td>")
-  #   ]
-  #   row.append col for col in cols
-  #   row
   renderSeq = (seqs, bases)->
     genid = bases.join('-')
     results = []
@@ -81,7 +52,9 @@ jQuery ($)->
       q = {'seq': bases.concat(s['q']), 'name': s['n'], 'klass': genid, 'isSeq': true} # 'class' will break JsRender?
       results.push $("#rowMaker").render(q)
     results
+
   fetchChar = ->
+    $("#search").addClass("is-loading")
     cp = $("#searchbox").val().toString().searchCodePoint()
     filters = $(".search-filter:not(:checked)").map( ()-> $(this).attr("name") ).get()
 
@@ -128,6 +101,9 @@ jQuery ($)->
           $("#initial").hide()
           $("#found").hide()
           $("#notfound").show()
+    $("#search").removeClass("is-loading")
+    false
+
   analyze = (id)->
     text = $(id).val()
     split = []
@@ -137,16 +113,21 @@ jQuery ($)->
       split.push first
       text = text.substring(range)
     return split
+
   charlistmaker = (seq)->
     tags = []
     pos = 0
     for code in seq
       width = if code > 0xFFFF then 2 else 1
-      color = if code.isFunctionalCodePoint() then 'is-success' else 'is-info'
-      tags.push "<span class=\"tag #{color}\" data-pos=\"#{pos}\" data-width=\"#{width}\">#{code.toUpperU()}<button class=\"delete delete-char\"></button></span>"
+      tags.push $("#CharTag").render
+        color: if code.isFunctionalCodePoint() then 'is-success' else 'is-info',
+        pos: pos,
+        width: width,
+        cp: code.toUpperU()
       pos += width
     $("#breakdown-body").html tags.join("+")
     return
+
   insertToBox = (string)->
     $("#bigbox").selection 'replace',
       text: string,
@@ -184,6 +165,18 @@ jQuery ($)->
     insertToBox cpdata.toUcs2()
     return false
 
+  # Social buttons
+  $("#twitter-share").click ->
+    url = encodeURIComponent(window.location.href)
+    content = encodeURIComponent($("#bigbox").val())
+    tag = encodeURIComponent("異体字セレクタセレクタ")
+    window.open "https://twitter.com/intent/tweet?text=#{content}&url=#{url}&hashtags=#{tag}", "tweet", "width=550,height=480,location=yes,resizable=yes,scrollbars=yes"
+    false
+  $("#line-it").click ->
+    message = encodeURIComponent "#{$("#bigbox").val()} #{window.location.href}"
+    window.open "//line.me/R/msg/text/?#{message}"
+    false
+
   $(document).on 'click', '.delete-char', ->
     tagdata = $(this).closest(".tag").data()
     if $.isNumeric(tagdata['pos']) and $.isNumeric(tagdata['width'])
@@ -197,12 +190,13 @@ jQuery ($)->
     insertToBox variant
     return false
 
-  $(document).on 'click', '.seq-header', ->
+  $(document).on 'click touchend', '.seq-header', -> # iOS doesn't recognize click on td?
     $(this).nextUntil(":not(.collapsible)").slideToggle()
 
-  former = $("#bigbox").val()
+  former = ""
   $("#bigbox").on "change keyup paste", ->
     current = $(this).val()
     return if current == former
     former = current
     charlistmaker analyze("#bigbox")
+  $("#bigbox").change() # trigger once on startup
