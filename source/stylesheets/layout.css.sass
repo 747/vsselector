@@ -54,11 +54,24 @@ dt
 .content dl:not(:last-child)
   margin-bottom: 1em
 
+$glyph-m: 2.4em
+$glyph-s: 1.8em
 .glyph
-  height: 2.4em
+  height: $glyph-m
   width: auto
   .is-small &
-    height: 1.8em
+    height: $glyph-s
+@media all and (-ms-high-contrast:none)
+  .glyph
+    width: $glyph-m
+    .is-small &
+      width: $glyph-s
+  *::-ms-backdrop, .glyph
+    width: $glyph-m
+  *::-ms-backdrop, .is-small .glyph
+    width: $glyph-s
+
+
 .transparent
   background: transparent
 .autocopy

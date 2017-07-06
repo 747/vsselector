@@ -2,6 +2,7 @@ doctype 5
 html lang='ja'
   head
     meta charset='utf-8'
+    meta name='viewport' content='width=device-width,initial-scale=1.0,minimum-scale=1.0'
     title = current_page.data.title
     = stylesheet_link_tag("layout").gsub('href="/', 'href="./')
     / ^ very dirty, need work
@@ -85,7 +86,7 @@ html lang='ja'
               p.nav-item.is-brand = current_page.data.title
             .nav-right.nav-menu
               a.nav-item.modality data-target="#about" 説明
-              a.nav-item href="https://github.com/747/vsselector" GitHub
+              a.nav-item href="https://github.com/747/vsselector" target="_blank" GitHub
     #workspace.columns.section.transparent
       #viewer.column.is-7
         textarea#bigbox.textarea.is-fullwidth placeholder="#{"\u{1F4DD}"}..."
@@ -156,14 +157,12 @@ html lang='ja'
               button#search.button.is-primary type='submit' value='search'
                 span#searchlabel 登録済の異体字を検索
       .level-right
-        .field.level-item.is-horizontal
-          .field-label: label.label: span#selectcol コレクションを指定
-          .field-body
-            .field.is-grouped
-              - data.knownnames.ivdcollections.each do |ivd|
-                label.control.checkbox
-                  input type='checkbox' class='search-filter' name=ivd checked=true
-                  =< ivd
+        .field.level-item.is-grouped
+          label.label.control: span#selectcol コレクションを指定
+          - data.knownnames.ivdcollections.each do |ivd|
+            label.control.checkbox
+              input type='checkbox' class='search-filter' name=ivd checked=true
+              =< ivd
     #entries
       #initial.message.is-info: p.has-text-centered.message-body 以下に検索結果が表示されます
       #notfound.message.is-warning: p.has-text-centered.message-body 見つかりませんでした
