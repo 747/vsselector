@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ldml SYSTEM "../../common/dtd/ldml.dtd">
+<!-- Copyright © 1991-2017 Unicode, Inc.
+For terms of use, see http://www.unicode.org/copyright.html
+Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
+CLDR data files are interpreted according to the LDML specification (http://unicode.org/reports/tr35/)
+
+Derived short names and annotations, using GenerateDerivedAnnotations.java. See warnings in /annotations/ file.
+-->
+<ldml>
+	<identity>
+		<version number="$Revision: 13710 $"/>
+		<language type="en"/>
+		<territory type="001"/>
+	</identity>
+	<annotations>
+		<annotation cp="🎅🏻">Christmas | Father Christmas | celebration | claus | father | santa | light skin tone</annotation>
+		<annotation cp="🎅🏻" type="tts">Father Christmas: light skin tone</annotation>
+		<annotation cp="🎅🏼">Christmas | Father Christmas | celebration | claus | father | santa | medium-light skin tone</annotation>
+		<annotation cp="🎅🏼" type="tts">Father Christmas: medium-light skin tone</annotation>
+		<annotation cp="🎅🏽">Christmas | Father Christmas | celebration | claus | father | santa | medium skin tone</annotation>
+		<annotation cp="🎅🏽" type="tts">Father Christmas: medium skin tone</annotation>
+		<annotation cp="🎅🏾">Christmas | Father Christmas | celebration | claus | father | santa | medium-dark skin tone</annotation>
+		<annotation cp="🎅🏾" type="tts">Father Christmas: medium-dark skin tone</annotation>
+		<annotation cp="🎅🏿">Christmas | Father Christmas | celebration | claus | father | santa | dark skin tone</annotation>
+		<annotation cp="🎅🏿" type="tts">Father Christmas: dark skin tone</annotation>
+		<annotation cp="🤶🏻">Christmas | Mother Christmas | Mrs. | celebration | claus | mother | light skin tone</annotation>
+		<annotation cp="🤶🏻" type="tts">Mother Christmas: light skin tone</annotation>
+		<annotation cp="🤶🏼">Christmas | Mother Christmas | Mrs. | celebration | claus | mother | medium-light skin tone</annotation>
+		<annotation cp="🤶🏼" type="tts">Mother Christmas: medium-light skin tone</annotation>
+		<annotation cp="🤶🏽">Christmas | Mother Christmas | Mrs. | celebration | claus | mother | medium skin tone</annotation>
+		<annotation cp="🤶🏽" type="tts">Mother Christmas: medium skin tone</annotation>
+		<annotation cp="🤶🏾">Christmas | Mother Christmas | Mrs. | celebration | claus | mother | medium-dark skin tone</annotation>
+		<annotation cp="🤶🏾" type="tts">Mother Christmas: medium-dark skin tone</annotation>
+		<annotation cp="🤶🏿">Christmas | Mother Christmas | Mrs. | celebration | claus | mother | dark skin tone</annotation>
+		<annotation cp="🤶🏿" type="tts">Mother Christmas: dark skin tone</annotation>
+		<annotation cp="🚴🏻">bicycle | biking | cyclist | person cycling | light skin tone</annotation>
+		<annotation cp="🚴🏻" type="tts">person cycling: light skin tone</annotation>
+		<annotation cp="🚴🏼">bicycle | biking | cyclist | person cycling | medium-light skin tone</annotation>
+		<annotation cp="🚴🏼" type="tts">person cycling: medium-light skin tone</annotation>
+		<annotation cp="🚴🏽">bicycle | biking | cyclist | person cycling | medium skin tone</annotation>
+		<annotation cp="🚴🏽" type="tts">person cycling: medium skin tone</annotation>
+		<annotation cp="🚴🏾">bicycle | biking | cyclist | person cycling | medium-dark skin tone</annotation>
+		<annotation cp="🚴🏾" type="tts">person cycling: medium-dark skin tone</annotation>
+		<annotation cp="🚴🏿">bicycle | biking | cyclist | person cycling | dark skin tone</annotation>
+		<annotation cp="🚴🏿" type="tts">person cycling: dark skin tone</annotation>
+		<annotation cp="🚴🏻‍♂">bicycle | biking | cyclist | man | man cycling | light skin tone</annotation>
+		<annotation cp="🚴🏻‍♂" type="tts">man cycling: light skin tone</annotation>
+		<annotation cp="🚴🏼‍♂">bicycle | biking | cyclist | man | man cycling | medium-light skin tone</annotation>
+		<annotation cp="🚴🏼‍♂" type="tts">man cycling: medium-light skin tone</annotation>
+		<annotation cp="🚴🏽‍♂">bicycle | biking | cyclist | man | man cycling | medium skin tone</annotation>
+		<annotation cp="🚴🏽‍♂" type="tts">man cycling: medium skin tone</annotation>
+		<annotation cp="🚴🏾‍♂">bicycle | biking | cyclist | man | man cycling | medium-dark skin tone</annotation>
+		<annotation cp="🚴🏾‍♂" type="tts">man cycling: medium-dark skin tone</annotation>
+		<annotation cp="🚴🏿‍♂">bicycle | biking | cyclist | man | man cycling | dark skin tone</annotation>
+		<annotation cp="🚴🏿‍♂" type="tts">man cycling: dark skin tone</annotation>
+		<annotation cp="🚴🏻‍♀">bicycle | biking | cyclist | woman | woman cycling | light skin tone</annotation>
+		<annotation cp="🚴🏻‍♀" type="tts">woman cycling: light skin tone</annotation>
+		<annotation cp="🚴🏼‍♀">bicycle | biking | cyclist | woman | woman cycling | medium-light skin tone</annotation>
+		<annotation cp="🚴🏼‍♀" type="tts">woman cycling: medium-light skin tone</annotation>
+		<annotation cp="🚴🏽‍♀">bicycle | biking | cyclist | woman | woman cycling | medium skin tone</annotation>
+		<annotation cp="🚴🏽‍♀" type="tts">woman cycling: medium skin tone</annotation>
+		<annotation cp="🚴🏾‍♀">bicycle | biking | cyclist | woman | woman cycling | medium-dark skin tone</annotation>
+		<annotation cp="🚴🏾‍♀" type="tts">woman cycling: medium-dark skin tone</annotation>
+		<annotation cp="🚴🏿‍♀">bicycle | biking | cyclist | woman | woman cycling | dark skin tone</annotation>
+		<annotation cp="🚴🏿‍♀" type="tts">woman cycling: dark skin tone</annotation>
+	</annotations>
+</ldml>

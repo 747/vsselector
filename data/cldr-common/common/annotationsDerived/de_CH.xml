@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ldml SYSTEM "../../common/dtd/ldml.dtd">
+<!-- Copyright © 1991-2017 Unicode, Inc.
+For terms of use, see http://www.unicode.org/copyright.html
+Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
+CLDR data files are interpreted according to the LDML specification (http://unicode.org/reports/tr35/)
+
+Derived short names and annotations, using GenerateDerivedAnnotations.java. See warnings in /annotations/ file.
+-->
+<ldml>
+	<identity>
+		<version number="$Revision: 13710 $"/>
+		<language type="de"/>
+		<territory type="CH"/>
+	</identity>
+	<annotations>
+		<annotation cp="🚶🏻">Fussgänger(in) | gehen | gehend | wandern | helle Hautfarbe</annotation>
+		<annotation cp="🚶🏻" type="tts">Fussgänger(in): helle Hautfarbe</annotation>
+		<annotation cp="🚶🏼">Fussgänger(in) | gehen | gehend | wandern | mittelhelle Hautfarbe</annotation>
+		<annotation cp="🚶🏼" type="tts">Fussgänger(in): mittelhelle Hautfarbe</annotation>
+		<annotation cp="🚶🏽">Fussgänger(in) | gehen | gehend | wandern | mittlere Hautfarbe</annotation>
+		<annotation cp="🚶🏽" type="tts">Fussgänger(in): mittlere Hautfarbe</annotation>
+		<annotation cp="🚶🏾">Fussgänger(in) | gehen | gehend | wandern | mitteldunkle Hautfarbe</annotation>
+		<annotation cp="🚶🏾" type="tts">Fussgänger(in): mitteldunkle Hautfarbe</annotation>
+		<annotation cp="🚶🏿">Fussgänger(in) | gehen | gehend | wandern | dunkle Hautfarbe</annotation>
+		<annotation cp="🚶🏿" type="tts">Fussgänger(in): dunkle Hautfarbe</annotation>
+		<annotation cp="🚶🏻‍♂">Fussgänger | Mann | Spaziergang | gehen | helle Hautfarbe</annotation>
+		<annotation cp="🚶🏻‍♂" type="tts">Fussgänger: helle Hautfarbe</annotation>
+		<annotation cp="🚶🏼‍♂">Fussgänger | Mann | Spaziergang | gehen | mittelhelle Hautfarbe</annotation>
+		<annotation cp="🚶🏼‍♂" type="tts">Fussgänger: mittelhelle Hautfarbe</annotation>
+		<annotation cp="🚶🏽‍♂">Fussgänger | Mann | Spaziergang | gehen | mittlere Hautfarbe</annotation>
+		<annotation cp="🚶🏽‍♂" type="tts">Fussgänger: mittlere Hautfarbe</annotation>
+		<annotation cp="🚶🏾‍♂">Fussgänger | Mann | Spaziergang | gehen | mitteldunkle Hautfarbe</annotation>
+		<annotation cp="🚶🏾‍♂" type="tts">Fussgänger: mitteldunkle Hautfarbe</annotation>
+		<annotation cp="🚶🏿‍♂">Fussgänger | Mann | Spaziergang | gehen | dunkle Hautfarbe</annotation>
+		<annotation cp="🚶🏿‍♂" type="tts">Fussgänger: dunkle Hautfarbe</annotation>
+		<annotation cp="🚶🏻‍♀">Frau | Fussgängerin | Spaziergang | gehen | helle Hautfarbe</annotation>
+		<annotation cp="🚶🏻‍♀" type="tts">Fussgängerin: helle Hautfarbe</annotation>
+		<annotation cp="🚶🏼‍♀">Frau | Fussgängerin | Spaziergang | gehen | mittelhelle Hautfarbe</annotation>
+		<annotation cp="🚶🏼‍♀" type="tts">Fussgängerin: mittelhelle Hautfarbe</annotation>
+		<annotation cp="🚶🏽‍♀">Frau | Fussgängerin | Spaziergang | gehen | mittlere Hautfarbe</annotation>
+		<annotation cp="🚶🏽‍♀" type="tts">Fussgängerin: mittlere Hautfarbe</annotation>
+		<annotation cp="🚶🏾‍♀">Frau | Fussgängerin | Spaziergang | gehen | mitteldunkle Hautfarbe</annotation>
+		<annotation cp="🚶🏾‍♀" type="tts">Fussgängerin: mitteldunkle Hautfarbe</annotation>
+		<annotation cp="🚶🏿‍♀">Frau | Fussgängerin | Spaziergang | gehen | dunkle Hautfarbe</annotation>
+		<annotation cp="🚶🏿‍♀" type="tts">Fussgängerin: dunkle Hautfarbe</annotation>
+		<annotation cp="🖖🏻">Finger | Hand | Spock | Vulkanier(in) | Vulkanischer Gruss | vulkanisch | helle Hautfarbe</annotation>
+		<annotation cp="🖖🏻" type="tts">Vulkanischer Gruss: helle Hautfarbe</annotation>
+		<annotation cp="🖖🏼">Finger | Hand | Spock | Vulkanier(in) | Vulkanischer Gruss | vulkanisch | mittelhelle Hautfarbe</annotation>
+		<annotation cp="🖖🏼" type="tts">Vulkanischer Gruss: mittelhelle Hautfarbe</annotation>
+		<annotation cp="🖖🏽">Finger | Hand | Spock | Vulkanier(in) | Vulkanischer Gruss | vulkanisch | mittlere Hautfarbe</annotation>
+		<annotation cp="🖖🏽" type="tts">Vulkanischer Gruss: mittlere Hautfarbe</annotation>
+		<annotation cp="🖖🏾">Finger | Hand | Spock | Vulkanier(in) | Vulkanischer Gruss | vulkanisch | mitteldunkle Hautfarbe</annotation>
+		<annotation cp="🖖🏾" type="tts">Vulkanischer Gruss: mitteldunkle Hautfarbe</annotation>
+		<annotation cp="🖖🏿">Finger | Hand | Spock | Vulkanier(in) | Vulkanischer Gruss | vulkanisch | dunkle Hautfarbe</annotation>
+		<annotation cp="🖖🏿" type="tts">Vulkanischer Gruss: dunkle Hautfarbe</annotation>
+		<annotation cp="🤘🏻">Finger | Hand | Hörner | Rock | Teufel | Teufelsgruss | helle Hautfarbe</annotation>
+		<annotation cp="🤘🏻" type="tts">Teufelsgruss: helle Hautfarbe</annotation>
+		<annotation cp="🤘🏼">Finger | Hand | Hörner | Rock | Teufel | Teufelsgruss | mittelhelle Hautfarbe</annotation>
+		<annotation cp="🤘🏼" type="tts">Teufelsgruss: mittelhelle Hautfarbe</annotation>
+		<annotation cp="🤘🏽">Finger | Hand | Hörner | Rock | Teufel | Teufelsgruss | mittlere Hautfarbe</annotation>
+		<annotation cp="🤘🏽" type="tts">Teufelsgruss: mittlere Hautfarbe</annotation>
+		<annotation cp="🤘🏾">Finger | Hand | Hörner | Rock | Teufel | Teufelsgruss | mitteldunkle Hautfarbe</annotation>
+		<annotation cp="🤘🏾" type="tts">Teufelsgruss: mitteldunkle Hautfarbe</annotation>
+		<annotation cp="🤘🏿">Finger | Hand | Hörner | Rock | Teufel | Teufelsgruss | dunkle Hautfarbe</annotation>
+		<annotation cp="🤘🏿" type="tts">Teufelsgruss: dunkle Hautfarbe</annotation>
+		<annotation cp="🇧🇳" type="tts">Brunei</annotation>
+		<annotation cp="🇧🇼" type="tts">Botswana</annotation>
+		<annotation cp="🇧🇾" type="tts">Weissrussland</annotation>
+		<annotation cp="🇨🇻" type="tts">Kapverden</annotation>
+		<annotation cp="🇬🇧" type="tts">Grossbritannien</annotation>
+		<annotation cp="🇸🇧" type="tts">Salomon-Inseln</annotation>
+		<annotation cp="🇹🇱" type="tts">Osttimor</annotation>
+		<annotation cp="🇿🇼" type="tts">Zimbabwe</annotation>
+	</annotations>
+</ldml>
