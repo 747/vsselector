@@ -39,7 +39,7 @@ html lang='ja'
             </div>
           </td>
           {{if isSeq}}
-          <td colspan="2">U+{{:~eachToUpperU(seq).join(' ')}}</td>
+          <td colspan="2">{{:~eachToUpperU(seq).join(' ')}}</td>
           <td><img class="glyph" src="./images/te/{{:~eachToHex(seq).join('-')}}.svg"></td>
           <td colspan="2">{{>name}}</td>
           {{else}}
