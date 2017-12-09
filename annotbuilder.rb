@@ -4,9 +4,6 @@ require 'active_support/core_ext'
 require 'json'
 
 cpath = "data/cldr-common/common"
-dfile = IO.read("#{cpath}/dtd/ldml.dtd", mode: "r:utf-8")
-# anno = Dir.open("#{cpath}/annotations")
-# ande = Dir.open("#{cpath}/annotationsDerived")
 dirs = ["annotations", "annotationsDerived"]
 langs = {en: ['en'], ja: ['ja']}
 
@@ -55,4 +52,13 @@ langs.each do |lang, tags|
       "L" => lookup.sort { |a, b| (a[0] <=> b[0]).nonzero? || a[1] <=> b[1] },
     }, out)
   }
+
+  dfile = IO.read("#{cpath}/dtd/ldml.dtd", mode: "r:utf-8")
+  # Ruby doesn't have a working DTD parser!
+  dfile.match(/<!ATTLIST version cldrVersion CDATA #FIXED "(\w+)" >/) do |m|
+    version = "data/versions.json"
+    vers = JSON.parse(IO.read(version, mode: "r:utf-8"))
+    vers["cldr"] = m[1]
+    open(version, "w:utf-8") { |ver| JSON.dump vers, ver }
+  end
 end

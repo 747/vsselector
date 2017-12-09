@@ -89,17 +89,18 @@ jQuery ($)->
                 'coll': v[coll]
                 'base': basechar
               list.append renderSeq(v[seq], [cp, v[id]]).join('') if v[seq]
+            $("#extern p:first").empty().append $("#Extern").render {'id': cp}
             new Clipboard '.clipboard',
               target: (trigger)->
                 $(trigger).parent().prev().children("input").first().get(0)
             $("#notfound").hide()
-            $("#found").show()
+            $("#found, #extern").show()
           else
-            $("#found").hide()
+            $("#found, #extern").hide()
             $("#notfound").show()
         error: ->
           $("#initial").hide()
-          $("#found").hide()
+          $("#found, #extern").hide()
           $("#notfound").show()
     $("#search").removeClass("is-loading")
     false
@@ -200,3 +201,36 @@ jQuery ($)->
     former = current
     charlistmaker analyze("#bigbox")
   $("#bigbox").change() # trigger once on startup
+
+  # https://stackoverflow.com/a/11845718
+  $.ui.autocomplete.prototype._resizeMenu = ->
+    ul = this.menu.element
+    ul.outerWidth this.element.outerWidth()
+
+  compl = []
+  langs = ["en", "ja"]
+  $.when.apply $, langs.map (lang)->
+    $.getJSON "./utils/#{lang}.json", (data)->
+      for entry in data["L"]
+        compl.push
+          label: entry[0]
+          value: data["D"][entry[1]][0]
+          desc: data["D"][entry[1]][1]
+  .then ->
+    $("#searchbox")
+      .autocomplete
+        source: compl
+        classes:
+          "ui-menu": "panel"
+          "ui-menu-item": "panel-block"
+        # focus: (ev, ui)->
+        #   $("#searchbox").val ui.item.value
+        #   return false
+        # select: (ev, ui)->
+        #   $("#searchbox").val ui.item.value
+        #   return false
+      .data "ui-autocomplete"
+      ._renderItem = (ul, item)->
+        $('<li class="panel-block">')
+          .append $('<span class="panel-icon">' + item.value + '</span><div><p class="title is-6">' + item.label + '</p><p class="subtitle content is-small">' + item.desc + '</p></div>')
+        .appendTo ul

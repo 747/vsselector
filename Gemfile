@@ -12,6 +12,10 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'middleman', '>= 4.0.0'
 gem 'middleman-livereload'
 
+# Ruby 2.4 JSON gem incompatibility workaround...
+# https://github.com/flori/json/issues/253#issuecomment-336528624
+gem 'json', github: 'flori/json', branch: 'v1.8'
+
 # =========================
 
 # app-specific

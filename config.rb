@@ -1,3 +1,6 @@
+# coding: utf-8
+Encoding.default_external = 'utf-8'
+
 ###
 # Page options, layouts, aliases and proxies
 ###

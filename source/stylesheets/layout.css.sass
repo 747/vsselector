@@ -14,7 +14,7 @@
   padding: 0.625rem
   // ^ disable default padding relative to font size
   height: 16rem
-#picker> ul
+#picker > ul
   height: 18rem
   display: none
   overflow-y: scroll
@@ -25,7 +25,7 @@
   margin-top: 1rem
 
 // hidden by default selectors
-#found, #notfound, .collapsible
+#found, #notfound, #extern, .collapsible
   display: none
 
 // table style fix
@@ -88,3 +88,13 @@ $glyph-s: 1.8em
   font-family: IPAmjMincho, HanaMinA, HanaMinB, serif
 .ivs-etc
   font-family: HanaMinA, HanaMinB, serif
+
+.ui-menu-item
+  background: $body-background
+  &.ui-state-focus
+    $pair: map-get($colors, "info")
+    background: nth($pair, 1)
+    *
+      color: nth($pair, 2)
+.ui-helper-hidden-accessible
+  display: none
