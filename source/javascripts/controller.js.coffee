@@ -69,6 +69,7 @@ jQuery ($)->
         success: (hash)->
           r = hash[key]
           $("#initial").hide()
+          $("#extern p:first").empty().append $("#Extern").render {'id': cp}
           if r?
             [id, type, name, vars, coll, seq] = ["i", "t", "n", r["V"], "c", "S"]
             list = $("#charlist").empty()
@@ -89,15 +90,14 @@ jQuery ($)->
                 'coll': v[coll]
                 'base': basechar
               list.append renderSeq(v[seq], [cp, v[id]]).join('') if v[seq]
-            $("#extern p:first").empty().append $("#Extern").render {'id': cp}
             new Clipboard '.clipboard',
               target: (trigger)->
                 $(trigger).parent().prev().children("input").first().get(0)
             $("#notfound").hide()
             $("#found, #extern").show()
           else
-            $("#found, #extern").hide()
-            $("#notfound").show()
+            $("#found").hide()
+            $("#notfound, #extern").show()
         error: ->
           $("#initial").hide()
           $("#found, #extern").hide()
