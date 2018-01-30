@@ -172,7 +172,10 @@ get_char = -> num, cat, name {
   char = chunks.lookup(num, cat, name)
   return char
 }
-cjku = -> n { "CJK UNIFIED IDEOGRAPH-#{n.hex4.upcase}" }
+cjku = -> n {
+  ci = [0xFA0E, 0xFA0F, 0xFA11, 0xFA13, 0xFA14, 0xFA1F, 0xFA21, 0xFA23, 0xFA24, *0xFA27..0xFA29].include? n
+  "CJK #{ci ? 'COMPATIBILITY' : 'UNIFIED'} IDEOGRAPH-#{n.hex4.upcase}"
+}
 report = -> l, n { puts "#{l}: passing #{n}" if n % 100 == 0 }
 compats = []
 ivdcols = []
