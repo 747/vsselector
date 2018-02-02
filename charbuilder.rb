@@ -13,7 +13,7 @@ UNTYPES = TYPES.map { |e| [e, TYPES.index(e)] }.to_h
 COLLS = TYPESJSON["collections"].map(&:intern)
 UNCOLLS = COLLS.map { |e| [e, COLLS.index(e)] }.to_h
 
-RUN_AT = Time.now
+RUN_AT = Time.at(Time.now.to_i)
 
 class Variant
   attr_accessor :id, :type, :collection, :name
@@ -180,6 +180,7 @@ report = -> l, n { puts "#{l}: passing #{n}" if n % 100 == 0 }
 compats = []
 ivdcols = []
 
+report["IVD", 0]
 open("#{DATAPATH}/IVD_Sequences.txt", "r:utf-8") do |ivs|
   version_got = false
   category = :ideograph
@@ -202,6 +203,7 @@ open("#{DATAPATH}/IVD_Sequences.txt", "r:utf-8") do |ivs|
   }
 end
 
+report["STD", 0]
 open("#{DATAPATH}/StandardizedVariants.txt", "r:utf-8") do |svs|
   category = :unknown
   collection = :standardized
@@ -218,12 +220,14 @@ open("#{DATAPATH}/StandardizedVariants.txt", "r:utf-8") do |svs|
       base, var = seq.spliph
       context, name = third.splip('#')
 
-      char = get_char[base, category, name]
+      # making it order-independent
+      c11y = category == :compat
+      base_cat = c11y ? :ideograph : category
+      base_name = c11y ? cjku[base] : name
+      char = get_char[base, base_cat, base_name]
 
       case category
       when :compat
-        char.type = :ideograph
-        char.name = cjku[base]
         char.var Variant.new(var, category, collection, desc)
         compid = desc.split('-')[1].to_i(16)
         comp = Character.new(compid, category, desc)
@@ -254,6 +258,7 @@ get_char[0x1F3F4, :emoji, "WAVING BLACK FLAG"]
 
 # In current logic, some emoji non-variant sequences depend on the product of this file
 # So this MUST be processed first!
+report["EVS", 0]
 open("#{DATAPATH}/emoji-variation-sequences.txt", "r:utf-8") do |evs|
   evs.each.with_index(1) { |line, lnum|
     report["EVS", lnum]
@@ -276,6 +281,7 @@ end
 
 # Some emoji zwj sequences depend on the product of this file for now
 # This MUST be processed before emoji-zwj-sequences.txt!
+report["EMOJI", 0]
 open("#{DATAPATH}/emoji-sequences.txt", "r:utf-8") do |emj|
   inrange = false
   trailing = false # false -> variant mode, true -> sequence mode
@@ -326,6 +332,7 @@ open("#{DATAPATH}/emoji-sequences.txt", "r:utf-8") do |emj|
   }
 end
 
+report["EZWJ", 0]
 open("#{DATAPATH}/emoji-zwj-sequences.txt", "r:utf-8") do |ezs|
   ezs.each.with_index(1) { |line, lnum|
     report["EZWJ", lnum]
@@ -359,6 +366,7 @@ open("#{DATAPATH}/emoji-zwj-sequences.txt", "r:utf-8") do |ezs|
   }
 end
 
+report["COMPAT", 0]
 compats.each.with_index(1) do |co, ci|
   report["COMPAT", ci]
   pa = co.vars.find { |v| v.type == :parent }
@@ -372,6 +380,7 @@ end
 
 chunks.save
 
+puts "generates VERSIONS"
 open("#{DATAPATH}/versions.json", "w:utf-8") do |ver|
   JSON.dump({
     "standardized" => versions[:std],
@@ -386,6 +395,7 @@ open("#{DATAPATH}/versions.json", "w:utf-8") do |ver|
   }, ver)
 end
 
+puts "generates KNOWNNAMES"
 open("#{DATAPATH}/knownnames.json", "w:utf-8") do |kno|
   JSON.dump({
     "ivdcollections" => ivdcols.sort
