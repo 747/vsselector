@@ -211,11 +211,12 @@ jQuery ($)->
   langs = ["en", "ja"]
   $.when.apply $, langs.map (lang)->
     $.getJSON "./utils/#{lang}.json", (data)->
-      for entry in data["L"]
-        compl.push
-          label: entry[0]
-          value: data["D"][entry[1]][0]
-          desc: data["D"][entry[1]][1]
+      for entry, refs of data["L"]
+        for r in refs
+          compl.push
+            label: entry
+            value: data["D"][r][0]
+            desc: data["D"][r][1]
   .then ->
     $("#searchbox")
       .autocomplete

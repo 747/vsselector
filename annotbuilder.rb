@@ -38,18 +38,18 @@ langs.each do |lang, tags|
   }
 
   chardef = []
-  lookup = []
+  lookup = {}
   dict.keys.sort.each { |k|
     chardef << ["#{k}", dict[k][0]]
     dict[k][1..-1].each do |n|
       warn "No TTS #{lang}: #{k} (#{k.to_s.ord.to_s(16)})" if dict[k][0].blank?
-      lookup << [n, chardef.size - 1]
+      (lookup[n] ||= []) << chardef.size - 1
     end
   }
   open("utils-source/#{lang}.json", "w:utf-8") { |out|
     JSON.dump({
       "D" => chardef,
-      "L" => lookup.sort { |a, b| (a[0] <=> b[0]).nonzero? || a[1] <=> b[1] },
+      "L" => lookup.sort.to_h,
     }, out)
   }
 
