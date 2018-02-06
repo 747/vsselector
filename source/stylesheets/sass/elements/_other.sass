@@ -1,31 +1,8 @@
 .block
   +block
 
-.container
-  position: relative
-  +desktop
-    margin: 0 auto
-    max-width: $desktop - 40px
-    width: $desktop - 40px
-    // Modifiers
-    &.is-fluid
-      margin: 0 20px
-      max-width: none
-      width: auto
-  +widescreen
-    max-width: $widescreen - 40px
-    width: $widescreen - 40px
-  +fullhd
-    max-width: $fullhd - 40px
-    width: $fullhd - 40px
-
 .delete
   +delete
-
-.fa
-  font-size: 21px
-  text-align: center
-  vertical-align: top
 
 .heading
   display: block
@@ -50,7 +27,7 @@
 .number
   align-items: center
   background-color: $background
-  border-radius: 290486px
+  border-radius: $radius-rounded
   display: inline-flex
   font-size: $size-medium
   height: 2em

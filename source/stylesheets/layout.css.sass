@@ -7,6 +7,8 @@
 @import "_bulma"
 /* end Bulma */
 
+#view
+  background: $white-bis
 #workspace
   min-height: 300px
 #bigbox
@@ -14,7 +16,7 @@
   padding: 0.625rem
   // ^ disable default padding relative to font size
   height: 16rem
-#picker > ul
+#catalog > ul
   height: 18rem
   display: none
   overflow-y: scroll
@@ -90,7 +92,7 @@ $glyph-s: 1.8em
   font-family: HanaMinA, HanaMinB, serif
 
 .ui-menu-item
-  background: $body-background
+  background: $white
   &.ui-state-focus
     $pair: map-get($colors, "info")
     background: nth($pair, 1)
