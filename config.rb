@@ -1,6 +1,8 @@
 # coding: utf-8
 Encoding.default_external = 'utf-8'
 
+# CoffeeScript::Source.path = File.expand_path('../misc/coffeescript/coffeescript.js', __FILE__)
+
 ###
 # Page options, layouts, aliases and proxies
 ###
