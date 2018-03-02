@@ -10,77 +10,77 @@ html lang='ja'
       TYPES = [#{data.types.categories.map{|t|%Q("#{t}")}.join(',')}];
       COLLS = [#{data.types.collections.map{|t|%Q("#{t}")}.join(',')}];
       // BASE_IDX = COLLS.indexOf("base");
-    | <script type="text/x-jsrender" id="rowMaker">
-        <tr{{if isSeq}} class="content message is-small is-warning collapsible {{>klass}}"{{/if}}>
-          <td>
-            <div class="field has-addons has-addons-centered">
-              <div class="control">
-                <button class="button is-dark insert{{if isSeq}} is-small{{/if}}">↑挿入</button>
-              </div>
-              <div class="control">
-                <input type="text" class="autocopy input has-text-centered{{if isSeq}} is-small{{/if}}
-                {{if coll === "Adobe-Japan1"}}
-                  ivs-aj1
-                {{else coll === "Moji_Joho"}}
-                  ivs-mj
-                {{else coll === "Hanyo-Denshi" || coll === "MSARG" || coll === "KRName"}}
-                  ivs-etc
-                {{/if}}"
-                {{if isSeq}}
-                value="{{:~eachToUcs2(seq).join('')}}"
-                {{else}}
-                value="{{if base && base !== id}}{{:base.toUcs2()}}{{/if}}{{:id.toUcs2()}}"
-                {{/if}}
-                >
-              </div>
-              <div class="control">
-                <button class="button clipboard is-primary{{if isSeq}} is-small{{/if}}">コピー</button>
-              </div>
-            </div>
-          </td>
-          {{if isSeq}}
-          <td colspan="2">{{:~eachToUpperU(seq).join(' ')}}</td>
-          <td><img class="glyph" src="./images/te/{{:~eachToHex(seq).join('-')}}.svg"></td>
-          <td colspan="2">{{>name}}</td>
-          {{else}}
-          <td>U+{{if base}}{{>base.toUpperU()}}{{else}}{{>id.toUpperU()}}{{/if}}</td>
-          <td>{{if base}}U+{{>id.toUpperU()}}{{else}}-{{/if}}</td>
-          <td>
-            <img class="glyph" src="
-            {{if type === "ideograph" || type === "compat"}}
-              http://glyphwiki.org/glyph/u{{if base && base !== id}}{{:base.toLowerU()}}-u{{/if}}{{:id.toLowerU()}}.svg
-            {{else type === "emoji"}}
-              ./images/te/{{if base}}{{:base.toString(16)}}-{{/if}}{{:id.toString(16)}}.svg
-            {{else}}
-              ./images/noimage.png
-            {{/if}}">
-          </td>
-          <td>
-            {{if cid}}
-            <span class="{{:cid}}">{{>cid}}</span>
-            {{else}}
-            {{>coll}}
-            {{/if}}
-          </td>
-          <td>{{>name}}</td>
-          {{/if}}
-        </tr>
-      </script>
-    | <script type="text/x-jsrender" id="SequencesHeader">
-        <tr id="{{>id}}" class="content message is-small is-warning seq-header">
-          <td colspan="6" class="message-header">この字から始まるシークエンス</td>
-        </tr>
-      </script>
-    | <script type="text/x-jsrender" id="CharTag">
-        <span class="tag {{:color}}" data-pos="{{:pos}}" data-width="{{:width}}">{{>cp}}<button class="delete delete-char"></button></span>
-      </script>
-    | <script type="text/x-jsrender" id="Extern">
-        <a class="button is-info" href="http://www.chise.org/est/view/character/{{:id.toUcs2()}}" target="_blank">CHISEで「{{>id.toUcs2()}}」を表示</a>
-        <a class="button is-info" href="https://glyphwiki.org/wiki/u{{:id.toLowerU()}}" target="_blank">GlyphWikiで「{{>id.toUcs2()}}」を表示</a>
-        <a class="button is-info" href="https://codepoints.net/U+{{:id.toUpperU()}}" target="_blank">Codepointsで「{{>id.toUcs2()}}」を表示</a>
-      </script>
+    / | <script type="text/x-jsrender" id="rowMaker">
+    /     <tr{{if isSeq}} class="content message is-small is-warning collapsible {{>klass}}"{{/if}}>
+    /       <td>
+    /         <div class="field has-addons has-addons-centered">
+    /           <div class="control">
+    /             <button class="button is-dark insert{{if isSeq}} is-small{{/if}}">↑挿入</button>
+    /           </div>
+    /           <div class="control">
+    /             <input type="text" class="autocopy input has-text-centered{{if isSeq}} is-small{{/if}}
+    /             {{if coll === "Adobe-Japan1"}}
+    /               ivs-aj1
+    /             {{else coll === "Moji_Joho"}}
+    /               ivs-mj
+    /             {{else coll === "Hanyo-Denshi" || coll === "MSARG" || coll === "KRName"}}
+    /               ivs-etc
+    /             {{/if}}"
+    /             {{if isSeq}}
+    /             value="{{:~eachToUcs2(seq).join('')}}"
+    /             {{else}}
+    /             value="{{if base && base !== id}}{{:base.toUcs2()}}{{/if}}{{:id.toUcs2()}}"
+    /             {{/if}}
+    /             >
+    /           </div>
+    /           <div class="control">
+    /             <button class="button clipboard is-primary{{if isSeq}} is-small{{/if}}">コピー</button>
+    /           </div>
+    /         </div>
+    /       </td>
+    /       {{if isSeq}}
+    /       <td colspan="2">{{:~eachToUpperU(seq).join(' ')}}</td>
+    /       <td><img class="glyph" src="./images/te/{{:~eachToHex(seq).join('-')}}.svg"></td>
+    /       <td colspan="2">{{>name}}</td>
+    /       {{else}}
+    /       <td>U+{{if base}}{{>base.toUpperU()}}{{else}}{{>id.toUpperU()}}{{/if}}</td>
+    /       <td>{{if base}}U+{{>id.toUpperU()}}{{else}}-{{/if}}</td>
+    /       <td>
+    /         <img class="glyph" src="
+    /         {{if type === "ideograph" || type === "compat"}}
+    /           http://glyphwiki.org/glyph/u{{if base && base !== id}}{{:base.toLowerU()}}-u{{/if}}{{:id.toLowerU()}}.svg
+    /         {{else type === "emoji"}}
+    /           ./images/te/{{if base}}{{:base.toString(16)}}-{{/if}}{{:id.toString(16)}}.svg
+    /         {{else}}
+    /           ./images/noimage.png
+    /         {{/if}}">
+    /       </td>
+    /       <td>
+    /         {{if cid}}
+    /         <span class="{{:cid}}">{{>cid}}</span>
+    /         {{else}}
+    /         {{>coll}}
+    /         {{/if}}
+    /       </td>
+    /       <td>{{>name}}</td>
+    /       {{/if}}
+    /     </tr>
+    /   </script>
+    / | <script type="text/x-jsrender" id="SequencesHeader">
+    /     <tr id="{{>id}}" class="content message is-small is-warning seq-header">
+    /       <td colspan="6" class="message-header">この字から始まるシークエンス</td>
+    /     </tr>
+    /   </script>
+    / | <script type="text/x-jsrender" id="CharTag">
+    /     <span class="tag {{:color}}" data-pos="{{:pos}}" data-width="{{:width}}">{{>cp}}<button class="delete delete-char"></button></span>
+    /   </script>
+    / | <script type="text/x-jsrender" id="Extern">
+    /     <a class="button is-info" href="http://www.chise.org/est/view/character/{{:id.toUcs2()}}" target="_blank">CHISEで「{{>id.toUcs2()}}」を表示</a>
+    /     <a class="button is-info" href="https://glyphwiki.org/wiki/u{{:id.toLowerU()}}" target="_blank">GlyphWikiで「{{>id.toUcs2()}}」を表示</a>
+    /     <a class="button is-info" href="https://codepoints.net/U+{{:id.toUpperU()}}" target="_blank">Codepointsで「{{>id.toUcs2()}}」を表示</a>
+    /   </script>
     / = javascript_include_tag "jquery-1.12.1.min", "jquery-ui.min", "sprintf.min", "controller"
-    = javascript_include_tag("jquery-1.12.1.min", "jquery-ui.min", "jsrender.min", "sprintf.min", "jquery.selection", "clipboard.min", "controller").gsub('src="/', 'src="./')
+    = javascript_include_tag("mithril.min", "sprintf.min", "clipboard.min", "newcontroller").gsub('src="/', 'src="./')
     / ^ very dirty, need work
   body#view
     .hero.is-dark
