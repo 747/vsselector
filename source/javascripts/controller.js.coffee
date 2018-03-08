@@ -90,7 +90,7 @@ jQuery ($)->
                 'coll': v[coll]
                 'base': basechar
               list.append renderSeq(v[seq], [cp, v[id]]).join('') if v[seq]
-            new Clipboard '.clipboard',
+            new ClipboardJS '.clipboard',
               target: (trigger)->
                 $(trigger).parent().prev().children("input").first().get(0)
             $("#notfound").hide()
