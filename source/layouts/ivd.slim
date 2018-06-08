@@ -34,7 +34,7 @@ html lang='ja'
                 >
               </div>
               <div class="control">
-                <button class="button clipboard is-primary{{if isSeq}} is-small{{/if}}">コピー</button>
+                <button class="button clipboard is-primary{{if isSeq}} is-small{{/if}}"><s>コピー</s></button>
               </div>
             </div>
           </td>
@@ -48,7 +48,7 @@ html lang='ja'
           <td>
             <img class="glyph" src="
             {{if type === "ideograph" || type === "compat"}}
-              http://glyphwiki.org/glyph/u{{if base && base !== id}}{{:base.toLowerU()}}-u{{/if}}{{:id.toLowerU()}}.svg
+              https://glyphwiki.org/glyph/u{{if base && base !== id}}{{:base.toLowerU()}}-u{{/if}}{{:id.toLowerU()}}.svg
             {{else type === "emoji"}}
               ./images/te/{{if base}}{{:base.toString(16)}}-{{/if}}{{:id.toString(16)}}.svg
             {{else}}

@@ -154,7 +154,7 @@ jQuery ($)->
 
   $(".toggler").click ->
     tab = $(this).data("tab")
-    $("#picker > ul:not(#{tab})").hide()
+    $("#catalog > ul:not(#{tab})").hide()
     $(tab).show()
     $(".toggler").each ->
       $(this).closest("li").removeClass("is-active")
@@ -184,15 +184,16 @@ jQuery ($)->
       str = $("#bigbox").val()
       $("#bigbox").val str.slice(0, tagdata['pos']) + str.slice(tagdata['pos'] + tagdata['width'])
       $("#bigbox").change()
-    return false
+    false
 
-  $(document).on 'click', '.insert', ->
+  $('#charlist').on 'click', '.insert', -> # document and body stopped binding the handler for unknown reason
     variant = $(this).parent().next().children("input").first().val()
     insertToBox variant
-    return false
+    false
 
-  $(document).on 'click touchend', '.seq-header', -> # iOS doesn't recognize click on td?
+  $('#charlist').on 'click touchend', '.seq-header', -> # iOS doesn't recognize click on td?
     $(this).nextUntil(":not(.collapsible)").slideToggle()
+    false
 
   former = ""
   $("#bigbox").on "change keyup paste", ->
