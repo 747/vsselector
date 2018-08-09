@@ -149,9 +149,9 @@ BigBox =
     m 'textarea#bigbox.textarea.is-fullwidth',
       placeholder: "#{0x1F4DD.toUcs2()}..."
       value: signboard.value
-      onchange: BigBox.f
-      onkeyup: BigBox.f
-      onpaste: BigBox.f
+      onchange: BigBox.f()
+      onkeyup: BigBox.f()
+      onpaste: BigBox.f()
 
 PickChar =
   view: (v)->
