@@ -81,7 +81,7 @@ html lang='ja'
     /     <a class="button is-info" href="https://codepoints.net/U+{{:id.toUpperU()}}" target="_blank">Codepointsで「{{>id.toUcs2()}}」を表示</a>
     /   </script>
     / = javascript_include_tag "jquery-1.12.1.min", "jquery-ui.min", "sprintf.min", "controller"
-    = javascript_include_tag("mithril.min", "sprintf.min", "clipboard.min", "newcontroller").gsub('src="/', 'src="./')
+    = javascript_include_tag("sprintf.min", "clipboard.min", "mithril.min").gsub('src="/', 'src="./')
     / ^ very dirty, need work
   body#view
     #app
@@ -195,3 +195,5 @@ html lang='ja'
       .modal-background
       .modal-content.box.content
         == yield
+    = javascript_include_tag("newcontroller").gsub('src="/', 'src="./')
+    / ^ load after all DOM are created
