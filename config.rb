@@ -3,6 +3,7 @@ Encoding.default_external = 'utf-8'
 
 # CoffeeScript::Source.path = File.expand_path('../misc/coffeescript/coffeescript.js', __FILE__)
 Tilt::CoffeeScriptTemplate.default_bare = true
+activate :sprockets
 
 ###
 # Page options, layouts, aliases and proxies
@@ -25,9 +26,9 @@ page '/*.txt', layout: false
 # General configuration
 
 # Reload the browser automatically whenever files change
-configure :development do
-  activate :livereload
-end
+# configure :development do
+#   activate :livereload
+# end
 
 ###
 # Helpers

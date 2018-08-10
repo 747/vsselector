@@ -9,8 +9,8 @@ gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 # Middleman Gems
-gem 'middleman', '>= 4.0.0'
-gem 'middleman-livereload'
+gem 'middleman', '~> 4.0'
+gem 'middleman-sprockets'
 
 # Ruby 2.4 JSON gem incompatibility workaround...
 # https://github.com/flori/json/issues/253#issuecomment-336528624
@@ -19,7 +19,6 @@ gem 'json', github: 'flori/json', branch: 'v1.8'
 # =========================
 
 # app-specific
-# gem 'stylus'
 gem 'coffee-script'
 gem 'slim'
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
