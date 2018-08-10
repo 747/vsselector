@@ -19,5 +19,5 @@ html lang='ja'
       .modal-background
       .modal-content.box.content
         == yield
-    = javascript_include_tag("newcontroller").gsub('src="/', 'src="./')
+    = javascript_include_tag("vsapp").gsub('src="/', 'src="./')
     / ^ load after all DOM are created
