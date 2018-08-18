@@ -1,5 +1,0 @@
-'source/javascripts/vsapp.js.coffee':
-  - '_helper_funcs.coffee'
-  - '_models.coffee'
-  - '_views.coffee'
-  - '_newcontroller.coffee'

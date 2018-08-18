@@ -1,8 +1,9 @@
 # coding: utf-8
 Encoding.default_external = 'utf-8'
+require_relative 'coffee_patch'
 
 # CoffeeScript::Source.path = File.expand_path('../misc/coffeescript/coffeescript.js', __FILE__)
-Tilt::CoffeeScriptTemplate.default_bare = true
+# Tilt::CoffeeScriptTemplate.default_bare = true
 activate :sprockets
 
 ###
