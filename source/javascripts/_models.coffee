@@ -9,18 +9,29 @@ signboard =
   ins: (v)->
     area = document.getElementById 'bigbox'
     [s, o, e] = [signboard.value, area.selectionStart, area.selectionEnd]
-    signboard.value = s.slice(0, o) + (+v).toUcs2() + s.slice(e)
+    signboard.value = s.slice(0, o) + v + s.slice(e)
 
 pickerTab =
   source: "ivs"
   set: (v)-> pickerTab.source = v
 
 query =
+  box: ""
   word: []
   phase: ""
   results: []
-  fetch: (v)->
-    cp = v.toString().searchCodePoint()
+  filters: []
+
+  allowed: (name)-> query.filters.indexOf(name) < 0
+
+  filter: (name)->
+    index = query.filters.indexOf name
+    if index < 0 then query.filters.push name else query.filters.splice index, 1
+
+  input: (text)-> query.box = text
+
+  fetch: ->
+    cp = query.box.toString().searchCodePoint()
 
     if cp?
       query.phase = "wait"
@@ -33,9 +44,42 @@ query =
       .then (result)->
         r = result[key]
         if r?
-          results.push r
+          # query.results.push query.build r, cp
+          query.results[0] = query.build r, cp
           query.phase = "found"
         else
           query.phase = "notfound"
       .catch (error)->
         query.phase = "error"
+
+  build: (r, cp)->
+    [o, id, type, name, vars, coll, seq] = [[], "i", "t", "n", r["V"], "c", "S"]
+    cat = TYPES[r[type]]
+    basechar = if TYPES[r[type]] == 'compat' then vars[0][id] else cp
+
+    o.push
+      'id': cp
+      'type': cat or r[type]
+      'name': r[name]
+      'cid': "base"
+
+    o.push query.buildSeq(r[seq], [cp]) if r[seq]
+
+    for v in vars
+      o.push
+        'id': v[id]
+        'type': TYPES[v[type]] or v[type]
+        'name': v[name]
+        'cid': COLLS[v[coll]]
+        'coll': v[coll]
+        'base': basechar
+
+      o.push query.buildSeq(v[seq], [cp, v[id]]) if v[seq]
+    o
+
+  buildSeq: (seqs, bases)->
+    genid = bases.join('-')
+    for s in seqs
+      'seq': bases.concat("-#{s['q']}")
+      'name': s['n']
+      'klass': genid

@@ -47,3 +47,5 @@ String::toCodepoints = ->
 # Array::eachToUpperU
 
 numlike = (x)-> +x is +x
+isObject = (value)->
+  value and typeof value is 'object' and value.constructor is Object

@@ -60,7 +60,7 @@ PickChar =
     a = v.attrs
     m 'li', id: a.id,
       m 'a.pick',
-        'data-char': a.data
+        'data-char': a.data.toUcs2()
         onclick: m.withAttr 'data-char', signboard.ins
         ontouchstart: m.withAttr 'data-char', signboard.ins
         m 'img.glyph', title: a.title, alt: a.alt, src: a.src
@@ -92,7 +92,7 @@ Picker =
                 for n in [17..256]
                   m PickChar,
                     id: "ivs-#{n}"
-                    data: "#{ivs n}"
+                    data: ivs n
                     title: "VS#{n} (#{ivs(n).formatU()})"
                     alt: "VS#{n}"
                     src: "undefined"
@@ -104,7 +104,7 @@ Picker =
                   for n in [1..16]
                     m PickChar,
                       id: "vs-#{n}"
-                      data: "#{svs n}"
+                      data: svs n
                       title: "VS#{n} (#{note(n)})"
                       alt: "VS#{n}"
                       src: "undefined"
@@ -113,7 +113,7 @@ Picker =
                   for n in [1..3]
                     m PickChar,
                       id: "fvs-#{n}"
-                      data: "#{fvs n}"
+                      data: fvs n
                       title: "Mongolian FVS#{n} (#{fvs(n).formatU()})"
                       alt: "FVS#{n}"
                       src: "undefined"
@@ -124,7 +124,7 @@ Picker =
                   for n in [0..25]
                     m PickChar,
                       id: "region-#{n}"
-                      data: "#{ris n}"
+                      data: ris n
                       title: "Regional letter #{(n+65).toUcs2()} (#{ris(n).formatU()})"
                       alt: "RIS #{(n+65).toUcs2()}"
                       src: "./images/te/#{ris(n).toLowerU()}.svg"
@@ -134,7 +134,7 @@ Picker =
                   for n in [2..6]
                     m PickChar,
                       id: "fitz-#{n}"
-                      data: "#{emo n}"
+                      data: emo n
                       title: "Fitzgerald #{sc(n)} (#{emo(n).formatU()})"
                       alt: "Fitz #{sc(n)}"
                       src: "./images/te/#{emo(n).toLowerU()}.svg"
@@ -142,7 +142,7 @@ Picker =
               m 'ul#util',
                 m PickChar,
                   id: "zwj"
-                  data: "#{0x200D}"
+                  data: 0x200D
                   title: "ZERO WIDTH JOINER (#{0x200D.formatU()})"
                   alt: "ZWJ"
                   src: "undefined"
@@ -156,7 +156,7 @@ Picker =
                   for n in [0..0x5F]
                     m PickChar,
                       id: "tags-#{n}"
-                      data: "#{tag(n)}"
+                      data: tag(n)
                       title: "Tag #{t(n)[0]} (#{tag(n).formatU()})"
                       alt: "Tag #{t(n)[1]}"
                       src: "undefined"
@@ -181,21 +181,6 @@ Workspace =
 
 #::: Search Area (bottom) :::#
 
-SearchData =
-  config:
-    string: ""
-    filter: []
-  result: {}
-  fetch: ->
-    cp = SearchData.config.string.searchCodePoint()
-    if cp?
-      uhex = cp.toUpperU()
-      [chunk, key] = [uhex.slice(0, uhex.length-2), uhex.slice(-2)]
-      m.request
-        type: "get"
-        url: "./chars/#{chunk}.json"
-      .then (hash)->
-        SearchData.result = hash[key]
 SeqHeader =
   view: ->
     m 'tr.content.message.is-small.is-warning.seq-header', id: id,
@@ -216,29 +201,35 @@ External =
 Row =
   view: (v)->
     a = v.attrs
-    isSeq = v.attrs.seq?
-
+    [id, base, name, type, cid, coll, isSeq] = [a.id, a.base, a.name, a.type, a.cid, a.coll, a.flag]
     m 'tr', class: (if isSeq then "content message is-small is-warning collapsible #{klass}"),
       m 'td',
         m '.field.has-addons.has-addons-centered',
           m '.control',
-            m 'button.is-dark.insert', class: (if isSeq then 'is-small'), '↑挿入'
+            m 'button.button.is-dark.insert',
+              class: (if isSeq then 'is-small'),
+              char: Row.calcChar(isSeq, base, id)
+              onclick: m.withAttr 'char', signboard.ins
+              ontouchstart: m.withAttr 'char', signboard.ins
+              '↑挿入'
           m '.control',
             m 'input.autocopy.input.has-text-centered',
-              class: ->
+              class: do ->
                 classes = if isSeq then ['is-small'] else []
-                classes.push ->
+                classes.push do ->
                   switch coll
                     when "Adobe-Japan1" then 'ivs-aj1'
                     when "Moji_Joho" then 'ivs-mj'
                     when "Hanyo-Denshi", "MSARG", "KRName" then 'ivs-etc'
                 classes.filter( (n) -> n isnt undefined ).join ' '
-              value: ->
-                if isSeq then seq.eachToUcs2.join ' '
-                else (if base and base isnt id then base.toUcs2()) + id.toUcs2()
+              value: Row.calcChar(isSeq, base, id)
+                
           m '.control'
-            m 'button.clipboard.is-primary', class: (if isSeq then 'is-small'), 'コピー'
-      ->
+            m 'button.button.clipboard.is-primary',
+              class: (if isSeq then 'is-small'),
+              'data-clipboard-text': Row.calcChar(isSeq, base, id)
+              'コピー'
+      do ->
         if isSeq
           [
             m 'td', colSpan: 2, seq.eachToUpperU.join ' '
@@ -249,29 +240,33 @@ Row =
         else
           [
             m 'td', "U+#{if base then base.toUpperU() else id.toUpperU()}"
-            m 'td', if base then 'U+' + base.toUpperU() else '-'
+            m 'td', if base then "U+#{id.toUpperU()}" else '-'
             m 'td',
               m 'img.glyph',
-                src: ->
+                src: do ->
                   switch type
                     when "ideograph", "compat"
                       "https://glyphwiki.org/glyph/u#{if base and base isnt id then base.toLowerU() + '-u'}#{id.toLowerU()}.svg"
                     when "emoji"
                       "./images/te/#{if base then base.toString(16) + '-'}#{id.toString(16)}.svg"
                     else "./images/noimage.png"
-            m 'td', ->
+            m 'td', do ->
               if cid then m 'span', class: cid, cid
               else coll
             m 'td', name
           ]
-  onupdate: ->
-    new ClipboardJS '.clipboard',
-      target: (trigger)->
-        trigger.parentNode.previousElementSibling.children.filter( (e)-> e.tagName is 'input' )[0].value
+  header: (id)->
+    m 'tr.content.message.is-small.is-warning.seq-header', id: id,
+      m 'td.message-header[colspan=6]', 'この字から始まるシークエンス'
+  oncreate: ->
+    new ClipboardJS '.clipboard'
+  calcChar: (seq, base, id)->
+    if seq then seq.eachToUcs2.join ' '
+    else "#{(if base then base.toUcs2() else '')}#{id.toUcs2()}"
 
 VResult =
   view: (v)->
-    m '#entries', VResult.response(query.phase)
+    m '#entries', do -> VResult.response(query.phase)
   response: (phase)->
     switch phase
       when 'found'
@@ -284,8 +279,16 @@ VResult =
             m 'th#image', '画像'
             m 'th#collection', 'コレクション'
             m 'th#internal', '識別名'
-        # m 'tbody#charlist', ->
-          # m Row # TODO
+          m 'tbody#charlist', do ->
+            for row, i in query.results[0] when query.allowed row['coll']
+              if Array.isArray row
+                hid = query.results[0][0].id + '-' + query.results[0][i-1].id
+                seqs = for seq in row
+                  seq['flag'] = true
+                  m Row, seq
+                seqs.unshift Row.header hid
+              else if isObject row
+                m Row, row
       when 'notfound'
         m External, char: query.word[0]
         m '#notfound.message.is-warning',
@@ -297,6 +300,26 @@ VResult =
         m '.message.is-info',
           m 'p.has-text-centered.message-body', '以下に検索結果が表示されます'
 
+SearchBox =
+  f: ->
+    m.withAttr 'value', query.input
+  key: (e)->
+    if SearchBox.keypressHappened and (e.key is 'Enter' or e.keyCode is 13 or e.which is 13)
+      query.fetch()
+    else
+      query.input e.currentTarget.value
+    SearchBox.keypressHappened = false
+  keypressHappened: false # keypressが発火しないkeyupは変換確定
+  keypress: -> SearchBox.keypressHappened = true
+  view: ->
+    m 'input#searchbox.input[type=text]',
+      placeholder: "例：邊、270B…"
+      value: query.box
+      onchange: SearchBox.f()
+      onkeypress: SearchBox.keypress
+      onkeyup: SearchBox.key
+      onpaste: SearchBox.f()
+
 Search =
   view: ->
     m '#search.section',
@@ -305,9 +328,11 @@ Search =
           m '.level-item',
             m '.field.has-addons',
               m 'p.control',
-                m 'input#searchbox.input', type: 'text', name: 'char', placeholder: "例：邊、270B…",
+                m SearchBox
               m 'p.control',
-                m 'button#search.button.is-primary', type: 'submit', value: 'search',
+                m 'button#searchbutton.button.is-primary',
+                  onclick: query.fetch
+                  ontouchstart: query.fetch
                   m 'span#searchlabel', '登録済の異体字を検索'
         m '.level-right',
           m '.field.level-item.is-grouped',
@@ -315,7 +340,10 @@ Search =
               m 'span#selectcol', 'コレクションを指定 (IVS)'
             for ivd in NAMES
               m 'label.control.checkbox',
-                m 'input', type: 'checkbox', class: 'search-filter', name: ivd, checked: true
+                m 'input.search-filter[type=checkbox]',
+                  name: ivd
+                  onclick: m.withAttr 'name', query.filter
+                  checked: query.allowed ivd
                 " #{ivd}"
       m VResult
 
