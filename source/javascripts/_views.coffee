@@ -81,8 +81,8 @@ Picker =
   view: ->
     m '#picker.column.is-5.message.is-success',
       m 'p.message-header',
-        m 'span.is-inline-desktop.is-hidden-touch', '←クリックで挿入'
-        m 'span.touch-picker-leader.is-hidden-desktop.is-inline-touch.has-text-centered', '↑クリックで挿入'
+        m 'span.is-inline-tablet.is-hidden-mobile', '←クリックで挿入'
+        m 'span.touch-picker-leader.is-hidden-tablet.is-inline-mobile.has-text-centered', '↑クリックで挿入'
       m '#catalog.message-body',
         do ->
           switch pickerTab.source
@@ -233,7 +233,7 @@ Row =
         if isSeq
           [
             m 'td', colSpan: 2, seq.eachToUpperU.join ' '
-            m 'td',
+            m 'td.glyph-col',
               m 'img.glyph', src: "./images/te/#{seq.eachToHex.join('-')}.svg"
             m 'td', colSpan: 2, name
           ]
@@ -241,14 +241,14 @@ Row =
           [
             m 'td', "U+#{if base then base.toUpperU() else id.toUpperU()}"
             m 'td', if base then "U+#{id.toUpperU()}" else '-'
-            m 'td',
+            m 'td.glyph-col',
               m 'img.glyph',
                 src: do ->
                   switch type
                     when "ideograph", "compat"
-                      "https://glyphwiki.org/glyph/u#{if base and base isnt id then base.toLowerU() + '-u'}#{id.toLowerU()}.svg"
+                      "https://glyphwiki.org/glyph/u#{if base then base.toLowerU() + '-u' else ''}#{id.toLowerU()}.svg"
                     when "emoji"
-                      "./images/te/#{if base then base.toString(16) + '-'}#{id.toString(16)}.svg"
+                      "./images/te/#{if base then base.toString(16) + '-' else ''}#{id.toString(16)}.svg"
                     else "./images/noimage.png"
             m 'td', do ->
               if cid then m 'span', class: cid, cid
@@ -262,16 +262,17 @@ Row =
     new ClipboardJS '.clipboard'
   calcChar: (seq, base, id)->
     if seq then seq.eachToUcs2.join ' '
-    else "#{(if base then base.toUcs2() else '')}#{id.toUcs2()}"
+    else "#{if base then base.toUcs2() else ''}#{id.toUcs2()}"
 
 VResult =
   view: (v)->
-    m '#entries', do -> VResult.response(query.phase)
+    m '#entries[style="overflow-x: auto"]', # until bulma officially has .table-container...
+      do -> VResult.response(query.phase)
   response: (phase)->
     switch phase
       when 'found'
         m External, code: query.word[0]
-        m 'table#found.table',
+        m 'table#found.table.is-fullwidth.is-marginless',
           m 'thead', m 'tr',
             m 'th#copy', '表示'
             m 'th#codepoint', 'コード'
@@ -304,13 +305,25 @@ SearchBox =
   f: ->
     m.withAttr 'value', query.input
   key: (e)->
+    e.redraw = false
     if SearchBox.keypressHappened and (e.key is 'Enter' or e.keyCode is 13 or e.which is 13)
-      query.fetch()
-    else
       query.input e.currentTarget.value
+      query.fetch()
+    else if SearchBox.buffer.clear
+      query.input e.currentTarget.value
+    SearchBox.buffer.update()
     SearchBox.keypressHappened = false
   keypressHappened: false # keypressが発火しないkeyupは変換確定
-  keypress: -> SearchBox.keypressHappened = true
+  keypress: (e)->
+    e.redraw = false
+    SearchBox.keypressHappened = true
+  buffer:
+    clear: false
+    __timer: undefined
+    update: ->
+      clearTimeout @__timer
+      @clear = false
+      @__timer = setTimeout (=> @clear = true; m.redraw), 100
   view: ->
     m 'input#searchbox.input[type=text]',
       placeholder: "例：邊、270B…"
@@ -335,16 +348,15 @@ Search =
                   ontouchstart: query.fetch
                   m 'span#searchlabel', '登録済の異体字を検索'
         m '.level-right',
-          m '.field.level-item.is-grouped',
-            m 'label.label.control',
-              m 'span#selectcol', 'コレクションを指定 (IVS)'
-            for ivd in NAMES
-              m 'label.control.checkbox',
-                m 'input.search-filter[type=checkbox]',
-                  name: ivd
-                  onclick: m.withAttr 'name', query.filter
-                  checked: query.allowed ivd
-                " #{ivd}"
+          m 'p.has-text-weight-bold.control.level-item',
+            m 'span#selectcol', 'コレクションを指定 (IVS)'
+          for ivd in NAMES
+            m 'label.level-item.fixed-inline-block.control.checkbox',
+              m 'input.search-filter[type=checkbox]',
+                name: ivd
+                onclick: m.withAttr 'name', query.filter
+                checked: query.allowed ivd
+              m 'span.collection-selector-desc', ivd
       m VResult
 
 #::: Main App :::#

@@ -57,12 +57,13 @@ dt
 
 $glyph-m: 2.4em
 $glyph-s: 1.8em
+$td-x-paddings: nth($table-cell-padding, 2) * 2
 .glyph
   height: $glyph-m
   width: auto
   .is-small &
     height: $glyph-s
-@media all and (-ms-high-contrast:none)
+@media all and (-ms-high-contrast:none) // what was this for?
   .glyph
     width: $glyph-m
     .is-small &
@@ -71,6 +72,10 @@ $glyph-s: 1.8em
     width: $glyph-m
   *::-ms-backdrop, .is-small .glyph
     width: $glyph-s
+.glyph-col
+  min-width: $glyph-m + $td-x-paddings
+  .is-small &
+    min-width: $glyph-s + $td-x-paddings
 
 
 .transparent
@@ -102,3 +107,5 @@ $glyph-s: 1.8em
 
 .touch-picker-leader
   width: 100% // hack to make it centered; is there any other way?
+.collection-selector-desc::before
+  content: '\A0' // hack to compensate for implicit spaces eaten by .level-item (display: flex)
