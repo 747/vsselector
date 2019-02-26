@@ -21,12 +21,19 @@ query =
   phase: ""
   results: []
   filters: []
+  visSeq: []
 
   allowed: (name)-> query.filters.indexOf(name) < 0
 
   filter: (name)->
     index = query.filters.indexOf name
     if index < 0 then query.filters.push name else query.filters.splice index, 1
+
+  visible: (group)-> query.visSeq.indexOf(group) >= 0
+
+  toggleSeq: (group)->
+    index = query.visSeq.indexOf group
+    if index < 0 then query.visSeq.push group else query.visSeq.splice index, 1
 
   input: (text)-> query.box = text
 
@@ -36,6 +43,7 @@ query =
     if cp?
       query.phase = "wait"
       query.word = [cp]
+      query.visSeq = []
       uhex = cp.toUpperU()
       [chunk, key] = [uhex.slice(0, uhex.length-2), uhex.slice(-2)]
       m.request

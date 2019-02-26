@@ -222,7 +222,7 @@ Row =
                     when "Adobe-Japan1" then 'ivs-aj1'
                     when "Moji_Joho" then 'ivs-mj'
                     when "Hanyo-Denshi", "MSARG", "KRName" then 'ivs-etc'
-                classes.filter( (n) -> n isnt undefined ).join ' '
+                (n for n in classes when n isnt undefined).join ' '
               value: Row.calcChar(seq, base, id)
                 
           m '.control'
@@ -256,13 +256,17 @@ Row =
               else coll
             m 'td', name
           ]
-  header: (id)->
-    m 'tr.content.message.is-small.is-warning.seq-header', id: id,
-      m 'td.message-header[colspan=6]', 'この字から始まるシークエンス'
+  header: (id, open)->
+    txt = if open then 'このシークエンスを閉じる' else 'この字から始まるシークエンス'
+    m 'tr.content.message.is-small.is-warning.seq-header',
+      id: id
+      onclick: m.withAttr 'id', query.toggleSeq
+      ontouchstart: m.withAttr 'id', query.toggleSeq
+      m 'td.message-header[colspan=6]', txt
   oncreate: ->
     new ClipboardJS '.clipboard'
   calcChar: (seq, base, id)->
-    if seq then seq.eachToUcs2().join ' '
+    if seq then seq.eachToUcs2().join ''
     else "#{if base then base.toUcs2() else ''}#{id.toUcs2()}"
 
 VResult =
@@ -287,9 +291,12 @@ VResult =
               for row, i in query.results[0] when query.allowed row['coll']
                 if Array.isArray row
                   hid = query.results[0][0].id + '-' + query.results[0][i-1].id
-                  rows.push do -> Row.header hid
-                  rows.push m Row, seq for seq in row
-                  # m 'tr', m 'td', seq['name'] for seq in row # TODO: figure out why m Row, seq doesn't work
+                  if query.visible hid
+                    rows.push do -> Row.header hid, true
+                    rows.push m Row, seq for seq in row
+                    rows.push do -> Row.header hid, true
+                  else
+                    rows.push do -> Row.header hid
                 else if isObject row
                   rows.push m Row, row
               rows
