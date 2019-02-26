@@ -41,10 +41,12 @@ String::toCodepoints = ->
     first = @getFirstCodePoint()
     range = if first and first > 0xFFFF then 2 else 1
     [first].concat @substr(range).toCodepoints()
-# TODO
-# Array::eachToUcs2
-# Array::eachToHex
-# Array::eachToUpperU
+Array::eachToUcs2 = ->
+  (e.toUcs2() for e in @)
+Array::eachToHex = ->
+  (e.toLowerU() for e in @)
+Array::eachToUpperU = ->
+  (e.toUpperU() for e in @)
 
 numlike = (x)-> +x is +x
 isObject = (value)->

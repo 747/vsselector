@@ -35,7 +35,7 @@ query =
 
     if cp?
       query.phase = "wait"
-      query.word = [cp.toUcs2()]
+      query.word = [cp]
       uhex = cp.toUpperU()
       [chunk, key] = [uhex.slice(0, uhex.length-2), uhex.slice(-2)]
       m.request
@@ -80,6 +80,6 @@ query =
   buildSeq: (seqs, bases)->
     genid = bases.join('-')
     for s in seqs
-      'seq': bases.concat("-#{s['q']}")
+      'seq': bases.concat(s['q'])
       'name': s['n']
       'klass': genid

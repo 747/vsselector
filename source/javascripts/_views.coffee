@@ -181,60 +181,61 @@ Workspace =
 
 #::: Search Area (bottom) :::#
 
-SeqHeader =
-  view: ->
-    m 'tr.content.message.is-small.is-warning.seq-header', id: id,
-      m 'td.message-header', colSpan: 6, 'この字から始まるシークエンス'
 External =
   view: (v)->
     id = v.attrs.code
-    m 'div',
-      [
-        ['CHISE', 'http://www.chise.org/est/view/character/', 'toUcs2']
-        ['GlyphWiki', 'https://glyphwiki.org/wiki/u', 'toLowerU']
-        ['Codepoints', 'https://codepoints.net/U+', 'toUpperU']
-      ].map (l)->
-        m 'a.button.is-info', "#{l[0]}で「#{id.toUcs2()}」を表示",
-          href: l[1] + id[l[2]]()
+    m 'div.message.is-info', m 'p.message-body', do ->
+      list = []
+      for s, i in External.sites
+        list.push ' ' if i > 0
+        list.push m 'a.button.is-info',
+          href: s[1] + id[s[2]]()
           target: '_blank'
-      , this
+          "#{s[0]}で「#{id.toUcs2()}」を表示"
+      list
+  sites: [
+    ['CHISE', 'http://www.chise.org/est/view/character/', 'toUcs2']
+    ['GlyphWiki', 'https://glyphwiki.org/wiki/u', 'toLowerU']
+    ['Codepoints', 'https://codepoints.net/U+', 'toUpperU']
+  ]
+      
 Row =
   view: (v)->
     a = v.attrs
-    [id, base, name, type, cid, coll, isSeq] = [a.id, a.base, a.name, a.type, a.cid, a.coll, a.flag]
-    m 'tr', class: (if isSeq then "content message is-small is-warning collapsible #{klass}"),
+    [id, base, name, type, cid, coll, seq] = [a.id, a.base, a.name, a.type, a.cid, a.coll, a.seq]
+    m 'tr', class: (if seq then "content message is-small is-warning collapsible #{a.klass}"),
       m 'td',
         m '.field.has-addons.has-addons-centered',
           m '.control',
             m 'button.button.is-dark.insert',
-              class: (if isSeq then 'is-small'),
-              char: Row.calcChar(isSeq, base, id)
+              class: (if seq then 'is-small'),
+              char: Row.calcChar(seq, base, id)
               onclick: m.withAttr 'char', signboard.ins
               ontouchstart: m.withAttr 'char', signboard.ins
               '↑挿入'
           m '.control',
             m 'input.autocopy.input.has-text-centered',
               class: do ->
-                classes = if isSeq then ['is-small'] else []
+                classes = if seq then ['is-small'] else []
                 classes.push do ->
                   switch coll
                     when "Adobe-Japan1" then 'ivs-aj1'
                     when "Moji_Joho" then 'ivs-mj'
                     when "Hanyo-Denshi", "MSARG", "KRName" then 'ivs-etc'
                 classes.filter( (n) -> n isnt undefined ).join ' '
-              value: Row.calcChar(isSeq, base, id)
+              value: Row.calcChar(seq, base, id)
                 
           m '.control'
             m 'button.button.clipboard.is-primary',
-              class: (if isSeq then 'is-small'),
-              'data-clipboard-text': Row.calcChar(isSeq, base, id)
+              class: (if seq then 'is-small'),
+              'data-clipboard-text': Row.calcChar(seq, base, id)
               'コピー'
       do ->
-        if isSeq
+        if seq
           [
-            m 'td', colSpan: 2, seq.eachToUpperU.join ' '
+            m 'td', colSpan: 2, seq.eachToUpperU().join ' '
             m 'td.glyph-col',
-              m 'img.glyph', src: "./images/te/#{seq.eachToHex.join('-')}.svg"
+              m 'img.glyph', src: "./images/te/#{seq.eachToHex().join('-')}.svg"
             m 'td', colSpan: 2, name
           ]
         else
@@ -261,7 +262,7 @@ Row =
   oncreate: ->
     new ClipboardJS '.clipboard'
   calcChar: (seq, base, id)->
-    if seq then seq.eachToUcs2.join ' '
+    if seq then seq.eachToUcs2().join ' '
     else "#{if base then base.toUcs2() else ''}#{id.toUcs2()}"
 
 VResult =
@@ -271,29 +272,34 @@ VResult =
   response: (phase)->
     switch phase
       when 'found'
-        m External, code: query.word[0]
-        m 'table#found.table.is-fullwidth.is-marginless',
-          m 'thead', m 'tr',
-            m 'th#copy', '表示'
-            m 'th#codepoint', 'コード'
-            m 'th#variation', 'セレクタ'
-            m 'th#image', '画像'
-            m 'th#collection', 'コレクション'
-            m 'th#internal', '識別名'
-          m 'tbody#charlist', do ->
-            for row, i in query.results[0] when query.allowed row['coll']
-              if Array.isArray row
-                hid = query.results[0][0].id + '-' + query.results[0][i-1].id
-                seqs = for seq in row
-                  seq['flag'] = true
-                  m Row, seq
-                seqs.unshift Row.header hid
-              else if isObject row
-                m Row, row
+        [
+          m External, code: query.word[0]
+          m 'table#found.table.is-fullwidth.is-marginless',
+            m 'thead', m 'tr',
+              m 'th#copy', '表示'
+              m 'th#codepoint', 'コード'
+              m 'th#variation', 'セレクタ'
+              m 'th#image', '画像'
+              m 'th#collection', 'コレクション'
+              m 'th#internal', '識別名'
+            m 'tbody#charlist', do ->
+              rows = []
+              for row, i in query.results[0] when query.allowed row['coll']
+                if Array.isArray row
+                  hid = query.results[0][0].id + '-' + query.results[0][i-1].id
+                  rows.push do -> Row.header hid
+                  rows.push m Row, seq for seq in row
+                  # m 'tr', m 'td', seq['name'] for seq in row # TODO: figure out why m Row, seq doesn't work
+                else if isObject row
+                  rows.push m Row, row
+              rows
+        ]
       when 'notfound'
-        m External, char: query.word[0]
-        m '#notfound.message.is-warning',
-          m 'p.has-text-centered.message-body', '見つかりませんでした'
+        [
+          m External, code: query.word[0]
+          m '#notfound.message.is-warning',
+            m 'p.has-text-centered.message-body', '見つかりませんでした'
+        ]
       when 'wait'
         m 'message.is-primary',
           m 'p.message-body.is-loading'
