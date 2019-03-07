@@ -1,3 +1,7 @@
+###
+# == VDOM models ==
+###
+
 signboard =
   value: ""
   set: (v)-> signboard.value = v

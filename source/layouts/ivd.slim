@@ -16,7 +16,7 @@ html lang='ja'
   body#view
     #app
     #about.modal
-      .modal-background
+      #unmodal.modal-background
       .modal-content.box.content
         == yield
     = javascript_include_tag("vsapp").gsub('src="/', 'src="./')

@@ -1,3 +1,7 @@
+###
+# == VDOM components ==
+###
+
 ### Pre-defined variables
 # TYPES = (index-to-type name mapping)
 # COLLS = (index-to-collection name mapping)
@@ -7,17 +11,26 @@
 #::: Header :::#
 
 Header =
+  modal: (e)->
+    e.redraw = false
+    popup()
   view: ->
     m '.navbar.is-dark',
       m '.navbar-brand',
         m 'p.navbar-item', document.title
         # below are quickfix for mobile view in current ver of Bulma CSS
-        m 'a.navbar-item.modality.is-hidden-desktop', 'data-target': "#about", '説明'
+        m 'a.navbar-item.modality.is-hidden-desktop',
+          onclick: Header.modal
+          ontouchstart: Header.modal
+          '説明'
         m 'a.navbar-item.is-hidden-desktop', href: "https://github.com/747/vsselector", target: "_blank", 'GitHub'
       m '.navbar-menu',
         m '.navbar-start'
         m '.navbar-end',
-          m 'a.navbar-item.modality', 'data-target': "#about", '説明'
+          m 'a.navbar-item.modality',
+            onclick: Header.modal
+            ontouchstart: Header.modal
+            '説明'
           m 'a.navbar-item', href: "https://github.com/747/vsselector", target: "_blank", 'GitHub'
 
 #::: Picker Area (top) :::#
