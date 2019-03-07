@@ -181,6 +181,24 @@ Workspace =
 
 #::: Search Area (bottom) :::#
 
+CharTab =
+  view: (v)->
+    w = v.attrs.codes
+    x = +v.attrs.num
+    active = (n)-> if n is x then 'is-active' else undefined
+    empty = (n)-> if query.results[n]? then undefined else 'has-background-warning'
+    link = (n)-> if n is x then undefined else m.withAttr('data-idx', query.show)
+    m 'div#chartabs.tabs.is-boxed', m 'ul', do ->
+      for ch, i in w
+        m 'li',
+          class: [active(i), empty(i)].join ' '
+          m 'a',
+            'data-idx': i
+            title: ch.toUpperU()
+            onclick: link(i)
+            ontouchstart: link(i)
+            ch.toUcs2()
+
 External =
   view: (v)->
     id = v.attrs.code
@@ -275,41 +293,50 @@ VResult =
       do -> VResult.response(query.phase)
   response: (phase)->
     switch phase
-      when 'found'
-        [
-          m External, code: query.word[0]
-          m 'table#found.table.is-fullwidth.is-marginless',
-            m 'thead', m 'tr',
-              m 'th#copy', '表示'
-              m 'th#codepoint', 'コード'
-              m 'th#variation', 'セレクタ'
-              m 'th#image', '画像'
-              m 'th#collection', 'コレクション'
-              m 'th#internal', '識別名'
-            m 'tbody#charlist', do ->
-              rows = []
-              for row, i in query.results[0] when query.allowed row['coll']
-                if Array.isArray row
-                  hid = query.results[0][0].id + '-' + query.results[0][i-1].id
-                  if query.visible hid
-                    rows.push do -> Row.header hid, true
-                    rows.push m Row, seq for seq in row
-                    rows.push do -> Row.header hid, true
-                  else
-                    rows.push do -> Row.header hid
-                else if isObject row
-                  rows.push m Row, row
-              rows
+      when 'got'
+        current = query.tab
+        fragment = [
+          m CharTab, codes: query.word, num: current
+          m External, code: query.word[current]
         ]
-      when 'notfound'
-        [
-          m External, code: query.word[0]
-          m '#notfound.message.is-warning',
-            m 'p.has-text-centered.message-body', '見つかりませんでした'
-        ]
+        if query.results[current]?
+          fragment.push(
+            m 'table#found.table.is-fullwidth.is-marginless',
+              m 'thead', m 'tr',
+                m 'th#copy', '表示'
+                m 'th#codepoint', 'コード'
+                m 'th#variation', 'セレクタ'
+                m 'th#image', '画像'
+                m 'th#collection', 'コレクション'
+                m 'th#internal', '識別名'
+              m 'tbody#charlist', do ->
+                rows = []
+                for row, i in query.results[current] when query.allowed row['coll']
+                  if Array.isArray row
+                    hid = query.results[current][0].id + '-' + query.results[current][i-1].id
+                    if query.visible hid
+                      rows.push do -> Row.header hid, true
+                      rows.push m Row, seq for seq in row
+                      rows.push do -> Row.header hid, true
+                    else
+                      rows.push do -> Row.header hid
+                  else if isObject row
+                    rows.push m Row, row
+                rows
+          )
+        else
+          fragment.push(
+            m '#notfound.message.is-warning',
+              m 'p.has-text-centered.message-body', '見つかりませんでした'
+          )
+
+        fragment
       when 'wait'
-        m 'message.is-primary',
-          m 'p.message-body.is-loading'
+        m '.message.is-primary',
+          m 'p.message-body', m 'button.button.is-fullwidth.is-text.is-paddingless.is-loading'
+      when 'error'
+        m '.message.is-danger',
+          m 'p.message-body', query.error
       else
         m '.message.is-info',
           m 'p.has-text-centered.message-body', '以下に検索結果が表示されます'

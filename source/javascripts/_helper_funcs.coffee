@@ -30,10 +30,13 @@ String::getFirstCodePoint = ->
   else
     undefined
 String::searchCodePoint = ->
-  if matched = /^\s*(?:U[-+])*([0-9A-F]{4,8})/i.exec(@)
-    parseInt(matched[1], 16)
-  else
-    @getFirstCodePoint()
+  segs = @match /(?:U[-+])*[0-9A-F]{4,8}|[\uD800-\uDBFF][\uDC00-\uDFFF]|(?!\s)[\u0000-\uD799\uE000-\uFFFD]/gi
+  norm = for s in segs
+    if matched = /^\s*(?:U[-+])*([0-9A-F]{4,8})/i.exec(s)
+      parseInt(matched[1], 16)
+    else
+      s.getFirstCodePoint()
+  (n for n, i in norm when n? and not n.isFunctionalCodePoint() and norm.indexOf(n) is i)
 String::toCodepoints = ->
   if @length <= 0
     []

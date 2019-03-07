@@ -20,16 +20,20 @@ query =
   word: []
   phase: ""
   results: []
+  error: ""
   filters: []
+  tab: undefined
   visSeq: []
 
-  allowed: (name)-> query.filters.indexOf(name) < 0
+  allowed: (name)-> name not in query.filters
 
   filter: (name)->
     index = query.filters.indexOf name
     if index < 0 then query.filters.push name else query.filters.splice index, 1
 
-  visible: (group)-> query.visSeq.indexOf(group) >= 0
+  show: (idx)-> query.tab = idx
+
+  visible: (group)-> group in query.visSeq
 
   toggleSeq: (group)->
     index = query.visSeq.indexOf group
@@ -42,23 +46,29 @@ query =
 
     if cp?
       query.phase = "wait"
-      query.word = [cp]
+      query.word = cp
+      query.results = []
+      query.tab = undefined
       query.visSeq = []
-      uhex = cp.toUpperU()
-      [chunk, key] = [uhex.slice(0, uhex.length-2), uhex.slice(-2)]
-      m.request
-        type: "get"
-        url: "./chars/#{chunk}.json"
-      .then (result)->
-        r = result[key]
-        if r?
-          # query.results.push query.build r, cp
-          query.results[0] = query.build r, cp
-          query.phase = "found"
-        else
-          query.phase = "notfound"
+
+      hexes = (c.toUpperU() for c in cp)
+      chunks = (e.slice(0, e.length-2) for e in hexes)
+      keys = (e.slice(-2) for e in hexes)
+      Promise.all (query.request(ch) for ch in chunks)
+      .then (results)->
+        for res, i in results
+          r = res[keys[i]]
+          query.results[i] = if r? then query.build(r, cp[i]) else undefined
+        query.phase = "got"
+        query.tab = 0
       .catch (error)->
         query.phase = "error"
+        query.error = error.message
+
+  request: (block)->
+    m.request
+      type: "get"
+      url: "./chars/#{block}.json"
 
   build: (r, cp)->
     [o, id, type, name, vars, coll, seq] = [[], "i", "t", "n", r["V"], "c", "S"]
