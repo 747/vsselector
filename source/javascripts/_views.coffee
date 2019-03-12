@@ -175,6 +175,36 @@ Picker =
                       src: "undefined"
         m Toggler
 
+Social =
+  view: ->
+    m '.level.is-mobile',
+      m '.level-left'
+      m 'p#shares.content.is-small.level-right',
+        m 'span#to_share.level-item', '内容をシェア'
+        m 'a#twitter-share.level-item',
+          onclick: (e)-> Social.share e, 'twitter'
+          ontouchstart: (e)-> Social.share e, 'twitter'
+          m 'img.glyph',
+            src: "images/Twitter_Social_Icon_Circle_Color.svg"
+            alt: "Twitter"
+        m 'a#line-it.level-item',
+          onclick: (e)-> Social.share e, 'line'
+          ontouchstart: (e)-> Social.share e, 'line'
+          m 'img.glyph',
+            src: "images/share-d.png"
+            alt: "LINE"
+  share: (e, t)->
+    e.redraw = false
+    switch t
+      when 'twitter'
+        url = encodeURIComponent window.location.href
+        content = encodeURIComponent signboard.value
+        tag = encodeURIComponent "異体字セレクタセレクタ"
+        window.open "https://twitter.com/intent/tweet?text=#{content}&url=#{url}&hashtags=#{tag}", "tweet", "width=550,height=480,location=yes,resizable=yes,scrollbars=yes"
+      when 'line'
+        message = encodeURIComponent "#{signboard.value} #{window.location.href}"
+        window.open "//line.me/R/msg/text/?#{message}"
+
 Workspace =
   view: ->
     m '#workspace.columns.section.transparent',
@@ -182,14 +212,7 @@ Workspace =
         m BigBox
         m '#breakdown.message.is-warning.is-fullwidth',
           m CharList
-        m '.level.is-mobile',
-          m '.level-left'
-          m 'p#shares.content.is-small.level-right',
-            m 'span#to_share.level-item', '内容をシェア'
-            m 'a#twitter-share.level-item',
-              m 'img.glyph', src: "images/Twitter_Social_Icon_Circle_Color.svg", alt: "Twitter"
-            m 'a#line-it.level-item',
-              m 'img.glyph', src: "images/share-d.png", alt: "LINE"
+        m Social
       m Picker
 
 #::: Search Area (bottom) :::#
