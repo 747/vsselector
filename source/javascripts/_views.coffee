@@ -42,7 +42,7 @@ CharTag =
   view: (v)->
     c = v.attrs.code
     color = if c.isFunctionalCodePoint() then 'is-success' else 'is-info'
-    m 'span.tag', class: color, 'data-pos': v.attrs.pos, "data-width": v.attrs.width, c.toUpperU(),
+    m 'span.tag', class: color, 'data-pos': v.attrs.pos, 'data-width': v.attrs.width, c.toUpperU(),
       m 'button.delete.is-small.delete-char',
         onclick: CharTag.f
         ontouchstart: CharTag.f
@@ -86,10 +86,10 @@ Toggler =
       ontouchstart: Toggler.f
     m '#groups.tabs.is-centered.is-toggle',
       m 'ul',
-        m 'li', 'data-tab': 'ivs', m 'a.toggler', props, 'IVS'
-        m 'li', 'data-tab': 'vs', m 'a.toggler', props, '(F)VS'
-        m 'li', 'data-tab': 'emod', m 'a.toggler', props, 'Emoji'
-        m 'li', 'data-tab': 'util', m 'a.toggler', props, 'Utils'
+        m 'li[data-tab="ivs"]', m 'a.toggler', props, 'IVS'
+        m 'li[data-tab="vs"]', m 'a.toggler', props, '(F)VS'
+        m 'li[data-tab="emod"]', m 'a.toggler', props, 'Emoji'
+        m 'li[data-tab="util"]', m 'a.toggler', props, 'Utils'
 Picker =
   view: ->
     m '#picker.column.is-5.message.is-success',
@@ -184,15 +184,13 @@ Social =
         m 'a#twitter-share.level-item',
           onclick: (e)-> Social.share e, 'twitter'
           ontouchstart: (e)-> Social.share e, 'twitter'
-          m 'img.glyph',
+          m 'img.glyph[alt="Twitter"]',
             src: "images/Twitter_Social_Icon_Circle_Color.svg"
-            alt: "Twitter"
         m 'a#line-it.level-item',
           onclick: (e)-> Social.share e, 'line'
           ontouchstart: (e)-> Social.share e, 'line'
-          m 'img.glyph',
+          m 'img.glyph[alt="LINE"]',
             src: "images/share-d.png"
-            alt: "LINE"
   share: (e, t)->
     e.redraw = false
     switch t
@@ -378,16 +376,21 @@ VResult =
           m 'p.has-text-centered.message-body', '以下に検索結果が表示されます'
 
 SearchBox =
+  oninit: ->
+    hint.load()
+
   f: ->
     m.withAttr 'value', query.input
   key: (e)->
     e.redraw = false
     if SearchBox.keypressHappened and (e.key is 'Enter' or e.keyCode is 13 or e.which is 13)
+      SearchBox.clearSuggestions()
       query.input e.currentTarget.value
       query.fetch()
-    else if SearchBox.buffer.clear
+    else
       query.input e.currentTarget.value
     SearchBox.buffer.update()
+    SearchBox.suggestBuffer.update()
     SearchBox.keypressHappened = false
   keypressHappened: false # keypressが発火しないkeyupは変換確定
   keypress: (e)->
@@ -401,13 +404,79 @@ SearchBox =
       @clear = false
       @__timer = setTimeout (=> @clear = true; m.redraw), 100
   view: ->
-    m 'input#searchbox.input[type=text]',
-      placeholder: "例：邊、270B…"
-      value: query.box
-      onchange: SearchBox.f()
-      onkeypress: SearchBox.keypress
-      onkeyup: SearchBox.key
-      onpaste: SearchBox.f()
+    [
+      m 'input#searchbox.input[type=text]',
+        placeholder: "例：邊、270B…"
+        value: query.box
+        onchange: SearchBox.f()
+        onkeypress: SearchBox.keypress
+        onkeyup: SearchBox.key
+        onpaste: SearchBox.f()
+      m '#autocomplete.panel.has-background-white', SearchBox.suggestionsCache
+    ]
+
+  candidate: ''
+  searchCache: []
+  suggestionsCache: []
+  selecting: undefined
+  insert: ->
+    m.withAttr 'data-char', SearchBox.replaceBySuggestion
+  replaceBySuggestion: (t)->
+    str = query.box
+    before = str.indexOf ':'
+    after = before + SearchBox.candidate.length + 2 # take in the closing colon, doesn't harm if nonexistent
+    query.input str.slice(0, before) + t + str.slice(after)
+    SearchBox.suggest()
+  clearSuggestions: ->
+    SearchBox.suggestionsCache = []
+  suggestBuffer:
+    clear: false
+    __timer: undefined
+    update: ->
+      clearTimeout @__timer
+      @clear = false
+      @__timer = setTimeout (=> @clear = true; SearchBox.suggest()), 500
+  suggest: ->
+    lead = query.box.indexOf ':'
+    if lead >= 0
+      start = lead + 1
+      end = query.box.indexOf(':', start)
+      captured = query.box.slice(start, (if end > 0 then end else undefined))
+    else
+      captured = ''
+    if hint.loaded and captured isnt SearchBox.candidate
+      SearchBox.selecting = undefined
+      SearchBox.candidate = captured
+      SearchBox.searchCache = hint.suggest captured
+      SearchBox.suggestionsCache = SearchBox.buildSuggestions()
+    m.redraw()
+  buildSuggestions: ->
+    for sg, i in SearchBox.searchCache
+        it = sg.item
+        _mk = [].concat.apply([], mt.indices for mt in sg.matches) # first-level flatten
+        mk = (e for e, mi in _mk when _mk.indexOf(e) is mi) # uniq
+          .sort (a, b)-> a[0] - b[0]
+        emph = (iv)-> m 'mark', iv
+        marked = do ->
+          fragment = it.label.toCodepoints().eachToUcs2()
+          loss = 0
+          for ep in mk
+            [bgn, end] = (p - loss for p in ep)
+            len = end - bgn
+            if len is 0
+              fragment[bgn] = emph fragment[bgn]
+            else if len > 0
+              fragment.splice bgn, len+1, emph fragment.slice bgn, end+1
+              loss += len
+          fragment
+        m 'a.autocomplete-item.panel-block',
+          class: if SearchBox.selecting is i then 'is-active' else ''
+          'data-char': it.value
+          onclick: SearchBox.insert()
+          ontouchstart: SearchBox.insert()
+          m 'span.panel-icon.emoji-width', it.value
+          m 'span', marked
+          m 'span.desc.has-text-grey-light.is-size-7', it.desc
 
 Search =
   view: ->

@@ -105,3 +105,35 @@ query =
       'seq': bases.concat(s['q'])
       'name': s['n']
       'klass': genid
+
+hint =
+  loaded: false
+  data: []
+  searcher: undefined
+  max: 20
+
+  suggest: (text)->
+    @searcher.search(text).slice(0, @max)
+
+  load: ->
+    langs = ['en', 'ja']
+    Promise.all (hint.request(ln) for ln in langs)
+    .then (results)->
+      for res in results
+        rd = res['D']
+        for entry, refs of res['L']
+          for r in refs
+            hint.data.push
+              label: entry
+              value: rd[r][0]
+              desc: rd[r][1]
+      hint.searcher = new Fuse hint.data,
+        includeMatches: true
+        threshold: 0.4
+        keys: ['label']
+      hint.loaded = true if hint.searcher
+
+  request: (lang)->
+    m.request
+      type: "get"
+      url: "./utils/#{lang}.json"

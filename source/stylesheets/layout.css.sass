@@ -95,15 +95,24 @@ $td-x-paddings: nth($table-cell-padding, 2) * 2
 .ivs-etc
   font-family: HanaMinA, HanaMinB, serif
 
-.ui-menu-item
-  background: $white
-  &.ui-state-focus
-    $pair: map-get($colors, "info")
-    background: nth($pair, 1)
-    *
-      color: nth($pair, 2)
-.ui-helper-hidden-accessible
-  display: none
+// .ui-menu-item
+//   background: $white
+//   &.ui-state-focus
+//     $pair: map-get($colors, "info")
+//     background: nth($pair, 1)
+//     *
+//       color: nth($pair, 2)
+// .ui-helper-hidden-accessible
+//   display: none
+
+#autocomplete
+  position: absolute
+  z-index: 9999
+  white-space: nowrap // force width of the content
+  .desc
+    margin: auto 1em
+.emoji-width
+  width: 2em !important
 
 .touch-picker-leader
   width: 100% // hack to make it centered; is there any other way?
