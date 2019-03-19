@@ -309,7 +309,7 @@ open("#{DATAPATH}/emoji-sequences.txt", "r:utf-8") do |emj|
         data2, desc = data1.splip('      ') # Is there a better way?
         bname, mname = desc.splip(',')
         # p [base, var, type, data1, data2, bname, mname].join("\t")
-      when "4.0", "5.0"
+      when "4.0", "5.0", "11.0"
         record, comment = line.splip('#')
         seq, type, desc = record.splip(';')
         base, var, *extra = seq.spliph # Expect possible longer sequence
@@ -348,7 +348,7 @@ open("#{DATAPATH}/emoji-zwj-sequences.txt", "r:utf-8") do |ezs|
         type, data1 = data.splip('#')
         data2, desc = data1.splip(/\s{3,}/)
         # bname, mname = desc.splip(',')
-      when "4.0", "5.0"
+      when "4.0", "5.0", "11.0"
         record, comment = line.splip('#')
         seq, type, desc = record.splip(';')
         base, var, *extra = seq.spliph
