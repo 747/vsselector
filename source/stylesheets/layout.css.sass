@@ -18,7 +18,6 @@
   height: 16rem
 #catalog > ul
   height: 18rem
-  display: none
   overflow-y: scroll
   & > li
     display: inline-block
@@ -27,8 +26,8 @@
   margin-top: 1rem
 
 // hidden by default selectors
-#found, #notfound, #extern, .collapsible
-  display: none
+// .collapsible
+//   display: none
 
 // table style fix
 table td, table th
@@ -58,12 +57,13 @@ dt
 
 $glyph-m: 2.4em
 $glyph-s: 1.8em
+$td-x-paddings: nth($table-cell-padding, 2) * 2
 .glyph
   height: $glyph-m
   width: auto
   .is-small &
     height: $glyph-s
-@media all and (-ms-high-contrast:none)
+@media all and (-ms-high-contrast:none) // what was this for?
   .glyph
     width: $glyph-m
     .is-small &
@@ -72,6 +72,10 @@ $glyph-s: 1.8em
     width: $glyph-m
   *::-ms-backdrop, .is-small .glyph
     width: $glyph-s
+.glyph-col
+  min-width: $glyph-m + $td-x-paddings
+  .is-small &
+    min-width: $glyph-s + $td-x-paddings
 
 
 .transparent
@@ -91,12 +95,26 @@ $glyph-s: 1.8em
 .ivs-etc
   font-family: HanaMinA, HanaMinB, serif
 
-.ui-menu-item
-  background: $white
-  &.ui-state-focus
-    $pair: map-get($colors, "info")
-    background: nth($pair, 1)
-    *
-      color: nth($pair, 2)
-.ui-helper-hidden-accessible
-  display: none
+// .ui-menu-item
+//   background: $white
+//   &.ui-state-focus
+//     $pair: map-get($colors, "info")
+//     background: nth($pair, 1)
+//     *
+//       color: nth($pair, 2)
+// .ui-helper-hidden-accessible
+//   display: none
+
+#autocomplete
+  position: absolute
+  z-index: 9999
+  white-space: nowrap // force width of the content
+  .desc
+    margin: auto 1em
+.emoji-width
+  width: 2em !important
+
+.touch-picker-leader
+  width: 100% // hack to make it centered; is there any other way?
+.collection-selector-desc::before
+  content: '\A0' // hack to compensate for implicit spaces eaten by .level-item (display: flex)
