@@ -212,7 +212,7 @@ open("#{DATAPATH}/StandardizedVariants.txt", "r:utf-8") do |svs|
     case line
     when /^# StandardizedVariants-(\d[\d\.]*\d|\d)\.txt/
       versions[:std] = $1
-    when /^# (?:CJK )*(Math|Myanmar|Phags-pa|Manichaean|Mongolian|Emoji|compat)/
+    when /^# (?:CJK |East Asian punctuation )*(Math|positional|Myanmar|Phags-pa|Manichaean|Mongolian|Emoji|compat)/
       category = $1.gsub('-', '').downcase.intern
     when /^\s*$|^#/; next
     else
@@ -291,7 +291,7 @@ open("#{DATAPATH}/emoji-sequences.txt", "r:utf-8") do |emj|
     case line
     when /^#\s*Version:\s*(\d[\d\.]*\d|\d)*/
       versions[:emo] = $1
-    when /^#\s*Emoji (Keycap|Flag|Tag|Modifier) Sequence/
+    when /^#\s*Emoji[ _](Keycap|Flag|Tag|Modifier)[ _]Sequence/
       trailing = true if %w(Keycap Flag Tag).include? $1
       inrange = true
     when /^#\s*={5,}/
@@ -309,7 +309,7 @@ open("#{DATAPATH}/emoji-sequences.txt", "r:utf-8") do |emj|
         data2, desc = data1.splip('      ') # Is there a better way?
         bname, mname = desc.splip(',')
         # p [base, var, type, data1, data2, bname, mname].join("\t")
-      when "4.0", "5.0", "11.0"
+      when "4.0", "5.0", "11.0", "12.0"
         record, comment = line.splip('#')
         seq, type, desc = record.splip(';')
         base, var, *extra = seq.spliph # Expect possible longer sequence
@@ -348,7 +348,7 @@ open("#{DATAPATH}/emoji-zwj-sequences.txt", "r:utf-8") do |ezs|
         type, data1 = data.splip('#')
         data2, desc = data1.splip(/\s{3,}/)
         # bname, mname = desc.splip(',')
-      when "4.0", "5.0", "11.0"
+      when "4.0", "5.0", "11.0", "12.0"
         record, comment = line.splip('#')
         seq, type, desc = record.splip(';')
         base, var, *extra = seq.spliph

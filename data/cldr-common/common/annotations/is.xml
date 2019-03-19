@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE ldml SYSTEM "../../common/dtd/ldml.dtd">
-<!-- Copyright © 1991-2017 Unicode, Inc.
+<!-- Copyright © 1991-2018 Unicode, Inc.
 For terms of use, see http://www.unicode.org/copyright.html
 Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
 CLDR data files are interpreted according to the LDML specification (http://unicode.org/reports/tr35/)
@@ -9,20 +9,20 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 -->
 <ldml>
 	<identity>
-		<version number="$Revision: 13702 $"/>
+		<version number="$Revision: 14368 $"/>
 		<language type="is"/>
 	</identity>
 	<annotations>
-		<annotation cp="🏻">húð | húðlitur | húðtegund 1–2 | tegund 1–2</annotation>
-		<annotation cp="🏻" type="tts">húðtegund 1–2</annotation>
-		<annotation cp="🏼">húð | húðlitur | húðtegund 3 | tegund 3</annotation>
-		<annotation cp="🏼" type="tts">húðtegund 3</annotation>
-		<annotation cp="🏽">húð | húðlitur | húðtegund 4 | tegund 4</annotation>
-		<annotation cp="🏽" type="tts">húðtegund 4</annotation>
-		<annotation cp="🏾">húð | húðlitur | húðtegund 5 | tegund 5</annotation>
-		<annotation cp="🏾" type="tts">húðtegund 5</annotation>
-		<annotation cp="🏿">húð | húðlitur | húðtegund 6 | tegund 6</annotation>
-		<annotation cp="🏿" type="tts">húðtegund 6</annotation>
+		<annotation cp="🏻">húðlitur | ljós húðlitur | tegund 1–2</annotation>
+		<annotation cp="🏻" type="tts">ljós húðlitur</annotation>
+		<annotation cp="🏼">húðlitur | meðalljós húðlitur | tegund 3</annotation>
+		<annotation cp="🏼" type="tts">meðalljós húðlitur</annotation>
+		<annotation cp="🏽">húðlitur | millihúðlitur | tegund 4</annotation>
+		<annotation cp="🏽" type="tts">millihúðlitur</annotation>
+		<annotation cp="🏾">húðlitur | meðaldökkur húðlitur | tegund 5</annotation>
+		<annotation cp="🏾" type="tts">meðaldökkur húðlitur</annotation>
+		<annotation cp="🏿">dökkur húðlitur | húðlitur | tegund 6</annotation>
+		<annotation cp="🏿" type="tts">dökkur húðlitur</annotation>
 		<annotation cp="😀">andlit | glott | glottandi andlit</annotation>
 		<annotation cp="😀" type="tts">glottandi andlit</annotation>
 		<annotation cp="😁">andlit | glottandi andlit | glottandi andlit með brosandi augum | hlæja</annotation>
@@ -31,31 +31,33 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="😂" type="tts">andlit tárast af gleði</annotation>
 		<annotation cp="🤣">hlátur | veltast | veltist um af hlátri</annotation>
 		<annotation cp="🤣" type="tts">veltist um af hlátri</annotation>
-		<annotation cp="😃">andlit | bros | brosandi andlit með opinn munn | hlæjandi | munnur | opinn</annotation>
+		<annotation cp="😃">andlit | bros | brosandi andlit með opinn munn | brosandi andlit með stórum augum | opinn munnur</annotation>
 		<annotation cp="😃" type="tts">brosandi andlit með opinn munn</annotation>
 		<annotation cp="😄">andlit | bros | bros og opinn munnur | hlæja | hlæjandi andlit</annotation>
 		<annotation cp="😄" type="tts">hlæjandi andlit</annotation>
 		<annotation cp="😅">andlit | bros | bros og kaldur sviti | brosandi sveitt andlit | sviti</annotation>
 		<annotation cp="😅" type="tts">bros og kaldur sviti</annotation>
-		<annotation cp="😆">andlit | bros | brosandi andlit með opinn munn og lokuð augu | hlæjandi | munnur | opinn</annotation>
-		<annotation cp="😆" type="tts">brosandi andlit með opinn munn og lokuð augu</annotation>
+		<annotation cp="😆">ánægja | andlit | bros | brosandi andlit með pírð augu | brosandi andlit og pírð augu</annotation>
+		<annotation cp="😆" type="tts">brosandi andlit með pírð augu</annotation>
 		<annotation cp="😉">andlit | blikk | blikkandi andlit</annotation>
 		<annotation cp="😉" type="tts">blikkandi andlit</annotation>
 		<annotation cp="😊">andlit | bros | brosandi andlit og augu | brosandi augu</annotation>
 		<annotation cp="😊" type="tts">bros</annotation>
 		<annotation cp="😋">andlit | andlit að njóta matar | góður matur</annotation>
 		<annotation cp="😋" type="tts">andlit að njóta matar</annotation>
-		<annotation cp="😎">andlit | bros | brosandi | brosandi andlit með sólgleraugu | sól | sólgleraugu | svalt | svalur | svöl</annotation>
+		<annotation cp="😎">bjart | brosandi andlit með sólgleraugu | brosandi andlit með sólgleraugum | sól | sólgleraugu | svalt</annotation>
 		<annotation cp="😎" type="tts">brosandi andlit með sólgleraugu</annotation>
-		<annotation cp="😍">andlit | ást | bros | brosandi andlit með hjartalaga augu | hjartalaga augu | hjörtu</annotation>
+		<annotation cp="😍">andlit | ást | augu | bros | brosandi andlit með hjartalaga augu</annotation>
 		<annotation cp="😍" type="tts">brosandi andlit með hjartalaga augu</annotation>
 		<annotation cp="😘">andlit | kasta kossi | koss | kveðjukoss | kyssa</annotation>
 		<annotation cp="😘" type="tts">kveðjukoss</annotation>
+		<annotation cp="🥰">aðdáun | ástfangin | ástfanginn | brosandi andlit með 3 hjörtum | skotinn í</annotation>
+		<annotation cp="🥰" type="tts">brosandi andlit með 3 hjörtum</annotation>
 		<annotation cp="😗">andlit | koss | kyssa | kyssandi andlit</annotation>
 		<annotation cp="😗" type="tts">kyssandi andlit</annotation>
 		<annotation cp="😙">andlit | koss og bros | kyssa og brosa | kyssandi og brosandi andlit</annotation>
 		<annotation cp="😙" type="tts">kyssa og brosa</annotation>
-		<annotation cp="😚">andlit | koss | kyssa | kyssa með lokuð augun | kyssandi andlit með lokuð augu | lokuð augu</annotation>
+		<annotation cp="😚">andlit | augu | koss | kyssandi andlit með lokuð augu | kyssandi andlit og lokuð augu</annotation>
 		<annotation cp="😚" type="tts">kyssandi andlit með lokuð augu</annotation>
 		<annotation cp="☺">andlit | bros | brosandi andlit | broskall | broskarl</annotation>
 		<annotation cp="☺" type="tts">broskarl</annotation>
@@ -65,7 +67,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🤗" type="tts">faðmandi andlit</annotation>
 		<annotation cp="🤩">andlit | augu | brosandi | stjarna | stjörnustjarfur</annotation>
 		<annotation cp="🤩" type="tts">stjörnustjarfur</annotation>
-		<annotation cp="🤔">andlit | hugsandi | hugsandi andlit</annotation>
+		<annotation cp="🤔">andlit | hugsandi</annotation>
 		<annotation cp="🤔" type="tts">hugsandi andlit</annotation>
 		<annotation cp="🤨">andlit með yppta brún | efasemdir | hissa | vantraust</annotation>
 		<annotation cp="🤨" type="tts">andlit með yppta brún</annotation>
@@ -87,21 +89,21 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="😮" type="tts">andlit með opinn munn</annotation>
 		<annotation cp="🤐">andlit | andlit með rennilás fyrir munninum | munnur | rennilás</annotation>
 		<annotation cp="🤐" type="tts">andlit með rennilás fyrir munninum</annotation>
-		<annotation cp="😯">andlit | undrandi | undrandi andlit | undrun</annotation>
+		<annotation cp="😯">andlit | undrandi | undrun</annotation>
 		<annotation cp="😯" type="tts">undrandi andlit</annotation>
 		<annotation cp="😪">andlit | syfja | syfjað andlit</annotation>
 		<annotation cp="😪" type="tts">syfjað andlit</annotation>
 		<annotation cp="😫">andlit | þreyta | þreytt andlit</annotation>
 		<annotation cp="😫" type="tts">þreytt andlit</annotation>
-		<annotation cp="😴">andlit | sofandi | sofandi andlit</annotation>
+		<annotation cp="😴">andlit | sofandi</annotation>
 		<annotation cp="😴" type="tts">sofandi</annotation>
 		<annotation cp="😌">andlit | andlit sem er létt | léttir</annotation>
 		<annotation cp="😌" type="tts">andlit sem er létt</annotation>
 		<annotation cp="😛">andlit | andlit að ulla | tunga út | ulla</annotation>
 		<annotation cp="😛" type="tts">tunga út</annotation>
-		<annotation cp="😜">andlit | blikk | blikkarl með útrétta tungu | grín | stríðni | tunga út og blikk</annotation>
+		<annotation cp="😜">andlit | auga | blikkandi auga að ulla | blikkarl með útrétta tungu | brandari | tunga</annotation>
 		<annotation cp="😜" type="tts">blikkarl með útrétta tungu</annotation>
-		<annotation cp="😝">andlit | lokuð augu | ógeð | oj | tunga út | tunga út og lokuð augu</annotation>
+		<annotation cp="😝">andlit | andlit að ulla og pírð augu | auga | hryllingur | oj | tunga</annotation>
 		<annotation cp="😝" type="tts">oj</annotation>
 		<annotation cp="🤤">andlit | slefa | slefandi</annotation>
 		<annotation cp="🤤" type="tts">slefandi</annotation>
@@ -111,8 +113,8 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="😓" type="tts">kaldur sviti</annotation>
 		<annotation cp="😔">andlit | í þungum þönkum | íbyggið andlit</annotation>
 		<annotation cp="😔" type="tts">íbyggið andlit</annotation>
-		<annotation cp="😕">andlit | ringlað andlit | ringlun</annotation>
-		<annotation cp="😕" type="tts">ringlað andlit</annotation>
+		<annotation cp="😕">andlit | ringlað andlit | ringlun | ruglingslegt andlit</annotation>
+		<annotation cp="😕" type="tts">ruglingslegt andlit</annotation>
 		<annotation cp="🙃">á hvolfi | andlit | andlit á hvolfi</annotation>
 		<annotation cp="🙃" type="tts">andlit á hvolfi</annotation>
 		<annotation cp="🤑">andlit | andlit með peningaseðil í munninum | munnur | peningaseðill</annotation>
@@ -123,7 +125,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="☹" type="tts">andlit með stóra skeifu</annotation>
 		<annotation cp="🙁">andlit | andlit með litla skeifu | skeifa</annotation>
 		<annotation cp="🙁" type="tts">andlit með litla skeifu</annotation>
-		<annotation cp="😖">andlit | forviða | forviða andlit</annotation>
+		<annotation cp="😖">andlit | forviða</annotation>
 		<annotation cp="😖" type="tts">forviða andlit</annotation>
 		<annotation cp="😞">andlit | vonbrigðaandlit | vonbrigði</annotation>
 		<annotation cp="😞" type="tts">vonbrigði</annotation>
@@ -133,7 +135,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="😤" type="tts">sigursvipur</annotation>
 		<annotation cp="😢">andlit | depurð | grátandi andlit | grátur | tár</annotation>
 		<annotation cp="😢" type="tts">grátandi andlit</annotation>
-		<annotation cp="😭">andlit | grátur | hágrátandi andlit | snökkt | sorg | tár</annotation>
+		<annotation cp="😭">andlit | grátandi andlit | grátur | hágrátandi andlit | sorg | tár</annotation>
 		<annotation cp="😭" type="tts">hágrátandi andlit</annotation>
 		<annotation cp="😦">andlit | leiði | leitt andlit | leitt andlit opinn munn | opinn munnur</annotation>
 		<annotation cp="😦" type="tts">leitt andlit</annotation>
@@ -143,14 +145,18 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="😨" type="tts">hrætt andlit</annotation>
 		<annotation cp="😩">andlit | þreyta | þreytulegt andlit</annotation>
 		<annotation cp="😩" type="tts">þreytulegt andlit</annotation>
-		<annotation cp="🤯" draft="provisional">splundrað höfuð</annotation>
-		<annotation cp="🤯" type="tts" draft="provisional">splundrað höfuð</annotation>
+		<annotation cp="🤯">splundrað höfuð</annotation>
+		<annotation cp="🤯" type="tts">splundrað höfuð</annotation>
 		<annotation cp="😬">andlit | andlit með grettu | gretta</annotation>
 		<annotation cp="😬" type="tts">gretta</annotation>
 		<annotation cp="😰">andlit | kaldur sviti | sveitt andlit | sviti</annotation>
 		<annotation cp="😰" type="tts">sveitt andlit</annotation>
 		<annotation cp="😱">andlit | hræðsla | öskra af ótta | óttaslegið andlit | ótti</annotation>
 		<annotation cp="😱" type="tts">óttaslegið andlit</annotation>
+		<annotation cp="🥵">heitt | með hita | rauður í framan | sólstingur | sviti</annotation>
+		<annotation cp="🥵" type="tts">heitt</annotation>
+		<annotation cp="🥶">blár í framan | frostbit | grýlukerti | ískalt | kalt</annotation>
+		<annotation cp="🥶" type="tts">kalt</annotation>
 		<annotation cp="😳">andlit | andlit að roðna | roðna</annotation>
 		<annotation cp="😳" type="tts">andlit að roðna</annotation>
 		<annotation cp="🤪">auga | lítið | stórt | sturlað andlit</annotation>
@@ -163,7 +169,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="😠" type="tts">reitt andlit</annotation>
 		<annotation cp="🤬">andlit með tákn fyrir munni | blóta | reiði</annotation>
 		<annotation cp="🤬" type="tts">andlit með tákn fyrir munni</annotation>
-		<annotation cp="😷">andlit | andlit með grímu | andlitsgríma | gríma | grímuklætt andlit | læknagríma</annotation>
+		<annotation cp="😷">andlit | andlit með grímu | andlit með læknagrímu | gríma | kalt | veikindi</annotation>
 		<annotation cp="😷" type="tts">andlit með grímu</annotation>
 		<annotation cp="🤒">andlit | andlit með hitamæli í munninum | hitamælir | með flensu | veikur</annotation>
 		<annotation cp="🤒" type="tts">andlit með hitamæli í munninum</annotation>
@@ -179,12 +185,16 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="😇" type="tts">brosandi andlit með geislabaug</annotation>
 		<annotation cp="🤠">hattur | kúreki</annotation>
 		<annotation cp="🤠" type="tts">kúreki</annotation>
-		<annotation cp="🤡">andlit | trúður</annotation>
-		<annotation cp="🤡" type="tts">trúður</annotation>
+		<annotation cp="🥳">fagna | flauta | hattur | partí | partíandlit</annotation>
+		<annotation cp="🥳" type="tts">partíandlit</annotation>
+		<annotation cp="🥴">hlykkjóttur munnur | kenderí | ójöfn augu | ringlað andlit | svima | víma</annotation>
+		<annotation cp="🥴" type="tts">ringlað andlit</annotation>
+		<annotation cp="🥺">biðjandi andlit | grátbiðja | hvolpaaugu | miskunn</annotation>
+		<annotation cp="🥺" type="tts">biðjandi andlit</annotation>
 		<annotation cp="🤥">andlit | gosi | ljúga | lygari | lygi</annotation>
 		<annotation cp="🤥" type="tts">lygari</annotation>
-		<annotation cp="🤫" draft="provisional">andilt að segja uss</annotation>
-		<annotation cp="🤫" type="tts" draft="provisional">andilt að segja uss</annotation>
+		<annotation cp="🤫">andilt að segja uss</annotation>
+		<annotation cp="🤫" type="tts">andilt að segja uss</annotation>
 		<annotation cp="🤭">andlit með hendi fyrir munn | úps</annotation>
 		<annotation cp="🤭" type="tts">andlit með hendi fyrir munn</annotation>
 		<annotation cp="🧐">andlit með einglyrni | gamaldags | teprulegur</annotation>
@@ -195,13 +205,15 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="😈" type="tts">broskarl með horn</annotation>
 		<annotation cp="👿">andlit | djöfull | púki | skratti</annotation>
 		<annotation cp="👿" type="tts">púki</annotation>
-		<annotation cp="👹">ævintýri | andlit | japanskt tröll | oni | skrímsli | tröll</annotation>
+		<annotation cp="🤡">andlit | trúður</annotation>
+		<annotation cp="🤡" type="tts">trúður</annotation>
+		<annotation cp="👹">ævintýri | andlit | oni | tröll | vera</annotation>
 		<annotation cp="👹" type="tts">tröll</annotation>
-		<annotation cp="👺">ævintýri | andlit | ári | japanskur púki | skrímsli | tengu</annotation>
+		<annotation cp="👺">ævintýri | andlit | ári | púki | tröll</annotation>
 		<annotation cp="👺" type="tts">ári</annotation>
 		<annotation cp="💀">ævintýri | andlit | hauskúpa | líkami</annotation>
 		<annotation cp="💀" type="tts">hauskúpa</annotation>
-		<annotation cp="☠">andlit | beinleggir | dauði | hauskúpa og beinleggir | höfuðkúpa | líkami | skrímsli</annotation>
+		<annotation cp="☠">andlit | beinleggir | dauði | hausk´úpa og beinleggir | hauskúpa og beinleggir | höfuðkúpa</annotation>
 		<annotation cp="☠" type="tts">hauskúpa og beinleggir</annotation>
 		<annotation cp="👻">ævintýri | andlit | draugur</annotation>
 		<annotation cp="👻" type="tts">draugur</annotation>
@@ -219,23 +231,23 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="😸" type="tts">glottandi köttur</annotation>
 		<annotation cp="😹">gleðitár | köttur | köttur með gleðitár</annotation>
 		<annotation cp="😹" type="tts">gleðitár</annotation>
-		<annotation cp="😻">ást | ástarköttur | ástfanginn köttur | brosandi köttur | brosandi köttur með hjartalaga augu | köttur</annotation>
+		<annotation cp="😻">andlit | ást | ástarköttur | brosandi köttur | brosandi köttur og hjartalaga augu | köttur</annotation>
 		<annotation cp="😻" type="tts">brosandi köttur</annotation>
 		<annotation cp="😼">glott | glottandi köttur | köttur | lúmskur köttur | lymska</annotation>
 		<annotation cp="😼" type="tts">lúmskur köttur</annotation>
-		<annotation cp="😽">kattarkoss | koss | köttur | köttur að kyssa | kyssa | kyssandi köttur</annotation>
+		<annotation cp="😽">andlit | augu | kattarkoss | koss | köttur | kyssandi köttur</annotation>
 		<annotation cp="😽" type="tts">kyssandi köttur</annotation>
-		<annotation cp="🙀">hissa | hnugginn köttur | köttur | ó | undrun | þreyttur</annotation>
+		<annotation cp="🙀">andlit | hissa | hnugginn köttur | köttur | óvænt | undrandi</annotation>
 		<annotation cp="🙀" type="tts">hnugginn köttur</annotation>
-		<annotation cp="😿">grátandi | grátandi köttur | grátur | köttur</annotation>
+		<annotation cp="😿">grátandi | grátur | köttur</annotation>
 		<annotation cp="😿" type="tts">grátandi köttur</annotation>
 		<annotation cp="😾">fýla | fýluköttur | köttur | köttur í fýlu</annotation>
 		<annotation cp="😾" type="tts">köttur í fýlu</annotation>
-		<annotation cp="🙈">api | api heldur fyrir augu | bannað | halda fyrir augu | illska | má ekki | sjá</annotation>
+		<annotation cp="🙈">api | api heldur fyrir augu | bannað | illska | má ekki sjá</annotation>
 		<annotation cp="🙈" type="tts">api heldur fyrir augu</annotation>
-		<annotation cp="🙉">api | api heldur fyrir eyru | bannað | halda fyrir eyru | heyra | illska | má ekki</annotation>
+		<annotation cp="🙉">api | api heldur fyrir eyru | illska | má ekki heyra</annotation>
 		<annotation cp="🙉" type="tts">api heldur fyrir eyru</annotation>
-		<annotation cp="🙊">api | api heldur fyrir munn | bannað | halda fyrir munn | illska | má ekki | tala</annotation>
+		<annotation cp="🙊">api | api heldur fyrir munn | illska | má ekki tala</annotation>
 		<annotation cp="🙊" type="tts">api heldur fyrir munn</annotation>
 		<annotation cp="👶">fólk | ungbarn</annotation>
 		<annotation cp="👶" type="tts">ungbarn</annotation>
@@ -243,19 +255,27 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🧒" type="tts">barn</annotation>
 		<annotation cp="👦">drengur | fólk | strákur</annotation>
 		<annotation cp="👦" type="tts">drengur</annotation>
-		<annotation cp="👧">fólk | stelpa | stúlka</annotation>
+		<annotation cp="👧">meyja | stelpa | stjörnumerki | stúlka</annotation>
 		<annotation cp="👧" type="tts">stúlka</annotation>
-		<annotation cp="🧑">fullorðinn | kynhlutlaust</annotation>
-		<annotation cp="🧑" type="tts">fullorðinn</annotation>
+		<annotation cp="🧑">fullorðinn | kynhlutlaust | manneskja</annotation>
+		<annotation cp="🧑" type="tts">manneskja</annotation>
+		<annotation cp="👱">fólk | ljóshærð manneskja | ljóst hár</annotation>
+		<annotation cp="👱" type="tts">ljóshærð manneskja</annotation>
 		<annotation cp="👨">fólk | karl | maður</annotation>
 		<annotation cp="👨" type="tts">karl</annotation>
+		<annotation cp="👱‍♂">ljóshærður | ljóst hár | maður</annotation>
+		<annotation cp="👱‍♂" type="tts">ljóshærður maður</annotation>
+		<annotation cp="🧔">maður með skegg | skegg</annotation>
+		<annotation cp="🧔" type="tts">maður með skegg</annotation>
 		<annotation cp="👩">fólk | kona</annotation>
 		<annotation cp="👩" type="tts">kona</annotation>
+		<annotation cp="👱‍♀">kona | ljóshærð | ljóst hár</annotation>
+		<annotation cp="👱‍♀" type="tts">ljóshærð kona</annotation>
 		<annotation cp="🧓">eldri fullorðinn | gamall | kynhlutlaust</annotation>
 		<annotation cp="🧓" type="tts">eldri fullorðinn</annotation>
-		<annotation cp="👴">eldri maður | fólk | gamall | gamall maður | maður</annotation>
+		<annotation cp="👴">eldri maður | fólk | gamall | maður</annotation>
 		<annotation cp="👴" type="tts">eldri maður</annotation>
-		<annotation cp="👵">eldri kona | fólk | gömul | gömul kona | kona</annotation>
+		<annotation cp="👵">eldri kona | fólk | gömul | kona</annotation>
 		<annotation cp="👵" type="tts">eldri kona</annotation>
 		<annotation cp="👨‍⚕">heilsa | hjúkrunarfræðingur | karl | karlkyns heilbrigðisstarfsmaður | læknir</annotation>
 		<annotation cp="👨‍⚕" type="tts">karlkyns heilbrigðisstarfsmaður</annotation>
@@ -289,7 +309,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="👨‍🏭" type="tts">karlkyns verksmiðjustarfsmaður</annotation>
 		<annotation cp="👩‍🏭">iðnaður | kona | kvenkyns verksmiðjustarfsmaður | verkfæri | verksmiðja</annotation>
 		<annotation cp="👩‍🏭" type="tts">kvenkyns verksmiðjustarfsmaður</annotation>
-		<annotation cp="👨‍💼">karl | karlkyns skrifstofustarfsmaður | skrifstofa | stjórandi | viðskipti</annotation>
+		<annotation cp="👨‍💼">karl | karlkyns skrifstofustarfsmaður | skrifstofa | stjórnandi | viðskipti</annotation>
 		<annotation cp="👨‍💼" type="tts">karlkyns skrifstofustarfsmaður</annotation>
 		<annotation cp="👩‍💼">kona | kvenkyns skrifstofustarfsmaður | skrifstofa | stjórnandi | viðskipti</annotation>
 		<annotation cp="👩‍💼" type="tts">kvenkyns skrifstofustarfsmaður</annotation>
@@ -355,23 +375,15 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="👳‍♂" type="tts">karl með túrban</annotation>
 		<annotation cp="👳‍♀">kona | kona með túrban | túrban</annotation>
 		<annotation cp="👳‍♀" type="tts">kona með túrban</annotation>
-		<annotation cp="👲">fólk | gua pi mao | kínverskur hattur | maður með gua pi mao | maður með kínverska húfu | maður með kínverskan hatt</annotation>
+		<annotation cp="👲">gua pi mao | hattur | maður | maður með kínverska húfu | maður með kínverskan hatt</annotation>
 		<annotation cp="👲" type="tts">maður með kínverska húfu</annotation>
 		<annotation cp="🧕">blæja | höfuðklútur | kona með höfuðklút | slæða | slör</annotation>
 		<annotation cp="🧕" type="tts">kona með höfuðklút</annotation>
-		<annotation cp="🧔">maður með skegg | skegg</annotation>
-		<annotation cp="🧔" type="tts">maður með skegg</annotation>
-		<annotation cp="👱">fólk | ljóshærð manneskja | ljóst hár</annotation>
-		<annotation cp="👱" type="tts">ljóshærð manneskja</annotation>
-		<annotation cp="👱‍♂">ljóshærður | ljóshærður maður | ljóst hár | maður</annotation>
-		<annotation cp="👱‍♂" type="tts">ljóshærður maður</annotation>
-		<annotation cp="👱‍♀">kona | ljóshærð | ljóshærð kona | ljóst hár</annotation>
-		<annotation cp="👱‍♀" type="tts">ljóshærð kona</annotation>
 		<annotation cp="🤵">brúðgumi | finn | maður | smóking</annotation>
 		<annotation cp="🤵" type="tts">smóking</annotation>
 		<annotation cp="👰">brúðarslör | brúðkaup | brúður | brúður með slör | fólk</annotation>
 		<annotation cp="👰" type="tts">brúður</annotation>
-		<annotation cp="🤰">kona | ófrísk | ólétt | ólétt kona</annotation>
+		<annotation cp="🤰">kona | ófrísk | ólétt</annotation>
 		<annotation cp="🤰" type="tts">ólétt kona</annotation>
 		<annotation cp="🤱">barn | brjóst | brjóstagjöf</annotation>
 		<annotation cp="🤱" type="tts">brjóstagjöf</annotation>
@@ -381,6 +393,18 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🎅" type="tts">jólasveinn</annotation>
 		<annotation cp="🤶">amma | jól | jólamamma | mamma</annotation>
 		<annotation cp="🤶" type="tts">jólamamma</annotation>
+		<annotation cp="🦸">góð | hetja | kvenhetja | ofurhetja | ofurkraftur</annotation>
+		<annotation cp="🦸" type="tts">ofurhetja</annotation>
+		<annotation cp="🦸‍♀">góð | hetja | kona | kvenhetja | ofurkona | ofurkraftur</annotation>
+		<annotation cp="🦸‍♀" type="tts">ofurkona</annotation>
+		<annotation cp="🦸‍♂">góður | hetja | maður | ofurkraftur | ofurmaður</annotation>
+		<annotation cp="🦸‍♂" type="tts">ofurmaður</annotation>
+		<annotation cp="🦹">glæpamaður | illmenni | illur | ofurkraftur | skúrkur</annotation>
+		<annotation cp="🦹" type="tts">skúrkur</annotation>
+		<annotation cp="🦹‍♀">glæpamaður | ill | illkvendi | kona | ofurkraftur</annotation>
+		<annotation cp="🦹‍♀" type="tts">illkvendi</annotation>
+		<annotation cp="🦹‍♂">glæpamaður | illmenni | illur | ofurkraftur | skúrkur</annotation>
+		<annotation cp="🦹‍♂" type="tts">illmenni</annotation>
 		<annotation cp="🧙">galdramaður | norn | seiðkarl | seiðkona</annotation>
 		<annotation cp="🧙" type="tts">galdramaður</annotation>
 		<annotation cp="🧙‍♀">galdrakona | norn | seiðkona</annotation>
@@ -389,10 +413,10 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🧙‍♂" type="tts">galdrakarl</annotation>
 		<annotation cp="🧚">álfur | Bokki | Óberon | Títanía</annotation>
 		<annotation cp="🧚" type="tts">álfur</annotation>
-		<annotation cp="🧚‍♀" draft="provisional">álfadís</annotation>
-		<annotation cp="🧚‍♀" type="tts" draft="provisional">álfadís</annotation>
-		<annotation cp="🧚‍♂" draft="provisional">álfakarl</annotation>
-		<annotation cp="🧚‍♂" type="tts" draft="provisional">álfakarl</annotation>
+		<annotation cp="🧚‍♀">álfadís</annotation>
+		<annotation cp="🧚‍♀" type="tts">álfadís</annotation>
+		<annotation cp="🧚‍♂">álfakarl</annotation>
+		<annotation cp="🧚‍♂" type="tts">álfakarl</annotation>
 		<annotation cp="🧛">Drakúla | hinir ódauðlegu | vampíra</annotation>
 		<annotation cp="🧛" type="tts">vampíra</annotation>
 		<annotation cp="🧛‍♀">hinir ódauðlegu | kvenkyns vampíra</annotation>
@@ -407,10 +431,10 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🧜‍♂" type="tts">marbendill</annotation>
 		<annotation cp="🧝">galdrar | huldumaður | töfrandi | töfrar | yfirnáttúrleiki</annotation>
 		<annotation cp="🧝" type="tts">huldumaður</annotation>
-		<annotation cp="🧝‍♀" draft="provisional">huldukona</annotation>
-		<annotation cp="🧝‍♀" type="tts" draft="provisional">huldukona</annotation>
-		<annotation cp="🧝‍♂" draft="provisional">huldukarl</annotation>
-		<annotation cp="🧝‍♂" type="tts" draft="provisional">huldukarl</annotation>
+		<annotation cp="🧝‍♀">huldukona</annotation>
+		<annotation cp="🧝‍♀" type="tts">huldukona</annotation>
+		<annotation cp="🧝‍♂">huldukarl</annotation>
+		<annotation cp="🧝‍♂" type="tts">huldukarl</annotation>
 		<annotation cp="🧞">andi | djinn</annotation>
 		<annotation cp="🧞" type="tts">andi</annotation>
 		<annotation cp="🧞‍♀">djinn | kvenkyns andi</annotation>
@@ -495,11 +519,11 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🚶‍♂" type="tts">gangandi maður</annotation>
 		<annotation cp="🚶‍♀">ganga | gangandi kona | gönguferð | kona | labba</annotation>
 		<annotation cp="🚶‍♀" type="tts">gangandi kona</annotation>
-		<annotation cp="🏃">hlaup | hlaupari | íþróttir</annotation>
+		<annotation cp="🏃">hlaup | hlaupari | maraþon</annotation>
 		<annotation cp="🏃" type="tts">hlaupari</annotation>
-		<annotation cp="🏃‍♂">hlaup | hlaupandi | hlaupandi maður | hlaupari | karl</annotation>
+		<annotation cp="🏃‍♂">hlaup | hlaupandi maður | maraþon</annotation>
 		<annotation cp="🏃‍♂" type="tts">hlaupandi maður</annotation>
-		<annotation cp="🏃‍♀">hlaup | hlaupandi | hlaupandi kona | hlaupari | kona</annotation>
+		<annotation cp="🏃‍♀">hlaup | hlaupandi kona | maraþon</annotation>
 		<annotation cp="🏃‍♀" type="tts">hlaupandi kona</annotation>
 		<annotation cp="💃">dans | dansandi kona | fólk</annotation>
 		<annotation cp="💃" type="tts">dansandi kona</annotation>
@@ -511,31 +535,31 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="👯‍♂" type="tts">menn með kanínueyru</annotation>
 		<annotation cp="👯‍♀">dans | konur | konur með kanínueyru | partí | skemmtun</annotation>
 		<annotation cp="👯‍♀" type="tts">konur með kanínueyru</annotation>
-		<annotation cp="🧖" draft="provisional">einstaklingur í gufubaði</annotation>
-		<annotation cp="🧖" type="tts" draft="provisional">einstaklingur í gufubaði</annotation>
+		<annotation cp="🧖">eimbað | einstaklingur í gufubaði | gufubað</annotation>
+		<annotation cp="🧖" type="tts">einstaklingur í gufubaði</annotation>
 		<annotation cp="🧖‍♀">eimbað | gufubað | kona í gufubaði</annotation>
 		<annotation cp="🧖‍♀" type="tts">kona í gufubaði</annotation>
 		<annotation cp="🧖‍♂">eimbað | gufubað | maður í gufubaði</annotation>
 		<annotation cp="🧖‍♂" type="tts">maður í gufubaði</annotation>
-		<annotation cp="🧗" draft="provisional">maður í klettaklifri</annotation>
-		<annotation cp="🧗" type="tts" draft="provisional">maður í klettaklifri</annotation>
+		<annotation cp="🧗">maður í klettaklifri</annotation>
+		<annotation cp="🧗" type="tts">maður í klettaklifri</annotation>
 		<annotation cp="🧗‍♀">klettaklifur | kona í klettaklifri</annotation>
 		<annotation cp="🧗‍♀" type="tts">kona í klettaklifri</annotation>
 		<annotation cp="🧗‍♂">karl í klettaklifri | klettaklifur</annotation>
 		<annotation cp="🧗‍♂" type="tts">karl í klettaklifri</annotation>
-		<annotation cp="🧘" draft="provisional">maður í lótuspósu</annotation>
-		<annotation cp="🧘" type="tts" draft="provisional">maður í lótuspósu</annotation>
-		<annotation cp="🧘‍♀" draft="provisional">kona í lótusp´ósu</annotation>
-		<annotation cp="🧘‍♀" type="tts" draft="provisional">kona í lótusp´ósu</annotation>
-		<annotation cp="🧘‍♂" draft="provisional">karl í lótuspósu</annotation>
-		<annotation cp="🧘‍♂" type="tts" draft="provisional">karl í lótuspósu</annotation>
+		<annotation cp="🧘">maður í lótuspósu</annotation>
+		<annotation cp="🧘" type="tts">maður í lótuspósu</annotation>
+		<annotation cp="🧘‍♀">kona í lótusp´ósu</annotation>
+		<annotation cp="🧘‍♀" type="tts">kona í lótusp´ósu</annotation>
+		<annotation cp="🧘‍♂">karl í lótuspósu</annotation>
+		<annotation cp="🧘‍♂" type="tts">karl í lótuspósu</annotation>
 		<annotation cp="🛀">bað | baðkar</annotation>
 		<annotation cp="🛀" type="tts">bað</annotation>
 		<annotation cp="🛌">hótel | manneskja í rúmi | sofa</annotation>
 		<annotation cp="🛌" type="tts">manneskja í rúmi</annotation>
 		<annotation cp="🕴">jakkaföt | maður | svífandi bisnessmaður í jakkafötum | viðskipti</annotation>
 		<annotation cp="🕴" type="tts">svífandi bisnessmaður í jakkafötum</annotation>
-		<annotation cp="🗣">andlit | höfuð | skuggamynd | tala | talandi höfuð | talar</annotation>
+		<annotation cp="🗣">andlit | höfuð | skuggamynd | tala | talandi</annotation>
 		<annotation cp="🗣" type="tts">talandi höfuð</annotation>
 		<annotation cp="👤">brjóstmynd | brjóstmynd í skugga | fólk | framan á</annotation>
 		<annotation cp="👤" type="tts">brjóstmynd í skugga</annotation>
@@ -613,11 +637,11 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🤼‍♂" type="tts">menn í glímu</annotation>
 		<annotation cp="🤼‍♀">glíma | konur | konur í glímu</annotation>
 		<annotation cp="🤼‍♀" type="tts">konur í glímu</annotation>
-		<annotation cp="🤽">íþrótt | manneskja í vatnapóló | sund | sundíþrótt | vatn | vatnapóló</annotation>
+		<annotation cp="🤽">manneskja í vatnapóló | póló | vatn</annotation>
 		<annotation cp="🤽" type="tts">manneskja í vatnapóló</annotation>
-		<annotation cp="🤽‍♂">karl | maður í vatnapóló | sund | sundíþrótt | vatnapóló | vatnsbolti</annotation>
+		<annotation cp="🤽‍♂">maður | maður í vatnapóló | vatnapóló</annotation>
 		<annotation cp="🤽‍♂" type="tts">maður í vatnapóló</annotation>
-		<annotation cp="🤽‍♀">kona | kona í vatnapóló | sund | sundíþrótt | vatnapóló | vatnsbolti</annotation>
+		<annotation cp="🤽‍♀">kona | kona í vatnapóló | vatnapóló</annotation>
 		<annotation cp="🤽‍♀" type="tts">kona í vatnapóló</annotation>
 		<annotation cp="🤾">boltaíþrótt | handbolti | handknattleikur | íþrótt</annotation>
 		<annotation cp="🤾" type="tts">handbolti</annotation>
@@ -631,11 +655,11 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🤹‍♂" type="tts">maður kastar boltum</annotation>
 		<annotation cp="🤹‍♀">boltakast | boltar | jöggla | juggla | kona kastar boltum</annotation>
 		<annotation cp="🤹‍♀" type="tts">kona kastar boltum</annotation>
-		<annotation cp="👫">fólk | karl | karl og kona | karl og kona leiðast | kona | leiðast | par</annotation>
+		<annotation cp="👫">haldast í hendur | hendi | karl og kona | leiðast | maður og kona leiðast | par</annotation>
 		<annotation cp="👫" type="tts">karl og kona</annotation>
-		<annotation cp="👬">fólk | karl | leiðast | par | tveir karlar | tveir karlar leiðast</annotation>
+		<annotation cp="👬">maður | par | tveir karlar | tveir menn leiðast | tvíburar | tvíburi</annotation>
 		<annotation cp="👬" type="tts">tveir karlar</annotation>
-		<annotation cp="👭">fólk | kona | leiðast | par | tvær konur | tvær konur leiðast</annotation>
+		<annotation cp="👭">hendur | kona | par | tvær konur | tvær konur leiðast</annotation>
 		<annotation cp="👭" type="tts">tvær konur</annotation>
 		<annotation cp="💏">fólk | koss | kyssast | rómantík</annotation>
 		<annotation cp="💏" type="tts">koss</annotation>
@@ -645,25 +669,29 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="👪" type="tts">fjölskylda</annotation>
 		<annotation cp="🤳">myndavél | sjálfa</annotation>
 		<annotation cp="🤳" type="tts">sjálfa</annotation>
-		<annotation cp="💪">hnykla | skrípó | spenntir vöðvar | sterkur | upphandleggsvöðvar | vöðvar</annotation>
+		<annotation cp="💪">skrípó | spenna vöðva | spenntir vöðvar | upphandleggsvöðvar | vöðvar</annotation>
 		<annotation cp="💪" type="tts">upphandleggsvöðvar</annotation>
-		<annotation cp="👈">benda | fingur | fingur bendir til vinstri | hendi | hönd | vísifingur</annotation>
+		<annotation cp="🦵">fótleggur | sparka | útlimur</annotation>
+		<annotation cp="🦵" type="tts">fótleggur</annotation>
+		<annotation cp="🦶">fótur | sparka | stappa | þramma</annotation>
+		<annotation cp="🦶" type="tts">fótur</annotation>
+		<annotation cp="👈">benda | benda til vinstri | fingur | fingur bendir til vinstri | hönd | vísifingur</annotation>
 		<annotation cp="👈" type="tts">fingur bendir til vinstri</annotation>
-		<annotation cp="👉">benda | fingur | fingur bendir til hægri | hendi | hönd | vísifingur</annotation>
+		<annotation cp="👉">benda | benda til hægri | fingur | fingur bendir til hægri | hönd | vísifingur</annotation>
 		<annotation cp="👉" type="tts">fingur bendir til hægri</annotation>
-		<annotation cp="☝">benda | fingur | hönd | líkami | upp | vísifingur | vísifingur bendir upp</annotation>
+		<annotation cp="☝">benda | benda upp | fingur | hönd | vísifingur | vísifingur bendir upp</annotation>
 		<annotation cp="☝" type="tts">vísifingur bendir upp</annotation>
-		<annotation cp="👆">benda | fingur | fingur bendir upp | hendi | hönd | upp | vísifingur</annotation>
+		<annotation cp="👆">bakhönd bendir upp | benda | fingur | fingur bendir upp | hönd | upp</annotation>
 		<annotation cp="👆" type="tts">fingur bendir upp</annotation>
 		<annotation cp="🖕">fingur | hönd | langatöng | líkami</annotation>
 		<annotation cp="🖕" type="tts">langatöng</annotation>
-		<annotation cp="👇">benda | fingur | fingur bendir niður | hendi | hönd | niður | vísifingur</annotation>
+		<annotation cp="👇">bakhönd bendir niður | benda | fingur | fingur bendir niður | hönd | niður</annotation>
 		<annotation cp="👇" type="tts">fingur bendir niður</annotation>
 		<annotation cp="✌">friðarmerki | friður | sigur | sigurmerki</annotation>
 		<annotation cp="✌" type="tts">friðarmerki</annotation>
 		<annotation cp="🤞">fingur | hendi | kross | krosslagðir fingur | lukka</annotation>
 		<annotation cp="🤞" type="tts">krosslagðir fingur</annotation>
-		<annotation cp="🖖">fingur | hönd | líkami | spock | vulcan | vulcan-kveðja</annotation>
+		<annotation cp="🖖">fingur | hendi | kveðja | spock | vulcan-kveðja | vúlkan</annotation>
 		<annotation cp="🖖" type="tts">vulcan-kveðja</annotation>
 		<annotation cp="🤘">fingur | glennt | hönd | líkami | rokkmerki</annotation>
 		<annotation cp="🤘" type="tts">rokkmerki</annotation>
@@ -687,7 +715,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🤛" type="tts">hægri hnefi</annotation>
 		<annotation cp="🤜">hnefi | hönd | krepptur | vinstri hnefi</annotation>
 		<annotation cp="🤜" type="tts">vinstri hnefi</annotation>
-		<annotation cp="🤚">hönd | lófi | upprétt | upprétt hönd</annotation>
+		<annotation cp="🤚">hönd | lófi | upprétt</annotation>
 		<annotation cp="🤚" type="tts">upprétt hönd</annotation>
 		<annotation cp="👋">hönd | hönd veifar | veifa</annotation>
 		<annotation cp="👋" type="tts">hönd veifar</annotation>
@@ -723,49 +751,61 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="👁‍🗨" type="tts">auga í talblöðru</annotation>
 		<annotation cp="🧠">gáfur | heili</annotation>
 		<annotation cp="🧠" type="tts">heili</annotation>
+		<annotation cp="🦴">bein | beinagrind</annotation>
+		<annotation cp="🦴" type="tts">bein</annotation>
+		<annotation cp="🦷">tannlæknir | tennur</annotation>
+		<annotation cp="🦷" type="tts">tennur</annotation>
 		<annotation cp="👅">andlit | líkami | tunga</annotation>
 		<annotation cp="👅" type="tts">tunga</annotation>
 		<annotation cp="👄">andlit | líkami | munnur | varir</annotation>
 		<annotation cp="👄" type="tts">munnur</annotation>
+		<annotation cp="🦰">rauðleitt hár | rautt hár</annotation>
+		<annotation cp="🦰" type="tts">rautt hár</annotation>
+		<annotation cp="🦱">afró | krullað hár | krullur | lokkar</annotation>
+		<annotation cp="🦱" type="tts">krullur</annotation>
+		<annotation cp="🦳">gamalt | grátt hár | hár | hvítt</annotation>
+		<annotation cp="🦳" type="tts">hvítt hár</annotation>
+		<annotation cp="🦲">hárleysi | hárlos | lyfjameðferð | rakað höfuð | skalli</annotation>
+		<annotation cp="🦲" type="tts">skalli</annotation>
 		<annotation cp="💋">koss | kossafar | rómantík | varir</annotation>
 		<annotation cp="💋" type="tts">kossafar</annotation>
 		<annotation cp="💘">ást | hjarta | hjarta með ör | ör | tilfinningar</annotation>
 		<annotation cp="💘" type="tts">hjarta með ör</annotation>
-		<annotation cp="❤">hjarta | rautt hjarta</annotation>
-		<annotation cp="❤" type="tts">rautt hjarta</annotation>
-		<annotation cp="💓">ást | hjarta | hjartsláttur | sláttur | tilfinningar</annotation>
-		<annotation cp="💓" type="tts">hjartsláttur</annotation>
-		<annotation cp="💔">ástarsorg | hjarta | hjartasorg | sorg | tilfinningar</annotation>
-		<annotation cp="💔" type="tts">ástarsorg</annotation>
-		<annotation cp="💕">ást | elskendur | tilfinningar | tvö hjörtu</annotation>
-		<annotation cp="💕" type="tts">tvö hjörtu</annotation>
+		<annotation cp="💝">hjarta | hjarta með slaufu | slaufa | tilfinningar | valentínusardagurinn</annotation>
+		<annotation cp="💝" type="tts">hjarta með slaufu</annotation>
 		<annotation cp="💖">æsingur | ást | glitrandi | glitrandi hjarta | tilfinningar</annotation>
 		<annotation cp="💖" type="tts">glitrandi hjarta</annotation>
-		<annotation cp="💗">æsingur | ást | hjarta | stækkandi hjarta | taugaóstyrkur | tilfinningar</annotation>
+		<annotation cp="💗">ást | púls | spenna | stækkandi hjarta | taugaspenna</annotation>
 		<annotation cp="💗" type="tts">stækkandi hjarta</annotation>
-		<annotation cp="💙">blátt | blátt hjarta | hjarta | tilfinningar</annotation>
-		<annotation cp="💙" type="tts">blátt hjarta</annotation>
-		<annotation cp="💚">grænt | grænt hjarta | hjarta | tilfinningar</annotation>
-		<annotation cp="💚" type="tts">grænt hjarta</annotation>
-		<annotation cp="💛">gult | gult hjarta | hjarta | tilfinningar</annotation>
-		<annotation cp="💛" type="tts">gult hjarta</annotation>
-		<annotation cp="🧡">appelsínugult | appelsínugult hjarta | hjarta | tilfinningar</annotation>
+		<annotation cp="💓">ást | hjarta | hjartsláttur | sláttur | tilfinningar</annotation>
+		<annotation cp="💓" type="tts">hjartsláttur</annotation>
+		<annotation cp="💞">ást | hjarta | snúningshjörtu</annotation>
+		<annotation cp="💞" type="tts">snúningshjörtu</annotation>
+		<annotation cp="💕">ást | elskendur | tilfinningar | tvö hjörtu</annotation>
+		<annotation cp="💕" type="tts">tvö hjörtu</annotation>
+		<annotation cp="💌">ástarbréf | bréf | bréf með hjarta | hjarta | rómantík</annotation>
+		<annotation cp="💌" type="tts">ástarbréf</annotation>
+		<annotation cp="❣">greinarmerki | hjarta | hjarta sem upphrópunarmerki | merki | upphrópunarmerki</annotation>
+		<annotation cp="❣" type="tts">hjarta sem upphrópunarmerki</annotation>
+		<annotation cp="💔">ástarsorg | brostið | hjarta</annotation>
+		<annotation cp="💔" type="tts">brostið hjarta</annotation>
+		<annotation cp="❤">hjarta | rautt hjarta</annotation>
+		<annotation cp="❤" type="tts">rautt hjarta</annotation>
+		<annotation cp="🧡">appelsínugult | hjarta | tilfinningar</annotation>
 		<annotation cp="🧡" type="tts">appelsínugult hjarta</annotation>
-		<annotation cp="💜">fjólublátt | fjólublátt hjarta | hjarta | tilfinningar</annotation>
+		<annotation cp="💛">gult | hjarta | tilfinningar</annotation>
+		<annotation cp="💛" type="tts">gult hjarta</annotation>
+		<annotation cp="💚">grænt | hjarta | tilfinningar</annotation>
+		<annotation cp="💚" type="tts">grænt hjarta</annotation>
+		<annotation cp="💙">blátt | hjarta | tilfinningar</annotation>
+		<annotation cp="💙" type="tts">blátt hjarta</annotation>
+		<annotation cp="💜">fjólublátt | hjarta | tilfinningar</annotation>
 		<annotation cp="💜" type="tts">fjólublátt hjarta</annotation>
 		<annotation cp="🖤">hjarta | illt innræti | svart hjarta | svartur</annotation>
 		<annotation cp="🖤" type="tts">svart hjarta</annotation>
-		<annotation cp="💝">hjarta | hjarta með slaufu | slaufa | tilfinningar | valentínusardagurinn</annotation>
-		<annotation cp="💝" type="tts">hjarta með slaufu</annotation>
-		<annotation cp="💞">ást | hjarta | kawaii | krúttlegt | sætt | snúast | snúningshjörtu | tilfinningar</annotation>
-		<annotation cp="💞" type="tts">snúningshjörtu</annotation>
 		<annotation cp="💟">hjarta | skraut með hjarta</annotation>
 		<annotation cp="💟" type="tts">skraut með hjarta</annotation>
-		<annotation cp="❣">greinarmerki | hjarta | hjarta sem upphrópunarmerki | merki | upphrópunarmerki</annotation>
-		<annotation cp="❣" type="tts">hjarta sem upphrópunarmerki</annotation>
-		<annotation cp="💌">ástarbréf | bréf | bréf með hjarta | hjarta | rómantík</annotation>
-		<annotation cp="💌" type="tts">ástarbréf</annotation>
-		<annotation cp="💤">hrotur | skrípó | sofandi | tilfinningar | zzz | þreyta</annotation>
+		<annotation cp="💤">hrotur | skrípó | sofandi | zzz | þreyta</annotation>
 		<annotation cp="💤" type="tts">þreyta</annotation>
 		<annotation cp="💢">reiði | reiðitákn | reiður | skrípó | tilfinningar</annotation>
 		<annotation cp="💢" type="tts">reiði</annotation>
@@ -793,6 +833,10 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="👓" type="tts">gleraugu</annotation>
 		<annotation cp="🕶">auga | dimmt | gleraugu | sólgleraugu</annotation>
 		<annotation cp="🕶" type="tts">sólgleraugu</annotation>
+		<annotation cp="🥽">hlífðargleraugu | logsuða | rafsuða | sund</annotation>
+		<annotation cp="🥽" type="tts">hlífðargleraugu</annotation>
+		<annotation cp="🥼">læknasloppur | læknir | tilraun | vísindamaður</annotation>
+		<annotation cp="🥼" type="tts">læknasloppur</annotation>
 		<annotation cp="👔">bindi | hálsbindi | klæðnaður</annotation>
 		<annotation cp="👔" type="tts">hálsbindi</annotation>
 		<annotation cp="👕">bolur | klæðnaður | stuttermabolur</annotation>
@@ -809,10 +853,10 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🧦" type="tts">sokkar</annotation>
 		<annotation cp="👗">föt | kjóll | klæðnaður</annotation>
 		<annotation cp="👗" type="tts">kjóll</annotation>
-		<annotation cp="👘">kímónó | kjóll | klæðnaður</annotation>
+		<annotation cp="👘">kímónó | klæðnaður | sloppur</annotation>
 		<annotation cp="👘" type="tts">kímónó</annotation>
-		<annotation cp="👙">bíkiní | klæðnaður | sundföt</annotation>
-		<annotation cp="👙" type="tts">bíkiní</annotation>
+		<annotation cp="👙">bikíní | klæðnaður | sundföt</annotation>
+		<annotation cp="👙" type="tts">bikíní</annotation>
 		<annotation cp="👚">föt | klæðnaður | kona | kvenföt</annotation>
 		<annotation cp="👚" type="tts">kvenföt</annotation>
 		<annotation cp="👛">budda | klæðnaður | peningabudda | smápeningar</annotation>
@@ -829,6 +873,10 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="👞" type="tts">herraskór</annotation>
 		<annotation cp="👟">íþróttaskór | klæðnaður | skór | strigaskór</annotation>
 		<annotation cp="👟" type="tts">íþróttaskór</annotation>
+		<annotation cp="🥾">bakpokaferðalag | fjallganga | gönguskór | tjaldferðalag</annotation>
+		<annotation cp="🥾" type="tts">gönguskór</annotation>
+		<annotation cp="🥿">ballettskór | inniskór | lágbotna skór | skór</annotation>
+		<annotation cp="🥿" type="tts">lágbotna skór</annotation>
 		<annotation cp="👠">háhælaður skór | klæðnaður | skór</annotation>
 		<annotation cp="👠" type="tts">háhælaður skór</annotation>
 		<annotation cp="👡">klæðnaður | kvensandali | kvenskór | sandali</annotation>
@@ -845,7 +893,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🎓" type="tts">útskriftarhúfa</annotation>
 		<annotation cp="🧢">derhúfa | hafnarboltahúfa</annotation>
 		<annotation cp="🧢" type="tts">derhúfa</annotation>
-		<annotation cp="⛑">andlit | björgunaraðstoð | hattur | hjálmur | hjálmur með hvítum krossi | kross</annotation>
+		<annotation cp="⛑">andlit | björgun | hjálmur | hjálmur með hvítum krossi | hjálp | kross</annotation>
 		<annotation cp="⛑" type="tts">hjálmur með hvítum krossi</annotation>
 		<annotation cp="📿">bæn | bænaband | föt | hálsmen | perlur | trú</annotation>
 		<annotation cp="📿" type="tts">bænaband</annotation>
@@ -871,6 +919,8 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🐺" type="tts">úlfshöfuð</annotation>
 		<annotation cp="🦊">andlit | dýr | refshöfuð | refur | tófa</annotation>
 		<annotation cp="🦊" type="tts">refshöfuð</annotation>
+		<annotation cp="🦝">forvitinn | slóttugur | þvottabjörn</annotation>
+		<annotation cp="🦝" type="tts">þvottabjörn</annotation>
 		<annotation cp="🐱">gæludýr | höfuð | kattarhöfuð | köttur</annotation>
 		<annotation cp="🐱" type="tts">kattarhöfuð</annotation>
 		<annotation cp="🐈">gæludýr | köttur</annotation>
@@ -919,12 +969,16 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🐪" type="tts">drómedari</annotation>
 		<annotation cp="🐫">kameldýr</annotation>
 		<annotation cp="🐫" type="tts">kameldýr</annotation>
+		<annotation cp="🦙">alpaka | lamadýr | ull | villt lamadýr | villt suður-amerískt spendýr</annotation>
+		<annotation cp="🦙" type="tts">lamadýr</annotation>
 		<annotation cp="🦒">blettir | doppur | gíraffi</annotation>
 		<annotation cp="🦒" type="tts">gíraffi</annotation>
 		<annotation cp="🐘">fíll</annotation>
 		<annotation cp="🐘" type="tts">fíll</annotation>
 		<annotation cp="🦏">dýr | nashyrningur</annotation>
 		<annotation cp="🦏" type="tts">nashyrningur</annotation>
+		<annotation cp="🦛">flóðhestur</annotation>
+		<annotation cp="🦛" type="tts">flóðhestur</annotation>
 		<annotation cp="🐭">höfuð | mús | músarhöfuð</annotation>
 		<annotation cp="🐭" type="tts">músarhöfuð</annotation>
 		<annotation cp="🐁">mús</annotation>
@@ -941,7 +995,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🐿" type="tts">jarðíkorni</annotation>
 		<annotation cp="🦔">broddar | broddgöltur | broddóttur</annotation>
 		<annotation cp="🦔" type="tts">broddgöltur</annotation>
-		<annotation cp="🦇">dýr | leðurblaka | leiðurblaka | vampýra</annotation>
+		<annotation cp="🦇">dýr | leðurblaka | vampíra</annotation>
 		<annotation cp="🦇" type="tts">leðurblaka</annotation>
 		<annotation cp="🐻">bjarnarhöfuð | björn | höfuð</annotation>
 		<annotation cp="🐻" type="tts">bjarnarhöfuð</annotation>
@@ -949,6 +1003,10 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🐨" type="tts">kóalabjörn</annotation>
 		<annotation cp="🐼">höfuð | panda | pönduhöfuð</annotation>
 		<annotation cp="🐼" type="tts">pönduhöfuð</annotation>
+		<annotation cp="🦘">Ástralía | hopp | kengúra | kengúruungi | pokadýr | ungi</annotation>
+		<annotation cp="🦘" type="tts">kengúra</annotation>
+		<annotation cp="🦡">greifingi | hunangsgreifingi | rellóttur | þjakandi</annotation>
+		<annotation cp="🦡" type="tts">greifingi</annotation>
 		<annotation cp="🐾">fótspor | loppa | loppur</annotation>
 		<annotation cp="🐾" type="tts">loppa</annotation>
 		<annotation cp="🦃">fugl | kalkúnn</annotation>
@@ -973,8 +1031,14 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🦅" type="tts">örn</annotation>
 		<annotation cp="🦆">fugl | önd</annotation>
 		<annotation cp="🦆" type="tts">önd</annotation>
+		<annotation cp="🦢">álft | álftarungi | fugl | ljóti andarunginn | svanur</annotation>
+		<annotation cp="🦢" type="tts">svanur</annotation>
 		<annotation cp="🦉">fugl | ugla</annotation>
 		<annotation cp="🦉" type="tts">ugla</annotation>
+		<annotation cp="🦚">fugl | páfugl | páhæna | stoltur | sýndarmennska</annotation>
+		<annotation cp="🦚" type="tts">páfugl</annotation>
+		<annotation cp="🦜">fugl | páfagaukur | sjóræningi | tal</annotation>
+		<annotation cp="🦜" type="tts">páfagaukur</annotation>
 		<annotation cp="🐸">froskshöfuð | froskur | höfuð</annotation>
 		<annotation cp="🐸" type="tts">froskshöfuð</annotation>
 		<annotation cp="🐊">krókódíll | krókókíll</annotation>
@@ -999,7 +1063,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🐋" type="tts">hvalur</annotation>
 		<annotation cp="🐬">höfrungur</annotation>
 		<annotation cp="🐬" type="tts">höfrungur</annotation>
-		<annotation cp="🐟">fiskur | stjörnumerki</annotation>
+		<annotation cp="🐟">fiskar | fiskur | stjörnumerki</annotation>
 		<annotation cp="🐟" type="tts">fiskur</annotation>
 		<annotation cp="🐠">fiskur | hitabelti | hitabeltisfiskur</annotation>
 		<annotation cp="🐠" type="tts">hitabeltisfiskur</annotation>
@@ -1013,6 +1077,8 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🐚" type="tts">kuðungur</annotation>
 		<annotation cp="🦀">krabbi | stjörnumerki</annotation>
 		<annotation cp="🦀" type="tts">krabbi</annotation>
+		<annotation cp="🦞">bisque | humar | klær | matarmikil súpa | sjávarfang</annotation>
+		<annotation cp="🦞" type="tts">humar</annotation>
 		<annotation cp="🦐">rækja | sjávardýr | skelfiskur</annotation>
 		<annotation cp="🦐" type="tts">rækja</annotation>
 		<annotation cp="🦑">sjávardýr | smokkfiskur</annotation>
@@ -1037,6 +1103,10 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🕸" type="tts">köngulóarvefur</annotation>
 		<annotation cp="🦂">sporðdreki | stjörnumerki</annotation>
 		<annotation cp="🦂" type="tts">sporðdreki</annotation>
+		<annotation cp="🦟">hiti | malaría | moskító | skordýr | veiki | veira</annotation>
+		<annotation cp="🦟" type="tts">moskító</annotation>
+		<annotation cp="🦠">amaba | baktería | örvera | veira | vírus</annotation>
+		<annotation cp="🦠" type="tts">örvera</annotation>
 		<annotation cp="💐">blóm | blómvöndur | rómantík</annotation>
 		<annotation cp="💐" type="tts">blómvöndur</annotation>
 		<annotation cp="🌸">blóm | kirsuber | kirsuberjablóm</annotation>
@@ -1059,7 +1129,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🌷" type="tts">túlípani</annotation>
 		<annotation cp="🌱">græðlingur | planta</annotation>
 		<annotation cp="🌱" type="tts">græðlingur</annotation>
-		<annotation cp="🌲">sígrænt | sígrænt tré | tré</annotation>
+		<annotation cp="🌲">sígrænt | tré</annotation>
 		<annotation cp="🌲" type="tts">sígrænt tré</annotation>
 		<annotation cp="🌳">lauftré | sumargrænt tré | tré</annotation>
 		<annotation cp="🌳" type="tts">sumargrænt tré</annotation>
@@ -1077,7 +1147,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🍀" type="tts">fjögurra laufa smári</annotation>
 		<annotation cp="🍁">hlynslauf | hlynur | lauf | laufblað</annotation>
 		<annotation cp="🍁" type="tts">hlynslauf</annotation>
-		<annotation cp="🍂">fallandi | fallandi lauf | fallandi laufblöð | haust | lauf | laufblað</annotation>
+		<annotation cp="🍂">fallandi | fallandi laufblöð | haust | lauf | laufblað</annotation>
 		<annotation cp="🍂" type="tts">fallandi lauf</annotation>
 		<annotation cp="🍃">lauf | lauf í vindi | laufblað | vindur</annotation>
 		<annotation cp="🍃" type="tts">lauf í vindi</annotation>
@@ -1095,9 +1165,11 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🍌" type="tts">banani</annotation>
 		<annotation cp="🍍">ananas | ávöxtur</annotation>
 		<annotation cp="🍍" type="tts">ananas</annotation>
-		<annotation cp="🍎">ávöxtur | epli | rautt | rautt epli</annotation>
+		<annotation cp="🥭">ávöxtur | mangó | suðrænn</annotation>
+		<annotation cp="🥭" type="tts">mangó</annotation>
+		<annotation cp="🍎">ávöxtur | epli | rautt</annotation>
 		<annotation cp="🍎" type="tts">rautt epli</annotation>
-		<annotation cp="🍏">ávöxtur | epli | grænt | grænt epli</annotation>
+		<annotation cp="🍏">ávöxtur | epli | grænt</annotation>
 		<annotation cp="🍏" type="tts">grænt epli</annotation>
 		<annotation cp="🍐">ávöxtur | pera</annotation>
 		<annotation cp="🍐" type="tts">pera</annotation>
@@ -1111,7 +1183,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🥝" type="tts">kíví</annotation>
 		<annotation cp="🍅">grænmeti | tómatur</annotation>
 		<annotation cp="🍅" type="tts">tómatur</annotation>
-		<annotation cp="🥥">kókoshneta | pálmatré | pálmi | piña colada</annotation>
+		<annotation cp="🥥">kókoshneta | pálmatré | pina colada</annotation>
 		<annotation cp="🥥" type="tts">kókoshneta</annotation>
 		<annotation cp="🥑">avókadó | grænmeti | matur</annotation>
 		<annotation cp="🥑" type="tts">avókadó</annotation>
@@ -1127,6 +1199,8 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🌶" type="tts">chilipipar</annotation>
 		<annotation cp="🥒">grænmeti | gúrka | matur</annotation>
 		<annotation cp="🥒" type="tts">gúrka</annotation>
+		<annotation cp="🥬">bok choi | grænkál | hvítkál | kál</annotation>
+		<annotation cp="🥬" type="tts">kál</annotation>
 		<annotation cp="🥦">brokkólí | garðakál</annotation>
 		<annotation cp="🥦" type="tts">brokkólí</annotation>
 		<annotation cp="🍄">sveppur</annotation>
@@ -1135,7 +1209,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🥜" type="tts">jarðhneta</annotation>
 		<annotation cp="🌰">hneta | kastanía</annotation>
 		<annotation cp="🌰" type="tts">kastanía</annotation>
-		<annotation cp="🍞">brauð</annotation>
+		<annotation cp="🍞">brauð | brauðhleifur</annotation>
 		<annotation cp="🍞" type="tts">brauð</annotation>
 		<annotation cp="🥐">brauð | franskt | horn</annotation>
 		<annotation cp="🥐" type="tts">horn</annotation>
@@ -1143,6 +1217,8 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🥖" type="tts">fransbrauð</annotation>
 		<annotation cp="🥨">saltkringla | snúin</annotation>
 		<annotation cp="🥨" type="tts">saltkringla</annotation>
+		<annotation cp="🥯">bakarí | beygla | smurostur</annotation>
+		<annotation cp="🥯" type="tts">beygla</annotation>
 		<annotation cp="🥞">eftirréttur | matur | pönnukökur</annotation>
 		<annotation cp="🥞" type="tts">pönnukökur</annotation>
 		<annotation cp="🧀">götóttur ostur | ostur</annotation>
@@ -1157,9 +1233,9 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🥓" type="tts">beikon</annotation>
 		<annotation cp="🍔">borgari | hamborgari | veitingastaður</annotation>
 		<annotation cp="🍔" type="tts">hamborgari</annotation>
-		<annotation cp="🍟">franskar | franskar kartöflur | veitingastaðurr</annotation>
+		<annotation cp="🍟">franskar | franskar kartöflur | veitingastaður</annotation>
 		<annotation cp="🍟" type="tts">franskar</annotation>
-		<annotation cp="🍕">pítsa | pítsusneið | pizza | pizzusneið | sneið | veitingastaður</annotation>
+		<annotation cp="🍕">ostur | pítsa | pítsusneið | sneið</annotation>
 		<annotation cp="🍕" type="tts">pítsusneið</annotation>
 		<annotation cp="🌭">pulsa | pylsa | pylsa í brauði | vínarpylsa</annotation>
 		<annotation cp="🌭" type="tts">pylsa í brauði</annotation>
@@ -1181,10 +1257,12 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🍲" type="tts">pottréttur</annotation>
 		<annotation cp="🥣">morgunkorn | morgunmatur | morgunverður | skál og skeið</annotation>
 		<annotation cp="🥣" type="tts">skál og skeið</annotation>
-		<annotation cp="🥗">grænmeti | salat</annotation>
+		<annotation cp="🥗">grænmeti | matur | salat</annotation>
 		<annotation cp="🥗" type="tts">salat</annotation>
 		<annotation cp="🍿">popp</annotation>
 		<annotation cp="🍿" type="tts">popp</annotation>
+		<annotation cp="🧂">krydd | salt | saltstaukur</annotation>
+		<annotation cp="🧂" type="tts">salt</annotation>
 		<annotation cp="🥫">dós | dósamatur</annotation>
 		<annotation cp="🥫" type="tts">dósamatur</annotation>
 		<annotation cp="🍱">bento-box | nesti | nestisbox</annotation>
@@ -1193,7 +1271,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🍘" type="tts">hrísgrjónakex</annotation>
 		<annotation cp="🍙">hrísgrjón | hrísgrjónabolla | onigiri</annotation>
 		<annotation cp="🍙" type="tts">hrísgrjónabolla</annotation>
-		<annotation cp="🍚">hrísgrjón | soðin | soðin hrísgrjón</annotation>
+		<annotation cp="🍚">hrísgrjón | soðin</annotation>
 		<annotation cp="🍚" type="tts">soðin hrísgrjón</annotation>
 		<annotation cp="🍛">hrísgrjón | hrísgrjón og karrí | karrí | veitingastaður</annotation>
 		<annotation cp="🍛" type="tts">hrísgrjón og karrí</annotation>
@@ -1201,8 +1279,8 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🍜" type="tts">núðlur</annotation>
 		<annotation cp="🍝">pasta | spagettí | veitingastaður</annotation>
 		<annotation cp="🍝" type="tts">spagettí</annotation>
-		<annotation cp="🍠">sæt kartafla | sætar kartöflur steikt sæt kartafla | steiktar kartöflur | veitingastaður</annotation>
-		<annotation cp="🍠" type="tts">steiktar kartöflur</annotation>
+		<annotation cp="🍠">kartafla | sæt | steikt | steiktar sætar kartöflur</annotation>
+		<annotation cp="🍠" type="tts">steiktar sætar kartöflur</annotation>
 		<annotation cp="🍢">oden | sjávarréttir | sjávarréttir á teini | veitingastaður</annotation>
 		<annotation cp="🍢" type="tts">oden</annotation>
 		<annotation cp="🍣">sushi | veitingastaður</annotation>
@@ -1211,9 +1289,11 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🍤" type="tts">djúpsteikt rækja</annotation>
 		<annotation cp="🍥">fiskkaka | fiskur | veitingastaður</annotation>
 		<annotation cp="🍥" type="tts">fiskkaka</annotation>
+		<annotation cp="🥮">hátíð | haust | tunglkaka</annotation>
+		<annotation cp="🥮" type="tts">tunglkaka</annotation>
 		<annotation cp="🍡">dango | mochi | soðkökur | soðkökur á teini | veitingastaður</annotation>
 		<annotation cp="🍡" type="tts">soðkökur á teini</annotation>
-		<annotation cp="🥟">dumpling | empanada | gyosa | hveitibollur | jiaozi | pierogi</annotation>
+		<annotation cp="🥟">dumpling | empanada | gyosa | pierogi | soðkaka</annotation>
 		<annotation cp="🥟" type="tts">dumpling</annotation>
 		<annotation cp="🥠">opinberun | spádómskaka | spádómur | vitrun</annotation>
 		<annotation cp="🥠" type="tts">spádómskaka</annotation>
@@ -1233,6 +1313,8 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🎂" type="tts">afmæliskaka</annotation>
 		<annotation cp="🍰">kaka | kökusneið | terta | veitingastaður</annotation>
 		<annotation cp="🍰" type="tts">kökusneið</annotation>
+		<annotation cp="🧁">bakarí | bollakaka | sætindi</annotation>
+		<annotation cp="🧁" type="tts">bollakaka</annotation>
 		<annotation cp="🥧">baka | bökudeig | fylling | sætabrauð</annotation>
 		<annotation cp="🥧" type="tts">baka</annotation>
 		<annotation cp="🍫">súkkulaði | súkkulaðiplata | veitingastaður</annotation>
@@ -1249,14 +1331,14 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🍼" type="tts">peli</annotation>
 		<annotation cp="🥛">drykkur | glas | mjólk | mjólkurglas</annotation>
 		<annotation cp="🥛" type="tts">mjólkurglas</annotation>
-		<annotation cp="☕">drekka | drykkur | heitur | heitur drykkur | kaffi | rjúkandi | te</annotation>
+		<annotation cp="☕">drykkur | heitt | heitur drykkur | kaffi | rjúkandi | te</annotation>
 		<annotation cp="☕" type="tts">heitur drykkur</annotation>
 		<annotation cp="🍵">bolli | drykkur | te | tebolli</annotation>
 		<annotation cp="🍵" type="tts">tebolli</annotation>
-		<annotation cp="🍶">bar | drykkur | flaska | glas | sake | sake-flaska og -glas | veitingastaður</annotation>
+		<annotation cp="🍶">bar | bolli | drykkur | flaska | sake</annotation>
 		<annotation cp="🍶" type="tts">sake</annotation>
-		<annotation cp="🍾">bar | drekka | flaska | flaska með korktappa sem skýst up úr hálsinum | korktappi | skjóta</annotation>
-		<annotation cp="🍾" type="tts">flaska með korktappa sem skýst up úr hálsinum</annotation>
+		<annotation cp="🍾">bar | flaska | flaska með korktappa | korkur | skjóta</annotation>
+		<annotation cp="🍾" type="tts">flaska með korktappa</annotation>
 		<annotation cp="🍷">bar | drekka | drykkur | glas | vín</annotation>
 		<annotation cp="🍷" type="tts">vín</annotation>
 		<annotation cp="🍸">bar | hanastél | kokteilglas | kokteill | veitingastaður</annotation>
@@ -1265,7 +1347,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🍹" type="tts">suðrænn kokteill</annotation>
 		<annotation cp="🍺">bar | bjór | bjórglas | glas | veitingastaður</annotation>
 		<annotation cp="🍺" type="tts">bjór</annotation>
-		<annotation cp="🍻">bar | bjór | bjórglös | glös | skál | veitingastaður</annotation>
+		<annotation cp="🍻">bar | bjór | bjórglös | bjórkönnur | drykkur | skál</annotation>
 		<annotation cp="🍻" type="tts">bjórglös</annotation>
 		<annotation cp="🥂">drykkur | glas | glös | skál</annotation>
 		<annotation cp="🥂" type="tts">skál</annotation>
@@ -1275,15 +1357,15 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🥤" type="tts">glas og rör</annotation>
 		<annotation cp="🥢">matprjónar</annotation>
 		<annotation cp="🥢" type="tts">matprjónar</annotation>
-		<annotation cp="🍽">diskur | eldamennska | gaffall | gaffall og hnifur við disk | hnífur</annotation>
-		<annotation cp="🍽" type="tts">gaffall og hnifur við disk</annotation>
+		<annotation cp="🍽">diskur | eldamennska | gaffall | gaffall og hnífur við disk | hnífur</annotation>
+		<annotation cp="🍽" type="tts">gaffall og hnífur við disk</annotation>
 		<annotation cp="🍴">hnífapör | hnífur og gaffall | veitingastaður</annotation>
 		<annotation cp="🍴" type="tts">hnífur og gaffall</annotation>
 		<annotation cp="🥄">hnífapör | skeið</annotation>
 		<annotation cp="🥄" type="tts">skeið</annotation>
 		<annotation cp="🔪">eldhúshnífur | hnífur</annotation>
 		<annotation cp="🔪" type="tts">hnífur</annotation>
-		<annotation cp="🏺">drekka | eldamennska | ílát | leirkrukka | stjörnumerki | vatnsberi | verkfræi | vopn</annotation>
+		<annotation cp="🏺">drykkur | eldamennska | krukka | leirkrukka | vatnsberi</annotation>
 		<annotation cp="🏺" type="tts">leirkrukka</annotation>
 		<annotation cp="🌍">Afríka | Evrópa | hnöttur sem sýnir Evrópu-Afríku | jörðin</annotation>
 		<annotation cp="🌍" type="tts">hnöttur sem sýnir Evrópu-Afríku</annotation>
@@ -1297,6 +1379,8 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🗺" type="tts">heimskort</annotation>
 		<annotation cp="🗾">Japan | kort | kort af Japan</annotation>
 		<annotation cp="🗾" type="tts">kort af Japan</annotation>
+		<annotation cp="🧭">áttaviti | kompás | leiðarlýsing | leiðsögn | segulmagn</annotation>
+		<annotation cp="🧭" type="tts">áttaviti</annotation>
 		<annotation cp="🏔">fjall | kalt | snæviþakinn fjallstindur | snjór</annotation>
 		<annotation cp="🏔" type="tts">snæviþakinn fjallstindur</annotation>
 		<annotation cp="⛰">fjall</annotation>
@@ -1321,11 +1405,11 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🏛" type="tts">klassísk fornbygging</annotation>
 		<annotation cp="🏗">bygging | í byggingu | mannvirki í byggingu</annotation>
 		<annotation cp="🏗" type="tts">mannvirki í byggingu</annotation>
+		<annotation cp="🧱">leir | múrhúð | múrsteinar | múrsteinn | vegglím | veggur</annotation>
+		<annotation cp="🧱" type="tts">múrsteinn</annotation>
 		<annotation cp="🏘">bygging | hús | húsaþyrping</annotation>
 		<annotation cp="🏘" type="tts">húsaþyrping</annotation>
-		<annotation cp="🏙">borg | borgarlandslag | byggingar</annotation>
-		<annotation cp="🏙" type="tts">borgarlandslag</annotation>
-		<annotation cp="🏚">bygging | hús | niðurnítt | niðurnítt hús</annotation>
+		<annotation cp="🏚">bygging | hús | niðurnítt</annotation>
 		<annotation cp="🏚" type="tts">niðurnítt hús</annotation>
 		<annotation cp="🏠">bygging | heimili | hús</annotation>
 		<annotation cp="🏠" type="tts">hús</annotation>
@@ -1335,7 +1419,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🏢" type="tts">skrifstofuhúsnæði</annotation>
 		<annotation cp="🏣">japan | japanskt pósthús | pósthús</annotation>
 		<annotation cp="🏣" type="tts">japanskt pósthús</annotation>
-		<annotation cp="🏤">evrópskt | evrópskt pósthús | pósthús | póstur</annotation>
+		<annotation cp="🏤">evrópskt | pósthús | póstur</annotation>
 		<annotation cp="🏤" type="tts">evrópskt pósthús</annotation>
 		<annotation cp="🏥">bygging | lækningar | læknir | sjúkrahús</annotation>
 		<annotation cp="🏥" type="tts">sjúkrahús</annotation>
@@ -1367,7 +1451,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="⛪" type="tts">kirkja</annotation>
 		<annotation cp="🕌">íslam | moska | múslimi | trúarbrögð</annotation>
 		<annotation cp="🕌" type="tts">moska</annotation>
-		<annotation cp="🕍">gyðingatrúar | gyðingur | hof | sýnagóga | trúarbrögð</annotation>
+		<annotation cp="🕍">gyðingatrú | gyðingur | samkunduhús | sýnagóga | trúarbrögð</annotation>
 		<annotation cp="🕍" type="tts">sýnagóga</annotation>
 		<annotation cp="⛩">hof | sjintó | sjintó-hof | trúarbrögð</annotation>
 		<annotation cp="⛩" type="tts">sjintó-hof</annotation>
@@ -1381,11 +1465,13 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🌁" type="tts">þokukennt</annotation>
 		<annotation cp="🌃">næturhiminn | nótt | stjörnuhiminn | stjörnur</annotation>
 		<annotation cp="🌃" type="tts">stjörnuhiminn</annotation>
+		<annotation cp="🏙">borg | borgarlandslag | byggingar</annotation>
+		<annotation cp="🏙" type="tts">borgarlandslag</annotation>
 		<annotation cp="🌄">fjall | morgunsól | sól kemur upp | sólarupprás yfir fjöllum</annotation>
 		<annotation cp="🌄" type="tts">sólarupprás yfir fjöllum</annotation>
 		<annotation cp="🌅">morgunsól | sólarupprás</annotation>
 		<annotation cp="🌅" type="tts">sólarupprás</annotation>
-		<annotation cp="🌆">borg | borg um kvöld | hús | kvöld | rökkur | sólarlag</annotation>
+		<annotation cp="🌆">borg | borg í rökkurró | borg um kvöld | borgarlandslag | kvöld | sólarlag</annotation>
 		<annotation cp="🌆" type="tts">borg um kvöld</annotation>
 		<annotation cp="🌇">hús | rökkur | sólarlag | sólarlag yfir húsum</annotation>
 		<annotation cp="🌇" type="tts">sólarlag</annotation>
@@ -1405,14 +1491,6 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="💈" type="tts">rakarastofa</annotation>
 		<annotation cp="🎪">sirkus | sirkustjald | skemmtun | tjald</annotation>
 		<annotation cp="🎪" type="tts">sirkus</annotation>
-		<annotation cp="🎭">leikhúsgrímur | leiklist | list | skemmtun | sviðslistir</annotation>
-		<annotation cp="🎭" type="tts">leikhúsgrímur</annotation>
-		<annotation cp="🖼">list | málverk | mynd | rammi | rammi með mynd | safn</annotation>
-		<annotation cp="🖼" type="tts">rammi með mynd</annotation>
-		<annotation cp="🎨">list | listamaður | litapalletta | málning | palletta</annotation>
-		<annotation cp="🎨" type="tts">litapalletta</annotation>
-		<annotation cp="🎰">leikur | spilakassi</annotation>
-		<annotation cp="🎰" type="tts">spilakassi</annotation>
 		<annotation cp="🚂">eimreið | gufulest | lest</annotation>
 		<annotation cp="🚂" type="tts">eimreið</annotation>
 		<annotation cp="🚃">járnbrautarlest | lestarvagn | rafmagnslest</annotation>
@@ -1473,6 +1551,8 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🚲" type="tts">hjólreiðar</annotation>
 		<annotation cp="🛴">farartæki | hjól | sparka | sparkhjól</annotation>
 		<annotation cp="🛴" type="tts">sparkhjól</annotation>
+		<annotation cp="🛹">bretti | hlaupabretti</annotation>
+		<annotation cp="🛹" type="tts">hlaupabretti</annotation>
 		<annotation cp="🛵">farartæki | hjól | mótorhjól | skellinaðra | vespa</annotation>
 		<annotation cp="🛵" type="tts">vespa</annotation>
 		<annotation cp="🚏">langferðabíll | rúta | strætisvagn | strætó</annotation>
@@ -1481,6 +1561,8 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🛣" type="tts">hraðbraut</annotation>
 		<annotation cp="🛤">brautarteinar | járnbrautarteinar | lest</annotation>
 		<annotation cp="🛤" type="tts">járnbrautarteinar</annotation>
+		<annotation cp="🛢">olía | olíutunna | tunna</annotation>
+		<annotation cp="🛢" type="tts">olíutunna</annotation>
 		<annotation cp="⛽">bensín | bensíndæla | bensínstöð</annotation>
 		<annotation cp="⛽" type="tts">bensíndæla</annotation>
 		<annotation cp="🚨">lögregla | lögregluljós | sírena</annotation>
@@ -1489,10 +1571,10 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🚥" type="tts">lárétt umferðarljós</annotation>
 		<annotation cp="🚦">ljós | lóðrétt umferðarljós | umferð</annotation>
 		<annotation cp="🚦" type="tts">lóðrétt umferðarljós</annotation>
-		<annotation cp="🚧">framkvæmdir | vegavinna</annotation>
-		<annotation cp="🚧" type="tts">vegavinna</annotation>
 		<annotation cp="🛑">átthyrningur | merki | stöðvunarskylda | stopp</annotation>
 		<annotation cp="🛑" type="tts">stöðvunarskylda</annotation>
+		<annotation cp="🚧">framkvæmdir | vegavinna</annotation>
+		<annotation cp="🚧" type="tts">vegavinna</annotation>
 		<annotation cp="⚓">akkeri | skip | tól</annotation>
 		<annotation cp="⚓" type="tts">akkeri</annotation>
 		<annotation cp="⛵">bátur | seglskúta | skúta | smábátahöfn</annotation>
@@ -1513,9 +1595,9 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="✈" type="tts">flugvél</annotation>
 		<annotation cp="🛩">farartæki | flugvél | lítil flugvél</annotation>
 		<annotation cp="🛩" type="tts">lítil flugvél</annotation>
-		<annotation cp="🛫">brottfarir | brottför | farartæki | flugvél | flugvél í flugtaki | innskráning</annotation>
+		<annotation cp="🛫">brottfarir | brottför | flugvél | flugvél í flugtaki | innritun</annotation>
 		<annotation cp="🛫" type="tts">flugvél í flugtaki</annotation>
-		<annotation cp="🛬">farartæki | flugvél | flugvél í lendingu | í lendingu | kemur | komur</annotation>
+		<annotation cp="🛬">flugvél | flugvél í lendingu | komur | lendir</annotation>
 		<annotation cp="🛬" type="tts">flugvél í lendingu</annotation>
 		<annotation cp="💺">sæti | stóll</annotation>
 		<annotation cp="💺" type="tts">sæti</annotation>
@@ -1535,18 +1617,8 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🛸" type="tts">fljúgandi diskur</annotation>
 		<annotation cp="🛎">bjalla | hótel | hótelbjalla</annotation>
 		<annotation cp="🛎" type="tts">hótelbjalla</annotation>
-		<annotation cp="🚪">dyr | hurð</annotation>
-		<annotation cp="🚪" type="tts">dyr</annotation>
-		<annotation cp="🛏">hótel | rúm | sofa</annotation>
-		<annotation cp="🛏" type="tts">rúm</annotation>
-		<annotation cp="🛋">hótel | lampi | sófi | sófi og lampi</annotation>
-		<annotation cp="🛋" type="tts">sófi og lampi</annotation>
-		<annotation cp="🚽">klósett | salerni</annotation>
-		<annotation cp="🚽" type="tts">klósett</annotation>
-		<annotation cp="🚿">sturta | vatn</annotation>
-		<annotation cp="🚿" type="tts">sturta</annotation>
-		<annotation cp="🛁">bað | baðkar | baðker</annotation>
-		<annotation cp="🛁" type="tts">baðker</annotation>
+		<annotation cp="🧳">farangur | ferðalag | pakka niður | taska</annotation>
+		<annotation cp="🧳" type="tts">farangur</annotation>
 		<annotation cp="⌛">niðurtalning | sandur | stundaglas</annotation>
 		<annotation cp="⌛" type="tts">stundaglas</annotation>
 		<annotation cp="⏳">niðurtalning | sandur | stundaglas | stundaglas með rennandi sandi</annotation>
@@ -1609,15 +1681,15 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🕚" type="tts">klukkan ellefu</annotation>
 		<annotation cp="🕦">11:30 | ellefu þrjátíu | hálftólf | klukka</annotation>
 		<annotation cp="🕦" type="tts">hálftólf</annotation>
-		<annotation cp="🌑">dökkt | dökkt tungl | máni | nýr máni | nýtt | nýtt tungl | tungl</annotation>
+		<annotation cp="🌑">dökkt | máni | nýr máni | nýtt | tungl</annotation>
 		<annotation cp="🌑" type="tts">nýtt tungl</annotation>
-		<annotation cp="🌒">mánasigð | máni | tungl | vaxandi | vaxandi máni | vaxandi tungl (minna en hálft)</annotation>
+		<annotation cp="🌒">mánasigð | máni | tungl | vaxandi | vaxandi tungl (minna en hálft)</annotation>
 		<annotation cp="🌒" type="tts">vaxandi tungl (minna en hálft)</annotation>
 		<annotation cp="🌓">fyrsta kvartil tungls | máni | tungl | vaxandi hálfmáni</annotation>
 		<annotation cp="🌓" type="tts">fyrsta kvartil tungls</annotation>
-		<annotation cp="🌔">ávalt tungl | hálfmáni | máni | tungl | vaxandi | vaxandi tungl (meira en hálft)</annotation>
+		<annotation cp="🌔">ávalt tungl | máni | tungl | vaxandi | vaxandi tungl (meira en hálft)</annotation>
 		<annotation cp="🌔" type="tts">vaxandi tungl (meira en hálft)</annotation>
-		<annotation cp="🌕">fullt | fullt tungl | máni | tungl</annotation>
+		<annotation cp="🌕">fullt | máni | tungl</annotation>
 		<annotation cp="🌕" type="tts">fullt tungl</annotation>
 		<annotation cp="🌖">ávalt tungl | máni | minnkandi | minnkandi tungl (meira en hálft) | tungl</annotation>
 		<annotation cp="🌖" type="tts">minnkandi tungl (meira en hálft)</annotation>
@@ -1627,23 +1699,23 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🌘" type="tts">minnkandi tungl (minna en hálft)</annotation>
 		<annotation cp="🌙">hálfmáni | máni | tungl</annotation>
 		<annotation cp="🌙" type="tts">hálfmáni</annotation>
-		<annotation cp="🌚">andlit | karlinn í tunglinu | máni | nýr máni | nýtt tungl með andliti | tungl</annotation>
+		<annotation cp="🌚">andlit | karlinn í tunglinu | máni | nýtt tungl | nýtt tungl með andliti | tungl</annotation>
 		<annotation cp="🌚" type="tts">nýtt tungl með andliti</annotation>
-		<annotation cp="🌛">andlit | fyrsta kvartil tungls með andliti | hálfmáni | karlinn í tunglinu | máni | tungl | tungl með andliti</annotation>
+		<annotation cp="🌛">andlit | fyrsta kvartil tungls | fyrsta kvartil tungls með andliti | máni | tungl | tunglsigð</annotation>
 		<annotation cp="🌛" type="tts">fyrsta kvartil tungls með andliti</annotation>
-		<annotation cp="🌜">andlit | hálfmáni | karlinn í tunglinu | máni | síðasta kvartil tungls með andliti | tungl | tungl með andliti</annotation>
+		<annotation cp="🌜">andlit | máni | síðasta kvartil tungls | síðasta kvartil tungls með andliti | tungl | tunglsigð</annotation>
 		<annotation cp="🌜" type="tts">síðasta kvartil tungls með andliti</annotation>
 		<annotation cp="🌡">hitamælir | veður</annotation>
 		<annotation cp="🌡" type="tts">hitamælir</annotation>
-		<annotation cp="☀">bjart | geimur | geislar | sól | sólskin | veður</annotation>
+		<annotation cp="☀">bjart | geislar | sól | sólargeislar | sólskin</annotation>
 		<annotation cp="☀" type="tts">sól</annotation>
-		<annotation cp="🌝">andlit | fullt tungl með andliti | karlinn í tunglinu | máni | tungl | tungl með andliti</annotation>
+		<annotation cp="🌝">andlit | bjart | fullt tungl | fullt tungl með andliti | máni | tungl</annotation>
 		<annotation cp="🌝" type="tts">fullt tungl með andliti</annotation>
 		<annotation cp="🌞">andlit | sól | sól með andliti</annotation>
 		<annotation cp="🌞" type="tts">sól með andliti</annotation>
 		<annotation cp="⭐">hvít stjarna | stjarna</annotation>
 		<annotation cp="⭐" type="tts">hvít stjarna</annotation>
-		<annotation cp="🌟">skínandi | skínandi stjarna | stjarna</annotation>
+		<annotation cp="🌟">skínandi | stjarna</annotation>
 		<annotation cp="🌟" type="tts">skínandi stjarna</annotation>
 		<annotation cp="🌠">óskastjarna | stjarna | stjörnuhrap</annotation>
 		<annotation cp="🌠" type="tts">stjörnuhrap</annotation>
@@ -1669,21 +1741,21 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🌪" type="tts">skýstrókur</annotation>
 		<annotation cp="🌫">ský | veður | þoka</annotation>
 		<annotation cp="🌫" type="tts">þoka</annotation>
-		<annotation cp="🌬">andlit | blása | ský | veður | veðurandlit | vindur</annotation>
+		<annotation cp="🌬">andlit | blæs | ský | veðurandlit | vindur</annotation>
 		<annotation cp="🌬" type="tts">veðurandlit</annotation>
 		<annotation cp="🌀">fellibylur | hvirfilbylur | hvirfilvindur | snýst | stormsveipur</annotation>
 		<annotation cp="🌀" type="tts">fellibylur</annotation>
 		<annotation cp="🌈">regn | regnbogi | veður</annotation>
 		<annotation cp="🌈" type="tts">regnbogi</annotation>
-		<annotation cp="🌂">klæðnaður | lokuð regnhlíf | regn | regnhlíf | rigning | veður</annotation>
+		<annotation cp="🌂">klæðnaður | lokuð regnhlíf | regnhlíf | rigning | samanlögð regnhlíf | veður</annotation>
 		<annotation cp="🌂" type="tts">lokuð regnhlíf</annotation>
 		<annotation cp="☂">klæðnaður | regn | regnhlíf | veður</annotation>
 		<annotation cp="☂" type="tts">regnhlíf</annotation>
-		<annotation cp="☔">dropi | klæðnaður | regn | regnhlíf | regnhlíf með regndropum | veður</annotation>
+		<annotation cp="☔">dropi | klæðnaður | regn | regnhlíf | regnhlíf með regndropum</annotation>
 		<annotation cp="☔" type="tts">regnhlíf með regndropum</annotation>
 		<annotation cp="⛱">regn | regnhlíf | regnhlíf á jörðinni | sól | veður</annotation>
 		<annotation cp="⛱" type="tts">regnhlíf á jörðinni</annotation>
-		<annotation cp="⚡">háspenna | háspenna lífshætta | lífshætta | rafmagn | spenna</annotation>
+		<annotation cp="⚡">háspenna | lífshætta | rafmagn | spenna</annotation>
 		<annotation cp="⚡" type="tts">háspenna</annotation>
 		<annotation cp="❄">kalt | snjókorn | snjór | veður</annotation>
 		<annotation cp="❄" type="tts">snjókorn</annotation>
@@ -1707,6 +1779,8 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🎆" type="tts">flugeldar</annotation>
 		<annotation cp="🎇">áramót | blys | hátíð | stjörnuljós</annotation>
 		<annotation cp="🎇" type="tts">stjörnuljós</annotation>
+		<annotation cp="🧨">dínamít | flugeldar | púðurkerling | sprengiefni</annotation>
+		<annotation cp="🧨" type="tts">púðurkerling</annotation>
 		<annotation cp="✨">glit | neistar | stjörnur</annotation>
 		<annotation cp="✨" type="tts">stjörnur</annotation>
 		<annotation cp="🎈">blaðra | veisla</annotation>
@@ -1715,7 +1789,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🎉" type="tts">knall</annotation>
 		<annotation cp="🎊">confetti | pappírssnifsi | veisla | veisluskraut</annotation>
 		<annotation cp="🎊" type="tts">veisluskraut</annotation>
-		<annotation cp="🎋">hátíð | pappírsskraut | stjörnuhátíð | Tanabata-tré | tré | tré og pappírsræmur</annotation>
+		<annotation cp="🎋">borði | fagnaður | japanskt | tanabata-tré | Tanabata-tré | tré</annotation>
 		<annotation cp="🎋" type="tts">Tanabata-tré</annotation>
 		<annotation cp="🎍">áramót | blómaskreyting með furu | fura | hátíð | japanskt</annotation>
 		<annotation cp="🎍" type="tts">blómaskreyting með furu</annotation>
@@ -1727,6 +1801,8 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🎐" type="tts">órói</annotation>
 		<annotation cp="🎑">hátíð | tungl | tunglskoðun | tunglskoðunarhátíð</annotation>
 		<annotation cp="🎑" type="tts">tunglskoðun</annotation>
+		<annotation cp="🧧">gjöf | lai see | lukka | peningar | rautt umslag</annotation>
+		<annotation cp="🧧" type="tts">rautt umslag</annotation>
 		<annotation cp="🎀">borði | slaufa | veisla</annotation>
 		<annotation cp="🎀" type="tts">borði</annotation>
 		<annotation cp="🎁">gjöf | innpökkuð gjöf | veisla</annotation>
@@ -1745,7 +1821,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🏅" type="tts">íþróttamedalía</annotation>
 		<annotation cp="🥇">fyrsta | gull | gullverðlaun | sæti | verðlaun</annotation>
 		<annotation cp="🥇" type="tts">gullverðlaun</annotation>
-		<annotation cp="🥈">annað | annar | sæti | silfur | silfurverðlaun | verðlaun</annotation>
+		<annotation cp="🥈">annað sæti | silfur | silfurverðlaun | verðlaun</annotation>
 		<annotation cp="🥈" type="tts">silfurverðlaun</annotation>
 		<annotation cp="🥉">brons | bronsverðlaun | sæti | verðlaun | þriðja</annotation>
 		<annotation cp="🥉" type="tts">bronsverðlaun</annotation>
@@ -1753,6 +1829,8 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="⚽" type="tts">fótbolti</annotation>
 		<annotation cp="⚾">bolti | hafnabolti</annotation>
 		<annotation cp="⚾" type="tts">hafnabolti</annotation>
+		<annotation cp="🥎">bolti | hanski | mjúkbolti | undirhandarkast</annotation>
+		<annotation cp="🥎" type="tts">mjúkbolti</annotation>
 		<annotation cp="🏀">bolti | íþróttir | karfa | körfubolti</annotation>
 		<annotation cp="🏀" type="tts">körfubolti</annotation>
 		<annotation cp="🏐">blak | bolti | leikur</annotation>
@@ -1763,16 +1841,18 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🏉" type="tts">rúgbíbolti</annotation>
 		<annotation cp="🎾">bolti | íþróttir | tennis | tennisbolti | tennisspaði og bolti</annotation>
 		<annotation cp="🎾" type="tts">tennis</annotation>
-		<annotation cp="🎱">biljarður | billjard | leikur | pool</annotation>
-		<annotation cp="🎱" type="tts">billjard</annotation>
+		<annotation cp="🥏">frisbí | frisbídiskur | ultimate</annotation>
+		<annotation cp="🥏" type="tts">frisbídiskur</annotation>
 		<annotation cp="🎳">keila | keilukúla | keilur | leikur</annotation>
 		<annotation cp="🎳" type="tts">keila</annotation>
 		<annotation cp="🏏">bolti | krikket | kylfa | leikur</annotation>
 		<annotation cp="🏏" type="tts">krikket</annotation>
 		<annotation cp="🏑">bolti | grashokkí | hokkí | kylfa | leikur | völlur</annotation>
 		<annotation cp="🏑" type="tts">grashokkí</annotation>
-		<annotation cp="🏒">hokkí | ís | íshokkí | kylfa | leikur | pökkur</annotation>
+		<annotation cp="🏒">ís | íshokkí | kylfa | leikur | pökkur</annotation>
 		<annotation cp="🏒" type="tts">íshokkí</annotation>
+		<annotation cp="🥍">bolti | háfleikur | kylfa | mark</annotation>
+		<annotation cp="🥍" type="tts">háfleikur</annotation>
 		<annotation cp="🏓">bolti | borðtennis | leikur | spaði</annotation>
 		<annotation cp="🏓" type="tts">borðtennis</annotation>
 		<annotation cp="🏸">badminton | badmintonbolti | fjaðrabolti | leikur | spaði</annotation>
@@ -1783,28 +1863,40 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🥋" type="tts">bardagabúningur</annotation>
 		<annotation cp="🥅">fótbolti | íþrótt | mark | net</annotation>
 		<annotation cp="🥅" type="tts">mark</annotation>
-		<annotation cp="🎯">beint í mark | leikur | skotfimi | skotmark</annotation>
-		<annotation cp="🎯" type="tts">skotmark</annotation>
 		<annotation cp="⛳">flagg í holu | golf | golfhola | hola</annotation>
 		<annotation cp="⛳" type="tts">golf</annotation>
 		<annotation cp="⛸">ís | skauti | svell</annotation>
 		<annotation cp="⛸" type="tts">skauti</annotation>
-		<annotation cp="🎣">afþreying | fiskur | skemmtun | stangveiði | veiðistöng | veiðistöng og fiskur</annotation>
+		<annotation cp="🎣">fiskur | stangveiði | veiðistöng</annotation>
 		<annotation cp="🎣" type="tts">stangveiði</annotation>
-		<annotation cp="🎽">bolur | hlaupa | hlaupabolur | hlaupabolur með rönd | íþróttir | rönd | skokka</annotation>
+		<annotation cp="🎽">bolur | borði | hlaup | hlaupabolur | íþróttir</annotation>
 		<annotation cp="🎽" type="tts">hlaupabolur</annotation>
 		<annotation cp="🎿">íþróttir | skíðaskór | skíði | skíði og skíðaskór</annotation>
 		<annotation cp="🎿" type="tts">skíði</annotation>
 		<annotation cp="🛷">sleði | Sleði</annotation>
 		<annotation cp="🛷" type="tts">sleði</annotation>
 		<annotation cp="🥌">krulla | krullusteinn | leikur | steinn</annotation>
-		<annotation cp="🥌" type="tts">krulla | steinn | krullusteinn</annotation>
+		<annotation cp="🥌" type="tts">krullusteinn</annotation>
+		<annotation cp="🎯">beint í mark | leikur | skotfimi | skotmark</annotation>
+		<annotation cp="🎯" type="tts">skotmark</annotation>
+		<annotation cp="🎱">biljarður | billjard | leikur | pool</annotation>
+		<annotation cp="🎱" type="tts">billjard</annotation>
+		<annotation cp="🔮">kristall | kristalskúla | kúla | spá | spádómur</annotation>
+		<annotation cp="🔮" type="tts">kristalskúla</annotation>
+		<annotation cp="🧿">heillagripur | illt-auga | nazar | perla | verndargripur</annotation>
+		<annotation cp="🧿" type="tts">nazar verndargripur</annotation>
 		<annotation cp="🎮">leikjatölva | leikur | stýripinni | tölvuleikur</annotation>
 		<annotation cp="🎮" type="tts">tölvuleikur</annotation>
 		<annotation cp="🕹">leikur | stýripinni | tölvuleikur</annotation>
 		<annotation cp="🕹" type="tts">stýripinni</annotation>
+		<annotation cp="🎰">leikur | spilakassi</annotation>
+		<annotation cp="🎰" type="tts">spilakassi</annotation>
 		<annotation cp="🎲">leikur | spilateningur | teningur</annotation>
 		<annotation cp="🎲" type="tts">teningur</annotation>
+		<annotation cp="🧩">krækja saman | pússl | pússluspil | vísbending</annotation>
+		<annotation cp="🧩" type="tts">pússl</annotation>
+		<annotation cp="🧸">bangsi | dót | fínt | leikfang</annotation>
+		<annotation cp="🧸" type="tts">bangsi</annotation>
 		<annotation cp="♠">leikur | spaði | spil | spilalitur</annotation>
 		<annotation cp="♠" type="tts">spaði</annotation>
 		<annotation cp="♥">hjarta | leikur | spil | spilalitur</annotation>
@@ -1813,16 +1905,28 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="♦" type="tts">tígull</annotation>
 		<annotation cp="♣">lauf | leikur | spil | spilalitur</annotation>
 		<annotation cp="♣" type="tts">lauf</annotation>
+		<annotation cp="♟">fórn | peð | skák | tafl | taflpeð</annotation>
+		<annotation cp="♟" type="tts">taflpeð</annotation>
 		<annotation cp="🃏">jóker | jókerspil | spil</annotation>
 		<annotation cp="🃏" type="tts">jókerspil</annotation>
 		<annotation cp="🀄">dreki | mahjong | Mahjong-tafla | rauður dreki</annotation>
 		<annotation cp="🀄" type="tts">Mahjong-tafla</annotation>
-		<annotation cp="🎴">blóm | blómaspil | Hanafuda | leikur | spil | spilastokkur</annotation>
+		<annotation cp="🎴">blóm | blómaspil | japanskur | leikur | spil</annotation>
 		<annotation cp="🎴" type="tts">blómaspil</annotation>
-		<annotation cp="🔇">ekki tala | hátalari | þögn</annotation>
-		<annotation cp="🔇" type="tts">ekki tala</annotation>
-		<annotation cp="🔈">hátalari | hljóðstyrkur</annotation>
-		<annotation cp="🔈" type="tts">hátalari</annotation>
+		<annotation cp="🎭">leikhúsgrímur | leiklist | list | skemmtun | sviðslistir</annotation>
+		<annotation cp="🎭" type="tts">leikhúsgrímur</annotation>
+		<annotation cp="🖼">list | málverk | mynd | rammi | rammi með mynd | safn</annotation>
+		<annotation cp="🖼" type="tts">rammi með mynd</annotation>
+		<annotation cp="🎨">list | listamaður | litapalletta | málning | palletta</annotation>
+		<annotation cp="🎨" type="tts">litapalletta</annotation>
+		<annotation cp="🧵">kefli | nál | sauma | tvinni | þráður</annotation>
+		<annotation cp="🧵" type="tts">tvinni</annotation>
+		<annotation cp="🧶">garn | hekl | hespa | hnykill</annotation>
+		<annotation cp="🧶" type="tts">garn</annotation>
+		<annotation cp="🔇">ekki tala | hátalari | hljóðlaus hátalari | þögn</annotation>
+		<annotation cp="🔇" type="tts">hljóðlaus hátalari</annotation>
+		<annotation cp="🔈">hátalari | hljóðstyrkur | lágvær hátalari</annotation>
+		<annotation cp="🔈" type="tts">lágvær hátalari</annotation>
 		<annotation cp="🔉">hátalari | hátalari í gangi | hljóðstyrkur | lágt</annotation>
 		<annotation cp="🔉" type="tts">hátalari í gangi</annotation>
 		<annotation cp="🔊">hátalari | hátt | hávær hátalari | hljóðstyrkur</annotation>
@@ -1885,7 +1989,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🔌" type="tts">innstunga</annotation>
 		<annotation cp="💻">fartölva | tölva</annotation>
 		<annotation cp="💻" type="tts">tölva</annotation>
-		<annotation cp="🖥">heimilis | heimilistölva | tölva</annotation>
+		<annotation cp="🖥">borðtölva | heimilistölva | tölva</annotation>
 		<annotation cp="🖥" type="tts">heimilistölva</annotation>
 		<annotation cp="🖨">prentari | tölva</annotation>
 		<annotation cp="🖨" type="tts">prentari</annotation>
@@ -1899,10 +2003,12 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="💽" type="tts">MD-diskur</annotation>
 		<annotation cp="💾">disketta | diskur</annotation>
 		<annotation cp="💾" type="tts">disketta</annotation>
-		<annotation cp="💿">blu-ray | CD | diskur | DVD | DVD-diskur | geisladiskur | mynddiskur</annotation>
+		<annotation cp="💿">blu-ray | diskur | geisladiskur | mynddiskur | tölva</annotation>
 		<annotation cp="💿" type="tts">blu-ray</annotation>
 		<annotation cp="📀">diskur | DVD | DVD-diskur | mynddiskur</annotation>
 		<annotation cp="📀" type="tts">DVD</annotation>
+		<annotation cp="🧮">reikningur | talnagrind</annotation>
+		<annotation cp="🧮" type="tts">talnagrind</annotation>
 		<annotation cp="🎥">bíó | kvikmynd | kvikmyndatökuvél | skemmtun</annotation>
 		<annotation cp="🎥" type="tts">kvikmyndatökuvél</annotation>
 		<annotation cp="🎞">bíómynd | kvikmynd | kvikmyndafilma | kvikmyndalist | rammi</annotation>
@@ -1925,19 +2031,13 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🔍" type="tts">stækkunargler sem vísar til vinstri</annotation>
 		<annotation cp="🔎">leita | stækkunargler | stækkunargler sem vísar til hægri</annotation>
 		<annotation cp="🔎" type="tts">stækkunargler sem vísar til hægri</annotation>
-		<annotation cp="🔬">smásjá | verkfæri | vísindi</annotation>
-		<annotation cp="🔬" type="tts">smásjá</annotation>
-		<annotation cp="🔭">sjónauki | verkfæri | vísindi</annotation>
-		<annotation cp="🔭" type="tts">sjónauki</annotation>
-		<annotation cp="📡">diskur | gervihnattaloftnet | gervihnattarloftnet | gervihnöttur | loftnet | samskipti</annotation>
-		<annotation cp="📡" type="tts">gervihnattaloftnet</annotation>
 		<annotation cp="🕯">kerti | ljós</annotation>
 		<annotation cp="🕯" type="tts">kerti</annotation>
-		<annotation cp="💡">hugmynd | ljós | ljósapera | pera | rafmagn | skrípó</annotation>
+		<annotation cp="💡">hugmynd | ljós | ljósapera | rafmagn | skrípó</annotation>
 		<annotation cp="💡" type="tts">ljósapera</annotation>
 		<annotation cp="🔦">ljós | vasaljós</annotation>
 		<annotation cp="🔦" type="tts">vasaljós</annotation>
-		<annotation cp="🏮">bar | izakaya | lampi | rauður | rauður lampi | veitingastaður</annotation>
+		<annotation cp="🏮">bar | izakaya | lampi | rauður | veitingastaður</annotation>
 		<annotation cp="🏮" type="tts">rauður lampi</annotation>
 		<annotation cp="📔">glósubók | glósubók með skrautkápu | kápa | skreytt glósubók</annotation>
 		<annotation cp="📔" type="tts">glósubók með skrautkápu</annotation>
@@ -1945,11 +2045,11 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="📕" type="tts">lokuð bók</annotation>
 		<annotation cp="📖">bók | opin bók</annotation>
 		<annotation cp="📖" type="tts">opin bók</annotation>
-		<annotation cp="📗">bók | græn | græn bók</annotation>
+		<annotation cp="📗">bók | græn</annotation>
 		<annotation cp="📗" type="tts">græn bók</annotation>
-		<annotation cp="📘">blá | blá bók | bók</annotation>
+		<annotation cp="📘">blá | bók</annotation>
 		<annotation cp="📘" type="tts">blá bók</annotation>
-		<annotation cp="📙">appelsínugul | appelsínugul bók | bók</annotation>
+		<annotation cp="📙">appelsínugul | bók</annotation>
 		<annotation cp="📙" type="tts">appelsínugul bók</annotation>
 		<annotation cp="📚">bækur | bók</annotation>
 		<annotation cp="📚" type="tts">bækur</annotation>
@@ -1965,7 +2065,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="📄" type="tts">skjal snýr upp</annotation>
 		<annotation cp="📰">blað | dagblað | fréttir</annotation>
 		<annotation cp="📰" type="tts">dagblað</annotation>
-		<annotation cp="🗞">dagblað | fréttir | pappír | samanrúllað | samanrúllað dagblað</annotation>
+		<annotation cp="🗞">dagblað | fréttir | pappír | samanrúllað</annotation>
 		<annotation cp="🗞" type="tts">samanrúllað dagblað</annotation>
 		<annotation cp="📑">bókamerki í tölvu | flipar | merki</annotation>
 		<annotation cp="📑" type="tts">bókamerki í tölvu</annotation>
@@ -1977,7 +2077,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="💰" type="tts">peningapoki</annotation>
 		<annotation cp="💴">peningar | peningaseðill | seðill | yen | yenaseðill</annotation>
 		<annotation cp="💴" type="tts">yenaseðill</annotation>
-		<annotation cp="💵">dalur | dollaraseðill | dollari | peningar | peningaseðill | seðill</annotation>
+		<annotation cp="💵">dollaraseðill | dollari | gjaldmiðill | peningaseðill | peningur | seðill</annotation>
 		<annotation cp="💵" type="tts">dollaraseðill</annotation>
 		<annotation cp="💶">evra | evruseðill | peningar | peningaseðill | seðill</annotation>
 		<annotation cp="💶" type="tts">evruseðill</annotation>
@@ -1987,6 +2087,8 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="💸" type="tts">fljúgandi peningar</annotation>
 		<annotation cp="💳">greiðslukort | kort | kredit | kreditkort</annotation>
 		<annotation cp="💳" type="tts">kreditkort</annotation>
+		<annotation cp="🧾">bókfærsla | bókhald | endurskoðun | kvittun | sönnun | sönnunargagn</annotation>
+		<annotation cp="🧾" type="tts">kvittun</annotation>
 		<annotation cp="💹">á uppleið | hækkar | jákvætt | markaður á uppleið | verðbréfamarkaður</annotation>
 		<annotation cp="💹" type="tts">markaður á uppleið</annotation>
 		<annotation cp="💱">gjaldmiðlar | gjaldmiðlareikningur | gjaldmiðlaskipti | peningar</annotation>
@@ -1997,13 +2099,13 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="✉" type="tts">umslag</annotation>
 		<annotation cp="📧">bréf | póstur | samskipti | tölvubréf | tölvupóstur</annotation>
 		<annotation cp="📧" type="tts">tölvupóstur</annotation>
-		<annotation cp="📨">bréf | móttekið | móttekinn póstur | póstur | póstur á innleið | samskipti | tölvupóstur | umslag</annotation>
+		<annotation cp="📨">bréf | móttekið | póstur | póstur á innleið | tölvupóstur | umslag</annotation>
 		<annotation cp="📨" type="tts">póstur á innleið</annotation>
-		<annotation cp="📩">bréf | póstur | póstur á útleið | samskipti | sendur póstur | tölvupóstur | umslag | útleið</annotation>
+		<annotation cp="📩">ör | póstsending | póstur á útleið | tölvupóstur | umsalg | umslag með ör</annotation>
 		<annotation cp="📩" type="tts">póstur á útleið</annotation>
-		<annotation cp="📤">bakki | póstur | samskipti | sendur póstur | sent | úthólf</annotation>
+		<annotation cp="📤">bréf | pósthólf | póstur | sendur póstur | sent | úthólf</annotation>
 		<annotation cp="📤" type="tts">sendur póstur</annotation>
-		<annotation cp="📥">bakki | innhólf | móttekið | móttekinn póstur | póstur | samskipti</annotation>
+		<annotation cp="📥">box | bréf | innhólf | móttekið | móttekinn póstur | póstur</annotation>
 		<annotation cp="📥" type="tts">móttekinn póstur</annotation>
 		<annotation cp="📦">böggull | kassi | pakki</annotation>
 		<annotation cp="📦" type="tts">pakki</annotation>
@@ -2065,7 +2167,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="📍" type="tts">teiknibóla með kúlu</annotation>
 		<annotation cp="📎">bréfaklemma | klemma</annotation>
 		<annotation cp="📎" type="tts">bréfaklemma</annotation>
-		<annotation cp="🖇">bréfaklemmur | samankræktar | samankræktar bréfaklemmur</annotation>
+		<annotation cp="🖇">bréfaklemmur | samankræktar</annotation>
 		<annotation cp="🖇" type="tts">samankræktar bréfaklemmur</annotation>
 		<annotation cp="📏">bein reglustika | reglustika</annotation>
 		<annotation cp="📏" type="tts">reglustika</annotation>
@@ -2089,7 +2191,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🔐" type="tts">lokaður lás</annotation>
 		<annotation cp="🔑">aðgangsorð | lykill | lykilorð</annotation>
 		<annotation cp="🔑" type="tts">lykill</annotation>
-		<annotation cp="🗝">gamall | gamall lykill | lás | lykill | vísbending</annotation>
+		<annotation cp="🗝">gamall | lás | lykill | vísbending</annotation>
 		<annotation cp="🗝" type="tts">gamall lykill</annotation>
 		<annotation cp="🔨">hamar | verkfæri</annotation>
 		<annotation cp="🔨" type="tts">hamar</annotation>
@@ -2101,11 +2203,11 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🛠" type="tts">hamar og skiptilykill</annotation>
 		<annotation cp="🗡">hnífur | rýtingur | vopn</annotation>
 		<annotation cp="🗡" type="tts">rýtingur</annotation>
-		<annotation cp="⚔">krosslögð | krosslögð sverð | sverð | vopn</annotation>
+		<annotation cp="⚔">krosslögð | sverð | vopn</annotation>
 		<annotation cp="⚔" type="tts">krosslögð sverð</annotation>
 		<annotation cp="🔫">byssa | skammbyssa</annotation>
 		<annotation cp="🔫" type="tts">byssa</annotation>
-		<annotation cp="🏹">bogaskytta | bogi | bogi og ör | bogmaðurinn | ör | stjörnumerki | verkfæri | vopn</annotation>
+		<annotation cp="🏹">bogaskytta | bogi | bogi og ör | bogmaður | ör</annotation>
 		<annotation cp="🏹" type="tts">bogi og ör</annotation>
 		<annotation cp="🛡">skjöldur | vopn</annotation>
 		<annotation cp="🛡" type="tts">skjöldur</annotation>
@@ -2117,18 +2219,64 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="⚙" type="tts">gírhjól</annotation>
 		<annotation cp="🗜">skrúfstykki | verkfæri | þjöppun</annotation>
 		<annotation cp="🗜" type="tts">þjöppun</annotation>
-		<annotation cp="⚗">efnafræði | eimingarflaska</annotation>
-		<annotation cp="⚗" type="tts">eimingarflaska</annotation>
-		<annotation cp="⚖">jafnvægi | skali | stjörmumerki | verkfæri | vog | vogin | þyngd</annotation>
+		<annotation cp="⚖">jafnréttisvog | jafnvægi | vog | vogarskál</annotation>
 		<annotation cp="⚖" type="tts">vog</annotation>
 		<annotation cp="🔗">tenglamerki | tenglar | tveir hlekkir</annotation>
 		<annotation cp="🔗" type="tts">tenglamerki</annotation>
 		<annotation cp="⛓">keðja</annotation>
 		<annotation cp="⛓" type="tts">keðja</annotation>
+		<annotation cp="🧰">kista | tól | verkfærakassi | verkfæri | viðgerðir</annotation>
+		<annotation cp="🧰" type="tts">verkfærakassi</annotation>
+		<annotation cp="🧲">aðdráttarafl | segull | segulmagn | skeifa</annotation>
+		<annotation cp="🧲" type="tts">segull</annotation>
+		<annotation cp="⚗">efnafræði | eimingarflaska</annotation>
+		<annotation cp="⚗" type="tts">eimingarflaska</annotation>
+		<annotation cp="🧪">efnafræði | efnafræðingur | tilraun | tilraunaglas | tilraunastofa | vísindi</annotation>
+		<annotation cp="🧪" type="tts">tilraunaglas</annotation>
+		<annotation cp="🧫">baktería | gerlaflóra | líffræði | líffræðingur | petrílskál | tilraunastofa</annotation>
+		<annotation cp="🧫" type="tts">petrílskál</annotation>
+		<annotation cp="🧬">dna | erfðaefni | gen | líf | líffræðingur | þróun</annotation>
+		<annotation cp="🧬" type="tts">dna</annotation>
+		<annotation cp="🔬">smásjá | verkfæri | vísindi</annotation>
+		<annotation cp="🔬" type="tts">smásjá</annotation>
+		<annotation cp="🔭">sjónauki | verkfæri | vísindi</annotation>
+		<annotation cp="🔭" type="tts">sjónauki</annotation>
+		<annotation cp="📡">diskur | gervihnattadiskur | gervihnattaloftnet | loftnet</annotation>
+		<annotation cp="📡" type="tts">gervihnattaloftnet</annotation>
 		<annotation cp="💉">læknir | lyf | nál | sprauta</annotation>
 		<annotation cp="💉" type="tts">sprauta</annotation>
 		<annotation cp="💊">læknir | lyf | pilla</annotation>
 		<annotation cp="💊" type="tts">pilla</annotation>
+		<annotation cp="🚪">dyr | hurð</annotation>
+		<annotation cp="🚪" type="tts">dyr</annotation>
+		<annotation cp="🛏">hótel | rúm | sofa</annotation>
+		<annotation cp="🛏" type="tts">rúm</annotation>
+		<annotation cp="🛋">hótel | lampi | sófi | sófi og lampi</annotation>
+		<annotation cp="🛋" type="tts">sófi og lampi</annotation>
+		<annotation cp="🚽">klósett | salerni</annotation>
+		<annotation cp="🚽" type="tts">klósett</annotation>
+		<annotation cp="🚿">sturta | vatn</annotation>
+		<annotation cp="🚿" type="tts">sturta</annotation>
+		<annotation cp="🛁">bað | baðkar | baðker</annotation>
+		<annotation cp="🛁" type="tts">baðker</annotation>
+		<annotation cp="🧴">áburðarflaska | áburður | krem | sjampó | sólarvörn</annotation>
+		<annotation cp="🧴" type="tts">áburðarflaska</annotation>
+		<annotation cp="🧷">bleyja | öryggisnæla | pönk | sikrisnæla</annotation>
+		<annotation cp="🧷" type="tts">öryggisnæla</annotation>
+		<annotation cp="🧹">kústur | norn | sópa | þrif</annotation>
+		<annotation cp="🧹" type="tts">kústur</annotation>
+		<annotation cp="🧺">búskapur | karfa | lautarferð | þvottur</annotation>
+		<annotation cp="🧺" type="tts">karfa</annotation>
+		<annotation cp="🧻">klósettpappír | pappírsrúlla | salernispappír</annotation>
+		<annotation cp="🧻" type="tts">pappírsrúlla</annotation>
+		<annotation cp="🧼">bað | löður | s´ápudiskur | sápa | sápustykki | þrif</annotation>
+		<annotation cp="🧼" type="tts">sápa</annotation>
+		<annotation cp="🧽">drekkur í sig | gljúpur | svampur | þrif</annotation>
+		<annotation cp="🧽" type="tts">svampur</annotation>
+		<annotation cp="🧯">eldur | kæfa | slökkva | slökkvitæki</annotation>
+		<annotation cp="🧯" type="tts">slökkvitæki</annotation>
+		<annotation cp="🛒">innkaup | innkaupakerra | innkaupavagn | kerra</annotation>
+		<annotation cp="🛒" type="tts">innkaupakerra</annotation>
 		<annotation cp="🚬">reykingar | sígaretta</annotation>
 		<annotation cp="🚬" type="tts">sígaretta</annotation>
 		<annotation cp="⚰">dauði | líkkista</annotation>
@@ -2137,12 +2285,6 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="⚱" type="tts">duftker</annotation>
 		<annotation cp="🗿">andlit | moyai | moyai-stytta | stytta</annotation>
 		<annotation cp="🗿" type="tts">moyai-stytta</annotation>
-		<annotation cp="🛢">olía | olíutunna | tunna</annotation>
-		<annotation cp="🛢" type="tts">olíutunna</annotation>
-		<annotation cp="🔮">kristall | kristalskúla | kúla | spá | spádómur</annotation>
-		<annotation cp="🔮" type="tts">kristalskúla</annotation>
-		<annotation cp="🛒">innkaup | innkaupakerra | innkaupavagn | karfa | kaupa | kerra | vagn</annotation>
-		<annotation cp="🛒" type="tts">innkaupakerra</annotation>
 		<annotation cp="🏧">banki | hraðbanki</annotation>
 		<annotation cp="🏧" type="tts">hraðbanki</annotation>
 		<annotation cp="🚮">merki, rusl í ruslatunnu | rusl | ruslafata</annotation>
@@ -2193,7 +2335,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🔞" type="tts">enginn undir 18 ára</annotation>
 		<annotation cp="☢">geislavirkni | merki</annotation>
 		<annotation cp="☢" type="tts">geislavirkni</annotation>
-		<annotation cp="☣">efni | hættuleg | hættuleg efni</annotation>
+		<annotation cp="☣">efni | hættuleg</annotation>
 		<annotation cp="☣" type="tts">hættuleg efni</annotation>
 		<annotation cp="⬆">átt | höfuðátt | norður | ör | ör upp</annotation>
 		<annotation cp="⬆" type="tts">ör upp</annotation>
@@ -2203,7 +2345,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="➡" type="tts">ör til hægri</annotation>
 		<annotation cp="↘">átt | ör | ör ská niður til hægri | suðaustur</annotation>
 		<annotation cp="↘" type="tts">ör ská niður til hægri</annotation>
-		<annotation cp="⬇">átt | höfuðátt | niður | ör | ör niður | suður</annotation>
+		<annotation cp="⬇">átt | höfuðátt | niður | ör | suður</annotation>
 		<annotation cp="⬇" type="tts">ör niður</annotation>
 		<annotation cp="↙">átt | ör | ör ská niður til vinstri | suðvestur</annotation>
 		<annotation cp="↙" type="tts">ör ská niður til vinstri</annotation>
@@ -2225,7 +2367,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="⤵" type="tts">sveigð ör niður</annotation>
 		<annotation cp="🔃">endurhlaða | endurhleðslutákn | lóðréttar réttsælisörvar | örvar</annotation>
 		<annotation cp="🔃" type="tts">endurhlaða</annotation>
-		<annotation cp="🔄">örvar | rangsælis | rangsælis örvar</annotation>
+		<annotation cp="🔄">örvar | rangsælis</annotation>
 		<annotation cp="🔄" type="tts">rangsælis örvar</annotation>
 		<annotation cp="🔙">ör | ör til baka | ör til vinstri | til baka | vinstri ör</annotation>
 		<annotation cp="🔙" type="tts">til baka</annotation>
@@ -2233,9 +2375,9 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🔚" type="tts">endir</annotation>
 		<annotation cp="🔛">Kveikt með upphrópunarmerki og ör | kveikt-ör | ör | upphrópun | upphrópunarmerki</annotation>
 		<annotation cp="🔛" type="tts">kveikt-ör</annotation>
-		<annotation cp="🔜">bráðum | bráðum með vinstri ör | bráðum-merki | ör</annotation>
-		<annotation cp="🔜" type="tts">bráðum-merki</annotation>
-		<annotation cp="🔝">efst | efst-ör | ör upp | toppur | upp | upp ör</annotation>
+		<annotation cp="🔜">bráðum | bráðum með vinstri ör | bráðum-merki | bráðum-ör | ör</annotation>
+		<annotation cp="🔜" type="tts">bráðum-ör</annotation>
+		<annotation cp="🔝">efst | efst-ör | ör | upp | uppör</annotation>
 		<annotation cp="🔝" type="tts">efst-ör</annotation>
 		<annotation cp="🛐">tilbeiðsla | tilbeiðslustaður | trúarbrögð</annotation>
 		<annotation cp="🛐" type="tts">tilbeiðslustaður</annotation>
@@ -2243,11 +2385,11 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="⚛" type="tts">frumeindartákn</annotation>
 		<annotation cp="🕉">hindúismi | om-merki | trúarbrögð</annotation>
 		<annotation cp="🕉" type="tts">om-merki</annotation>
-		<annotation cp="✡">davíð | davíðsstjarna | gyðingatrú | gyðingur | stjarna | trúarbrögð</annotation>
+		<annotation cp="✡">Davíð | davíðsstjarna | gyðingdómur | gyðingur | stjarna</annotation>
 		<annotation cp="✡" type="tts">davíðsstjarna</annotation>
 		<annotation cp="☸">búddisti | dharma | dharmahjól | hjól | trúarbrögð</annotation>
 		<annotation cp="☸" type="tts">dharmahjól</annotation>
-		<annotation cp="☯">jang | jin | jin jang | taó | taóisti | trúarbrögð</annotation>
+		<annotation cp="☯">jang | jin | taó | taóisti | trúarbrögð</annotation>
 		<annotation cp="☯" type="tts">jin jang</annotation>
 		<annotation cp="✝">kristni | kross | latneskur kross | trúarbrögð</annotation>
 		<annotation cp="✝" type="tts">latneskur kross</annotation>
@@ -2259,7 +2401,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="☮" type="tts">friðartákn</annotation>
 		<annotation cp="🕎">ljósastjaki | margálma kertastjaki | menorah-ljósastika | trúarbrögð</annotation>
 		<annotation cp="🕎" type="tts">menorah-ljósastika</annotation>
-		<annotation cp="🔯">sexhyrnd | sexhyrnd stjarna | spá | spádómur | stjarna</annotation>
+		<annotation cp="🔯">sexhyrnd | spá | spádómur | stjarna</annotation>
 		<annotation cp="🔯" type="tts">sexhyrnd stjarna</annotation>
 		<annotation cp="♈">hrútur | hrúturinn | stjörnumerki</annotation>
 		<annotation cp="♈" type="tts">hrúturinn</annotation>
@@ -2291,7 +2433,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🔀" type="tts">fléttaðar örvar til hægri</annotation>
 		<annotation cp="🔁">endurtaka | örvar | réttsælis</annotation>
 		<annotation cp="🔁" type="tts">endurtaka</annotation>
-		<annotation cp="🔂">einu sinni | númer 1 | örvar | réttsælis | réttsælis örvar | réttsælis örvar með tölunni 1</annotation>
+		<annotation cp="🔂">einu sinni | númer 1 | örvar | réttsælis | réttsælis örvar með tölunni 1</annotation>
 		<annotation cp="🔂" type="tts">réttsælis örvar</annotation>
 		<annotation cp="▶">hægri | ör | spila | spilunartakki | þríhyrningur</annotation>
 		<annotation cp="▶" type="tts">spilunartakki</annotation>
@@ -2299,7 +2441,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="⏩" type="tts">spóla áfram</annotation>
 		<annotation cp="⏭">áfram | næsta lag | ör | skiptitakki | þríhyrningur</annotation>
 		<annotation cp="⏭" type="tts">skiptitakki</annotation>
-		<annotation cp="⏯">hægri | ör | pása | spila | spilunar- og pásuhnappur | þríhyrningur</annotation>
+		<annotation cp="⏯">ör | pása | spila | spilunar- og pásuhnappur | spilunar- og pásutakki | þríhyrningur</annotation>
 		<annotation cp="⏯" type="tts">spilunar- og pásuhnappur</annotation>
 		<annotation cp="◀">hnappur til að spóla til baka | ör | spóla til baka | vinstri | þríhyrningur</annotation>
 		<annotation cp="◀" type="tts">hnappur til að spóla til baka</annotation>
@@ -2329,18 +2471,20 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🔅" type="tts">lítil birta</annotation>
 		<annotation cp="🔆">birta | bjart | mikil birta | tákn um mikla birtu</annotation>
 		<annotation cp="🔆" type="tts">mikil birta</annotation>
-		<annotation cp="📶">farsímastyrkur | farsími | loftnet | sendistyrkur | sími | strik | styrkur</annotation>
-		<annotation cp="📶" type="tts">farsímastyrkur</annotation>
+		<annotation cp="📶">farsímasamband | farsímastyrkur | farsími | loftnet</annotation>
+		<annotation cp="📶" type="tts">farsímasamband</annotation>
 		<annotation cp="📳">farsími | sími | stilling | titringur</annotation>
 		<annotation cp="📳" type="tts">titringur</annotation>
 		<annotation cp="📴">farsími | sími | slökkt | slökkt á farsíma | slökkt á síma</annotation>
 		<annotation cp="📴" type="tts">slökkt á síma</annotation>
-		<annotation cp="♀">konur | kvenkyns | kvenkyns merki | merki</annotation>
+		<annotation cp="♀">konur | kvenkyns | merki</annotation>
 		<annotation cp="♀" type="tts">kvenkyns merki</annotation>
-		<annotation cp="♂">karlar | karlkyns | karlkyns merki | merki</annotation>
+		<annotation cp="♂">karlar | karlkyns | merki</annotation>
 		<annotation cp="♂" type="tts">karlkyns merki</annotation>
 		<annotation cp="⚕">læknavísindi | lækningamerki | lækningar | læknir | merki</annotation>
 		<annotation cp="⚕" type="tts">lækningamerki</annotation>
+		<annotation cp="♾">algilt | eilífð | óendanleiki | takmarkaleysi</annotation>
+		<annotation cp="♾" type="tts">óendanleiki</annotation>
 		<annotation cp="♻">alþjóðlegt endurvinnslumerki | endurvinnsla | endurvinnslumerki</annotation>
 		<annotation cp="♻" type="tts">endurvinnsla</annotation>
 		<annotation cp="⚜">fleur-de-lis | fleur-de-lis-tákn</annotation>
@@ -2361,7 +2505,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="✔" type="tts">stórt hakmerki</annotation>
 		<annotation cp="✖">afturkalla | margfalda | margföldunar-x | stórt margföldunar-x</annotation>
 		<annotation cp="✖" type="tts">stórt margföldunar-x</annotation>
-		<annotation cp="❌">hætta við | kross | krossmerki | margföldun | merki | x</annotation>
+		<annotation cp="❌">hætta við | kross | krossmark | margföldun | merki | x</annotation>
 		<annotation cp="❌" type="tts">kross</annotation>
 		<annotation cp="❎">„X“ í kassa | krosshnappur | krossmerki</annotation>
 		<annotation cp="❎" type="tts">krosshnappur</annotation>
@@ -2403,7 +2547,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="®" type="tts">skráð</annotation>
 		<annotation cp="™">skrásett vörumerki | vörumerki</annotation>
 		<annotation cp="™" type="tts">skrásett vörumerki</annotation>
-		<annotation cp="💯">100 | 100 stig | fullt hús | stig</annotation>
+		<annotation cp="💯">100 | fullt hús | stig</annotation>
 		<annotation cp="💯" type="tts">fullt hús</annotation>
 		<annotation cp="🔠">hástafir | latneskir hástafir | latneskt letur | setja inn latneska hástafi</annotation>
 		<annotation cp="🔠" type="tts">hástafir</annotation>
@@ -2415,11 +2559,11 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🔣" type="tts">tákn</annotation>
 		<annotation cp="🔤">ABC | enska | latneska stafrófið | setja inn latneska stafrófið</annotation>
 		<annotation cp="🔤" type="tts">latneska stafrófið</annotation>
-		<annotation cp="🅰">A | A-blóðflokkur | blóð | blóðflokkur | blóðflokkur A</annotation>
+		<annotation cp="🅰">A | A-blóðflokkur | blóð | blóðflokkur</annotation>
 		<annotation cp="🅰" type="tts">A-blóðflokkur</annotation>
-		<annotation cp="🆎">AB | AB-blóðflokkur | blóð | blóðflokkur | blóðflokkur AB</annotation>
+		<annotation cp="🆎">AB | AB-blóðflokkur | blóð | blóðflokkur</annotation>
 		<annotation cp="🆎" type="tts">AB-blóðflokkur</annotation>
-		<annotation cp="🅱">B | B-blóðflokkur | blóð | blóðflokkur | blóðflokkur B</annotation>
+		<annotation cp="🅱">B | B-blóðflokkur | blóð | blóðflokkur</annotation>
 		<annotation cp="🅱" type="tts">B-blóðflokkur</annotation>
 		<annotation cp="🆑">CL | CL-skilti | skilti</annotation>
 		<annotation cp="🆑" type="tts">CL</annotation>
@@ -2437,7 +2581,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🆕" type="tts">nýtt</annotation>
 		<annotation cp="🆖">NG | NG-skilti | skilti</annotation>
 		<annotation cp="🆖" type="tts">NG</annotation>
-		<annotation cp="🅾">blóð | blóðflokkur | blóðflokkur O | O | O-blóðflokkur</annotation>
+		<annotation cp="🅾">blóð | blóðflokkur | O | O-blóðflokkur</annotation>
 		<annotation cp="🅾" type="tts">O-blóðflokkur</annotation>
 		<annotation cp="🆗">í lagi | OK | OK-skilti</annotation>
 		<annotation cp="🆗" type="tts">OK</annotation>
@@ -2445,7 +2589,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🅿" type="tts">bílastæði</annotation>
 		<annotation cp="🆘">hjálp | skilti | SOS | SOS-skilti</annotation>
 		<annotation cp="🆘" type="tts">SOS</annotation>
-		<annotation cp="🆙">skilti | UP! | UP! skilti</annotation>
+		<annotation cp="🆙">skilti | UP!</annotation>
 		<annotation cp="🆙" type="tts">UP!</annotation>
 		<annotation cp="🆚">gegn | skilti | versus | versus-skilti | VS</annotation>
 		<annotation cp="🆚" type="tts">VS</annotation>
@@ -2483,22 +2627,30 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🈺" type="tts">„Opið“ á japönsku</annotation>
 		<annotation cp="🈵">„Allt fullt“ á japönsku | allt fullt | japanska | myndletur</annotation>
 		<annotation cp="🈵" type="tts">„Allt fullt“ á japönsku</annotation>
-		<annotation cp="▪">ferningur | lítill svartur ferningur | rúmfræði</annotation>
-		<annotation cp="▪" type="tts">lítill svartur ferningur</annotation>
-		<annotation cp="▫">ferningur | lítill hvítur ferningur | rúmfræði</annotation>
-		<annotation cp="▫" type="tts">lítill hvítur ferningur</annotation>
-		<annotation cp="◻">ferningur | hvítur meðalstór ferningur | rúmfræði</annotation>
-		<annotation cp="◻" type="tts">hvítur meðalstór ferningur</annotation>
+		<annotation cp="🔴">hringur | rauður | rúmfræði | stór rauður hringur</annotation>
+		<annotation cp="🔴" type="tts">stór rauður hringur</annotation>
+		<annotation cp="🔵">blár | hringur | rúmfræði | stór blár hringur</annotation>
+		<annotation cp="🔵" type="tts">stór blár hringur</annotation>
+		<annotation cp="⚪">hringur | hvítur | rúmfræði</annotation>
+		<annotation cp="⚪" type="tts">hvítur hringur</annotation>
+		<annotation cp="⚫">hringur | rúmfræði | svartur</annotation>
+		<annotation cp="⚫" type="tts">svartur hringur</annotation>
+		<annotation cp="⬜">ferningur | rúmfræði | stór hvítur ferningur</annotation>
+		<annotation cp="⬜" type="tts">stór hvítur ferningur</annotation>
+		<annotation cp="⬛">ferningur | rúmfræði | stór svartur ferningur</annotation>
+		<annotation cp="⬛" type="tts">stór svartur ferningur</annotation>
 		<annotation cp="◼">ferningur | rúmfræði | svartur meðalstór ferningur</annotation>
 		<annotation cp="◼" type="tts">svartur meðalstór ferningur</annotation>
+		<annotation cp="◻">ferningur | hvítur meðalstór ferningur | rúmfræði</annotation>
+		<annotation cp="◻" type="tts">hvítur meðalstór ferningur</annotation>
 		<annotation cp="◽">ferningur | hvítur meðalsmár ferningur | rúmfræði</annotation>
 		<annotation cp="◽" type="tts">hvítur meðalsmár ferningur</annotation>
 		<annotation cp="◾">ferningur | rúmfræði | svartur meðalsmár ferningur</annotation>
 		<annotation cp="◾" type="tts">svartur meðalsmár ferningur</annotation>
-		<annotation cp="⬛">ferningur | rúmfræði | stór svartur ferningur</annotation>
-		<annotation cp="⬛" type="tts">stór svartur ferningur</annotation>
-		<annotation cp="⬜">ferningur | rúmfræði | stór hvítur ferningur</annotation>
-		<annotation cp="⬜" type="tts">stór hvítur ferningur</annotation>
+		<annotation cp="▫">ferningur | lítill hvítur ferningur | rúmfræði</annotation>
+		<annotation cp="▫" type="tts">lítill hvítur ferningur</annotation>
+		<annotation cp="▪">ferningur | lítill svartur ferningur | rúmfræði</annotation>
+		<annotation cp="▪" type="tts">lítill svartur ferningur</annotation>
 		<annotation cp="🔶">appelsínugulur | stór appelsínugulur tígull | tígull</annotation>
 		<annotation cp="🔶" type="tts">stór appelsínugulur tígull</annotation>
 		<annotation cp="🔷">blár | stór blár tígull | tígull</annotation>
@@ -2519,25 +2671,19 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 		<annotation cp="🔲" type="tts">svartur ferningslaga hnappur</annotation>
 		<annotation cp="🔳">ferningur | hnappur | hvítur ferningslaga hnappur</annotation>
 		<annotation cp="🔳" type="tts">hvítur ferningslaga hnappur</annotation>
-		<annotation cp="⚪">hringur | hvítur | hvítur hringur | rúmfræði</annotation>
-		<annotation cp="⚪" type="tts">hvítur hringur</annotation>
-		<annotation cp="⚫">hringur | rúmfræði | svartur | svartur hringur</annotation>
-		<annotation cp="⚫" type="tts">svartur hringur</annotation>
-		<annotation cp="🔴">hringur | rauður | rúmfræði | stór rauður hringur</annotation>
-		<annotation cp="🔴" type="tts">stór rauður hringur</annotation>
-		<annotation cp="🔵">blár | hringur | rúmfræði | stór blár hringur</annotation>
-		<annotation cp="🔵" type="tts">stór blár hringur</annotation>
 		<annotation cp="🏁">flagg | íþróttir | kappakstur | rásflagg</annotation>
 		<annotation cp="🏁" type="tts">rásflagg</annotation>
 		<annotation cp="🚩">fáni | flagg | staðsetningarmerki | veifa</annotation>
 		<annotation cp="🚩" type="tts">flagg</annotation>
 		<annotation cp="🎌">fánar | fánar í kross | hátíð | japanskir fánar í kross</annotation>
 		<annotation cp="🎌" type="tts">japanskir fánar í kross</annotation>
-		<annotation cp="🏴">blaktandi | blaktandi svartur fáni</annotation>
-		<annotation cp="🏴" type="tts">blaktandi svartur fáni</annotation>
-		<annotation cp="🏳">blaktandi | blaktandi hvítur fáni</annotation>
-		<annotation cp="🏳" type="tts">blaktandi hvítur fáni</annotation>
+		<annotation cp="🏴">blaktandi | blaktandi svartur fáni | svartur fáni</annotation>
+		<annotation cp="🏴" type="tts">svartur fáni</annotation>
+		<annotation cp="🏳">blaktandi | blaktandi hvítur fáni | hvítur fáni</annotation>
+		<annotation cp="🏳" type="tts">hvítur fáni</annotation>
 		<annotation cp="🏳‍🌈">fáni | gay pride | gleðiganga | regnbogafáni | regnbogi</annotation>
 		<annotation cp="🏳‍🌈" type="tts">regnbogafáni</annotation>
+		<annotation cp="🏴‍☠">fjársjóður | hausk´úpuflagg | ræna og rupla | sjóræningi | sjóræningjafáni</annotation>
+		<annotation cp="🏴‍☠" type="tts">sjóræningjafáni</annotation>
 	</annotations>
 </ldml>

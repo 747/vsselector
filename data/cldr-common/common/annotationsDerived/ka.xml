@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE ldml SYSTEM "../../common/dtd/ldml.dtd">
-<!-- Copyright © 1991-2017 Unicode, Inc.
+<!-- Copyright © 1991-2018 Unicode, Inc.
 For terms of use, see http://www.unicode.org/copyright.html
 Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
 CLDR data files are interpreted according to the LDML specification (http://unicode.org/reports/tr35/)
@@ -9,30 +9,90 @@ Derived short names and annotations, using GenerateDerivedAnnotations.java. See 
 -->
 <ldml>
 	<identity>
-		<version number="$Revision: 13710 $"/>
+		<version number="$Revision: 14212 $"/>
 		<language type="ka"/>
 	</identity>
 	<annotations>
-		<annotation cp="0⃣">კლავიში</annotation>
-		<annotation cp="0⃣" type="tts">კლავიში: 0</annotation>
-		<annotation cp="1⃣">კლავიში</annotation>
-		<annotation cp="1⃣" type="tts">კლავიში: 1</annotation>
-		<annotation cp="2⃣">კლავიში</annotation>
-		<annotation cp="2⃣" type="tts">კლავიში: 2</annotation>
-		<annotation cp="3⃣">კლავიში</annotation>
-		<annotation cp="3⃣" type="tts">კლავიში: 3</annotation>
-		<annotation cp="4⃣">კლავიში</annotation>
-		<annotation cp="4⃣" type="tts">კლავიში: 4</annotation>
-		<annotation cp="5⃣">კლავიში</annotation>
-		<annotation cp="5⃣" type="tts">კლავიში: 5</annotation>
-		<annotation cp="6⃣">კლავიში</annotation>
-		<annotation cp="6⃣" type="tts">კლავიში: 6</annotation>
-		<annotation cp="7⃣">კლავიში</annotation>
-		<annotation cp="7⃣" type="tts">კლავიში: 7</annotation>
-		<annotation cp="8⃣">კლავიში</annotation>
-		<annotation cp="8⃣" type="tts">კლავიში: 8</annotation>
-		<annotation cp="9⃣">კლავიში</annotation>
-		<annotation cp="9⃣" type="tts">კლავიში: 9</annotation>
+		<annotation cp="🦵🏻">კიდური | ფეხი | წვივი | კანის ღია ტონალობა</annotation>
+		<annotation cp="🦵🏻" type="tts">ფეხი: კანის ღია ტონალობა</annotation>
+		<annotation cp="🦵🏼">კიდური | ფეხი | წვივი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🦵🏼" type="tts">ფეხი: ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🦵🏽">კიდური | ფეხი | წვივი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🦵🏽" type="tts">ფეხი: კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🦵🏾">კიდური | ფეხი | წვივი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🦵🏾" type="tts">ფეხი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🦵🏿">კიდური | ფეხი | წვივი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="🦵🏿" type="tts">ფეხი: კანის მუქი ტონალობა</annotation>
+		<annotation cp="🦶🏻">კიდური | ტერფი | კანის ღია ტონალობა</annotation>
+		<annotation cp="🦶🏻" type="tts">ტერფი: კანის ღია ტონალობა</annotation>
+		<annotation cp="🦶🏼">კიდური | ტერფი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🦶🏼" type="tts">ტერფი: ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🦶🏽">კიდური | ტერფი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🦶🏽" type="tts">ტერფი: კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🦶🏾">კიდური | ტერფი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🦶🏾" type="tts">ტერფი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🦶🏿">კიდური | ტერფი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="🦶🏿" type="tts">ტერფი: კანის მუქი ტონალობა</annotation>
+		<annotation cp="🦸🏻">ზებუნებრივი | კეთილი | სუპერგმირი | ქალი გმირი | კანის ღია ტონალობა</annotation>
+		<annotation cp="🦸🏻" type="tts">სუპერგმირი: კანის ღია ტონალობა</annotation>
+		<annotation cp="🦸🏼">ზებუნებრივი | კეთილი | სუპერგმირი | ქალი გმირი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🦸🏼" type="tts">სუპერგმირი: ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🦸🏽">ზებუნებრივი | კეთილი | სუპერგმირი | ქალი გმირი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🦸🏽" type="tts">სუპერგმირი: კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🦸🏾">ზებუნებრივი | კეთილი | სუპერგმირი | ქალი გმირი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🦸🏾" type="tts">სუპერგმირი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🦸🏿">ზებუნებრივი | კეთილი | სუპერგმირი | ქალი გმირი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="🦸🏿" type="tts">სუპერგმირი: კანის მუქი ტონალობა</annotation>
+		<annotation cp="🦸🏻‍♀">გმირი | გმირი ქალი | ზებუნებრივი | კეთილი | სუპერგმირი ქალი | კანის ღია ტონალობა</annotation>
+		<annotation cp="🦸🏻‍♀" type="tts">სუპერგმირი ქალი: კანის ღია ტონალობა</annotation>
+		<annotation cp="🦸🏼‍♀">გმირი | გმირი ქალი | ზებუნებრივი | კეთილი | სუპერგმირი ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🦸🏼‍♀" type="tts">სუპერგმირი ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🦸🏽‍♀">გმირი | გმირი ქალი | ზებუნებრივი | კეთილი | სუპერგმირი ქალი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🦸🏽‍♀" type="tts">სუპერგმირი ქალი: კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🦸🏾‍♀">გმირი | გმირი ქალი | ზებუნებრივი | კეთილი | სუპერგმირი ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🦸🏾‍♀" type="tts">სუპერგმირი ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🦸🏿‍♀">გმირი | გმირი ქალი | ზებუნებრივი | კეთილი | სუპერგმირი ქალი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="🦸🏿‍♀" type="tts">სუპერგმირი ქალი: კანის მუქი ტონალობა</annotation>
+		<annotation cp="🦸🏻‍♂">გმირი | ზებუნებრივი | კაცი | კეთილი | სუპერგმირი კაცი | კანის ღია ტონალობა</annotation>
+		<annotation cp="🦸🏻‍♂" type="tts">სუპერგმირი კაცი: კანის ღია ტონალობა</annotation>
+		<annotation cp="🦸🏼‍♂">გმირი | ზებუნებრივი | კაცი | კეთილი | სუპერგმირი კაცი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🦸🏼‍♂" type="tts">სუპერგმირი კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🦸🏽‍♂">გმირი | ზებუნებრივი | კაცი | კეთილი | სუპერგმირი კაცი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🦸🏽‍♂" type="tts">სუპერგმირი კაცი: კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🦸🏾‍♂">გმირი | ზებუნებრივი | კაცი | კეთილი | სუპერგმირი კაცი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🦸🏾‍♂" type="tts">სუპერგმირი კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🦸🏿‍♂">გმირი | ზებუნებრივი | კაცი | კეთილი | სუპერგმირი კაცი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="🦸🏿‍♂" type="tts">სუპერგმირი კაცი: კანის მუქი ტონალობა</annotation>
+		<annotation cp="🦹🏻">ბოროტი | ბოროტი გმირი | ზებუნებრივი | კრიმინალი | უარყოფითი გმირი | კანის ღია ტონალობა</annotation>
+		<annotation cp="🦹🏻" type="tts">ბოროტი გმირი: კანის ღია ტონალობა</annotation>
+		<annotation cp="🦹🏼">ბოროტი | ბოროტი გმირი | ზებუნებრივი | კრიმინალი | უარყოფითი გმირი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🦹🏼" type="tts">ბოროტი გმირი: ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🦹🏽">ბოროტი | ბოროტი გმირი | ზებუნებრივი | კრიმინალი | უარყოფითი გმირი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🦹🏽" type="tts">ბოროტი გმირი: კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🦹🏾">ბოროტი | ბოროტი გმირი | ზებუნებრივი | კრიმინალი | უარყოფითი გმირი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🦹🏾" type="tts">ბოროტი გმირი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🦹🏿">ბოროტი | ბოროტი გმირი | ზებუნებრივი | კრიმინალი | უარყოფითი გმირი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="🦹🏿" type="tts">ბოროტი გმირი: კანის მუქი ტონალობა</annotation>
+		<annotation cp="🦹🏻‍♀">ბოროტი | ბოროტი გმირი ქალი | ზებუნებრივი | კრიმინალი | უარყოფითი გმირი | ქალი | კანის ღია ტონალობა</annotation>
+		<annotation cp="🦹🏻‍♀" type="tts">ბოროტი გმირი ქალი: კანის ღია ტონალობა</annotation>
+		<annotation cp="🦹🏼‍♀">ბოროტი | ბოროტი გმირი ქალი | ზებუნებრივი | კრიმინალი | უარყოფითი გმირი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🦹🏼‍♀" type="tts">ბოროტი გმირი ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🦹🏽‍♀">ბოროტი | ბოროტი გმირი ქალი | ზებუნებრივი | კრიმინალი | უარყოფითი გმირი | ქალი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🦹🏽‍♀" type="tts">ბოროტი გმირი ქალი: კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🦹🏾‍♀">ბოროტი | ბოროტი გმირი ქალი | ზებუნებრივი | კრიმინალი | უარყოფითი გმირი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🦹🏾‍♀" type="tts">ბოროტი გმირი ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🦹🏿‍♀">ბოროტი | ბოროტი გმირი ქალი | ზებუნებრივი | კრიმინალი | უარყოფითი გმირი | ქალი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="🦹🏿‍♀" type="tts">ბოროტი გმირი ქალი: კანის მუქი ტონალობა</annotation>
+		<annotation cp="🦹🏻‍♂">ბოროტი | ბოროტი გმირი კაცი | ზებუნებრივი | კაცი | კრიმინალი | უარყოფითი გმირი | კანის ღია ტონალობა</annotation>
+		<annotation cp="🦹🏻‍♂" type="tts">ბოროტი გმირი კაცი: კანის ღია ტონალობა</annotation>
+		<annotation cp="🦹🏼‍♂">ბოროტი | ბოროტი გმირი კაცი | ზებუნებრივი | კაცი | კრიმინალი | უარყოფითი გმირი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🦹🏼‍♂" type="tts">ბოროტი გმირი კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🦹🏽‍♂">ბოროტი | ბოროტი გმირი კაცი | ზებუნებრივი | კაცი | კრიმინალი | უარყოფითი გმირი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🦹🏽‍♂" type="tts">ბოროტი გმირი კაცი: კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🦹🏾‍♂">ბოროტი | ბოროტი გმირი კაცი | ზებუნებრივი | კაცი | კრიმინალი | უარყოფითი გმირი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🦹🏾‍♂" type="tts">ბოროტი გმირი კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🦹🏿‍♂">ბოროტი | ბოროტი გმირი კაცი | ზებუნებრივი | კაცი | კრიმინალი | უარყოფითი გმირი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="🦹🏿‍♂" type="tts">ბოროტი გმირი კაცი: კანის მუქი ტონალობა</annotation>
 		<annotation cp="👶🏻">ბავშვი | ჩვილი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👶🏻" type="tts">ჩვილი: კანის ღია ტონალობა</annotation>
 		<annotation cp="👶🏼">ბავშვი | ჩვილი | ღიადან საშუალომდე კანის ტონალობა</annotation>
@@ -93,6 +153,54 @@ Derived short names and annotations, using GenerateDerivedAnnotations.java. See 
 		<annotation cp="👨🏾" type="tts">კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏿">კაცი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👨🏿" type="tts">კაცი: კანის მუქი ტონალობა</annotation>
+		<annotation cp="👨‍🦰">კაცი | წითელი თმა</annotation>
+		<annotation cp="👨‍🦰" type="tts">კაცი: წითელი თმა</annotation>
+		<annotation cp="👨🏻‍🦰">კაცი | კანის ღია ტონალობა | წითელი თმა</annotation>
+		<annotation cp="👨🏻‍🦰" type="tts">კაცი: კანის ღია ტონალობა, წითელი თმა</annotation>
+		<annotation cp="👨🏼‍🦰">კაცი | ღიადან საშუალომდე კანის ტონალობა | წითელი თმა</annotation>
+		<annotation cp="👨🏼‍🦰" type="tts">კაცი: ღიადან საშუალომდე კანის ტონალობა, წითელი თმა</annotation>
+		<annotation cp="👨🏽‍🦰">კაცი | კანის საშუალო ტონალობა | წითელი თმა</annotation>
+		<annotation cp="👨🏽‍🦰" type="tts">კაცი: კანის საშუალო ტონალობა, წითელი თმა</annotation>
+		<annotation cp="👨🏾‍🦰">კაცი | საშუალოდან მუქამდე კანის ტონალობა | წითელი თმა</annotation>
+		<annotation cp="👨🏾‍🦰" type="tts">კაცი: საშუალოდან მუქამდე კანის ტონალობა, წითელი თმა</annotation>
+		<annotation cp="👨🏿‍🦰">კაცი | კანის მუქი ტონალობა | წითელი თმა</annotation>
+		<annotation cp="👨🏿‍🦰" type="tts">კაცი: კანის მუქი ტონალობა, წითელი თმა</annotation>
+		<annotation cp="👨‍🦱">კაცი | ხვეული თმა</annotation>
+		<annotation cp="👨‍🦱" type="tts">კაცი: ხვეული თმა</annotation>
+		<annotation cp="👨🏻‍🦱">კაცი | კანის ღია ტონალობა | ხვეული თმა</annotation>
+		<annotation cp="👨🏻‍🦱" type="tts">კაცი: კანის ღია ტონალობა, ხვეული თმა</annotation>
+		<annotation cp="👨🏼‍🦱">კაცი | ღიადან საშუალომდე კანის ტონალობა | ხვეული თმა</annotation>
+		<annotation cp="👨🏼‍🦱" type="tts">კაცი: ღიადან საშუალომდე კანის ტონალობა, ხვეული თმა</annotation>
+		<annotation cp="👨🏽‍🦱">კაცი | კანის საშუალო ტონალობა | ხვეული თმა</annotation>
+		<annotation cp="👨🏽‍🦱" type="tts">კაცი: კანის საშუალო ტონალობა, ხვეული თმა</annotation>
+		<annotation cp="👨🏾‍🦱">კაცი | საშუალოდან მუქამდე კანის ტონალობა | ხვეული თმა</annotation>
+		<annotation cp="👨🏾‍🦱" type="tts">კაცი: საშუალოდან მუქამდე კანის ტონალობა, ხვეული თმა</annotation>
+		<annotation cp="👨🏿‍🦱">კაცი | კანის მუქი ტონალობა | ხვეული თმა</annotation>
+		<annotation cp="👨🏿‍🦱" type="tts">კაცი: კანის მუქი ტონალობა, ხვეული თმა</annotation>
+		<annotation cp="👨‍🦲">კაცი | მელოტი</annotation>
+		<annotation cp="👨‍🦲" type="tts">კაცი: მელოტი</annotation>
+		<annotation cp="👨🏻‍🦲">კაცი | კანის ღია ტონალობა | მელოტი</annotation>
+		<annotation cp="👨🏻‍🦲" type="tts">კაცი: კანის ღია ტონალობა, მელოტი</annotation>
+		<annotation cp="👨🏼‍🦲">კაცი | ღიადან საშუალომდე კანის ტონალობა | მელოტი</annotation>
+		<annotation cp="👨🏼‍🦲" type="tts">კაცი: ღიადან საშუალომდე კანის ტონალობა, მელოტი</annotation>
+		<annotation cp="👨🏽‍🦲">კაცი | კანის საშუალო ტონალობა | მელოტი</annotation>
+		<annotation cp="👨🏽‍🦲" type="tts">კაცი: კანის საშუალო ტონალობა, მელოტი</annotation>
+		<annotation cp="👨🏾‍🦲">კაცი | საშუალოდან მუქამდე კანის ტონალობა | მელოტი</annotation>
+		<annotation cp="👨🏾‍🦲" type="tts">კაცი: საშუალოდან მუქამდე კანის ტონალობა, მელოტი</annotation>
+		<annotation cp="👨🏿‍🦲">კაცი | კანის მუქი ტონალობა | მელოტი</annotation>
+		<annotation cp="👨🏿‍🦲" type="tts">კაცი: კანის მუქი ტონალობა, მელოტი</annotation>
+		<annotation cp="👨‍🦳">კაცი | თეთრი თმა</annotation>
+		<annotation cp="👨‍🦳" type="tts">კაცი: თეთრი თმა</annotation>
+		<annotation cp="👨🏻‍🦳">კაცი | კანის ღია ტონალობა | თეთრი თმა</annotation>
+		<annotation cp="👨🏻‍🦳" type="tts">კაცი: კანის ღია ტონალობა, თეთრი თმა</annotation>
+		<annotation cp="👨🏼‍🦳">კაცი | ღიადან საშუალომდე კანის ტონალობა | თეთრი თმა</annotation>
+		<annotation cp="👨🏼‍🦳" type="tts">კაცი: ღიადან საშუალომდე კანის ტონალობა, თეთრი თმა</annotation>
+		<annotation cp="👨🏽‍🦳">კაცი | კანის საშუალო ტონალობა | თეთრი თმა</annotation>
+		<annotation cp="👨🏽‍🦳" type="tts">კაცი: კანის საშუალო ტონალობა, თეთრი თმა</annotation>
+		<annotation cp="👨🏾‍🦳">კაცი | საშუალოდან მუქამდე კანის ტონალობა | თეთრი თმა</annotation>
+		<annotation cp="👨🏾‍🦳" type="tts">კაცი: საშუალოდან მუქამდე კანის ტონალობა, თეთრი თმა</annotation>
+		<annotation cp="👨🏿‍🦳">კაცი | კანის მუქი ტონალობა | თეთრი თმა</annotation>
+		<annotation cp="👨🏿‍🦳" type="tts">კაცი: კანის მუქი ტონალობა, თეთრი თმა</annotation>
 		<annotation cp="👩🏻">ქალი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👩🏻" type="tts">ქალი: კანის ღია ტონალობა</annotation>
 		<annotation cp="👩🏼">ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
@@ -103,6 +211,54 @@ Derived short names and annotations, using GenerateDerivedAnnotations.java. See 
 		<annotation cp="👩🏾" type="tts">ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏿">ქალი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👩🏿" type="tts">ქალი: კანის მუქი ტონალობა</annotation>
+		<annotation cp="👩‍🦰">ქალი | წითელი თმა</annotation>
+		<annotation cp="👩‍🦰" type="tts">ქალი: წითელი თმა</annotation>
+		<annotation cp="👩🏻‍🦰">ქალი | კანის ღია ტონალობა | წითელი თმა</annotation>
+		<annotation cp="👩🏻‍🦰" type="tts">ქალი: კანის ღია ტონალობა, წითელი თმა</annotation>
+		<annotation cp="👩🏼‍🦰">ქალი | ღიადან საშუალომდე კანის ტონალობა | წითელი თმა</annotation>
+		<annotation cp="👩🏼‍🦰" type="tts">ქალი: ღიადან საშუალომდე კანის ტონალობა, წითელი თმა</annotation>
+		<annotation cp="👩🏽‍🦰">ქალი | კანის საშუალო ტონალობა | წითელი თმა</annotation>
+		<annotation cp="👩🏽‍🦰" type="tts">ქალი: კანის საშუალო ტონალობა, წითელი თმა</annotation>
+		<annotation cp="👩🏾‍🦰">ქალი | საშუალოდან მუქამდე კანის ტონალობა | წითელი თმა</annotation>
+		<annotation cp="👩🏾‍🦰" type="tts">ქალი: საშუალოდან მუქამდე კანის ტონალობა, წითელი თმა</annotation>
+		<annotation cp="👩🏿‍🦰">ქალი | კანის მუქი ტონალობა | წითელი თმა</annotation>
+		<annotation cp="👩🏿‍🦰" type="tts">ქალი: კანის მუქი ტონალობა, წითელი თმა</annotation>
+		<annotation cp="👩‍🦱">ქალი | ხვეული თმა</annotation>
+		<annotation cp="👩‍🦱" type="tts">ქალი: ხვეული თმა</annotation>
+		<annotation cp="👩🏻‍🦱">ქალი | კანის ღია ტონალობა | ხვეული თმა</annotation>
+		<annotation cp="👩🏻‍🦱" type="tts">ქალი: კანის ღია ტონალობა, ხვეული თმა</annotation>
+		<annotation cp="👩🏼‍🦱">ქალი | ღიადან საშუალომდე კანის ტონალობა | ხვეული თმა</annotation>
+		<annotation cp="👩🏼‍🦱" type="tts">ქალი: ღიადან საშუალომდე კანის ტონალობა, ხვეული თმა</annotation>
+		<annotation cp="👩🏽‍🦱">ქალი | კანის საშუალო ტონალობა | ხვეული თმა</annotation>
+		<annotation cp="👩🏽‍🦱" type="tts">ქალი: კანის საშუალო ტონალობა, ხვეული თმა</annotation>
+		<annotation cp="👩🏾‍🦱">ქალი | საშუალოდან მუქამდე კანის ტონალობა | ხვეული თმა</annotation>
+		<annotation cp="👩🏾‍🦱" type="tts">ქალი: საშუალოდან მუქამდე კანის ტონალობა, ხვეული თმა</annotation>
+		<annotation cp="👩🏿‍🦱">ქალი | კანის მუქი ტონალობა | ხვეული თმა</annotation>
+		<annotation cp="👩🏿‍🦱" type="tts">ქალი: კანის მუქი ტონალობა, ხვეული თმა</annotation>
+		<annotation cp="👩‍🦲">ქალი | მელოტი</annotation>
+		<annotation cp="👩‍🦲" type="tts">ქალი: მელოტი</annotation>
+		<annotation cp="👩🏻‍🦲">ქალი | კანის ღია ტონალობა | მელოტი</annotation>
+		<annotation cp="👩🏻‍🦲" type="tts">ქალი: კანის ღია ტონალობა, მელოტი</annotation>
+		<annotation cp="👩🏼‍🦲">ქალი | ღიადან საშუალომდე კანის ტონალობა | მელოტი</annotation>
+		<annotation cp="👩🏼‍🦲" type="tts">ქალი: ღიადან საშუალომდე კანის ტონალობა, მელოტი</annotation>
+		<annotation cp="👩🏽‍🦲">ქალი | კანის საშუალო ტონალობა | მელოტი</annotation>
+		<annotation cp="👩🏽‍🦲" type="tts">ქალი: კანის საშუალო ტონალობა, მელოტი</annotation>
+		<annotation cp="👩🏾‍🦲">ქალი | საშუალოდან მუქამდე კანის ტონალობა | მელოტი</annotation>
+		<annotation cp="👩🏾‍🦲" type="tts">ქალი: საშუალოდან მუქამდე კანის ტონალობა, მელოტი</annotation>
+		<annotation cp="👩🏿‍🦲">ქალი | კანის მუქი ტონალობა | მელოტი</annotation>
+		<annotation cp="👩🏿‍🦲" type="tts">ქალი: კანის მუქი ტონალობა, მელოტი</annotation>
+		<annotation cp="👩‍🦳">ქალი | თეთრი თმა</annotation>
+		<annotation cp="👩‍🦳" type="tts">ქალი: თეთრი თმა</annotation>
+		<annotation cp="👩🏻‍🦳">ქალი | კანის ღია ტონალობა | თეთრი თმა</annotation>
+		<annotation cp="👩🏻‍🦳" type="tts">ქალი: კანის ღია ტონალობა, თეთრი თმა</annotation>
+		<annotation cp="👩🏼‍🦳">ქალი | ღიადან საშუალომდე კანის ტონალობა | თეთრი თმა</annotation>
+		<annotation cp="👩🏼‍🦳" type="tts">ქალი: ღიადან საშუალომდე კანის ტონალობა, თეთრი თმა</annotation>
+		<annotation cp="👩🏽‍🦳">ქალი | კანის საშუალო ტონალობა | თეთრი თმა</annotation>
+		<annotation cp="👩🏽‍🦳" type="tts">ქალი: კანის საშუალო ტონალობა, თეთრი თმა</annotation>
+		<annotation cp="👩🏾‍🦳">ქალი | საშუალოდან მუქამდე კანის ტონალობა | თეთრი თმა</annotation>
+		<annotation cp="👩🏾‍🦳" type="tts">ქალი: საშუალოდან მუქამდე კანის ტონალობა, თეთრი თმა</annotation>
+		<annotation cp="👩🏿‍🦳">ქალი | კანის მუქი ტონალობა | თეთრი თმა</annotation>
+		<annotation cp="👩🏿‍🦳" type="tts">ქალი: კანის მუქი ტონალობა, თეთრი თმა</annotation>
 		<annotation cp="🧓🏻">გენდერ-ნეიტრალური | ჭარმაგი | კანის ღია ტონალობა</annotation>
 		<annotation cp="🧓🏻" type="tts">ჭარმაგი: კანის ღია ტონალობა</annotation>
 		<annotation cp="🧓🏼">გენდერ-ნეიტრალური | ჭარმაგი | ღიადან საშუალომდე კანის ტონალობა</annotation>
@@ -113,165 +269,165 @@ Derived short names and annotations, using GenerateDerivedAnnotations.java. See 
 		<annotation cp="🧓🏾" type="tts">ჭარმაგი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="🧓🏿">გენდერ-ნეიტრალური | ჭარმაგი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="🧓🏿" type="tts">ჭარმაგი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👴🏻">კაცი | მოხუცი | მოხუცი კაცი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👴🏻">კაცი | მოხუცი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👴🏻" type="tts">მოხუცი კაცი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👴🏼">კაცი | მოხუცი | მოხუცი კაცი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👴🏼">კაცი | მოხუცი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👴🏼" type="tts">მოხუცი კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👴🏽">კაცი | მოხუცი | მოხუცი კაცი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👴🏽">კაცი | მოხუცი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👴🏽" type="tts">მოხუცი კაცი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👴🏾">კაცი | მოხუცი | მოხუცი კაცი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👴🏾">კაცი | მოხუცი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👴🏾" type="tts">მოხუცი კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👴🏿">კაცი | მოხუცი | მოხუცი კაცი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👴🏿">კაცი | მოხუცი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👴🏿" type="tts">მოხუცი კაცი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👵🏻">მოხუცი | მოხუცი ქალი | ქალი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👵🏻">მოხუცი | ქალი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👵🏻" type="tts">მოხუცი ქალი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👵🏼">მოხუცი | მოხუცი ქალი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👵🏼">მოხუცი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👵🏼" type="tts">მოხუცი ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👵🏽">მოხუცი | მოხუცი ქალი | ქალი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👵🏽">მოხუცი | ქალი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👵🏽" type="tts">მოხუცი ქალი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👵🏾">მოხუცი | მოხუცი ქალი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👵🏾">მოხუცი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👵🏾" type="tts">მოხუცი ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👵🏿">მოხუცი | მოხუცი ქალი | ქალი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👵🏿">მოხუცი | ქალი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👵🏿" type="tts">მოხუცი ქალი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👨🏻‍⚕">ექთანი | ექიმი | ექიმი კაცი | თერაპევტი | კაცი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👨🏻‍⚕">ექთანი | ექიმი | თერაპევტი | კაცი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👨🏻‍⚕" type="tts">ექიმი კაცი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👨🏼‍⚕">ექთანი | ექიმი | ექიმი კაცი | თერაპევტი | კაცი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👨🏼‍⚕">ექთანი | ექიმი | თერაპევტი | კაცი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏼‍⚕" type="tts">ექიმი კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👨🏽‍⚕">ექთანი | ექიმი | ექიმი კაცი | თერაპევტი | კაცი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👨🏽‍⚕">ექთანი | ექიმი | თერაპევტი | კაცი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👨🏽‍⚕" type="tts">ექიმი კაცი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👨🏾‍⚕">ექთანი | ექიმი | ექიმი კაცი | თერაპევტი | კაცი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👨🏾‍⚕">ექთანი | ექიმი | თერაპევტი | კაცი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏾‍⚕" type="tts">ექიმი კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👨🏿‍⚕">ექთანი | ექიმი | ექიმი კაცი | თერაპევტი | კაცი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👨🏿‍⚕">ექთანი | ექიმი | თერაპევტი | კაცი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👨🏿‍⚕" type="tts">ექიმი კაცი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👩🏻‍⚕">ექთანი | ექიმი | ექიმი ქალი | თერაპევტი | ქალი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👩🏻‍⚕">ექთანი | ექიმი | თერაპევტი | ქალი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👩🏻‍⚕" type="tts">ექიმი ქალი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👩🏼‍⚕">ექთანი | ექიმი | ექიმი ქალი | თერაპევტი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👩🏼‍⚕">ექთანი | ექიმი | თერაპევტი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏼‍⚕" type="tts">ექიმი ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👩🏽‍⚕">ექთანი | ექიმი | ექიმი ქალი | თერაპევტი | ქალი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👩🏽‍⚕">ექთანი | ექიმი | თერაპევტი | ქალი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👩🏽‍⚕" type="tts">ექიმი ქალი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👩🏾‍⚕">ექთანი | ექიმი | ექიმი ქალი | თერაპევტი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👩🏾‍⚕">ექთანი | ექიმი | თერაპევტი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏾‍⚕" type="tts">ექიმი ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👩🏿‍⚕">ექთანი | ექიმი | ექიმი ქალი | თერაპევტი | ქალი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👩🏿‍⚕">ექთანი | ექიმი | თერაპევტი | ქალი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👩🏿‍⚕" type="tts">ექიმი ქალი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👨🏻‍🎓">კაცი | მეცნიერი | სტუდენტი | სტუდენტი კაცი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👨🏻‍🎓">კაცი | მეცნიერი | სტუდენტი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👨🏻‍🎓" type="tts">სტუდენტი კაცი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👨🏼‍🎓">კაცი | მეცნიერი | სტუდენტი | სტუდენტი კაცი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👨🏼‍🎓">კაცი | მეცნიერი | სტუდენტი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏼‍🎓" type="tts">სტუდენტი კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👨🏽‍🎓">კაცი | მეცნიერი | სტუდენტი | სტუდენტი კაცი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👨🏽‍🎓">კაცი | მეცნიერი | სტუდენტი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👨🏽‍🎓" type="tts">სტუდენტი კაცი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👨🏾‍🎓">კაცი | მეცნიერი | სტუდენტი | სტუდენტი კაცი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👨🏾‍🎓">კაცი | მეცნიერი | სტუდენტი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏾‍🎓" type="tts">სტუდენტი კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👨🏿‍🎓">კაცი | მეცნიერი | სტუდენტი | სტუდენტი კაცი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👨🏿‍🎓">კაცი | მეცნიერი | სტუდენტი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👨🏿‍🎓" type="tts">სტუდენტი კაცი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👩🏻‍🎓">მეცნიერი | სტუდენტი | სტუდენტი ქალი | ქალი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👩🏻‍🎓">მეცნიერი | სტუდენტი | ქალი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👩🏻‍🎓" type="tts">სტუდენტი ქალი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👩🏼‍🎓">მეცნიერი | სტუდენტი | სტუდენტი ქალი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👩🏼‍🎓">მეცნიერი | სტუდენტი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏼‍🎓" type="tts">სტუდენტი ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👩🏽‍🎓">მეცნიერი | სტუდენტი | სტუდენტი ქალი | ქალი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👩🏽‍🎓">მეცნიერი | სტუდენტი | ქალი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👩🏽‍🎓" type="tts">სტუდენტი ქალი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👩🏾‍🎓">მეცნიერი | სტუდენტი | სტუდენტი ქალი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👩🏾‍🎓">მეცნიერი | სტუდენტი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏾‍🎓" type="tts">სტუდენტი ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👩🏿‍🎓">მეცნიერი | სტუდენტი | სტუდენტი ქალი | ქალი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👩🏿‍🎓">მეცნიერი | სტუდენტი | ქალი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👩🏿‍🎓" type="tts">სტუდენტი ქალი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👨🏻‍🏫">ინსტრუქტორი | კაცი | მასწავლებელი | მასწავლებელი კაცი | მეცნიერი | პროფესორი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👨🏻‍🏫">ინსტრუქტორი | კაცი | მასწავლებელი | მეცნიერი | პროფესორი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👨🏻‍🏫" type="tts">მასწავლებელი კაცი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👨🏼‍🏫">ინსტრუქტორი | კაცი | მასწავლებელი | მასწავლებელი კაცი | მეცნიერი | პროფესორი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👨🏼‍🏫">ინსტრუქტორი | კაცი | მასწავლებელი | მეცნიერი | პროფესორი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏼‍🏫" type="tts">მასწავლებელი კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👨🏽‍🏫">ინსტრუქტორი | კაცი | მასწავლებელი | მასწავლებელი კაცი | მეცნიერი | პროფესორი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👨🏽‍🏫">ინსტრუქტორი | კაცი | მასწავლებელი | მეცნიერი | პროფესორი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👨🏽‍🏫" type="tts">მასწავლებელი კაცი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👨🏾‍🏫">ინსტრუქტორი | კაცი | მასწავლებელი | მასწავლებელი კაცი | მეცნიერი | პროფესორი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👨🏾‍🏫">ინსტრუქტორი | კაცი | მასწავლებელი | მეცნიერი | პროფესორი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏾‍🏫" type="tts">მასწავლებელი კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👨🏿‍🏫">ინსტრუქტორი | კაცი | მასწავლებელი | მასწავლებელი კაცი | მეცნიერი | პროფესორი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👨🏿‍🏫">ინსტრუქტორი | კაცი | მასწავლებელი | მეცნიერი | პროფესორი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👨🏿‍🏫" type="tts">მასწავლებელი კაცი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👩🏻‍🏫">ინსტრუქტორი | მასწავლებელი | მასწავლებელი ქალი | მეცნიერი | პროფესორი | ქალი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👩🏻‍🏫">ინსტრუქტორი | მასწავლებელი | მეცნიერი | პროფესორი | ქალი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👩🏻‍🏫" type="tts">მასწავლებელი ქალი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👩🏼‍🏫">ინსტრუქტორი | მასწავლებელი | მასწავლებელი ქალი | მეცნიერი | პროფესორი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👩🏼‍🏫">ინსტრუქტორი | მასწავლებელი | მეცნიერი | პროფესორი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏼‍🏫" type="tts">მასწავლებელი ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👩🏽‍🏫">ინსტრუქტორი | მასწავლებელი | მასწავლებელი ქალი | მეცნიერი | პროფესორი | ქალი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👩🏽‍🏫">ინსტრუქტორი | მასწავლებელი | მეცნიერი | პროფესორი | ქალი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👩🏽‍🏫" type="tts">მასწავლებელი ქალი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👩🏾‍🏫">ინსტრუქტორი | მასწავლებელი | მასწავლებელი ქალი | მეცნიერი | პროფესორი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👩🏾‍🏫">ინსტრუქტორი | მასწავლებელი | მეცნიერი | პროფესორი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏾‍🏫" type="tts">მასწავლებელი ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👩🏿‍🏫">ინსტრუქტორი | მასწავლებელი | მასწავლებელი ქალი | მეცნიერი | პროფესორი | ქალი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👩🏿‍🏫">ინსტრუქტორი | მასწავლებელი | მეცნიერი | პროფესორი | ქალი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👩🏿‍🏫" type="tts">მასწავლებელი ქალი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👨🏻‍⚖">კაცი | მოსამართლე | მოსამართლე კაცი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👨🏻‍⚖">კაცი | მოსამართლე | კანის ღია ტონალობა</annotation>
 		<annotation cp="👨🏻‍⚖" type="tts">მოსამართლე კაცი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👨🏼‍⚖">კაცი | მოსამართლე | მოსამართლე კაცი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👨🏼‍⚖">კაცი | მოსამართლე | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏼‍⚖" type="tts">მოსამართლე კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👨🏽‍⚖">კაცი | მოსამართლე | მოსამართლე კაცი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👨🏽‍⚖">კაცი | მოსამართლე | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👨🏽‍⚖" type="tts">მოსამართლე კაცი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👨🏾‍⚖">კაცი | მოსამართლე | მოსამართლე კაცი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👨🏾‍⚖">კაცი | მოსამართლე | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏾‍⚖" type="tts">მოსამართლე კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👨🏿‍⚖">კაცი | მოსამართლე | მოსამართლე კაცი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👨🏿‍⚖">კაცი | მოსამართლე | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👨🏿‍⚖" type="tts">მოსამართლე კაცი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👩🏻‍⚖">მოსამართლე | მოსამართლე ქალი | ქალი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👩🏻‍⚖">მოსამართლე | ქალი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👩🏻‍⚖" type="tts">მოსამართლე ქალი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👩🏼‍⚖">მოსამართლე | მოსამართლე ქალი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👩🏼‍⚖">მოსამართლე | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏼‍⚖" type="tts">მოსამართლე ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👩🏽‍⚖">მოსამართლე | მოსამართლე ქალი | ქალი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👩🏽‍⚖">მოსამართლე | ქალი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👩🏽‍⚖" type="tts">მოსამართლე ქალი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👩🏾‍⚖">მოსამართლე | მოსამართლე ქალი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👩🏾‍⚖">მოსამართლე | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏾‍⚖" type="tts">მოსამართლე ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👩🏿‍⚖">მოსამართლე | მოსამართლე ქალი | ქალი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👩🏿‍⚖">მოსამართლე | ქალი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👩🏿‍⚖" type="tts">მოსამართლე ქალი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👨🏻‍🌾">კაცი | მებაღე | ფერმერი | ფერმერი კაცი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👨🏻‍🌾">კაცი | მებაღე | ფერმერი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👨🏻‍🌾" type="tts">ფერმერი კაცი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👨🏼‍🌾">კაცი | მებაღე | ფერმერი | ფერმერი კაცი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👨🏼‍🌾">კაცი | მებაღე | ფერმერი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏼‍🌾" type="tts">ფერმერი კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👨🏽‍🌾">კაცი | მებაღე | ფერმერი | ფერმერი კაცი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👨🏽‍🌾">კაცი | მებაღე | ფერმერი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👨🏽‍🌾" type="tts">ფერმერი კაცი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👨🏾‍🌾">კაცი | მებაღე | ფერმერი | ფერმერი კაცი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👨🏾‍🌾">კაცი | მებაღე | ფერმერი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏾‍🌾" type="tts">ფერმერი კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👨🏿‍🌾">კაცი | მებაღე | ფერმერი | ფერმერი კაცი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👨🏿‍🌾">კაცი | მებაღე | ფერმერი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👨🏿‍🌾" type="tts">ფერმერი კაცი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👩🏻‍🌾">მებაღე | ფერმერი | ფერმერი ქალი | ქალი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👩🏻‍🌾">მებაღე | ფერმერი | ქალი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👩🏻‍🌾" type="tts">ფერმერი ქალი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👩🏼‍🌾">მებაღე | ფერმერი | ფერმერი ქალი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👩🏼‍🌾">მებაღე | ფერმერი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏼‍🌾" type="tts">ფერმერი ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👩🏽‍🌾">მებაღე | ფერმერი | ფერმერი ქალი | ქალი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👩🏽‍🌾">მებაღე | ფერმერი | ქალი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👩🏽‍🌾" type="tts">ფერმერი ქალი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👩🏾‍🌾">მებაღე | ფერმერი | ფერმერი ქალი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👩🏾‍🌾">მებაღე | ფერმერი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏾‍🌾" type="tts">ფერმერი ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👩🏿‍🌾">მებაღე | ფერმერი | ფერმერი ქალი | ქალი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👩🏿‍🌾">მებაღე | ფერმერი | ქალი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👩🏿‍🌾" type="tts">ფერმერი ქალი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👨🏻‍🍳">კაცი | მზარეული | მზარეული კაცი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👨🏻‍🍳">კაცი | მზარეული | კანის ღია ტონალობა</annotation>
 		<annotation cp="👨🏻‍🍳" type="tts">მზარეული კაცი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👨🏼‍🍳">კაცი | მზარეული | მზარეული კაცი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👨🏼‍🍳">კაცი | მზარეული | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏼‍🍳" type="tts">მზარეული კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👨🏽‍🍳">კაცი | მზარეული | მზარეული კაცი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👨🏽‍🍳">კაცი | მზარეული | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👨🏽‍🍳" type="tts">მზარეული კაცი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👨🏾‍🍳">კაცი | მზარეული | მზარეული კაცი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👨🏾‍🍳">კაცი | მზარეული | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏾‍🍳" type="tts">მზარეული კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👨🏿‍🍳">კაცი | მზარეული | მზარეული კაცი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👨🏿‍🍳">კაცი | მზარეული | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👨🏿‍🍳" type="tts">მზარეული კაცი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👩🏻‍🍳">მზარეული | მზარეული ქალი | ქალი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👩🏻‍🍳">მზარეული | ქალი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👩🏻‍🍳" type="tts">მზარეული ქალი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👩🏼‍🍳">მზარეული | მზარეული ქალი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👩🏼‍🍳">მზარეული | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏼‍🍳" type="tts">მზარეული ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👩🏽‍🍳">მზარეული | მზარეული ქალი | ქალი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👩🏽‍🍳">მზარეული | ქალი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👩🏽‍🍳" type="tts">მზარეული ქალი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👩🏾‍🍳">მზარეული | მზარეული ქალი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👩🏾‍🍳">მზარეული | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏾‍🍳" type="tts">მზარეული ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👩🏿‍🍳">მზარეული | მზარეული ქალი | ქალი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👩🏿‍🍳">მზარეული | ქალი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👩🏿‍🍳" type="tts">მზარეული ქალი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👨🏻‍🔧">ელექტრიკი | კაცი | მექანიკოსი | მექანიკოსი კაცი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👨🏻‍🔧">ელექტრიკი | კაცი | მექანიკოსი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👨🏻‍🔧" type="tts">მექანიკოსი კაცი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👨🏼‍🔧">ელექტრიკი | კაცი | მექანიკოსი | მექანიკოსი კაცი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👨🏼‍🔧">ელექტრიკი | კაცი | მექანიკოსი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏼‍🔧" type="tts">მექანიკოსი კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👨🏽‍🔧">ელექტრიკი | კაცი | მექანიკოსი | მექანიკოსი კაცი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👨🏽‍🔧">ელექტრიკი | კაცი | მექანიკოსი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👨🏽‍🔧" type="tts">მექანიკოსი კაცი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👨🏾‍🔧">ელექტრიკი | კაცი | მექანიკოსი | მექანიკოსი კაცი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👨🏾‍🔧">ელექტრიკი | კაცი | მექანიკოსი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏾‍🔧" type="tts">მექანიკოსი კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👨🏿‍🔧">ელექტრიკი | კაცი | მექანიკოსი | მექანიკოსი კაცი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👨🏿‍🔧">ელექტრიკი | კაცი | მექანიკოსი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👨🏿‍🔧" type="tts">მექანიკოსი კაცი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👩🏻‍🔧">ელექტრიკი | მექანიკოსი | მექანიკოსი ქალი | ქალი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👩🏻‍🔧">ელექტრიკი | მექანიკოსი | ქალი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👩🏻‍🔧" type="tts">მექანიკოსი ქალი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👩🏼‍🔧">ელექტრიკი | მექანიკოსი | მექანიკოსი ქალი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👩🏼‍🔧">ელექტრიკი | მექანიკოსი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏼‍🔧" type="tts">მექანიკოსი ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👩🏽‍🔧">ელექტრიკი | მექანიკოსი | მექანიკოსი ქალი | ქალი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👩🏽‍🔧">ელექტრიკი | მექანიკოსი | ქალი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👩🏽‍🔧" type="tts">მექანიკოსი ქალი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👩🏾‍🔧">ელექტრიკი | მექანიკოსი | მექანიკოსი ქალი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👩🏾‍🔧">ელექტრიკი | მექანიკოსი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏾‍🔧" type="tts">მექანიკოსი ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👩🏿‍🔧">ელექტრიკი | მექანიკოსი | მექანიკოსი ქალი | ქალი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👩🏿‍🔧">ელექტრიკი | მექანიკოსი | ქალი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👩🏿‍🔧" type="tts">მექანიკოსი ქალი: კანის მუქი ტონალობა</annotation>
 		<annotation cp="👨🏻‍🏭">ინდუსტრია | კაცი | ქარხანა | ქარხნის მუშაკი კაცი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👨🏻‍🏭" type="tts">ქარხნის მუშაკი კაცი: კანის ღია ტონალობა</annotation>
@@ -313,25 +469,25 @@ Derived short names and annotations, using GenerateDerivedAnnotations.java. See 
 		<annotation cp="👩🏾‍💼" type="tts">თანამშრომელი ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏿‍💼">არქიტექტურა | ბიზნესი | თანამშრომელი ქალი | მენეჯერი | ოფისი | სამსახური | ქალი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👩🏿‍💼" type="tts">თანამშრომელი ქალი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👨🏻‍🔬">ბილოგი | კაცი | მათემატიკოსი | მეცნიერი | მეცნიერი კაცი | ფიზიკოსი | ქიმიკოსი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👨🏻‍🔬">ბილოგი | კაცი | მათემატიკოსი | მეცნიერი | ფიზიკოსი | ქიმიკოსი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👨🏻‍🔬" type="tts">მეცნიერი კაცი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👨🏼‍🔬">ბილოგი | კაცი | მათემატიკოსი | მეცნიერი | მეცნიერი კაცი | ფიზიკოსი | ქიმიკოსი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👨🏼‍🔬">ბილოგი | კაცი | მათემატიკოსი | მეცნიერი | ფიზიკოსი | ქიმიკოსი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏼‍🔬" type="tts">მეცნიერი კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👨🏽‍🔬">ბილოგი | კაცი | მათემატიკოსი | მეცნიერი | მეცნიერი კაცი | ფიზიკოსი | ქიმიკოსი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👨🏽‍🔬">ბილოგი | კაცი | მათემატიკოსი | მეცნიერი | ფიზიკოსი | ქიმიკოსი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👨🏽‍🔬" type="tts">მეცნიერი კაცი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👨🏾‍🔬">ბილოგი | კაცი | მათემატიკოსი | მეცნიერი | მეცნიერი კაცი | ფიზიკოსი | ქიმიკოსი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👨🏾‍🔬">ბილოგი | კაცი | მათემატიკოსი | მეცნიერი | ფიზიკოსი | ქიმიკოსი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏾‍🔬" type="tts">მეცნიერი კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👨🏿‍🔬">ბილოგი | კაცი | მათემატიკოსი | მეცნიერი | მეცნიერი კაცი | ფიზიკოსი | ქიმიკოსი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👨🏿‍🔬">ბილოგი | კაცი | მათემატიკოსი | მეცნიერი | ფიზიკოსი | ქიმიკოსი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👨🏿‍🔬" type="tts">მეცნიერი კაცი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👩🏻‍🔬">ბილოგი | მათემატიკოსი | მეცნიერი | მეცნიერი ქალი | ფიზიკოსი | ქალი | ქიმიკოსი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👩🏻‍🔬">ბილოგი | მათემატიკოსი | მეცნიერი | ფიზიკოსი | ქალი | ქიმიკოსი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👩🏻‍🔬" type="tts">მეცნიერი ქალი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👩🏼‍🔬">ბილოგი | მათემატიკოსი | მეცნიერი | მეცნიერი ქალი | ფიზიკოსი | ქალი | ქიმიკოსი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👩🏼‍🔬">ბილოგი | მათემატიკოსი | მეცნიერი | ფიზიკოსი | ქალი | ქიმიკოსი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏼‍🔬" type="tts">მეცნიერი ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👩🏽‍🔬">ბილოგი | მათემატიკოსი | მეცნიერი | მეცნიერი ქალი | ფიზიკოსი | ქალი | ქიმიკოსი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👩🏽‍🔬">ბილოგი | მათემატიკოსი | მეცნიერი | ფიზიკოსი | ქალი | ქიმიკოსი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👩🏽‍🔬" type="tts">მეცნიერი ქალი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👩🏾‍🔬">ბილოგი | მათემატიკოსი | მეცნიერი | მეცნიერი ქალი | ფიზიკოსი | ქალი | ქიმიკოსი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👩🏾‍🔬">ბილოგი | მათემატიკოსი | მეცნიერი | ფიზიკოსი | ქალი | ქიმიკოსი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏾‍🔬" type="tts">მეცნიერი ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👩🏿‍🔬">ბილოგი | მათემატიკოსი | მეცნიერი | მეცნიერი ქალი | ფიზიკოსი | ქალი | ქიმიკოსი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👩🏿‍🔬">ბილოგი | მათემატიკოსი | მეცნიერი | ფიზიკოსი | ქალი | ქიმიკოსი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👩🏿‍🔬" type="tts">მეცნიერი ქალი: კანის მუქი ტონალობა</annotation>
 		<annotation cp="👨🏻‍💻">აიტიშნიკი | ბიჭი | დეველოპერი | კაცი | კოდერი | ლეპტოპი | პროგრამისტი კაცი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👨🏻‍💻" type="tts">პროგრამისტი კაცი: კანის ღია ტონალობა</annotation>
@@ -353,65 +509,65 @@ Derived short names and annotations, using GenerateDerivedAnnotations.java. See 
 		<annotation cp="👩🏾‍💻" type="tts">პროგრამისტი ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏿‍💻">აიტიშნიკი | გოგო | დეველოპერი | კოდერი | ლეპტოპი | პროგრამისტი ქალი | ქალი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👩🏿‍💻" type="tts">პროგრამისტი ქალი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👨🏻‍🎤">ბიჭი | კაცი | მომღერალი | მომღერალი კაცი | მსახიობი | როკერი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👨🏻‍🎤">ბიჭი | კაცი | მომღერალი | მსახიობი | როკერი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👨🏻‍🎤" type="tts">მომღერალი კაცი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👨🏼‍🎤">ბიჭი | კაცი | მომღერალი | მომღერალი კაცი | მსახიობი | როკერი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👨🏼‍🎤">ბიჭი | კაცი | მომღერალი | მსახიობი | როკერი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏼‍🎤" type="tts">მომღერალი კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👨🏽‍🎤">ბიჭი | კაცი | მომღერალი | მომღერალი კაცი | მსახიობი | როკერი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👨🏽‍🎤">ბიჭი | კაცი | მომღერალი | მსახიობი | როკერი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👨🏽‍🎤" type="tts">მომღერალი კაცი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👨🏾‍🎤">ბიჭი | კაცი | მომღერალი | მომღერალი კაცი | მსახიობი | როკერი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👨🏾‍🎤">ბიჭი | კაცი | მომღერალი | მსახიობი | როკერი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏾‍🎤" type="tts">მომღერალი კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👨🏿‍🎤">ბიჭი | კაცი | მომღერალი | მომღერალი კაცი | მსახიობი | როკერი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👨🏿‍🎤">ბიჭი | კაცი | მომღერალი | მსახიობი | როკერი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👨🏿‍🎤" type="tts">მომღერალი კაცი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👩🏻‍🎤">გოგო | მომღერალი | მომღერალი ქალი | მსახიობი | როკერი | ქალი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👩🏻‍🎤">გოგო | მომღერალი | მსახიობი | როკერი | ქალი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👩🏻‍🎤" type="tts">მომღერალი ქალი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👩🏼‍🎤">გოგო | მომღერალი | მომღერალი ქალი | მსახიობი | როკერი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👩🏼‍🎤">გოგო | მომღერალი | მსახიობი | როკერი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏼‍🎤" type="tts">მომღერალი ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👩🏽‍🎤">გოგო | მომღერალი | მომღერალი ქალი | მსახიობი | როკერი | ქალი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👩🏽‍🎤">გოგო | მომღერალი | მსახიობი | როკერი | ქალი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👩🏽‍🎤" type="tts">მომღერალი ქალი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👩🏾‍🎤">გოგო | მომღერალი | მომღერალი ქალი | მსახიობი | როკერი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👩🏾‍🎤">გოგო | მომღერალი | მსახიობი | როკერი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏾‍🎤" type="tts">მომღერალი ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👩🏿‍🎤">გოგო | მომღერალი | მომღერალი ქალი | მსახიობი | როკერი | ქალი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👩🏿‍🎤">გოგო | მომღერალი | მსახიობი | როკერი | ქალი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👩🏿‍🎤" type="tts">მომღერალი ქალი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👨🏻‍🎨">ბიჭი | კაცი | მხატვარი | მხატვარი კაცი | პალიტრა | კანის ღია ტონალობა</annotation>
+		<annotation cp="👨🏻‍🎨">ბიჭი | კაცი | მხატვარი | პალიტრა | კანის ღია ტონალობა</annotation>
 		<annotation cp="👨🏻‍🎨" type="tts">მხატვარი კაცი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👨🏼‍🎨">ბიჭი | კაცი | მხატვარი | მხატვარი კაცი | პალიტრა | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👨🏼‍🎨">ბიჭი | კაცი | მხატვარი | პალიტრა | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏼‍🎨" type="tts">მხატვარი კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👨🏽‍🎨">ბიჭი | კაცი | მხატვარი | მხატვარი კაცი | პალიტრა | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👨🏽‍🎨">ბიჭი | კაცი | მხატვარი | პალიტრა | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👨🏽‍🎨" type="tts">მხატვარი კაცი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👨🏾‍🎨">ბიჭი | კაცი | მხატვარი | მხატვარი კაცი | პალიტრა | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👨🏾‍🎨">ბიჭი | კაცი | მხატვარი | პალიტრა | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏾‍🎨" type="tts">მხატვარი კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👨🏿‍🎨">ბიჭი | კაცი | მხატვარი | მხატვარი კაცი | პალიტრა | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👨🏿‍🎨">ბიჭი | კაცი | მხატვარი | პალიტრა | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👨🏿‍🎨" type="tts">მხატვარი კაცი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👩🏻‍🎨">გოგო | მხატვარი | მხატვარი ქალი | პალიტრა | ქალი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👩🏻‍🎨">გოგო | მხატვარი | პალიტრა | ქალი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👩🏻‍🎨" type="tts">მხატვარი ქალი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👩🏼‍🎨">გოგო | მხატვარი | მხატვარი ქალი | პალიტრა | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👩🏼‍🎨">გოგო | მხატვარი | პალიტრა | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏼‍🎨" type="tts">მხატვარი ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👩🏽‍🎨">გოგო | მხატვარი | მხატვარი ქალი | პალიტრა | ქალი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👩🏽‍🎨">გოგო | მხატვარი | პალიტრა | ქალი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👩🏽‍🎨" type="tts">მხატვარი ქალი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👩🏾‍🎨">გოგო | მხატვარი | მხატვარი ქალი | პალიტრა | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👩🏾‍🎨">გოგო | მხატვარი | პალიტრა | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏾‍🎨" type="tts">მხატვარი ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👩🏿‍🎨">გოგო | მხატვარი | მხატვარი ქალი | პალიტრა | ქალი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👩🏿‍🎨">გოგო | მხატვარი | პალიტრა | ქალი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👩🏿‍🎨" type="tts">მხატვარი ქალი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👨🏻‍✈">თვითმფრინავი | კაცი | პილოტი | პილოტი კაცი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👨🏻‍✈">თვითმფრინავი | კაცი | პილოტი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👨🏻‍✈" type="tts">პილოტი კაცი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👨🏼‍✈">თვითმფრინავი | კაცი | პილოტი | პილოტი კაცი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👨🏼‍✈">თვითმფრინავი | კაცი | პილოტი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏼‍✈" type="tts">პილოტი კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👨🏽‍✈">თვითმფრინავი | კაცი | პილოტი | პილოტი კაცი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👨🏽‍✈">თვითმფრინავი | კაცი | პილოტი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👨🏽‍✈" type="tts">პილოტი კაცი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👨🏾‍✈">თვითმფრინავი | კაცი | პილოტი | პილოტი კაცი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👨🏾‍✈">თვითმფრინავი | კაცი | პილოტი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👨🏾‍✈" type="tts">პილოტი კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👨🏿‍✈">თვითმფრინავი | კაცი | პილოტი | პილოტი კაცი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👨🏿‍✈">თვითმფრინავი | კაცი | პილოტი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👨🏿‍✈" type="tts">პილოტი კაცი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👩🏻‍✈">თვითმფრინავი | პილოტი | პილოტი ქალი | ქალი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👩🏻‍✈">თვითმფრინავი | პილოტი | ქალი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👩🏻‍✈" type="tts">პილოტი ქალი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👩🏼‍✈">თვითმფრინავი | პილოტი | პილოტი ქალი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👩🏼‍✈">თვითმფრინავი | პილოტი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏼‍✈" type="tts">პილოტი ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👩🏽‍✈">თვითმფრინავი | პილოტი | პილოტი ქალი | ქალი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👩🏽‍✈">თვითმფრინავი | პილოტი | ქალი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👩🏽‍✈" type="tts">პილოტი ქალი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👩🏾‍✈">თვითმფრინავი | პილოტი | პილოტი ქალი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👩🏾‍✈">თვითმფრინავი | პილოტი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👩🏾‍✈" type="tts">პილოტი ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👩🏿‍✈">თვითმფრინავი | პილოტი | პილოტი ქალი | ქალი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👩🏿‍✈">თვითმფრინავი | პილოტი | ქალი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👩🏿‍✈" type="tts">პილოტი ქალი: კანის მუქი ტონალობა</annotation>
 		<annotation cp="👨🏻‍🚀">ასტრონავტი კაცი | კაცი | კოსმოსი | რაკეტა | კანის ღია ტონალობა</annotation>
 		<annotation cp="👨🏻‍🚀" type="tts">ასტრონავტი კაცი: კანის ღია ტონალობა</annotation>
@@ -463,25 +619,25 @@ Derived short names and annotations, using GenerateDerivedAnnotations.java. See 
 		<annotation cp="👮🏾" type="tts">პოლიციელი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👮🏿">პოლიცია | პოლიციელი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👮🏿" type="tts">პოლიციელი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👮🏻‍♂">კაცი | პოლიციელი | პოლიციელი კაცი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👮🏻‍♂">კაცი | პოლიციელი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👮🏻‍♂" type="tts">პოლიციელი კაცი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👮🏼‍♂">კაცი | პოლიციელი | პოლიციელი კაცი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👮🏼‍♂">კაცი | პოლიციელი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👮🏼‍♂" type="tts">პოლიციელი კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👮🏽‍♂">კაცი | პოლიციელი | პოლიციელი კაცი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👮🏽‍♂">კაცი | პოლიციელი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👮🏽‍♂" type="tts">პოლიციელი კაცი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👮🏾‍♂">კაცი | პოლიციელი | პოლიციელი კაცი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👮🏾‍♂">კაცი | პოლიციელი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👮🏾‍♂" type="tts">პოლიციელი კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👮🏿‍♂">კაცი | პოლიციელი | პოლიციელი კაცი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👮🏿‍♂">კაცი | პოლიციელი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👮🏿‍♂" type="tts">პოლიციელი კაცი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👮🏻‍♀">პოლიციელი | პოლიციელი ქალი | ქალი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👮🏻‍♀">პოლიციელი | ქალი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👮🏻‍♀" type="tts">პოლიციელი ქალი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👮🏼‍♀">პოლიციელი | პოლიციელი ქალი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👮🏼‍♀">პოლიციელი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👮🏼‍♀" type="tts">პოლიციელი ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👮🏽‍♀">პოლიციელი | პოლიციელი ქალი | ქალი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👮🏽‍♀">პოლიციელი | ქალი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👮🏽‍♀" type="tts">პოლიციელი ქალი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👮🏾‍♀">პოლიციელი | პოლიციელი ქალი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👮🏾‍♀">პოლიციელი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👮🏾‍♀" type="tts">პოლიციელი ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👮🏿‍♀">პოლიციელი | პოლიციელი ქალი | ქალი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👮🏿‍♀">პოლიციელი | ქალი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👮🏿‍♀" type="tts">პოლიციელი ქალი: კანის მუქი ტონალობა</annotation>
 		<annotation cp="🕵🏻">გამომძიებელი | დეტექტივი | ჯაშუში | კანის ღია ტონალობა</annotation>
 		<annotation cp="🕵🏻" type="tts">დეტექტივი: კანის ღია ტონალობა</annotation>
@@ -493,25 +649,25 @@ Derived short names and annotations, using GenerateDerivedAnnotations.java. See 
 		<annotation cp="🕵🏾" type="tts">დეტექტივი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="🕵🏿">გამომძიებელი | დეტექტივი | ჯაშუში | კანის მუქი ტონალობა</annotation>
 		<annotation cp="🕵🏿" type="tts">დეტექტივი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="🕵🏻‍♂">დეტექტივი | დეტექტივი კაცი | კაცი | ჯაშუში | კანის ღია ტონალობა</annotation>
+		<annotation cp="🕵🏻‍♂">დეტექტივი | კაცი | ჯაშუში | კანის ღია ტონალობა</annotation>
 		<annotation cp="🕵🏻‍♂" type="tts">დეტექტივი კაცი: კანის ღია ტონალობა</annotation>
-		<annotation cp="🕵🏼‍♂">დეტექტივი | დეტექტივი კაცი | კაცი | ჯაშუში | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🕵🏼‍♂">დეტექტივი | კაცი | ჯაშუში | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="🕵🏼‍♂" type="tts">დეტექტივი კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="🕵🏽‍♂">დეტექტივი | დეტექტივი კაცი | კაცი | ჯაშუში | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🕵🏽‍♂">დეტექტივი | კაცი | ჯაშუში | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="🕵🏽‍♂" type="tts">დეტექტივი კაცი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="🕵🏾‍♂">დეტექტივი | დეტექტივი კაცი | კაცი | ჯაშუში | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🕵🏾‍♂">დეტექტივი | კაცი | ჯაშუში | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="🕵🏾‍♂" type="tts">დეტექტივი კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="🕵🏿‍♂">დეტექტივი | დეტექტივი კაცი | კაცი | ჯაშუში | კანის მუქი ტონალობა</annotation>
+		<annotation cp="🕵🏿‍♂">დეტექტივი | კაცი | ჯაშუში | კანის მუქი ტონალობა</annotation>
 		<annotation cp="🕵🏿‍♂" type="tts">დეტექტივი კაცი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="🕵🏻‍♀">დეტექტივი | დეტექტივი ქალი | ქალი | ჯაშუში | კანის ღია ტონალობა</annotation>
+		<annotation cp="🕵🏻‍♀">დეტექტივი | ქალი | ჯაშუში | კანის ღია ტონალობა</annotation>
 		<annotation cp="🕵🏻‍♀" type="tts">დეტექტივი ქალი: კანის ღია ტონალობა</annotation>
-		<annotation cp="🕵🏼‍♀">დეტექტივი | დეტექტივი ქალი | ქალი | ჯაშუში | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🕵🏼‍♀">დეტექტივი | ქალი | ჯაშუში | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="🕵🏼‍♀" type="tts">დეტექტივი ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="🕵🏽‍♀">დეტექტივი | დეტექტივი ქალი | ქალი | ჯაშუში | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🕵🏽‍♀">დეტექტივი | ქალი | ჯაშუში | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="🕵🏽‍♀" type="tts">დეტექტივი ქალი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="🕵🏾‍♀">დეტექტივი | დეტექტივი ქალი | ქალი | ჯაშუში | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🕵🏾‍♀">დეტექტივი | ქალი | ჯაშუში | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="🕵🏾‍♀" type="tts">დეტექტივი ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="🕵🏿‍♀">დეტექტივი | დეტექტივი ქალი | ქალი | ჯაშუში | კანის მუქი ტონალობა</annotation>
+		<annotation cp="🕵🏿‍♀">დეტექტივი | ქალი | ჯაშუში | კანის მუქი ტონალობა</annotation>
 		<annotation cp="🕵🏿‍♀" type="tts">დეტექტივი ქალი: კანის მუქი ტონალობა</annotation>
 		<annotation cp="💂🏻">დაცვა | ყარაული | კანის ღია ტონალობა</annotation>
 		<annotation cp="💂🏻" type="tts">ყარაული: კანის ღია ტონალობა</annotation>
@@ -523,25 +679,25 @@ Derived short names and annotations, using GenerateDerivedAnnotations.java. See 
 		<annotation cp="💂🏾" type="tts">ყარაული: საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="💂🏿">დაცვა | ყარაული | კანის მუქი ტონალობა</annotation>
 		<annotation cp="💂🏿" type="tts">ყარაული: კანის მუქი ტონალობა</annotation>
-		<annotation cp="💂🏻‍♂">კაცი | მცველი | მცველი კაცი | კანის ღია ტონალობა</annotation>
+		<annotation cp="💂🏻‍♂">კაცი | მცველი | კანის ღია ტონალობა</annotation>
 		<annotation cp="💂🏻‍♂" type="tts">მცველი კაცი: კანის ღია ტონალობა</annotation>
-		<annotation cp="💂🏼‍♂">კაცი | მცველი | მცველი კაცი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="💂🏼‍♂">კაცი | მცველი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="💂🏼‍♂" type="tts">მცველი კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="💂🏽‍♂">კაცი | მცველი | მცველი კაცი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="💂🏽‍♂">კაცი | მცველი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="💂🏽‍♂" type="tts">მცველი კაცი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="💂🏾‍♂">კაცი | მცველი | მცველი კაცი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="💂🏾‍♂">კაცი | მცველი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="💂🏾‍♂" type="tts">მცველი კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="💂🏿‍♂">კაცი | მცველი | მცველი კაცი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="💂🏿‍♂">კაცი | მცველი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="💂🏿‍♂" type="tts">მცველი კაცი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="💂🏻‍♀">მცველი | მცველი ქალი | ქალი | კანის ღია ტონალობა</annotation>
+		<annotation cp="💂🏻‍♀">მცველი | ქალი | კანის ღია ტონალობა</annotation>
 		<annotation cp="💂🏻‍♀" type="tts">მცველი ქალი: კანის ღია ტონალობა</annotation>
-		<annotation cp="💂🏼‍♀">მცველი | მცველი ქალი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="💂🏼‍♀">მცველი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="💂🏼‍♀" type="tts">მცველი ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="💂🏽‍♀">მცველი | მცველი ქალი | ქალი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="💂🏽‍♀">მცველი | ქალი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="💂🏽‍♀" type="tts">მცველი ქალი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="💂🏾‍♀">მცველი | მცველი ქალი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="💂🏾‍♀">მცველი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="💂🏾‍♀" type="tts">მცველი ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="💂🏿‍♀">მცველი | მცველი ქალი | ქალი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="💂🏿‍♀">მცველი | ქალი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="💂🏿‍♀" type="tts">მცველი ქალი: კანის მუქი ტონალობა</annotation>
 		<annotation cp="👷🏻">მუშა | მშენებელი | მშენებლობა | ქუდი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👷🏻" type="tts">მშენებელი: კანის ღია ტონალობა</annotation>
@@ -553,25 +709,25 @@ Derived short names and annotations, using GenerateDerivedAnnotations.java. See 
 		<annotation cp="👷🏾" type="tts">მშენებელი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👷🏿">მუშა | მშენებელი | მშენებლობა | ქუდი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👷🏿" type="tts">მშენებელი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👷🏻‍♂">კაცი | მუშა | მუშა კაცი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👷🏻‍♂">კაცი | მუშა | კანის ღია ტონალობა</annotation>
 		<annotation cp="👷🏻‍♂" type="tts">მუშა კაცი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👷🏼‍♂">კაცი | მუშა | მუშა კაცი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👷🏼‍♂">კაცი | მუშა | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👷🏼‍♂" type="tts">მუშა კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👷🏽‍♂">კაცი | მუშა | მუშა კაცი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👷🏽‍♂">კაცი | მუშა | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👷🏽‍♂" type="tts">მუშა კაცი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👷🏾‍♂">კაცი | მუშა | მუშა კაცი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👷🏾‍♂">კაცი | მუშა | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👷🏾‍♂" type="tts">მუშა კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👷🏿‍♂">კაცი | მუშა | მუშა კაცი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👷🏿‍♂">კაცი | მუშა | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👷🏿‍♂" type="tts">მუშა კაცი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👷🏻‍♀">მუშა | მუშა ქალი | ქალი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👷🏻‍♀">მუშა | ქალი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👷🏻‍♀" type="tts">მუშა ქალი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👷🏼‍♀">მუშა | მუშა ქალი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👷🏼‍♀">მუშა | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👷🏼‍♀" type="tts">მუშა ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👷🏽‍♀">მუშა | მუშა ქალი | ქალი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👷🏽‍♀">მუშა | ქალი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👷🏽‍♀" type="tts">მუშა ქალი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👷🏾‍♀">მუშა | მუშა ქალი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👷🏾‍♀">მუშა | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👷🏾‍♀" type="tts">მუშა ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👷🏿‍♀">მუშა | მუშა ქალი | ქალი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👷🏿‍♀">მუშა | ქალი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👷🏿‍♀" type="tts">მუშა ქალი: კანის მუქი ტონალობა</annotation>
 		<annotation cp="🤴🏻">პრინცი | კანის ღია ტონალობა</annotation>
 		<annotation cp="🤴🏻" type="tts">პრინცი: კანის ღია ტონალობა</annotation>
@@ -703,15 +859,15 @@ Derived short names and annotations, using GenerateDerivedAnnotations.java. See 
 		<annotation cp="👰🏾" type="tts">პატარძალი ვუალით: საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👰🏿">ვუალი | პატარძალი | პატარძალი ვუალით | ფატა | ქორწილი | ქორწინება | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👰🏿" type="tts">პატარძალი ვუალით: კანის მუქი ტონალობა</annotation>
-		<annotation cp="🤰🏻">ორსული | ორსული ქალი | ქალი | კანის ღია ტონალობა</annotation>
+		<annotation cp="🤰🏻">ორსული | ქალი | კანის ღია ტონალობა</annotation>
 		<annotation cp="🤰🏻" type="tts">ორსული ქალი: კანის ღია ტონალობა</annotation>
-		<annotation cp="🤰🏼">ორსული | ორსული ქალი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🤰🏼">ორსული | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="🤰🏼" type="tts">ორსული ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="🤰🏽">ორსული | ორსული ქალი | ქალი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🤰🏽">ორსული | ქალი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="🤰🏽" type="tts">ორსული ქალი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="🤰🏾">ორსული | ორსული ქალი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🤰🏾">ორსული | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="🤰🏾" type="tts">ორსული ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="🤰🏿">ორსული | ორსული ქალი | ქალი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="🤰🏿">ორსული | ქალი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="🤰🏿" type="tts">ორსული ქალი: კანის მუქი ტონალობა</annotation>
 		<annotation cp="🤱🏻">მეძუძური | ჩვილი | ძუძუ | კანის ღია ტონალობა</annotation>
 		<annotation cp="🤱🏻" type="tts">მეძუძური: კანის ღია ტონალობა</annotation>
@@ -723,15 +879,15 @@ Derived short names and annotations, using GenerateDerivedAnnotations.java. See 
 		<annotation cp="🤱🏾" type="tts">მეძუძური: საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="🤱🏿">მეძუძური | ჩვილი | ძუძუ | კანის მუქი ტონალობა</annotation>
 		<annotation cp="🤱🏿" type="tts">მეძუძური: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👼🏻">ანგელოზი | ბავშვი | ბავშვი ანგელოზი | ზღაპარი | სახე | ფანტაზია | ფანტასტიკა | კანის ღია ტონალობა</annotation>
+		<annotation cp="👼🏻">ანგელოზი | ბავშვი | ზღაპარი | სახე | ფანტაზია | ფანტასტიკა | კანის ღია ტონალობა</annotation>
 		<annotation cp="👼🏻" type="tts">ბავშვი ანგელოზი: კანის ღია ტონალობა</annotation>
-		<annotation cp="👼🏼">ანგელოზი | ბავშვი | ბავშვი ანგელოზი | ზღაპარი | სახე | ფანტაზია | ფანტასტიკა | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👼🏼">ანგელოზი | ბავშვი | ზღაპარი | სახე | ფანტაზია | ფანტასტიკა | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👼🏼" type="tts">ბავშვი ანგელოზი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👼🏽">ანგელოზი | ბავშვი | ბავშვი ანგელოზი | ზღაპარი | სახე | ფანტაზია | ფანტასტიკა | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👼🏽">ანგელოზი | ბავშვი | ზღაპარი | სახე | ფანტაზია | ფანტასტიკა | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👼🏽" type="tts">ბავშვი ანგელოზი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👼🏾">ანგელოზი | ბავშვი | ბავშვი ანგელოზი | ზღაპარი | სახე | ფანტაზია | ფანტასტიკა | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👼🏾">ანგელოზი | ბავშვი | ზღაპარი | სახე | ფანტაზია | ფანტასტიკა | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👼🏾" type="tts">ბავშვი ანგელოზი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👼🏿">ანგელოზი | ბავშვი | ბავშვი ანგელოზი | ზღაპარი | სახე | ფანტაზია | ფანტასტიკა | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👼🏿">ანგელოზი | ბავშვი | ზღაპარი | სახე | ფანტაზია | ფანტასტიკა | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👼🏿" type="tts">ბავშვი ანგელოზი: კანის მუქი ტონალობა</annotation>
 		<annotation cp="🎅🏻">აღნიშვნა | ახალი წელი | ზეიმი | ზღაპარი | თოვლის ბაბუა | კალანდა | მამა | სანტა | სანტა კლაუსი | ფანტაზია | ფანტასტიკა | შობა | კანის ღია ტონალობა</annotation>
 		<annotation cp="🎅🏻" type="tts">სანტა კლაუსი: კანის ღია ტონალობა</annotation>
@@ -913,25 +1069,25 @@ Derived short names and annotations, using GenerateDerivedAnnotations.java. See 
 		<annotation cp="🙍🏾" type="tts">შეჭმუხნილი პიროვნება: საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="🙍🏿">ჟესტი | შეკრული | შეჭმუხნილი | შეჭმუხნილი პიროვნება | კანის მუქი ტონალობა</annotation>
 		<annotation cp="🙍🏿" type="tts">შეჭმუხნილი პიროვნება: კანის მუქი ტონალობა</annotation>
-		<annotation cp="🙍🏻‍♂">კაცი | ჟესტი | შეჭმუხნილი | შეჭმუხნილი კაცი | კანის ღია ტონალობა</annotation>
+		<annotation cp="🙍🏻‍♂">კაცი | ჟესტი | შეჭმუხნილი | კანის ღია ტონალობა</annotation>
 		<annotation cp="🙍🏻‍♂" type="tts">შეჭმუხნილი კაცი: კანის ღია ტონალობა</annotation>
-		<annotation cp="🙍🏼‍♂">კაცი | ჟესტი | შეჭმუხნილი | შეჭმუხნილი კაცი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🙍🏼‍♂">კაცი | ჟესტი | შეჭმუხნილი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="🙍🏼‍♂" type="tts">შეჭმუხნილი კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="🙍🏽‍♂">კაცი | ჟესტი | შეჭმუხნილი | შეჭმუხნილი კაცი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🙍🏽‍♂">კაცი | ჟესტი | შეჭმუხნილი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="🙍🏽‍♂" type="tts">შეჭმუხნილი კაცი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="🙍🏾‍♂">კაცი | ჟესტი | შეჭმუხნილი | შეჭმუხნილი კაცი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🙍🏾‍♂">კაცი | ჟესტი | შეჭმუხნილი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="🙍🏾‍♂" type="tts">შეჭმუხნილი კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="🙍🏿‍♂">კაცი | ჟესტი | შეჭმუხნილი | შეჭმუხნილი კაცი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="🙍🏿‍♂">კაცი | ჟესტი | შეჭმუხნილი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="🙍🏿‍♂" type="tts">შეჭმუხნილი კაცი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="🙍🏻‍♀">ჟესტი | ქალი | შეჭმუხნილი | შეჭმუხნილი ქალი | კანის ღია ტონალობა</annotation>
+		<annotation cp="🙍🏻‍♀">ჟესტი | ქალი | შეჭმუხნილი | კანის ღია ტონალობა</annotation>
 		<annotation cp="🙍🏻‍♀" type="tts">შეჭმუხნილი ქალი: კანის ღია ტონალობა</annotation>
-		<annotation cp="🙍🏼‍♀">ჟესტი | ქალი | შეჭმუხნილი | შეჭმუხნილი ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🙍🏼‍♀">ჟესტი | ქალი | შეჭმუხნილი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="🙍🏼‍♀" type="tts">შეჭმუხნილი ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="🙍🏽‍♀">ჟესტი | ქალი | შეჭმუხნილი | შეჭმუხნილი ქალი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🙍🏽‍♀">ჟესტი | ქალი | შეჭმუხნილი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="🙍🏽‍♀" type="tts">შეჭმუხნილი ქალი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="🙍🏾‍♀">ჟესტი | ქალი | შეჭმუხნილი | შეჭმუხნილი ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🙍🏾‍♀">ჟესტი | ქალი | შეჭმუხნილი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="🙍🏾‍♀" type="tts">შეჭმუხნილი ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="🙍🏿‍♀">ჟესტი | ქალი | შეჭმუხნილი | შეჭმუხნილი ქალი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="🙍🏿‍♀">ჟესტი | ქალი | შეჭმუხნილი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="🙍🏿‍♀" type="tts">შეჭმუხნილი ქალი: კანის მუქი ტონალობა</annotation>
 		<annotation cp="🙎🏻">გაბერილი | გაბერილი პიროვნება | ჟესტი | კანის ღია ტონალობა</annotation>
 		<annotation cp="🙎🏻" type="tts">გაბერილი პიროვნება: კანის ღია ტონალობა</annotation>
@@ -943,25 +1099,25 @@ Derived short names and annotations, using GenerateDerivedAnnotations.java. See 
 		<annotation cp="🙎🏾" type="tts">გაბერილი პიროვნება: საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="🙎🏿">გაბერილი | გაბერილი პიროვნება | ჟესტი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="🙎🏿" type="tts">გაბერილი პიროვნება: კანის მუქი ტონალობა</annotation>
-		<annotation cp="🙎🏻‍♂">გაბუტული | გაბუტული კაცი | კაცი | ჟესტი | კანის ღია ტონალობა</annotation>
+		<annotation cp="🙎🏻‍♂">გაბუტული | კაცი | ჟესტი | კანის ღია ტონალობა</annotation>
 		<annotation cp="🙎🏻‍♂" type="tts">გაბუტული კაცი: კანის ღია ტონალობა</annotation>
-		<annotation cp="🙎🏼‍♂">გაბუტული | გაბუტული კაცი | კაცი | ჟესტი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🙎🏼‍♂">გაბუტული | კაცი | ჟესტი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="🙎🏼‍♂" type="tts">გაბუტული კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="🙎🏽‍♂">გაბუტული | გაბუტული კაცი | კაცი | ჟესტი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🙎🏽‍♂">გაბუტული | კაცი | ჟესტი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="🙎🏽‍♂" type="tts">გაბუტული კაცი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="🙎🏾‍♂">გაბუტული | გაბუტული კაცი | კაცი | ჟესტი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🙎🏾‍♂">გაბუტული | კაცი | ჟესტი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="🙎🏾‍♂" type="tts">გაბუტული კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="🙎🏿‍♂">გაბუტული | გაბუტული კაცი | კაცი | ჟესტი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="🙎🏿‍♂">გაბუტული | კაცი | ჟესტი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="🙎🏿‍♂" type="tts">გაბუტული კაცი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="🙎🏻‍♀">გაბუტული | გაბუტული ქალი | ჟესტი | ქალი | კანის ღია ტონალობა</annotation>
+		<annotation cp="🙎🏻‍♀">გაბუტული | ჟესტი | ქალი | კანის ღია ტონალობა</annotation>
 		<annotation cp="🙎🏻‍♀" type="tts">გაბუტული ქალი: კანის ღია ტონალობა</annotation>
-		<annotation cp="🙎🏼‍♀">გაბუტული | გაბუტული ქალი | ჟესტი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🙎🏼‍♀">გაბუტული | ჟესტი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="🙎🏼‍♀" type="tts">გაბუტული ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="🙎🏽‍♀">გაბუტული | გაბუტული ქალი | ჟესტი | ქალი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🙎🏽‍♀">გაბუტული | ჟესტი | ქალი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="🙎🏽‍♀" type="tts">გაბუტული ქალი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="🙎🏾‍♀">გაბუტული | გაბუტული ქალი | ჟესტი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🙎🏾‍♀">გაბუტული | ჟესტი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="🙎🏾‍♀" type="tts">გაბუტული ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="🙎🏿‍♀">გაბუტული | გაბუტული ქალი | ჟესტი | ქალი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="🙎🏿‍♀">გაბუტული | ჟესტი | ქალი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="🙎🏿‍♀" type="tts">გაბუტული ქალი: კანის მუქი ტონალობა</annotation>
 		<annotation cp="🙅🏻">აკრძალვა | აკრძალულია | არა | ჟესტი | ჟესტი „არა“ | ხელი | კანის ღია ტონალობა</annotation>
 		<annotation cp="🙅🏻" type="tts">ჟესტი „არა“: კანის ღია ტონალობა</annotation>
@@ -1063,25 +1219,25 @@ Derived short names and annotations, using GenerateDerivedAnnotations.java. See 
 		<annotation cp="🙋🏾" type="tts">ბედნიერი ხელაწეული პიროვნება: საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="🙋🏿">აწეული | ბედნიერი | ბედნიერი ხელაწეული პიროვნება | ჟესტი | ხელი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="🙋🏿" type="tts">ბედნიერი ხელაწეული პიროვნება: კანის მუქი ტონალობა</annotation>
-		<annotation cp="🙋🏻‍♂">კაცი | ჟესტი | ხელაწეული | ხელაწეული კაცი | კანის ღია ტონალობა</annotation>
+		<annotation cp="🙋🏻‍♂">კაცი | ჟესტი | ხელაწეული | კანის ღია ტონალობა</annotation>
 		<annotation cp="🙋🏻‍♂" type="tts">ხელაწეული კაცი: კანის ღია ტონალობა</annotation>
-		<annotation cp="🙋🏼‍♂">კაცი | ჟესტი | ხელაწეული | ხელაწეული კაცი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🙋🏼‍♂">კაცი | ჟესტი | ხელაწეული | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="🙋🏼‍♂" type="tts">ხელაწეული კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="🙋🏽‍♂">კაცი | ჟესტი | ხელაწეული | ხელაწეული კაცი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🙋🏽‍♂">კაცი | ჟესტი | ხელაწეული | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="🙋🏽‍♂" type="tts">ხელაწეული კაცი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="🙋🏾‍♂">კაცი | ჟესტი | ხელაწეული | ხელაწეული კაცი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🙋🏾‍♂">კაცი | ჟესტი | ხელაწეული | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="🙋🏾‍♂" type="tts">ხელაწეული კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="🙋🏿‍♂">კაცი | ჟესტი | ხელაწეული | ხელაწეული კაცი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="🙋🏿‍♂">კაცი | ჟესტი | ხელაწეული | კანის მუქი ტონალობა</annotation>
 		<annotation cp="🙋🏿‍♂" type="tts">ხელაწეული კაცი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="🙋🏻‍♀">ჟესტი | ქალი | ხელაწეული | ხელაწეული ქალი | კანის ღია ტონალობა</annotation>
+		<annotation cp="🙋🏻‍♀">ჟესტი | ქალი | ხელაწეული | კანის ღია ტონალობა</annotation>
 		<annotation cp="🙋🏻‍♀" type="tts">ხელაწეული ქალი: კანის ღია ტონალობა</annotation>
-		<annotation cp="🙋🏼‍♀">ჟესტი | ქალი | ხელაწეული | ხელაწეული ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🙋🏼‍♀">ჟესტი | ქალი | ხელაწეული | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="🙋🏼‍♀" type="tts">ხელაწეული ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="🙋🏽‍♀">ჟესტი | ქალი | ხელაწეული | ხელაწეული ქალი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🙋🏽‍♀">ჟესტი | ქალი | ხელაწეული | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="🙋🏽‍♀" type="tts">ხელაწეული ქალი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="🙋🏾‍♀">ჟესტი | ქალი | ხელაწეული | ხელაწეული ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🙋🏾‍♀">ჟესტი | ქალი | ხელაწეული | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="🙋🏾‍♀" type="tts">ხელაწეული ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="🙋🏿‍♀">ჟესტი | ქალი | ხელაწეული | ხელაწეული ქალი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="🙋🏿‍♀">ჟესტი | ქალი | ხელაწეული | კანის მუქი ტონალობა</annotation>
 		<annotation cp="🙋🏿‍♀" type="tts">ხელაწეული ქალი: კანის მუქი ტონალობა</annotation>
 		<annotation cp="🙇🏻">ბოდიში | დახრა | თავდახრილი პიროვნება | პატიება | ჟესტი | კანის ღია ტონალობა</annotation>
 		<annotation cp="🙇🏻" type="tts">თავდახრილი პიროვნება: კანის ღია ტონალობა</annotation>
@@ -1093,25 +1249,25 @@ Derived short names and annotations, using GenerateDerivedAnnotations.java. See 
 		<annotation cp="🙇🏾" type="tts">თავდახრილი პიროვნება: საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="🙇🏿">ბოდიში | დახრა | თავდახრილი პიროვნება | პატიება | ჟესტი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="🙇🏿" type="tts">თავდახრილი პიროვნება: კანის მუქი ტონალობა</annotation>
-		<annotation cp="🙇🏻‍♂">თავდახრილი | თავდახრილი კაცი | კაცი | კანის ღია ტონალობა</annotation>
+		<annotation cp="🙇🏻‍♂">თავდახრილი | კაცი | კანის ღია ტონალობა</annotation>
 		<annotation cp="🙇🏻‍♂" type="tts">თავდახრილი კაცი: კანის ღია ტონალობა</annotation>
-		<annotation cp="🙇🏼‍♂">თავდახრილი | თავდახრილი კაცი | კაცი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🙇🏼‍♂">თავდახრილი | კაცი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="🙇🏼‍♂" type="tts">თავდახრილი კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="🙇🏽‍♂">თავდახრილი | თავდახრილი კაცი | კაცი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🙇🏽‍♂">თავდახრილი | კაცი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="🙇🏽‍♂" type="tts">თავდახრილი კაცი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="🙇🏾‍♂">თავდახრილი | თავდახრილი კაცი | კაცი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🙇🏾‍♂">თავდახრილი | კაცი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="🙇🏾‍♂" type="tts">თავდახრილი კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="🙇🏿‍♂">თავდახრილი | თავდახრილი კაცი | კაცი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="🙇🏿‍♂">თავდახრილი | კაცი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="🙇🏿‍♂" type="tts">თავდახრილი კაცი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="🙇🏻‍♀">თავდახრილი | თავდახრილი ქალი | ქალი | კანის ღია ტონალობა</annotation>
+		<annotation cp="🙇🏻‍♀">თავდახრილი | ქალი | კანის ღია ტონალობა</annotation>
 		<annotation cp="🙇🏻‍♀" type="tts">თავდახრილი ქალი: კანის ღია ტონალობა</annotation>
-		<annotation cp="🙇🏼‍♀">თავდახრილი | თავდახრილი ქალი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🙇🏼‍♀">თავდახრილი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="🙇🏼‍♀" type="tts">თავდახრილი ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="🙇🏽‍♀">თავდახრილი | თავდახრილი ქალი | ქალი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🙇🏽‍♀">თავდახრილი | ქალი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="🙇🏽‍♀" type="tts">თავდახრილი ქალი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="🙇🏾‍♀">თავდახრილი | თავდახრილი ქალი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🙇🏾‍♀">თავდახრილი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="🙇🏾‍♀" type="tts">თავდახრილი ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="🙇🏿‍♀">თავდახრილი | თავდახრილი ქალი | ქალი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="🙇🏿‍♀">თავდახრილი | ქალი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="🙇🏿‍♀" type="tts">თავდახრილი ქალი: კანის მუქი ტონალობა</annotation>
 		<annotation cp="🤦🏻">გაღიზიანება | სახე | სახეზე ხელის აფარება | ურწმუნოება | ხელი | კანის ღია ტონალობა</annotation>
 		<annotation cp="🤦🏻" type="tts">სახეზე ხელის აფარება: კანის ღია ტონალობა</annotation>
@@ -1703,25 +1859,25 @@ Derived short names and annotations, using GenerateDerivedAnnotations.java. See 
 		<annotation cp="🤸🏾" type="tts">აკრობატული ილეთი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="🤸🏿">ადამიანი | აკრობატიკა | აკრობატული ილეთი | სპორტი | ტანვარჯიში | კანის მუქი ტონალობა</annotation>
 		<annotation cp="🤸🏿" type="tts">აკრობატული ილეთი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="🤸🏻‍♂">აკრობატი | აკრობატი კაცი | კაცი | სპორტი | კანის ღია ტონალობა</annotation>
+		<annotation cp="🤸🏻‍♂">აკრობატი | კაცი | სპორტი | კანის ღია ტონალობა</annotation>
 		<annotation cp="🤸🏻‍♂" type="tts">აკრობატი კაცი: კანის ღია ტონალობა</annotation>
-		<annotation cp="🤸🏼‍♂">აკრობატი | აკრობატი კაცი | კაცი | სპორტი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🤸🏼‍♂">აკრობატი | კაცი | სპორტი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="🤸🏼‍♂" type="tts">აკრობატი კაცი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="🤸🏽‍♂">აკრობატი | აკრობატი კაცი | კაცი | სპორტი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🤸🏽‍♂">აკრობატი | კაცი | სპორტი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="🤸🏽‍♂" type="tts">აკრობატი კაცი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="🤸🏾‍♂">აკრობატი | აკრობატი კაცი | კაცი | სპორტი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🤸🏾‍♂">აკრობატი | კაცი | სპორტი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="🤸🏾‍♂" type="tts">აკრობატი კაცი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="🤸🏿‍♂">აკრობატი | აკრობატი კაცი | კაცი | სპორტი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="🤸🏿‍♂">აკრობატი | კაცი | სპორტი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="🤸🏿‍♂" type="tts">აკრობატი კაცი: კანის მუქი ტონალობა</annotation>
-		<annotation cp="🤸🏻‍♀">აკრობატი | აკრობატი ქალი | სპორტი | ქალი | კანის ღია ტონალობა</annotation>
+		<annotation cp="🤸🏻‍♀">აკრობატი | სპორტი | ქალი | კანის ღია ტონალობა</annotation>
 		<annotation cp="🤸🏻‍♀" type="tts">აკრობატი ქალი: კანის ღია ტონალობა</annotation>
-		<annotation cp="🤸🏼‍♀">აკრობატი | აკრობატი ქალი | სპორტი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="🤸🏼‍♀">აკრობატი | სპორტი | ქალი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="🤸🏼‍♀" type="tts">აკრობატი ქალი: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="🤸🏽‍♀">აკრობატი | აკრობატი ქალი | სპორტი | ქალი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="🤸🏽‍♀">აკრობატი | სპორტი | ქალი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="🤸🏽‍♀" type="tts">აკრობატი ქალი: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="🤸🏾‍♀">აკრობატი | აკრობატი ქალი | სპორტი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="🤸🏾‍♀">აკრობატი | სპორტი | ქალი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="🤸🏾‍♀" type="tts">აკრობატი ქალი: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="🤸🏿‍♀">აკრობატი | აკრობატი ქალი | სპორტი | ქალი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="🤸🏿‍♀">აკრობატი | სპორტი | ქალი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="🤸🏿‍♀" type="tts">აკრობატი ქალი: კანის მუქი ტონალობა</annotation>
 		<annotation cp="🤽🏻">ადამიანი | სპორტი | წყალბურთი | წყალი | კანის ღია ტონალობა</annotation>
 		<annotation cp="🤽🏻" type="tts">წყალბურთი: კანის ღია ტონალობა</annotation>
@@ -2035,25 +2191,25 @@ Derived short names and annotations, using GenerateDerivedAnnotations.java. See 
 		<annotation cp="👌🏾" type="tts">ო’ქეის ჟესტი ხელით: საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👌🏿">კარგი | ო’ქეის ჟესტი ხელით | სხეული | ტანი | ხელი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👌🏿" type="tts">ო’ქეის ჟესტი ხელით: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👍🏻">+1 | ზემოთ | სხეული | ტანი | ცერა | ცერა ზემოთ | ხელი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👍🏻">+1 | ზემოთ | სხეული | ტანი | ცერა | ხელი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👍🏻" type="tts">ცერა ზემოთ: კანის ღია ტონალობა</annotation>
-		<annotation cp="👍🏼">+1 | ზემოთ | სხეული | ტანი | ცერა | ცერა ზემოთ | ხელი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👍🏼">+1 | ზემოთ | სხეული | ტანი | ცერა | ხელი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👍🏼" type="tts">ცერა ზემოთ: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👍🏽">+1 | ზემოთ | სხეული | ტანი | ცერა | ცერა ზემოთ | ხელი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👍🏽">+1 | ზემოთ | სხეული | ტანი | ცერა | ხელი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👍🏽" type="tts">ცერა ზემოთ: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👍🏾">+1 | ზემოთ | სხეული | ტანი | ცერა | ცერა ზემოთ | ხელი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👍🏾">+1 | ზემოთ | სხეული | ტანი | ცერა | ხელი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👍🏾" type="tts">ცერა ზემოთ: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👍🏿">+1 | ზემოთ | სხეული | ტანი | ცერა | ცერა ზემოთ | ხელი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👍🏿">+1 | ზემოთ | სხეული | ტანი | ცერა | ხელი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👍🏿" type="tts">ცერა ზემოთ: კანის მუქი ტონალობა</annotation>
-		<annotation cp="👎🏻">-1 | სხეული | ტანი | ქვემოთ | ცერა | ცერა ქვემოთ | ხელი | კანის ღია ტონალობა</annotation>
+		<annotation cp="👎🏻">-1 | სხეული | ტანი | ქვემოთ | ცერა | ხელი | კანის ღია ტონალობა</annotation>
 		<annotation cp="👎🏻" type="tts">ცერა ქვემოთ: კანის ღია ტონალობა</annotation>
-		<annotation cp="👎🏼">-1 | სხეული | ტანი | ქვემოთ | ცერა | ცერა ქვემოთ | ხელი | ღიადან საშუალომდე კანის ტონალობა</annotation>
+		<annotation cp="👎🏼">-1 | სხეული | ტანი | ქვემოთ | ცერა | ხელი | ღიადან საშუალომდე კანის ტონალობა</annotation>
 		<annotation cp="👎🏼" type="tts">ცერა ქვემოთ: ღიადან საშუალომდე კანის ტონალობა</annotation>
-		<annotation cp="👎🏽">-1 | სხეული | ტანი | ქვემოთ | ცერა | ცერა ქვემოთ | ხელი | კანის საშუალო ტონალობა</annotation>
+		<annotation cp="👎🏽">-1 | სხეული | ტანი | ქვემოთ | ცერა | ხელი | კანის საშუალო ტონალობა</annotation>
 		<annotation cp="👎🏽" type="tts">ცერა ქვემოთ: კანის საშუალო ტონალობა</annotation>
-		<annotation cp="👎🏾">-1 | სხეული | ტანი | ქვემოთ | ცერა | ცერა ქვემოთ | ხელი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
+		<annotation cp="👎🏾">-1 | სხეული | ტანი | ქვემოთ | ცერა | ხელი | საშუალოდან მუქამდე კანის ტონალობა</annotation>
 		<annotation cp="👎🏾" type="tts">ცერა ქვემოთ: საშუალოდან მუქამდე კანის ტონალობა</annotation>
-		<annotation cp="👎🏿">-1 | სხეული | ტანი | ქვემოთ | ცერა | ცერა ქვემოთ | ხელი | კანის მუქი ტონალობა</annotation>
+		<annotation cp="👎🏿">-1 | სხეული | ტანი | ქვემოთ | ცერა | ხელი | კანის მუქი ტონალობა</annotation>
 		<annotation cp="👎🏿" type="tts">ცერა ქვემოთ: კანის მუქი ტონალობა</annotation>
 		<annotation cp="✊🏻">აწეული მუშტი | დარტყმა | მუშტი | სხეული | ტანი | შეკრული | ხელი | კანის ღია ტონალობა</annotation>
 		<annotation cp="✊🏻" type="tts">აწეული მუშტი: კანის ღია ტონალობა</annotation>
@@ -2222,526 +2378,546 @@ Derived short names and annotations, using GenerateDerivedAnnotations.java. See 
 		<annotation cp="🔟">კლავიში</annotation>
 		<annotation cp="🔟" type="tts">კლავიში: 10</annotation>
 		<annotation cp="🇦🇨">დროშა</annotation>
-		<annotation cp="🇦🇨" type="tts">ამაღლების კუნძული</annotation>
+		<annotation cp="🇦🇨" type="tts">დროშა: ამაღლების კუნძული</annotation>
 		<annotation cp="🇦🇩">დროშა</annotation>
-		<annotation cp="🇦🇩" type="tts">ანდორა</annotation>
+		<annotation cp="🇦🇩" type="tts">დროშა: ანდორა</annotation>
 		<annotation cp="🇦🇪">დროშა</annotation>
-		<annotation cp="🇦🇪" type="tts">არაბთა გაერთიანებული საამიროები</annotation>
+		<annotation cp="🇦🇪" type="tts">დროშა: არაბთა გაერთიანებული საამიროები</annotation>
 		<annotation cp="🇦🇫">დროშა</annotation>
-		<annotation cp="🇦🇫" type="tts">ავღანეთი</annotation>
+		<annotation cp="🇦🇫" type="tts">დროშა: ავღანეთი</annotation>
 		<annotation cp="🇦🇬">დროშა</annotation>
-		<annotation cp="🇦🇬" type="tts">ანტიგუა და ბარბუდა</annotation>
+		<annotation cp="🇦🇬" type="tts">დროშა: ანტიგუა და ბარბუდა</annotation>
 		<annotation cp="🇦🇮">დროშა</annotation>
-		<annotation cp="🇦🇮" type="tts">ანგვილა</annotation>
+		<annotation cp="🇦🇮" type="tts">დროშა: ანგვილა</annotation>
 		<annotation cp="🇦🇱">დროშა</annotation>
-		<annotation cp="🇦🇱" type="tts">ალბანეთი</annotation>
+		<annotation cp="🇦🇱" type="tts">დროშა: ალბანეთი</annotation>
 		<annotation cp="🇦🇲">დროშა</annotation>
-		<annotation cp="🇦🇲" type="tts">სომხეთი</annotation>
+		<annotation cp="🇦🇲" type="tts">დროშა: სომხეთი</annotation>
 		<annotation cp="🇦🇴">დროშა</annotation>
-		<annotation cp="🇦🇴" type="tts">ანგოლა</annotation>
+		<annotation cp="🇦🇴" type="tts">დროშა: ანგოლა</annotation>
 		<annotation cp="🇦🇶">დროშა</annotation>
-		<annotation cp="🇦🇶" type="tts">ანტარქტიკა</annotation>
+		<annotation cp="🇦🇶" type="tts">დროშა: ანტარქტიკა</annotation>
 		<annotation cp="🇦🇷">დროშა</annotation>
-		<annotation cp="🇦🇷" type="tts">არგენტინა</annotation>
+		<annotation cp="🇦🇷" type="tts">დროშა: არგენტინა</annotation>
 		<annotation cp="🇦🇸">დროშა</annotation>
-		<annotation cp="🇦🇸" type="tts">ამერიკის სამოა</annotation>
+		<annotation cp="🇦🇸" type="tts">დროშა: ამერიკის სამოა</annotation>
 		<annotation cp="🇦🇹">დროშა</annotation>
-		<annotation cp="🇦🇹" type="tts">ავსტრია</annotation>
+		<annotation cp="🇦🇹" type="tts">დროშა: ავსტრია</annotation>
 		<annotation cp="🇦🇺">დროშა</annotation>
-		<annotation cp="🇦🇺" type="tts">ავსტრალია</annotation>
+		<annotation cp="🇦🇺" type="tts">დროშა: ავსტრალია</annotation>
 		<annotation cp="🇦🇼">დროშა</annotation>
-		<annotation cp="🇦🇼" type="tts">არუბა</annotation>
+		<annotation cp="🇦🇼" type="tts">დროშა: არუბა</annotation>
 		<annotation cp="🇦🇽">დროშა</annotation>
-		<annotation cp="🇦🇽" type="tts">ალანდის კუნძულები</annotation>
+		<annotation cp="🇦🇽" type="tts">დროშა: ალანდის კუნძულები</annotation>
 		<annotation cp="🇦🇿">დროშა</annotation>
-		<annotation cp="🇦🇿" type="tts">აზერბაიჯანი</annotation>
+		<annotation cp="🇦🇿" type="tts">დროშა: აზერბაიჯანი</annotation>
 		<annotation cp="🇧🇦">დროშა</annotation>
-		<annotation cp="🇧🇦" type="tts">ბოსნია და ჰერცეგოვინა</annotation>
+		<annotation cp="🇧🇦" type="tts">დროშა: ბოსნია და ჰერცეგოვინა</annotation>
 		<annotation cp="🇧🇧">დროშა</annotation>
-		<annotation cp="🇧🇧" type="tts">ბარბადოსი</annotation>
+		<annotation cp="🇧🇧" type="tts">დროშა: ბარბადოსი</annotation>
 		<annotation cp="🇧🇩">დროშა</annotation>
-		<annotation cp="🇧🇩" type="tts">ბანგლადეში</annotation>
+		<annotation cp="🇧🇩" type="tts">დროშა: ბანგლადეში</annotation>
 		<annotation cp="🇧🇪">დროშა</annotation>
-		<annotation cp="🇧🇪" type="tts">ბელგია</annotation>
+		<annotation cp="🇧🇪" type="tts">დროშა: ბელგია</annotation>
 		<annotation cp="🇧🇫">დროშა</annotation>
-		<annotation cp="🇧🇫" type="tts">ბურკინა-ფასო</annotation>
+		<annotation cp="🇧🇫" type="tts">დროშა: ბურკინა-ფასო</annotation>
 		<annotation cp="🇧🇬">დროშა</annotation>
-		<annotation cp="🇧🇬" type="tts">ბულგარეთი</annotation>
+		<annotation cp="🇧🇬" type="tts">დროშა: ბულგარეთი</annotation>
 		<annotation cp="🇧🇭">დროშა</annotation>
-		<annotation cp="🇧🇭" type="tts">ბაჰრეინი</annotation>
+		<annotation cp="🇧🇭" type="tts">დროშა: ბაჰრეინი</annotation>
 		<annotation cp="🇧🇮">დროშა</annotation>
-		<annotation cp="🇧🇮" type="tts">ბურუნდი</annotation>
+		<annotation cp="🇧🇮" type="tts">დროშა: ბურუნდი</annotation>
 		<annotation cp="🇧🇯">დროშა</annotation>
-		<annotation cp="🇧🇯" type="tts">ბენინი</annotation>
+		<annotation cp="🇧🇯" type="tts">დროშა: ბენინი</annotation>
 		<annotation cp="🇧🇱">დროშა</annotation>
-		<annotation cp="🇧🇱" type="tts">სენ-ბართელმი</annotation>
+		<annotation cp="🇧🇱" type="tts">დროშა: სენ-ბართელმი</annotation>
 		<annotation cp="🇧🇲">დროშა</annotation>
-		<annotation cp="🇧🇲" type="tts">ბერმუდა</annotation>
+		<annotation cp="🇧🇲" type="tts">დროშა: ბერმუდა</annotation>
 		<annotation cp="🇧🇳">დროშა</annotation>
-		<annotation cp="🇧🇳" type="tts">ბრუნეი</annotation>
+		<annotation cp="🇧🇳" type="tts">დროშა: ბრუნეი</annotation>
 		<annotation cp="🇧🇴">დროშა</annotation>
-		<annotation cp="🇧🇴" type="tts">ბოლივია</annotation>
+		<annotation cp="🇧🇴" type="tts">დროშა: ბოლივია</annotation>
 		<annotation cp="🇧🇶">დროშა</annotation>
-		<annotation cp="🇧🇶" type="tts">კარიბის ნიდერლანდები</annotation>
+		<annotation cp="🇧🇶" type="tts">დროშა: კარიბის ნიდერლანდები</annotation>
 		<annotation cp="🇧🇷">დროშა</annotation>
-		<annotation cp="🇧🇷" type="tts">ბრაზილია</annotation>
+		<annotation cp="🇧🇷" type="tts">დროშა: ბრაზილია</annotation>
 		<annotation cp="🇧🇸">დროშა</annotation>
-		<annotation cp="🇧🇸" type="tts">ბაჰამის კუნძულები</annotation>
+		<annotation cp="🇧🇸" type="tts">დროშა: ბაჰამის კუნძულები</annotation>
 		<annotation cp="🇧🇹">დროშა</annotation>
-		<annotation cp="🇧🇹" type="tts">ბუტანი</annotation>
+		<annotation cp="🇧🇹" type="tts">დროშა: ბუტანი</annotation>
 		<annotation cp="🇧🇻">დროშა</annotation>
-		<annotation cp="🇧🇻" type="tts">ბუვე</annotation>
+		<annotation cp="🇧🇻" type="tts">დროშა: ბუვე</annotation>
 		<annotation cp="🇧🇼">დროშა</annotation>
-		<annotation cp="🇧🇼" type="tts">ბოტსვანა</annotation>
+		<annotation cp="🇧🇼" type="tts">დროშა: ბოტსვანა</annotation>
 		<annotation cp="🇧🇾">დროშა</annotation>
-		<annotation cp="🇧🇾" type="tts">ბელარუსი</annotation>
+		<annotation cp="🇧🇾" type="tts">დროშა: ბელარუსი</annotation>
 		<annotation cp="🇧🇿">დროშა</annotation>
-		<annotation cp="🇧🇿" type="tts">ბელიზი</annotation>
+		<annotation cp="🇧🇿" type="tts">დროშა: ბელიზი</annotation>
 		<annotation cp="🇨🇦">დროშა</annotation>
-		<annotation cp="🇨🇦" type="tts">კანადა</annotation>
+		<annotation cp="🇨🇦" type="tts">დროშა: კანადა</annotation>
 		<annotation cp="🇨🇨">დროშა</annotation>
-		<annotation cp="🇨🇨" type="tts">ქოქოსის (კილინგის) კუნძულები</annotation>
+		<annotation cp="🇨🇨" type="tts">დროშა: ქოქოსის (კილინგის) კუნძულები</annotation>
 		<annotation cp="🇨🇩">დროშა</annotation>
-		<annotation cp="🇨🇩" type="tts">კონგო - კინშასა</annotation>
+		<annotation cp="🇨🇩" type="tts">დროშა: კონგო - კინშასა</annotation>
 		<annotation cp="🇨🇫">დროშა</annotation>
-		<annotation cp="🇨🇫" type="tts">ცენტრალური აფრიკის რესპუბლიკა</annotation>
+		<annotation cp="🇨🇫" type="tts">დროშა: ცენტრალური აფრიკის რესპუბლიკა</annotation>
 		<annotation cp="🇨🇬">დროშა</annotation>
-		<annotation cp="🇨🇬" type="tts">კონგო - ბრაზავილი</annotation>
+		<annotation cp="🇨🇬" type="tts">დროშა: კონგო - ბრაზავილი</annotation>
 		<annotation cp="🇨🇭">დროშა</annotation>
-		<annotation cp="🇨🇭" type="tts">შვეიცარია</annotation>
+		<annotation cp="🇨🇭" type="tts">დროშა: შვეიცარია</annotation>
 		<annotation cp="🇨🇮">დროშა</annotation>
-		<annotation cp="🇨🇮" type="tts">კოტ-დივუარი</annotation>
+		<annotation cp="🇨🇮" type="tts">დროშა: კოტ-დივუარი</annotation>
 		<annotation cp="🇨🇰">დროშა</annotation>
-		<annotation cp="🇨🇰" type="tts">კუკის კუნძულები</annotation>
+		<annotation cp="🇨🇰" type="tts">დროშა: კუკის კუნძულები</annotation>
 		<annotation cp="🇨🇱">დროშა</annotation>
-		<annotation cp="🇨🇱" type="tts">ჩილე</annotation>
+		<annotation cp="🇨🇱" type="tts">დროშა: ჩილე</annotation>
 		<annotation cp="🇨🇲">დროშა</annotation>
-		<annotation cp="🇨🇲" type="tts">კამერუნი</annotation>
+		<annotation cp="🇨🇲" type="tts">დროშა: კამერუნი</annotation>
 		<annotation cp="🇨🇳">დროშა</annotation>
-		<annotation cp="🇨🇳" type="tts">ჩინეთი</annotation>
+		<annotation cp="🇨🇳" type="tts">დროშა: ჩინეთი</annotation>
 		<annotation cp="🇨🇴">დროშა</annotation>
-		<annotation cp="🇨🇴" type="tts">კოლუმბია</annotation>
+		<annotation cp="🇨🇴" type="tts">დროშა: კოლუმბია</annotation>
 		<annotation cp="🇨🇵">დროშა</annotation>
-		<annotation cp="🇨🇵" type="tts">კლიპერტონის კუნძული</annotation>
+		<annotation cp="🇨🇵" type="tts">დროშა: კლიპერტონის კუნძული</annotation>
 		<annotation cp="🇨🇷">დროშა</annotation>
-		<annotation cp="🇨🇷" type="tts">კოსტა-რიკა</annotation>
+		<annotation cp="🇨🇷" type="tts">დროშა: კოსტა-რიკა</annotation>
 		<annotation cp="🇨🇺">დროშა</annotation>
-		<annotation cp="🇨🇺" type="tts">კუბა</annotation>
+		<annotation cp="🇨🇺" type="tts">დროშა: კუბა</annotation>
 		<annotation cp="🇨🇻">დროშა</annotation>
-		<annotation cp="🇨🇻" type="tts">კაბო-ვერდე</annotation>
+		<annotation cp="🇨🇻" type="tts">დროშა: კაბო-ვერდე</annotation>
 		<annotation cp="🇨🇼">დროშა</annotation>
-		<annotation cp="🇨🇼" type="tts">კიურასაო</annotation>
+		<annotation cp="🇨🇼" type="tts">დროშა: კიურასაო</annotation>
 		<annotation cp="🇨🇽">დროშა</annotation>
-		<annotation cp="🇨🇽" type="tts">შობის კუნძული</annotation>
+		<annotation cp="🇨🇽" type="tts">დროშა: შობის კუნძული</annotation>
 		<annotation cp="🇨🇾">დროშა</annotation>
-		<annotation cp="🇨🇾" type="tts">კვიპროსი</annotation>
+		<annotation cp="🇨🇾" type="tts">დროშა: კვიპროსი</annotation>
 		<annotation cp="🇨🇿">დროშა</annotation>
-		<annotation cp="🇨🇿" type="tts">ჩეხეთი</annotation>
+		<annotation cp="🇨🇿" type="tts">დროშა: ჩეხეთი</annotation>
 		<annotation cp="🇩🇪">დროშა</annotation>
-		<annotation cp="🇩🇪" type="tts">გერმანია</annotation>
+		<annotation cp="🇩🇪" type="tts">დროშა: გერმანია</annotation>
 		<annotation cp="🇩🇬">დროშა</annotation>
-		<annotation cp="🇩🇬" type="tts">დიეგო-გარსია</annotation>
+		<annotation cp="🇩🇬" type="tts">დროშა: დიეგო-გარსია</annotation>
 		<annotation cp="🇩🇯">დროშა</annotation>
-		<annotation cp="🇩🇯" type="tts">ჯიბუტი</annotation>
+		<annotation cp="🇩🇯" type="tts">დროშა: ჯიბუტი</annotation>
 		<annotation cp="🇩🇰">დროშა</annotation>
-		<annotation cp="🇩🇰" type="tts">დანია</annotation>
+		<annotation cp="🇩🇰" type="tts">დროშა: დანია</annotation>
 		<annotation cp="🇩🇲">დროშა</annotation>
-		<annotation cp="🇩🇲" type="tts">დომინიკა</annotation>
+		<annotation cp="🇩🇲" type="tts">დროშა: დომინიკა</annotation>
 		<annotation cp="🇩🇴">დროშა</annotation>
-		<annotation cp="🇩🇴" type="tts">დომინიკელთა რესპუბლიკა</annotation>
+		<annotation cp="🇩🇴" type="tts">დროშა: დომინიკელთა რესპუბლიკა</annotation>
 		<annotation cp="🇩🇿">დროშა</annotation>
-		<annotation cp="🇩🇿" type="tts">ალჟირი</annotation>
+		<annotation cp="🇩🇿" type="tts">დროშა: ალჟირი</annotation>
 		<annotation cp="🇪🇦">დროშა</annotation>
-		<annotation cp="🇪🇦" type="tts">სეუტა და მელილა</annotation>
+		<annotation cp="🇪🇦" type="tts">დროშა: სეუტა და მელილა</annotation>
 		<annotation cp="🇪🇨">დროშა</annotation>
-		<annotation cp="🇪🇨" type="tts">ეკვადორი</annotation>
+		<annotation cp="🇪🇨" type="tts">დროშა: ეკვადორი</annotation>
 		<annotation cp="🇪🇪">დროშა</annotation>
-		<annotation cp="🇪🇪" type="tts">ესტონეთი</annotation>
+		<annotation cp="🇪🇪" type="tts">დროშა: ესტონეთი</annotation>
 		<annotation cp="🇪🇬">დროშა</annotation>
-		<annotation cp="🇪🇬" type="tts">ეგვიპტე</annotation>
+		<annotation cp="🇪🇬" type="tts">დროშა: ეგვიპტე</annotation>
 		<annotation cp="🇪🇭">დროშა</annotation>
-		<annotation cp="🇪🇭" type="tts">დასავლეთ საჰარა</annotation>
+		<annotation cp="🇪🇭" type="tts">დროშა: დასავლეთ საჰარა</annotation>
 		<annotation cp="🇪🇷">დროშა</annotation>
-		<annotation cp="🇪🇷" type="tts">ერიტრეა</annotation>
+		<annotation cp="🇪🇷" type="tts">დროშა: ერიტრეა</annotation>
 		<annotation cp="🇪🇸">დროშა</annotation>
-		<annotation cp="🇪🇸" type="tts">ესპანეთი</annotation>
+		<annotation cp="🇪🇸" type="tts">დროშა: ესპანეთი</annotation>
 		<annotation cp="🇪🇹">დროშა</annotation>
-		<annotation cp="🇪🇹" type="tts">ეთიოპია</annotation>
+		<annotation cp="🇪🇹" type="tts">დროშა: ეთიოპია</annotation>
 		<annotation cp="🇪🇺">დროშა</annotation>
-		<annotation cp="🇪🇺" type="tts">ევროკავშირი</annotation>
+		<annotation cp="🇪🇺" type="tts">დროშა: ევროკავშირი</annotation>
 		<annotation cp="🇫🇮">დროშა</annotation>
-		<annotation cp="🇫🇮" type="tts">ფინეთი</annotation>
+		<annotation cp="🇫🇮" type="tts">დროშა: ფინეთი</annotation>
 		<annotation cp="🇫🇯">დროშა</annotation>
-		<annotation cp="🇫🇯" type="tts">ფიჯი</annotation>
+		<annotation cp="🇫🇯" type="tts">დროშა: ფიჯი</annotation>
 		<annotation cp="🇫🇰">დროშა</annotation>
-		<annotation cp="🇫🇰" type="tts">ფოლკლენდის კუნძულები</annotation>
+		<annotation cp="🇫🇰" type="tts">დროშა: ფოლკლენდის კუნძულები</annotation>
 		<annotation cp="🇫🇲">დროშა</annotation>
-		<annotation cp="🇫🇲" type="tts">მიკრონეზია</annotation>
+		<annotation cp="🇫🇲" type="tts">დროშა: მიკრონეზია</annotation>
 		<annotation cp="🇫🇴">დროშა</annotation>
-		<annotation cp="🇫🇴" type="tts">ფარერის კუნძულები</annotation>
+		<annotation cp="🇫🇴" type="tts">დროშა: ფარერის კუნძულები</annotation>
 		<annotation cp="🇫🇷">დროშა</annotation>
-		<annotation cp="🇫🇷" type="tts">საფრანგეთი</annotation>
+		<annotation cp="🇫🇷" type="tts">დროშა: საფრანგეთი</annotation>
 		<annotation cp="🇬🇦">დროშა</annotation>
-		<annotation cp="🇬🇦" type="tts">გაბონი</annotation>
+		<annotation cp="🇬🇦" type="tts">დროშა: გაბონი</annotation>
 		<annotation cp="🇬🇧">დროშა</annotation>
-		<annotation cp="🇬🇧" type="tts">გაერთიანებული სამეფო</annotation>
+		<annotation cp="🇬🇧" type="tts">დროშა: გაერთიანებული სამეფო</annotation>
 		<annotation cp="🇬🇩">დროშა</annotation>
-		<annotation cp="🇬🇩" type="tts">გრენადა</annotation>
+		<annotation cp="🇬🇩" type="tts">დროშა: გრენადა</annotation>
 		<annotation cp="🇬🇪">დროშა</annotation>
-		<annotation cp="🇬🇪" type="tts">საქართველო</annotation>
+		<annotation cp="🇬🇪" type="tts">დროშა: საქართველო</annotation>
 		<annotation cp="🇬🇫">დროშა</annotation>
-		<annotation cp="🇬🇫" type="tts">საფრანგეთის გვიანა</annotation>
+		<annotation cp="🇬🇫" type="tts">დროშა: საფრანგეთის გვიანა</annotation>
 		<annotation cp="🇬🇬">დროშა</annotation>
-		<annotation cp="🇬🇬" type="tts">გერნსი</annotation>
+		<annotation cp="🇬🇬" type="tts">დროშა: გერნსი</annotation>
 		<annotation cp="🇬🇭">დროშა</annotation>
-		<annotation cp="🇬🇭" type="tts">განა</annotation>
+		<annotation cp="🇬🇭" type="tts">დროშა: განა</annotation>
 		<annotation cp="🇬🇮">დროშა</annotation>
-		<annotation cp="🇬🇮" type="tts">გიბრალტარი</annotation>
+		<annotation cp="🇬🇮" type="tts">დროშა: გიბრალტარი</annotation>
 		<annotation cp="🇬🇱">დროშა</annotation>
-		<annotation cp="🇬🇱" type="tts">გრენლანდია</annotation>
+		<annotation cp="🇬🇱" type="tts">დროშა: გრენლანდია</annotation>
 		<annotation cp="🇬🇲">დროშა</annotation>
-		<annotation cp="🇬🇲" type="tts">გამბია</annotation>
+		<annotation cp="🇬🇲" type="tts">დროშა: გამბია</annotation>
 		<annotation cp="🇬🇳">დროშა</annotation>
-		<annotation cp="🇬🇳" type="tts">გვინეა</annotation>
+		<annotation cp="🇬🇳" type="tts">დროშა: გვინეა</annotation>
 		<annotation cp="🇬🇵">დროშა</annotation>
-		<annotation cp="🇬🇵" type="tts">გვადელუპა</annotation>
+		<annotation cp="🇬🇵" type="tts">დროშა: გვადელუპა</annotation>
 		<annotation cp="🇬🇶">დროშა</annotation>
-		<annotation cp="🇬🇶" type="tts">ეკვატორული გვინეა</annotation>
+		<annotation cp="🇬🇶" type="tts">დროშა: ეკვატორული გვინეა</annotation>
 		<annotation cp="🇬🇷">დროშა</annotation>
-		<annotation cp="🇬🇷" type="tts">საბერძნეთი</annotation>
+		<annotation cp="🇬🇷" type="tts">დროშა: საბერძნეთი</annotation>
 		<annotation cp="🇬🇸">დროშა</annotation>
-		<annotation cp="🇬🇸" type="tts">სამხრეთ ჯორჯია და სამხრეთ სენდვიჩის კუნძულები</annotation>
+		<annotation cp="🇬🇸" type="tts">დროშა: სამხრეთ ჯორჯია და სამხრეთ სენდვიჩის კუნძულები</annotation>
 		<annotation cp="🇬🇹">დროშა</annotation>
-		<annotation cp="🇬🇹" type="tts">გვატემალა</annotation>
+		<annotation cp="🇬🇹" type="tts">დროშა: გვატემალა</annotation>
 		<annotation cp="🇬🇺">დროშა</annotation>
-		<annotation cp="🇬🇺" type="tts">გუამი</annotation>
+		<annotation cp="🇬🇺" type="tts">დროშა: გუამი</annotation>
 		<annotation cp="🇬🇼">დროშა</annotation>
-		<annotation cp="🇬🇼" type="tts">გვინეა-ბისაუ</annotation>
+		<annotation cp="🇬🇼" type="tts">დროშა: გვინეა-ბისაუ</annotation>
 		<annotation cp="🇬🇾">დროშა</annotation>
-		<annotation cp="🇬🇾" type="tts">გაიანა</annotation>
+		<annotation cp="🇬🇾" type="tts">დროშა: გაიანა</annotation>
 		<annotation cp="🇭🇰">დროშა</annotation>
-		<annotation cp="🇭🇰" type="tts">ჰონკონგის სპეციალური ადმინისტრაციული რეგიონი ჩინეთი</annotation>
+		<annotation cp="🇭🇰" type="tts">დროშა: ჰონკონგის სპეციალური ადმინისტრაციული რეგიონი ჩინეთი</annotation>
 		<annotation cp="🇭🇲">დროშა</annotation>
-		<annotation cp="🇭🇲" type="tts">ჰერდი და მაკდონალდის კუნძულები</annotation>
+		<annotation cp="🇭🇲" type="tts">დროშა: ჰერდი და მაკდონალდის კუნძულები</annotation>
 		<annotation cp="🇭🇳">დროშა</annotation>
-		<annotation cp="🇭🇳" type="tts">ჰონდურასი</annotation>
+		<annotation cp="🇭🇳" type="tts">დროშა: ჰონდურასი</annotation>
 		<annotation cp="🇭🇷">დროშა</annotation>
-		<annotation cp="🇭🇷" type="tts">ხორვატია</annotation>
+		<annotation cp="🇭🇷" type="tts">დროშა: ხორვატია</annotation>
 		<annotation cp="🇭🇹">დროშა</annotation>
-		<annotation cp="🇭🇹" type="tts">ჰაიტი</annotation>
+		<annotation cp="🇭🇹" type="tts">დროშა: ჰაიტი</annotation>
 		<annotation cp="🇭🇺">დროშა</annotation>
-		<annotation cp="🇭🇺" type="tts">უნგრეთი</annotation>
+		<annotation cp="🇭🇺" type="tts">დროშა: უნგრეთი</annotation>
 		<annotation cp="🇮🇨">დროშა</annotation>
-		<annotation cp="🇮🇨" type="tts">კანარის კუნძულები</annotation>
+		<annotation cp="🇮🇨" type="tts">დროშა: კანარის კუნძულები</annotation>
 		<annotation cp="🇮🇩">დროშა</annotation>
-		<annotation cp="🇮🇩" type="tts">ინდონეზია</annotation>
+		<annotation cp="🇮🇩" type="tts">დროშა: ინდონეზია</annotation>
 		<annotation cp="🇮🇪">დროშა</annotation>
-		<annotation cp="🇮🇪" type="tts">ირლანდია</annotation>
+		<annotation cp="🇮🇪" type="tts">დროშა: ირლანდია</annotation>
 		<annotation cp="🇮🇱">დროშა</annotation>
-		<annotation cp="🇮🇱" type="tts">ისრაელი</annotation>
+		<annotation cp="🇮🇱" type="tts">დროშა: ისრაელი</annotation>
 		<annotation cp="🇮🇲">დროშა</annotation>
-		<annotation cp="🇮🇲" type="tts">მენის კუნძული</annotation>
+		<annotation cp="🇮🇲" type="tts">დროშა: მენის კუნძული</annotation>
 		<annotation cp="🇮🇳">დროშა</annotation>
-		<annotation cp="🇮🇳" type="tts">ინდოეთი</annotation>
+		<annotation cp="🇮🇳" type="tts">დროშა: ინდოეთი</annotation>
 		<annotation cp="🇮🇴">დროშა</annotation>
-		<annotation cp="🇮🇴" type="tts">ბრიტანეთის ტერიტორია ინდოეთის ოკეანეში</annotation>
+		<annotation cp="🇮🇴" type="tts">დროშა: ბრიტანეთის ტერიტორია ინდოეთის ოკეანეში</annotation>
 		<annotation cp="🇮🇶">დროშა</annotation>
-		<annotation cp="🇮🇶" type="tts">ერაყი</annotation>
+		<annotation cp="🇮🇶" type="tts">დროშა: ერაყი</annotation>
 		<annotation cp="🇮🇷">დროშა</annotation>
-		<annotation cp="🇮🇷" type="tts">ირანი</annotation>
+		<annotation cp="🇮🇷" type="tts">დროშა: ირანი</annotation>
 		<annotation cp="🇮🇸">დროშა</annotation>
-		<annotation cp="🇮🇸" type="tts">ისლანდია</annotation>
+		<annotation cp="🇮🇸" type="tts">დროშა: ისლანდია</annotation>
 		<annotation cp="🇮🇹">დროშა</annotation>
-		<annotation cp="🇮🇹" type="tts">იტალია</annotation>
+		<annotation cp="🇮🇹" type="tts">დროშა: იტალია</annotation>
 		<annotation cp="🇯🇪">დროშა</annotation>
-		<annotation cp="🇯🇪" type="tts">ჯერსი</annotation>
+		<annotation cp="🇯🇪" type="tts">დროშა: ჯერსი</annotation>
 		<annotation cp="🇯🇲">დროშა</annotation>
-		<annotation cp="🇯🇲" type="tts">იამაიკა</annotation>
+		<annotation cp="🇯🇲" type="tts">დროშა: იამაიკა</annotation>
 		<annotation cp="🇯🇴">დროშა</annotation>
-		<annotation cp="🇯🇴" type="tts">იორდანია</annotation>
+		<annotation cp="🇯🇴" type="tts">დროშა: იორდანია</annotation>
 		<annotation cp="🇯🇵">დროშა</annotation>
-		<annotation cp="🇯🇵" type="tts">იაპონია</annotation>
+		<annotation cp="🇯🇵" type="tts">დროშა: იაპონია</annotation>
 		<annotation cp="🇰🇪">დროშა</annotation>
-		<annotation cp="🇰🇪" type="tts">კენია</annotation>
+		<annotation cp="🇰🇪" type="tts">დროშა: კენია</annotation>
 		<annotation cp="🇰🇬">დროშა</annotation>
-		<annotation cp="🇰🇬" type="tts">ყირგიზეთი</annotation>
+		<annotation cp="🇰🇬" type="tts">დროშა: ყირგიზეთი</annotation>
 		<annotation cp="🇰🇭">დროშა</annotation>
-		<annotation cp="🇰🇭" type="tts">კამბოჯა</annotation>
+		<annotation cp="🇰🇭" type="tts">დროშა: კამბოჯა</annotation>
 		<annotation cp="🇰🇮">დროშა</annotation>
-		<annotation cp="🇰🇮" type="tts">კირიბატი</annotation>
+		<annotation cp="🇰🇮" type="tts">დროშა: კირიბატი</annotation>
 		<annotation cp="🇰🇲">დროშა</annotation>
-		<annotation cp="🇰🇲" type="tts">კომორის კუნძულები</annotation>
+		<annotation cp="🇰🇲" type="tts">დროშა: კომორის კუნძულები</annotation>
 		<annotation cp="🇰🇳">დროშა</annotation>
-		<annotation cp="🇰🇳" type="tts">სენტ-კიტსი და ნევისი</annotation>
+		<annotation cp="🇰🇳" type="tts">დროშა: სენტ-კიტსი და ნევისი</annotation>
 		<annotation cp="🇰🇵">დროშა</annotation>
-		<annotation cp="🇰🇵" type="tts">ჩრდილოეთ კორეა</annotation>
+		<annotation cp="🇰🇵" type="tts">დროშა: ჩრდილოეთ კორეა</annotation>
 		<annotation cp="🇰🇷">დროშა</annotation>
-		<annotation cp="🇰🇷" type="tts">სამხრეთ კორეა</annotation>
+		<annotation cp="🇰🇷" type="tts">დროშა: სამხრეთ კორეა</annotation>
 		<annotation cp="🇰🇼">დროშა</annotation>
-		<annotation cp="🇰🇼" type="tts">ქუვეითი</annotation>
+		<annotation cp="🇰🇼" type="tts">დროშა: ქუვეითი</annotation>
 		<annotation cp="🇰🇾">დროშა</annotation>
-		<annotation cp="🇰🇾" type="tts">კაიმანის კუნძულები</annotation>
+		<annotation cp="🇰🇾" type="tts">დროშა: კაიმანის კუნძულები</annotation>
 		<annotation cp="🇰🇿">დროშა</annotation>
-		<annotation cp="🇰🇿" type="tts">ყაზახეთი</annotation>
+		<annotation cp="🇰🇿" type="tts">დროშა: ყაზახეთი</annotation>
 		<annotation cp="🇱🇦">დროშა</annotation>
-		<annotation cp="🇱🇦" type="tts">ლაოსი</annotation>
+		<annotation cp="🇱🇦" type="tts">დროშა: ლაოსი</annotation>
 		<annotation cp="🇱🇧">დროშა</annotation>
-		<annotation cp="🇱🇧" type="tts">ლიბანი</annotation>
+		<annotation cp="🇱🇧" type="tts">დროშა: ლიბანი</annotation>
 		<annotation cp="🇱🇨">დროშა</annotation>
-		<annotation cp="🇱🇨" type="tts">სენტ-ლუსია</annotation>
+		<annotation cp="🇱🇨" type="tts">დროშა: სენტ-ლუსია</annotation>
 		<annotation cp="🇱🇮">დროშა</annotation>
-		<annotation cp="🇱🇮" type="tts">ლიხტენშტაინი</annotation>
+		<annotation cp="🇱🇮" type="tts">დროშა: ლიხტენშტაინი</annotation>
 		<annotation cp="🇱🇰">დროშა</annotation>
-		<annotation cp="🇱🇰" type="tts">შრი-ლანკა</annotation>
+		<annotation cp="🇱🇰" type="tts">დროშა: შრი-ლანკა</annotation>
 		<annotation cp="🇱🇷">დროშა</annotation>
-		<annotation cp="🇱🇷" type="tts">ლიბერია</annotation>
+		<annotation cp="🇱🇷" type="tts">დროშა: ლიბერია</annotation>
 		<annotation cp="🇱🇸">დროშა</annotation>
-		<annotation cp="🇱🇸" type="tts">ლესოთო</annotation>
+		<annotation cp="🇱🇸" type="tts">დროშა: ლესოთო</annotation>
 		<annotation cp="🇱🇹">დროშა</annotation>
-		<annotation cp="🇱🇹" type="tts">ლიტვა</annotation>
+		<annotation cp="🇱🇹" type="tts">დროშა: ლიტვა</annotation>
 		<annotation cp="🇱🇺">დროშა</annotation>
-		<annotation cp="🇱🇺" type="tts">ლუქსემბურგი</annotation>
+		<annotation cp="🇱🇺" type="tts">დროშა: ლუქსემბურგი</annotation>
 		<annotation cp="🇱🇻">დროშა</annotation>
-		<annotation cp="🇱🇻" type="tts">ლატვია</annotation>
+		<annotation cp="🇱🇻" type="tts">დროშა: ლატვია</annotation>
 		<annotation cp="🇱🇾">დროშა</annotation>
-		<annotation cp="🇱🇾" type="tts">ლიბია</annotation>
+		<annotation cp="🇱🇾" type="tts">დროშა: ლიბია</annotation>
 		<annotation cp="🇲🇦">დროშა</annotation>
-		<annotation cp="🇲🇦" type="tts">მაროკო</annotation>
+		<annotation cp="🇲🇦" type="tts">დროშა: მაროკო</annotation>
 		<annotation cp="🇲🇨">დროშა</annotation>
-		<annotation cp="🇲🇨" type="tts">მონაკო</annotation>
+		<annotation cp="🇲🇨" type="tts">დროშა: მონაკო</annotation>
 		<annotation cp="🇲🇩">დროშა</annotation>
-		<annotation cp="🇲🇩" type="tts">მოლდოვა</annotation>
+		<annotation cp="🇲🇩" type="tts">დროშა: მოლდოვა</annotation>
 		<annotation cp="🇲🇪">დროშა</annotation>
-		<annotation cp="🇲🇪" type="tts">მონტენეგრო</annotation>
+		<annotation cp="🇲🇪" type="tts">დროშა: მონტენეგრო</annotation>
 		<annotation cp="🇲🇫">დროშა</annotation>
-		<annotation cp="🇲🇫" type="tts">სენ-მარტენი</annotation>
+		<annotation cp="🇲🇫" type="tts">დროშა: სენ-მარტენი</annotation>
 		<annotation cp="🇲🇬">დროშა</annotation>
-		<annotation cp="🇲🇬" type="tts">მადაგასკარი</annotation>
+		<annotation cp="🇲🇬" type="tts">დროშა: მადაგასკარი</annotation>
 		<annotation cp="🇲🇭">დროშა</annotation>
-		<annotation cp="🇲🇭" type="tts">მარშალის კუნძულები</annotation>
+		<annotation cp="🇲🇭" type="tts">დროშა: მარშალის კუნძულები</annotation>
 		<annotation cp="🇲🇰">დროშა</annotation>
-		<annotation cp="🇲🇰" type="tts">მაკედონია</annotation>
+		<annotation cp="🇲🇰" type="tts">დროშა: მაკედონია</annotation>
 		<annotation cp="🇲🇱">დროშა</annotation>
-		<annotation cp="🇲🇱" type="tts">მალი</annotation>
+		<annotation cp="🇲🇱" type="tts">დროშა: მალი</annotation>
 		<annotation cp="🇲🇲">დროშა</annotation>
-		<annotation cp="🇲🇲" type="tts">მიანმარი (ბირმა)</annotation>
+		<annotation cp="🇲🇲" type="tts">დროშა: მიანმარი (ბირმა)</annotation>
 		<annotation cp="🇲🇳">დროშა</annotation>
-		<annotation cp="🇲🇳" type="tts">მონღოლეთი</annotation>
+		<annotation cp="🇲🇳" type="tts">დროშა: მონღოლეთი</annotation>
 		<annotation cp="🇲🇴">დროშა</annotation>
-		<annotation cp="🇲🇴" type="tts">მაკაოს სპეციალური ადმინისტრაციული რეგიონი ჩინეთი</annotation>
+		<annotation cp="🇲🇴" type="tts">დროშა: მაკაოს სპეციალური ადმინისტრაციული რეგიონი ჩინეთი</annotation>
 		<annotation cp="🇲🇵">დროშა</annotation>
-		<annotation cp="🇲🇵" type="tts">ჩრდილოეთ მარიანას კუნძულები</annotation>
+		<annotation cp="🇲🇵" type="tts">დროშა: ჩრდილოეთ მარიანას კუნძულები</annotation>
 		<annotation cp="🇲🇶">დროშა</annotation>
-		<annotation cp="🇲🇶" type="tts">მარტინიკა</annotation>
+		<annotation cp="🇲🇶" type="tts">დროშა: მარტინიკა</annotation>
 		<annotation cp="🇲🇷">დროშა</annotation>
-		<annotation cp="🇲🇷" type="tts">მავრიტანია</annotation>
+		<annotation cp="🇲🇷" type="tts">დროშა: მავრიტანია</annotation>
 		<annotation cp="🇲🇸">დროშა</annotation>
-		<annotation cp="🇲🇸" type="tts">მონსერატი</annotation>
+		<annotation cp="🇲🇸" type="tts">დროშა: მონსერატი</annotation>
 		<annotation cp="🇲🇹">დროშა</annotation>
-		<annotation cp="🇲🇹" type="tts">მალტა</annotation>
+		<annotation cp="🇲🇹" type="tts">დროშა: მალტა</annotation>
 		<annotation cp="🇲🇺">დროშა</annotation>
-		<annotation cp="🇲🇺" type="tts">მავრიკი</annotation>
+		<annotation cp="🇲🇺" type="tts">დროშა: მავრიკი</annotation>
 		<annotation cp="🇲🇻">დროშა</annotation>
-		<annotation cp="🇲🇻" type="tts">მალდივები</annotation>
+		<annotation cp="🇲🇻" type="tts">დროშა: მალდივები</annotation>
 		<annotation cp="🇲🇼">დროშა</annotation>
-		<annotation cp="🇲🇼" type="tts">მალავი</annotation>
+		<annotation cp="🇲🇼" type="tts">დროშა: მალავი</annotation>
 		<annotation cp="🇲🇽">დროშა</annotation>
-		<annotation cp="🇲🇽" type="tts">მექსიკა</annotation>
+		<annotation cp="🇲🇽" type="tts">დროშა: მექსიკა</annotation>
 		<annotation cp="🇲🇾">დროშა</annotation>
-		<annotation cp="🇲🇾" type="tts">მალაიზია</annotation>
+		<annotation cp="🇲🇾" type="tts">დროშა: მალაიზია</annotation>
 		<annotation cp="🇲🇿">დროშა</annotation>
-		<annotation cp="🇲🇿" type="tts">მოზამბიკი</annotation>
+		<annotation cp="🇲🇿" type="tts">დროშა: მოზამბიკი</annotation>
 		<annotation cp="🇳🇦">დროშა</annotation>
-		<annotation cp="🇳🇦" type="tts">ნამიბია</annotation>
+		<annotation cp="🇳🇦" type="tts">დროშა: ნამიბია</annotation>
 		<annotation cp="🇳🇨">დროშა</annotation>
-		<annotation cp="🇳🇨" type="tts">ახალი კალედონია</annotation>
+		<annotation cp="🇳🇨" type="tts">დროშა: ახალი კალედონია</annotation>
 		<annotation cp="🇳🇪">დროშა</annotation>
-		<annotation cp="🇳🇪" type="tts">ნიგერი</annotation>
+		<annotation cp="🇳🇪" type="tts">დროშა: ნიგერი</annotation>
 		<annotation cp="🇳🇫">დროშა</annotation>
-		<annotation cp="🇳🇫" type="tts">ნორფოლკის კუნძული</annotation>
+		<annotation cp="🇳🇫" type="tts">დროშა: ნორფოლკის კუნძული</annotation>
 		<annotation cp="🇳🇬">დროშა</annotation>
-		<annotation cp="🇳🇬" type="tts">ნიგერია</annotation>
+		<annotation cp="🇳🇬" type="tts">დროშა: ნიგერია</annotation>
 		<annotation cp="🇳🇮">დროშა</annotation>
-		<annotation cp="🇳🇮" type="tts">ნიკარაგუა</annotation>
+		<annotation cp="🇳🇮" type="tts">დროშა: ნიკარაგუა</annotation>
 		<annotation cp="🇳🇱">დროშა</annotation>
-		<annotation cp="🇳🇱" type="tts">ნიდერლანდები</annotation>
+		<annotation cp="🇳🇱" type="tts">დროშა: ნიდერლანდები</annotation>
 		<annotation cp="🇳🇴">დროშა</annotation>
-		<annotation cp="🇳🇴" type="tts">ნორვეგია</annotation>
+		<annotation cp="🇳🇴" type="tts">დროშა: ნორვეგია</annotation>
 		<annotation cp="🇳🇵">დროშა</annotation>
-		<annotation cp="🇳🇵" type="tts">ნეპალი</annotation>
+		<annotation cp="🇳🇵" type="tts">დროშა: ნეპალი</annotation>
 		<annotation cp="🇳🇷">დროშა</annotation>
-		<annotation cp="🇳🇷" type="tts">ნაურუ</annotation>
+		<annotation cp="🇳🇷" type="tts">დროშა: ნაურუ</annotation>
 		<annotation cp="🇳🇺">დროშა</annotation>
-		<annotation cp="🇳🇺" type="tts">ნიუე</annotation>
+		<annotation cp="🇳🇺" type="tts">დროშა: ნიუე</annotation>
 		<annotation cp="🇳🇿">დროშა</annotation>
-		<annotation cp="🇳🇿" type="tts">ახალი ზელანდია</annotation>
+		<annotation cp="🇳🇿" type="tts">დროშა: ახალი ზელანდია</annotation>
 		<annotation cp="🇴🇲">დროშა</annotation>
-		<annotation cp="🇴🇲" type="tts">ომანი</annotation>
+		<annotation cp="🇴🇲" type="tts">დროშა: ომანი</annotation>
 		<annotation cp="🇵🇦">დროშა</annotation>
-		<annotation cp="🇵🇦" type="tts">პანამა</annotation>
+		<annotation cp="🇵🇦" type="tts">დროშა: პანამა</annotation>
 		<annotation cp="🇵🇪">დროშა</annotation>
-		<annotation cp="🇵🇪" type="tts">პერუ</annotation>
+		<annotation cp="🇵🇪" type="tts">დროშა: პერუ</annotation>
 		<annotation cp="🇵🇫">დროშა</annotation>
-		<annotation cp="🇵🇫" type="tts">საფრანგეთის პოლინეზია</annotation>
+		<annotation cp="🇵🇫" type="tts">დროშა: საფრანგეთის პოლინეზია</annotation>
 		<annotation cp="🇵🇬">დროშა</annotation>
-		<annotation cp="🇵🇬" type="tts">პაპუა-ახალი გვინეა</annotation>
+		<annotation cp="🇵🇬" type="tts">დროშა: პაპუა-ახალი გვინეა</annotation>
 		<annotation cp="🇵🇭">დროშა</annotation>
-		<annotation cp="🇵🇭" type="tts">ფილიპინები</annotation>
+		<annotation cp="🇵🇭" type="tts">დროშა: ფილიპინები</annotation>
 		<annotation cp="🇵🇰">დროშა</annotation>
-		<annotation cp="🇵🇰" type="tts">პაკისტანი</annotation>
+		<annotation cp="🇵🇰" type="tts">დროშა: პაკისტანი</annotation>
 		<annotation cp="🇵🇱">დროშა</annotation>
-		<annotation cp="🇵🇱" type="tts">პოლონეთი</annotation>
+		<annotation cp="🇵🇱" type="tts">დროშა: პოლონეთი</annotation>
 		<annotation cp="🇵🇲">დროშა</annotation>
-		<annotation cp="🇵🇲" type="tts">სენ-პიერი და მიკელონი</annotation>
+		<annotation cp="🇵🇲" type="tts">დროშა: სენ-პიერი და მიკელონი</annotation>
 		<annotation cp="🇵🇳">დროშა</annotation>
-		<annotation cp="🇵🇳" type="tts">პიტკერნის კუნძულები</annotation>
+		<annotation cp="🇵🇳" type="tts">დროშა: პიტკერნის კუნძულები</annotation>
 		<annotation cp="🇵🇷">დროშა</annotation>
-		<annotation cp="🇵🇷" type="tts">პუერტო-რიკო</annotation>
+		<annotation cp="🇵🇷" type="tts">დროშა: პუერტო-რიკო</annotation>
 		<annotation cp="🇵🇸">დროშა</annotation>
-		<annotation cp="🇵🇸" type="tts">პალესტინის ტერიტორიები</annotation>
+		<annotation cp="🇵🇸" type="tts">დროშა: პალესტინის ტერიტორიები</annotation>
 		<annotation cp="🇵🇹">დროშა</annotation>
-		<annotation cp="🇵🇹" type="tts">პორტუგალია</annotation>
+		<annotation cp="🇵🇹" type="tts">დროშა: პორტუგალია</annotation>
 		<annotation cp="🇵🇼">დროშა</annotation>
-		<annotation cp="🇵🇼" type="tts">პალაუ</annotation>
+		<annotation cp="🇵🇼" type="tts">დროშა: პალაუ</annotation>
 		<annotation cp="🇵🇾">დროშა</annotation>
-		<annotation cp="🇵🇾" type="tts">პარაგვაი</annotation>
+		<annotation cp="🇵🇾" type="tts">დროშა: პარაგვაი</annotation>
 		<annotation cp="🇶🇦">დროშა</annotation>
-		<annotation cp="🇶🇦" type="tts">კატარი</annotation>
+		<annotation cp="🇶🇦" type="tts">დროშა: კატარი</annotation>
 		<annotation cp="🇷🇪">დროშა</annotation>
-		<annotation cp="🇷🇪" type="tts">რეუნიონი</annotation>
+		<annotation cp="🇷🇪" type="tts">დროშა: რეუნიონი</annotation>
 		<annotation cp="🇷🇴">დროშა</annotation>
-		<annotation cp="🇷🇴" type="tts">რუმინეთი</annotation>
+		<annotation cp="🇷🇴" type="tts">დროშა: რუმინეთი</annotation>
 		<annotation cp="🇷🇸">დროშა</annotation>
-		<annotation cp="🇷🇸" type="tts">სერბეთი</annotation>
+		<annotation cp="🇷🇸" type="tts">დროშა: სერბეთი</annotation>
 		<annotation cp="🇷🇺">დროშა</annotation>
-		<annotation cp="🇷🇺" type="tts">რუსეთი</annotation>
+		<annotation cp="🇷🇺" type="tts">დროშა: რუსეთი</annotation>
 		<annotation cp="🇷🇼">დროშა</annotation>
-		<annotation cp="🇷🇼" type="tts">რუანდა</annotation>
+		<annotation cp="🇷🇼" type="tts">დროშა: რუანდა</annotation>
 		<annotation cp="🇸🇦">დროშა</annotation>
-		<annotation cp="🇸🇦" type="tts">საუდის არაბეთი</annotation>
+		<annotation cp="🇸🇦" type="tts">დროშა: საუდის არაბეთი</annotation>
 		<annotation cp="🇸🇧">დროშა</annotation>
-		<annotation cp="🇸🇧" type="tts">სოლომონის კუნძულები</annotation>
+		<annotation cp="🇸🇧" type="tts">დროშა: სოლომონის კუნძულები</annotation>
 		<annotation cp="🇸🇨">დროშა</annotation>
-		<annotation cp="🇸🇨" type="tts">სეიშელის კუნძულები</annotation>
+		<annotation cp="🇸🇨" type="tts">დროშა: სეიშელის კუნძულები</annotation>
 		<annotation cp="🇸🇩">დროშა</annotation>
-		<annotation cp="🇸🇩" type="tts">სუდანი</annotation>
+		<annotation cp="🇸🇩" type="tts">დროშა: სუდანი</annotation>
 		<annotation cp="🇸🇪">დროშა</annotation>
-		<annotation cp="🇸🇪" type="tts">შვედეთი</annotation>
+		<annotation cp="🇸🇪" type="tts">დროშა: შვედეთი</annotation>
 		<annotation cp="🇸🇬">დროშა</annotation>
-		<annotation cp="🇸🇬" type="tts">სინგაპური</annotation>
+		<annotation cp="🇸🇬" type="tts">დროშა: სინგაპური</annotation>
 		<annotation cp="🇸🇭">დროშა</annotation>
-		<annotation cp="🇸🇭" type="tts">წმინდა ელენეს კუნძული</annotation>
+		<annotation cp="🇸🇭" type="tts">დროშა: წმინდა ელენეს კუნძული</annotation>
 		<annotation cp="🇸🇮">დროშა</annotation>
-		<annotation cp="🇸🇮" type="tts">სლოვენია</annotation>
+		<annotation cp="🇸🇮" type="tts">დროშა: სლოვენია</annotation>
 		<annotation cp="🇸🇯">დროშა</annotation>
-		<annotation cp="🇸🇯" type="tts">შპიცბერგენი და იან-მაიენი</annotation>
+		<annotation cp="🇸🇯" type="tts">დროშა: შპიცბერგენი და იან-მაიენი</annotation>
 		<annotation cp="🇸🇰">დროშა</annotation>
-		<annotation cp="🇸🇰" type="tts">სლოვაკეთი</annotation>
+		<annotation cp="🇸🇰" type="tts">დროშა: სლოვაკეთი</annotation>
 		<annotation cp="🇸🇱">დროშა</annotation>
-		<annotation cp="🇸🇱" type="tts">სიერა-ლეონე</annotation>
+		<annotation cp="🇸🇱" type="tts">დროშა: სიერა-ლეონე</annotation>
 		<annotation cp="🇸🇲">დროშა</annotation>
-		<annotation cp="🇸🇲" type="tts">სან-მარინო</annotation>
+		<annotation cp="🇸🇲" type="tts">დროშა: სან-მარინო</annotation>
 		<annotation cp="🇸🇳">დროშა</annotation>
-		<annotation cp="🇸🇳" type="tts">სენეგალი</annotation>
+		<annotation cp="🇸🇳" type="tts">დროშა: სენეგალი</annotation>
 		<annotation cp="🇸🇴">დროშა</annotation>
-		<annotation cp="🇸🇴" type="tts">სომალი</annotation>
+		<annotation cp="🇸🇴" type="tts">დროშა: სომალი</annotation>
 		<annotation cp="🇸🇷">დროშა</annotation>
-		<annotation cp="🇸🇷" type="tts">სურინამი</annotation>
+		<annotation cp="🇸🇷" type="tts">დროშა: სურინამი</annotation>
 		<annotation cp="🇸🇸">დროშა</annotation>
-		<annotation cp="🇸🇸" type="tts">სამხრეთ სუდანი</annotation>
+		<annotation cp="🇸🇸" type="tts">დროშა: სამხრეთ სუდანი</annotation>
 		<annotation cp="🇸🇹">დროშა</annotation>
-		<annotation cp="🇸🇹" type="tts">სან-ტომე და პრინსიპი</annotation>
+		<annotation cp="🇸🇹" type="tts">დროშა: სან-ტომე და პრინსიპი</annotation>
 		<annotation cp="🇸🇻">დროშა</annotation>
-		<annotation cp="🇸🇻" type="tts">სალვადორი</annotation>
+		<annotation cp="🇸🇻" type="tts">დროშა: სალვადორი</annotation>
 		<annotation cp="🇸🇽">დროშა</annotation>
-		<annotation cp="🇸🇽" type="tts">სინტ-მარტენი</annotation>
+		<annotation cp="🇸🇽" type="tts">დროშა: სინტ-მარტენი</annotation>
 		<annotation cp="🇸🇾">დროშა</annotation>
-		<annotation cp="🇸🇾" type="tts">სირია</annotation>
+		<annotation cp="🇸🇾" type="tts">დროშა: სირია</annotation>
 		<annotation cp="🇸🇿">დროშა</annotation>
-		<annotation cp="🇸🇿" type="tts">სვაზილენდი</annotation>
+		<annotation cp="🇸🇿" type="tts">დროშა: სვაზილენდი</annotation>
 		<annotation cp="🇹🇦">დროშა</annotation>
-		<annotation cp="🇹🇦" type="tts">ტრისტან-და-კუნია</annotation>
+		<annotation cp="🇹🇦" type="tts">დროშა: ტრისტან-და-კუნია</annotation>
 		<annotation cp="🇹🇨">დროშა</annotation>
-		<annotation cp="🇹🇨" type="tts">თერქს-ქაიქოსის კუნძულები</annotation>
+		<annotation cp="🇹🇨" type="tts">დროშა: თერქს-ქაიქოსის კუნძულები</annotation>
 		<annotation cp="🇹🇩">დროშა</annotation>
-		<annotation cp="🇹🇩" type="tts">ჩადი</annotation>
+		<annotation cp="🇹🇩" type="tts">დროშა: ჩადი</annotation>
 		<annotation cp="🇹🇫">დროშა</annotation>
-		<annotation cp="🇹🇫" type="tts">ფრანგული სამხრეთის ტერიტორიები</annotation>
+		<annotation cp="🇹🇫" type="tts">დროშა: ფრანგული სამხრეთის ტერიტორიები</annotation>
 		<annotation cp="🇹🇬">დროშა</annotation>
-		<annotation cp="🇹🇬" type="tts">ტოგო</annotation>
+		<annotation cp="🇹🇬" type="tts">დროშა: ტოგო</annotation>
 		<annotation cp="🇹🇭">დროშა</annotation>
-		<annotation cp="🇹🇭" type="tts">ტაილანდი</annotation>
+		<annotation cp="🇹🇭" type="tts">დროშა: ტაილანდი</annotation>
 		<annotation cp="🇹🇯">დროშა</annotation>
-		<annotation cp="🇹🇯" type="tts">ტაჯიკეთი</annotation>
+		<annotation cp="🇹🇯" type="tts">დროშა: ტაჯიკეთი</annotation>
 		<annotation cp="🇹🇰">დროშა</annotation>
-		<annotation cp="🇹🇰" type="tts">ტოკელაუ</annotation>
+		<annotation cp="🇹🇰" type="tts">დროშა: ტოკელაუ</annotation>
 		<annotation cp="🇹🇱">დროშა</annotation>
-		<annotation cp="🇹🇱" type="tts">ტიმორ-ლესტე</annotation>
+		<annotation cp="🇹🇱" type="tts">დროშა: ტიმორ-ლესტე</annotation>
 		<annotation cp="🇹🇲">დროშა</annotation>
-		<annotation cp="🇹🇲" type="tts">თურქმენეთი</annotation>
+		<annotation cp="🇹🇲" type="tts">დროშა: თურქმენეთი</annotation>
 		<annotation cp="🇹🇳">დროშა</annotation>
-		<annotation cp="🇹🇳" type="tts">ტუნისი</annotation>
+		<annotation cp="🇹🇳" type="tts">დროშა: ტუნისი</annotation>
 		<annotation cp="🇹🇴">დროშა</annotation>
-		<annotation cp="🇹🇴" type="tts">ტონგა</annotation>
+		<annotation cp="🇹🇴" type="tts">დროშა: ტონგა</annotation>
 		<annotation cp="🇹🇷">დროშა</annotation>
-		<annotation cp="🇹🇷" type="tts">თურქეთი</annotation>
+		<annotation cp="🇹🇷" type="tts">დროშა: თურქეთი</annotation>
 		<annotation cp="🇹🇹">დროშა</annotation>
-		<annotation cp="🇹🇹" type="tts">ტრინიდადი და ტობაგო</annotation>
+		<annotation cp="🇹🇹" type="tts">დროშა: ტრინიდადი და ტობაგო</annotation>
 		<annotation cp="🇹🇻">დროშა</annotation>
-		<annotation cp="🇹🇻" type="tts">ტუვალუ</annotation>
+		<annotation cp="🇹🇻" type="tts">დროშა: ტუვალუ</annotation>
 		<annotation cp="🇹🇼">დროშა</annotation>
-		<annotation cp="🇹🇼" type="tts">ტაივანი</annotation>
+		<annotation cp="🇹🇼" type="tts">დროშა: ტაივანი</annotation>
 		<annotation cp="🇹🇿">დროშა</annotation>
-		<annotation cp="🇹🇿" type="tts">ტანზანია</annotation>
+		<annotation cp="🇹🇿" type="tts">დროშა: ტანზანია</annotation>
 		<annotation cp="🇺🇦">დროშა</annotation>
-		<annotation cp="🇺🇦" type="tts">უკრაინა</annotation>
+		<annotation cp="🇺🇦" type="tts">დროშა: უკრაინა</annotation>
 		<annotation cp="🇺🇬">დროშა</annotation>
-		<annotation cp="🇺🇬" type="tts">უგანდა</annotation>
+		<annotation cp="🇺🇬" type="tts">დროშა: უგანდა</annotation>
 		<annotation cp="🇺🇲">დროშა</annotation>
-		<annotation cp="🇺🇲" type="tts">აშშ-ის შორეული კუნძულები</annotation>
+		<annotation cp="🇺🇲" type="tts">დროშა: აშშ-ის შორეული კუნძულები</annotation>
 		<annotation cp="🇺🇳">დროშა</annotation>
-		<annotation cp="🇺🇳" type="tts">გაერო</annotation>
+		<annotation cp="🇺🇳" type="tts">დროშა: გაერო</annotation>
 		<annotation cp="🇺🇸">დროშა</annotation>
-		<annotation cp="🇺🇸" type="tts">ამერიკის შეერთებული შტატები</annotation>
+		<annotation cp="🇺🇸" type="tts">დროშა: ამერიკის შეერთებული შტატები</annotation>
 		<annotation cp="🇺🇾">დროშა</annotation>
-		<annotation cp="🇺🇾" type="tts">ურუგვაი</annotation>
+		<annotation cp="🇺🇾" type="tts">დროშა: ურუგვაი</annotation>
 		<annotation cp="🇺🇿">დროშა</annotation>
-		<annotation cp="🇺🇿" type="tts">უზბეკეთი</annotation>
+		<annotation cp="🇺🇿" type="tts">დროშა: უზბეკეთი</annotation>
 		<annotation cp="🇻🇦">დროშა</annotation>
-		<annotation cp="🇻🇦" type="tts">ქალაქი ვატიკანი</annotation>
+		<annotation cp="🇻🇦" type="tts">დროშა: ქალაქი ვატიკანი</annotation>
 		<annotation cp="🇻🇨">დროშა</annotation>
-		<annotation cp="🇻🇨" type="tts">სენტ-ვინსენტი და გრენადინები</annotation>
+		<annotation cp="🇻🇨" type="tts">დროშა: სენტ-ვინსენტი და გრენადინები</annotation>
 		<annotation cp="🇻🇪">დროშა</annotation>
-		<annotation cp="🇻🇪" type="tts">ვენესუელა</annotation>
+		<annotation cp="🇻🇪" type="tts">დროშა: ვენესუელა</annotation>
 		<annotation cp="🇻🇬">დროშა</annotation>
-		<annotation cp="🇻🇬" type="tts">ბრიტანეთის ვირჯინის კუნძულები</annotation>
+		<annotation cp="🇻🇬" type="tts">დროშა: ბრიტანეთის ვირჯინის კუნძულები</annotation>
 		<annotation cp="🇻🇮">დროშა</annotation>
-		<annotation cp="🇻🇮" type="tts">აშშ-ის ვირჯინის კუნძულები</annotation>
+		<annotation cp="🇻🇮" type="tts">დროშა: აშშ-ის ვირჯინის კუნძულები</annotation>
 		<annotation cp="🇻🇳">დროშა</annotation>
-		<annotation cp="🇻🇳" type="tts">ვიეტნამი</annotation>
+		<annotation cp="🇻🇳" type="tts">დროშა: ვიეტნამი</annotation>
 		<annotation cp="🇻🇺">დროშა</annotation>
-		<annotation cp="🇻🇺" type="tts">ვანუატუ</annotation>
+		<annotation cp="🇻🇺" type="tts">დროშა: ვანუატუ</annotation>
 		<annotation cp="🇼🇫">დროშა</annotation>
-		<annotation cp="🇼🇫" type="tts">უოლისი და ფუტუნა</annotation>
+		<annotation cp="🇼🇫" type="tts">დროშა: უოლისი და ფუტუნა</annotation>
 		<annotation cp="🇼🇸">დროშა</annotation>
-		<annotation cp="🇼🇸" type="tts">სამოა</annotation>
+		<annotation cp="🇼🇸" type="tts">დროშა: სამოა</annotation>
 		<annotation cp="🇽🇰">დროშა</annotation>
-		<annotation cp="🇽🇰" type="tts">კოსოვო</annotation>
+		<annotation cp="🇽🇰" type="tts">დროშა: კოსოვო</annotation>
 		<annotation cp="🇾🇪">დროშა</annotation>
-		<annotation cp="🇾🇪" type="tts">იემენი</annotation>
+		<annotation cp="🇾🇪" type="tts">დროშა: იემენი</annotation>
 		<annotation cp="🇾🇹">დროშა</annotation>
-		<annotation cp="🇾🇹" type="tts">მაიოტა</annotation>
+		<annotation cp="🇾🇹" type="tts">დროშა: მაიოტა</annotation>
 		<annotation cp="🇿🇦">დროშა</annotation>
-		<annotation cp="🇿🇦" type="tts">სამხრეთ აფრიკის რესპუბლიკა</annotation>
+		<annotation cp="🇿🇦" type="tts">დროშა: სამხრეთ აფრიკის რესპუბლიკა</annotation>
 		<annotation cp="🇿🇲">დროშა</annotation>
-		<annotation cp="🇿🇲" type="tts">ზამბია</annotation>
+		<annotation cp="🇿🇲" type="tts">დროშა: ზამბია</annotation>
 		<annotation cp="🇿🇼">დროშა</annotation>
-		<annotation cp="🇿🇼" type="tts">ზიმბაბვე</annotation>
+		<annotation cp="🇿🇼" type="tts">დროშა: ზიმბაბვე</annotation>
 		<annotation cp="🏴󠁧󠁢󠁥󠁮󠁧󠁿">დროშა</annotation>
-		<annotation cp="🏴󠁧󠁢󠁥󠁮󠁧󠁿" type="tts">ინგლისი</annotation>
+		<annotation cp="🏴󠁧󠁢󠁥󠁮󠁧󠁿" type="tts">დროშა: ინგლისი</annotation>
 		<annotation cp="🏴󠁧󠁢󠁳󠁣󠁴󠁿">დროშა</annotation>
-		<annotation cp="🏴󠁧󠁢󠁳󠁣󠁴󠁿" type="tts">შოტლანდია</annotation>
+		<annotation cp="🏴󠁧󠁢󠁳󠁣󠁴󠁿" type="tts">დროშა: შოტლანდია</annotation>
 		<annotation cp="🏴󠁧󠁢󠁷󠁬󠁳󠁿">დროშა</annotation>
-		<annotation cp="🏴󠁧󠁢󠁷󠁬󠁳󠁿" type="tts">უელსი</annotation>
+		<annotation cp="🏴󠁧󠁢󠁷󠁬󠁳󠁿" type="tts">დროშა: უელსი</annotation>
+		<annotation cp="0⃣">კლავიში</annotation>
+		<annotation cp="0⃣" type="tts">კლავიში: 0</annotation>
+		<annotation cp="1⃣">კლავიში</annotation>
+		<annotation cp="1⃣" type="tts">კლავიში: 1</annotation>
+		<annotation cp="2⃣">კლავიში</annotation>
+		<annotation cp="2⃣" type="tts">კლავიში: 2</annotation>
+		<annotation cp="3⃣">კლავიში</annotation>
+		<annotation cp="3⃣" type="tts">კლავიში: 3</annotation>
+		<annotation cp="4⃣">კლავიში</annotation>
+		<annotation cp="4⃣" type="tts">კლავიში: 4</annotation>
+		<annotation cp="5⃣">კლავიში</annotation>
+		<annotation cp="5⃣" type="tts">კლავიში: 5</annotation>
+		<annotation cp="6⃣">კლავიში</annotation>
+		<annotation cp="6⃣" type="tts">კლავიში: 6</annotation>
+		<annotation cp="7⃣">კლავიში</annotation>
+		<annotation cp="7⃣" type="tts">კლავიში: 7</annotation>
+		<annotation cp="8⃣">კლავიში</annotation>
+		<annotation cp="8⃣" type="tts">კლავიში: 8</annotation>
+		<annotation cp="9⃣">კლავიში</annotation>
+		<annotation cp="9⃣" type="tts">კლავიში: 9</annotation>
 	</annotations>
 </ldml>
