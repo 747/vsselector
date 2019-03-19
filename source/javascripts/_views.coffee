@@ -383,10 +383,28 @@ SearchBox =
     m.withAttr 'value', query.input
   key: (e)->
     e.redraw = false
-    if SearchBox.keypressHappened and (e.key is 'Enter' or e.keyCode is 13 or e.which is 13)
-      SearchBox.clearSuggestions()
-      query.input e.currentTarget.value
-      query.fetch()
+    if SearchBox.suggestionsCache.length > 0
+      last = SearchBox.suggestionsCache.length - 1
+      curr = SearchBox.selecting
+      rebuild = ->
+        SearchBox.suggestionsCache = SearchBox.buildSuggestions()
+        SearchBox.keypressHappened = false
+        m.redraw()
+
+    if e.key is 'Enter' or e.keyCode is 13 or e.which is 13
+      if SearchBox.keypressHappened
+        return SearchBox.replaceBySuggestion SearchBox.suggestionsCache[curr].attrs['data-char'] if curr?
+        SearchBox.clearSuggestions()
+        query.input e.currentTarget.value
+        query.fetch()
+    else if e.key is 'ArrowDown' or e.keyCode is 40 or e.which is 40
+      if last?
+        SearchBox.selecting = if not curr? or curr >= last then 0 else curr + 1
+        return rebuild()
+    else if e.key is 'ArrowUp' or e.keyCode is 38 or e.which is 38
+      if last?
+        SearchBox.selecting = if not curr? or curr <= 0 then last else curr - 1
+        return rebuild()
     else
       query.input e.currentTarget.value
     SearchBox.buffer.update()
@@ -410,6 +428,7 @@ SearchBox =
         value: query.box
         onchange: SearchBox.f()
         onkeypress: SearchBox.keypress
+        oninput: SearchBox.key
         onkeyup: SearchBox.key
         onpaste: SearchBox.f()
       m '#autocomplete.panel.has-background-white', SearchBox.suggestionsCache
