@@ -41,7 +41,7 @@ CharTag =
     d = e.target.parentElement.dataset
     signboard.del d.pos, d.width
   view: (v)->
-    c = v.attrs.code
+    c = +v.attrs.code
     color = if c.isFunctionalCodePoint() then 'is-success' else 'is-info'
     m 'span.tag', class: color, 'data-pos': v.attrs.pos, 'data-width': v.attrs.width, c.toUpperU(),
       m 'button.delete.is-small.delete-char',
@@ -221,7 +221,7 @@ CharTab =
     w = v.attrs.codes
     x = +v.attrs.num
     active = (n)-> if n is x then 'is-active' else undefined
-    empty = (n)-> if query.results[n]? then undefined else 'has-background-warning'
+    empty = (n)-> if query.results[n]? then undefined else 'has-background-grey-lighter'
     link = (n)-> if n is x then undefined else m.withAttr('data-idx', query.show)
     m 'div#chartabs.tabs.is-boxed', m 'ul', do ->
       for ch, i in w
@@ -236,7 +236,7 @@ CharTab =
 
 External =
   view: (v)->
-    id = v.attrs.code
+    id = +v.attrs.code
     m 'div.message.is-info', m 'p.message-body', do ->
       list = []
       for s, i in External.sites
@@ -493,7 +493,7 @@ SearchBox =
               loss += len
           fragment
         m 'a.autocomplete-item.panel-block',
-          class: if SearchBox.selecting is i then 'is-active' else ''
+          class: if SearchBox.selecting is i then 'has-background-link has-text-white' else ''
           'data-char': it.value
           onclick: SearchBox.insert()
           ontouchstart: SearchBox.insert()
