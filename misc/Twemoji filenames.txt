@@ -220,3 +220,4 @@ ae.svg should be ae-fe0f.svg (fully-qualified) ®️
 # addition
 265f.svg should be 265f-fe0f.svg # since 11.0
 267e.svg should be 267e-fe0f.svg # since 11.0
+267f.svg should be 267f-fe0f.svg
