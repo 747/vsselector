@@ -5,7 +5,8 @@
 ### Pre-defined variables
 # TYPES = (index-to-type name mapping)
 # COLLS = (index-to-collection name mapping)
-# BASE_IDX = COLLS.indexOf("base")
+# NAMES = (valid IVD collection names)
+# MISSING = (emoji codes missing from the main glyph lib)
 ###
 
 #::: Header :::#
@@ -284,10 +285,12 @@ Row =
               'コピー'
       do ->
         if seq
+          code = seq.eachToHex().join('-')
+          path = if MISSING.indexOf(code) > 0 then "./images/te/supp/#{code}.png" else "./images/te/#{code}.svg"
           [
             m 'td', colSpan: 2, seq.eachToUpperU().join ' '
             m 'td.glyph-col',
-              m 'img.glyph', src: "./images/te/#{seq.eachToHex().join('-')}.svg"
+              m 'img.glyph', src: path
             m 'td', colSpan: 2, name
           ]
         else
@@ -301,7 +304,8 @@ Row =
                     when "ideograph", "compat"
                       "https://glyphwiki.org/glyph/u#{if base then base.toLowerU() + '-u' else ''}#{id.toLowerU()}.svg"
                     when "emoji"
-                      "./images/te/#{if base then base.toString(16) + '-' else ''}#{id.toString(16)}.svg"
+                      code = "#{if base then base.toString(16) + '-' else ''}#{id.toString(16)}"
+                      if MISSING.indexOf(code) > 0 then "./images/te/supp/#{code}.png" else "./images/te/#{code}.svg"
                     else "./images/noimage.png"
             m 'td', do ->
               if cid then m 'span', class: cid, cid

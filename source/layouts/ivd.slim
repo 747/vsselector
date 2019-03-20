@@ -10,7 +10,7 @@ html lang='ja'
       TYPES = [#{data.types.categories.map{|t|%Q("#{t}")}.join(',')}];
       COLLS = [#{data.types.collections.map{|t|%Q("#{t}")}.join(',')}];
       NAMES = [#{data.knownnames.ivdcollections.map{|t|%Q("#{t}")}.join(',')}];
-      // BASE_IDX = COLLS.indexOf("base");
+      MISSING = [#{data.tempmissing.codes.map{|t|%Q("#{t}")}.join(',')}];
     = javascript_include_tag("library").gsub('src="/', 'src="./')
     / ^ very dirty, need work
   body#view

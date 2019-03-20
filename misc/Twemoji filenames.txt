@@ -216,3 +216,7 @@ ae.svg should be ae-fe0f.svg (fully-qualified) ®️
 303d.svg should be 303d-fe0f.svg (fully-qualified) 〽️
 3297.svg should be 3297-fe0f.svg (fully-qualified) ㊗️
 3299.svg should be 3299-fe0f.svg (fully-qualified) ㊙️
+
+# addition
+265f.svg should be 265f-fe0f.svg # since 11.0
+267e.svg should be 267e-fe0f.svg # since 11.0
