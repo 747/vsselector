@@ -418,7 +418,7 @@ SearchBox =
   view: ->
     [
       m 'input#searchbox.input[type=text]',
-        placeholder: "例：邊、270B…"
+        placeholder: "例　1F468:ハート:葛飾"
         value: query.box
         onchange: SearchBox.f()
         onkeypress: SearchBox.keypress
