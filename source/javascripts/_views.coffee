@@ -519,12 +519,17 @@ Search =
           m 'p.has-text-weight-bold.control.level-item',
             m 'span#selectcol', 'コレクションを指定 (IVS)'
           for ivd in NAMES
-            m 'label.level-item.fixed-inline-block.control.checkbox',
-              m 'input.search-filter[type=checkbox]',
+            m '.level-item.collection-selector.control.checkbox',
+              m 'input.is-checkradio.is-block.is-success.search-filter[type=checkbox]',
                 name: ivd
                 onclick: m.withAttr 'name', query.filter
+                ontouchstart: m.withAttr 'name', query.filter
                 checked: query.allowed ivd
-              m 'span.collection-selector-desc', ivd
+              m 'label.collection-selector-desc',
+                for: ivd,
+                onclick: m.withAttr 'for', query.filter # because it shadows the checkbox
+                ontouchstart: m.withAttr 'for', query.filter
+                ivd
       m VResult
 
 #::: Main App :::#

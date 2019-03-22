@@ -5,6 +5,9 @@ $message-header-body-border-width: 0 2px 2px 0
 
 @import "_bulma"
 /* end Bulma */
+/* begin Bulma-checkradio */
+@import "_bulma-checkradio"
+/* end Bulma-checkradio */
 
 #view
   background: $white-bis
@@ -115,5 +118,13 @@ $td-x-paddings: nth($table-cell-padding, 2) * 2
 
 .touch-picker-leader
   width: 100% // hack to make it centered; is there any other way?
-.collection-selector-desc::before
-  content: '\A0' // hack to compensate for implicit spaces eaten by .level-item (display: flex)
+.collection-selector
+  margin-bottom: 0 !important
+
+  .collection-selector-desc
+    +mobile
+      margin-top: 0 !important
+      margin-bottom: 0.1em !important
+// no longer needed with checkradio extension
+// .collection-selector-desc::before
+//   content: '\A0' // hack to compensate for implicit spaces eaten by .level-item (display: flex)
