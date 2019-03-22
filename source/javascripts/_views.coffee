@@ -22,7 +22,6 @@ Header =
         # below are quickfix for mobile view in current ver of Bulma CSS
         m 'a.navbar-item.modality.is-hidden-desktop',
           onclick: Header.modal
-          ontouchstart: Header.modal
           '説明'
         m 'a.navbar-item.is-hidden-desktop', href: "https://github.com/747/vsselector", target: "_blank", 'GitHub'
       m '.navbar-menu',
@@ -30,7 +29,6 @@ Header =
         m '.navbar-end',
           m 'a.navbar-item.modality',
             onclick: Header.modal
-            ontouchstart: Header.modal
             '説明'
           m 'a.navbar-item', href: "https://github.com/747/vsselector", target: "_blank", 'GitHub'
 
@@ -46,7 +44,6 @@ CharTag =
     m 'span.tag', class: color, 'data-pos': v.attrs.pos, 'data-width': v.attrs.width, c.toUpperU(),
       m 'button.delete.is-small.delete-char',
         onclick: CharTag.f
-        ontouchstart: CharTag.f
 CharList =
   view: (v)->
     c = signboard.value.toCodepoints()
@@ -76,7 +73,6 @@ PickChar =
       m 'a.pick',
         'data-char': a.data.toUcs2()
         onclick: m.withAttr 'data-char', signboard.ins
-        ontouchstart: m.withAttr 'data-char', signboard.ins
         m 'img.glyph', title: a.title, alt: a.alt, src: a.src
 Toggler =
   f: (e)->
@@ -84,7 +80,6 @@ Toggler =
   view: ->
     props =
       onclick: Toggler.f
-      ontouchstart: Toggler.f
     m '#groups.tabs.is-centered.is-toggle',
       m 'ul',
         m 'li[data-tab="ivs"]', m 'a.toggler', props, 'IVS'
@@ -184,12 +179,10 @@ Social =
         m 'span#to_share.level-item', '内容をシェア'
         m 'a#twitter-share.level-item',
           onclick: (e)-> Social.share e, 'twitter'
-          ontouchstart: (e)-> Social.share e, 'twitter'
           m 'img.glyph[alt="Twitter"]',
             src: "images/Twitter_Social_Icon_Circle_Color.svg"
         m 'a#line-it.level-item',
           onclick: (e)-> Social.share e, 'line'
-          ontouchstart: (e)-> Social.share e, 'line'
           m 'img.glyph[alt="LINE"]',
             src: "images/share-d.png"
   share: (e, t)->
@@ -231,7 +224,6 @@ CharTab =
             'data-idx': i
             title: ch.toUpperU()
             onclick: link(i)
-            ontouchstart: link(i)
             ch.toUcs2()
 
 External =
@@ -264,7 +256,6 @@ Row =
               class: (if seq then 'is-small'),
               char: Row.calcChar(seq, base, id)
               onclick: m.withAttr 'char', signboard.ins
-              ontouchstart: m.withAttr 'char', signboard.ins
               '↑挿入'
           m '.control',
             m 'input.autocopy.input.has-text-centered',
@@ -317,7 +308,6 @@ Row =
     m 'tr.content.message.is-small.is-warning.seq-header',
       id: id
       onclick: m.withAttr 'id', query.toggleSeq
-      ontouchstart: m.withAttr 'id', query.toggleSeq
       m 'td.message-header[colspan=6]', txt
   oncreate: ->
     new ClipboardJS '.clipboard'
@@ -496,7 +486,6 @@ SearchBox =
           class: if SearchBox.selecting is i then 'has-background-link has-text-white' else ''
           'data-char': it.value
           onclick: SearchBox.insert()
-          ontouchstart: SearchBox.insert()
           m 'span.panel-icon.emoji-width', it.value
           m 'span', marked
           m 'span.desc.has-text-grey-light.is-size-7', it.desc
@@ -513,7 +502,6 @@ Search =
               m 'p.control',
                 m 'button#searchbutton.button.is-primary',
                   onclick: query.fetch
-                  ontouchstart: query.fetch
                   m 'span#searchlabel', '登録済の異体字を検索'
         m '.level-right',
           m 'p.has-text-weight-bold.control.level-item',
@@ -523,12 +511,10 @@ Search =
               m 'input.is-checkradio.is-block.is-success.search-filter[type=checkbox]',
                 name: ivd
                 onclick: m.withAttr 'name', query.filter
-                ontouchstart: m.withAttr 'name', query.filter
                 checked: query.allowed ivd
               m 'label.collection-selector-desc',
                 for: ivd,
                 onclick: m.withAttr 'for', query.filter # because it shadows the checkbox
-                ontouchstart: m.withAttr 'for', query.filter
                 ivd
       m VResult
 
