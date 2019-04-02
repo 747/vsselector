@@ -152,7 +152,7 @@ Picker =
                   tx = (x)-> ['red hair', 'curly hair', 'bald', 'white hair'][x]
                   for n in [0..3]
                     m PickChar,
-                      id: "fitz-#{n}"
+                      id: "ecom-#{n}"
                       data: emc n
                       title: "Emoji component #{tx(n)} (#{emc(n).formatU()})"
                       alt: tx(n).charAt(0).toUpperCase() + tx(n).slice(1)
