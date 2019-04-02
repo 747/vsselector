@@ -147,6 +147,16 @@ Picker =
                       title: "Fitzgerald #{sc(n)} (#{emo(n).formatU()})"
                       alt: "Fitz #{sc(n)}"
                       src: "./images/te/#{emo(n).toLowerU()}.svg"
+                do ->
+                  emc = (x)-> 0x1F9B0 + x
+                  tx = (x)-> ['red hair', 'curly hair', 'bald', 'white hair'][x]
+                  for n in [0..3]
+                    m PickChar,
+                      id: "fitz-#{n}"
+                      data: emc n
+                      title: "Emoji component #{tx(n)} (#{emc(n).formatU()})"
+                      alt: tx(n).charAt(0).toUpperCase() + tx(n).slice(1)
+                      src: "./images/te/supp/#{emc(n).toLowerU()}.png"
             when "util"
               m 'ul#util',
                 m PickChar,
