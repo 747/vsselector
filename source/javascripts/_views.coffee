@@ -156,7 +156,7 @@ Picker =
                       data: emc n
                       title: "Emoji component #{tx(n)} (#{emc(n).formatU()})"
                       alt: tx(n).charAt(0).toUpperCase() + tx(n).slice(1)
-                      src: "./images/te/supp/#{emc(n).toLowerU()}.png"
+                      src: "./images/te/#{emc(n).toLowerU()}.svg"
             when "util"
               m 'ul#util',
                 m PickChar,
