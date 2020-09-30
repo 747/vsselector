@@ -12,9 +12,11 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'middleman', '~> 4.0'
 gem 'middleman-sprockets'
 
-# Ruby 2.4 JSON gem incompatibility workaround...
-# https://github.com/flori/json/issues/253#issuecomment-336528624
-gem 'json', github: 'flori/json', branch: 'v1.8'
+# Security alerts
+gem 'rack', '~> 2.2'
+gem 'activesupport', '~> 5.2'
+gem 'kramdown', '~> 2.3'
+
 
 # =========================
 
@@ -22,3 +24,8 @@ gem 'json', github: 'flori/json', branch: 'v1.8'
 gem 'coffee-script'
 gem 'slim'
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
+
+group :development do
+  gem 'cairo'
+  gem 'pango'
+end

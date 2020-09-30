@@ -253,7 +253,7 @@ External =
     ['GlyphWiki', 'https://glyphwiki.org/wiki/u', 'toLowerU']
     ['Codepoints', 'https://codepoints.net/U+', 'toUpperU']
   ]
-      
+
 Row =
   view: (v)->
     a = v.attrs
@@ -278,7 +278,7 @@ Row =
                     when "Hanyo-Denshi", "MSARG", "KRName" then 'ivs-etc'
                 (n for n in classes when n isnt undefined).join ' '
               value: Row.calcChar(seq, base, id)
-                
+
           m '.control'
             m 'button.button.clipboard.is-primary',
               class: (if seq then 'is-small'),

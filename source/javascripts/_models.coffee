@@ -88,13 +88,14 @@ query =
     o.push query.buildSeq(r[seq], [cp]) if r[seq]
 
     for v in vars
+      cname = COLLS[v[coll]]
       o.push
         'id': v[id]
         'type': TYPES[v[type]] or v[type]
         'name': v[name]
-        'cid': COLLS[v[coll]]
+        'cid': cname
         'coll': v[coll]
-        'base': basechar
+        'base': basechar unless cname is 'parent'
 
       o.push query.buildSeq(v[seq], [cp, v[id]]) if v[seq]
     o
