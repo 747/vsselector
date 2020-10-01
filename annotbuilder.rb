@@ -56,9 +56,9 @@ langs.each do |lang, tags|
   dfile = IO.read("#{cpath}/dtd/ldml.dtd", mode: "r:utf-8")
   # Ruby doesn't have a working DTD parser!
   dfile.match(/<!ATTLIST version cldrVersion CDATA #FIXED "(\w+)" >/) do |m|
-    version = "data/versions.json"
+    version = "public/_data.json"
     vers = JSON.parse(IO.read(version, mode: "r:utf-8"))
-    vers["cldr"] = m[1]
+    vers["versions"]["cldr"] = m[1]
     open(version, "w:utf-8") { |ver| JSON.dump vers, ver }
   end
 end

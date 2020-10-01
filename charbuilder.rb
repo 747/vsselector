@@ -4,13 +4,14 @@ require 'active_support/core_ext'
 require 'singleton'
 
 DATAPATH = "data"
+JSONPATH = "public/_data.json"
 CHARPATH = "chars-source"
 FINALPATH = "build/chars"
 
-TYPESJSON = JSON.load(File.open("#{DATAPATH}/types.json", "r:utf-8").read)
-TYPES = TYPESJSON["categories"].map(&:intern)
+TYPESJSON = JSON.load(File.open(JSONPATH, "r:utf-8").read)
+TYPES = TYPESJSON["types"]["categories"].map(&:intern)
 UNTYPES = TYPES.map { |e| [e, TYPES.index(e)] }.to_h
-COLLS = TYPESJSON["collections"].map(&:intern)
+COLLS = TYPESJSON["types"]["collections"].map(&:intern)
 UNCOLLS = COLLS.map { |e| [e, COLLS.index(e)] }.to_h
 
 RUN_AT = Time.at(Time.now.to_i)
@@ -381,23 +382,17 @@ end
 chunks.save
 
 puts "generates VERSIONS"
-open("#{DATAPATH}/versions.json", "w:utf-8") do |ver|
-  JSON.dump({
-    "standardized" => versions[:std],
-    "ideographic" => versions[:ivd],
-    "emojivs" => versions[:evs],
-    "emojisequences" => versions[:emo],
-    "emojizwj" => versions[:ezs],
-    "generated" => Time.now.strftime("%Y/%m/%d %R %Z"),
-    # "ivd-range" => [],
-    # "compat-range" => [],
-    # "emoji-range" => [],
-  }, ver)
-end
+vers = TYPESJSON["versions"]
+vers["standardized"] = versions[:std],
+vers["ideographic"] = versions[:ivd],
+vers["emojivs"] = versions[:evs],
+vers["emojisequences"] = versions[:emo],
+vers["emojizwj"] = versions[:ezs],
+vers["generated"] = Time.now.strftime("%Y/%m/%d %R %Z"),
 
 puts "generates KNOWNNAMES"
-open("#{DATAPATH}/knownnames.json", "w:utf-8") do |kno|
-  JSON.dump({
-    "ivdcollections" => ivdcols.sort
-  }, kno)
+TYPESJSON["knownnames"]["ivdcollections"] = ivdcols.sort
+
+open(JSONPATH, "w:utf-8") do |out|
+  JSON.dump TYPESJSON, out
 end
