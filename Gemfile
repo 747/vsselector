@@ -1,6 +1,6 @@
 gem 'activesupport', '~> 5.2'
 
-group :development do
+group :development, optional: true do
   gem 'cairo'
   gem 'pango'
 end
