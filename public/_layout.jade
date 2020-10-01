@@ -1,0 +1,21 @@
+doctype html
+html(lang='ja')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width,initial-scale=1.0,minimum-scale=1.0')
+    title= name
+    link(rel="stylesheet", href="css/layout.css")
+    script
+      != 'TYPES = [' + public._data.types.categories.map(function(t){return '"'+t+'"'}).join(',') + '];'
+      != 'COLLS = [' + public._data.types.collections.map(function(t){return '"'+t+'"'}).join(',') + '];'
+      != 'NAMES = [' + public._data.knownnames.ivdcollections.map(function(t){return '"'+t+'"'}).join(',') + '];'
+      != 'MISSING = [' + public._data.tempmissing.codes.map(function(t){return '"'+t+'"'}).join(',') + '];'
+    script(src="js/library.js")
+  body#view
+    #app
+    #about.modal
+      #unmodal.modal-background
+      .modal-content.box.content
+        != yield
+    script(src="js/vsapp.js")
+    // ^ load after all DOM are created

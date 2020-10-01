@@ -1,0 +1,44 @@
+{
+  "knownnames": {
+    "ivdcollections": [
+      "Adobe-Japan1",
+      "Hanyo-Denshi",
+      "KRName",
+      "MSARG",
+      "Moji_Joho"
+    ]
+  },
+  "tempmissing": {
+    "codes": []
+  },
+  "types": {
+    "categories": [
+      "unknown",
+      "ideograph",
+      "compat",
+      "emoji",
+      "plain",
+      "math",
+      "myanmar",
+      "phagspa",
+      "manichaean",
+      "mongolian"
+    ],
+    "collections": [
+      "unknown",
+      "base",
+      "parent",
+      "standardized",
+      "modifier"
+    ]
+  },
+  "versions": {
+    "standardized": "12.0.0",
+    "ideographic": "2017-12-12",
+    "emojivs": "12.0",
+    "emojisequences": "12.0",
+    "emojizwj": "12.0",
+    "generated": "2019/03/19 17:17 JST",
+    "cldr": "34"
+  }
+}
