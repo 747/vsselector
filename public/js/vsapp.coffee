@@ -311,7 +311,7 @@ Picker =
                     data: ivs n
                     title: "VS#{n} (#{ivs(n).formatU()})"
                     alt: "VS#{n}"
-                    src: "undefined"
+                    src: "./images/selectors/vs-#{n}.svg"
             when "vs"
               m 'ul#vs',
                 do ->
@@ -323,7 +323,7 @@ Picker =
                       data: svs n
                       title: "VS#{n} (#{note(n)})"
                       alt: "VS#{n}"
-                      src: "undefined"
+                      src: "./images/selectors/vs-#{n}.svg"
                 do ->
                   fvs = (x) -> 0x180B + x - 1
                   for n in [1..3]
@@ -332,7 +332,7 @@ Picker =
                       data: fvs n
                       title: "Mongolian FVS#{n} (#{fvs(n).formatU()})"
                       alt: "FVS#{n}"
-                      src: "undefined"
+                      src: "./images/selectors/fvs-#{n}.svg"
             when "emod"
               m 'ul#emod',
                 do ->
@@ -371,7 +371,7 @@ Picker =
                   data: 0x200D
                   title: "ZERO WIDTH JOINER (#{0x200D.formatU()})"
                   alt: "ZWJ"
-                  src: "undefined"
+                  src: "./images/selectors/zwj.svg"
                 do ->
                   tag = (x)-> 0xE0020 + x
                   t = (x)->
@@ -385,7 +385,7 @@ Picker =
                       data: tag(n)
                       title: "Tag #{t(n)[0]} (#{tag(n).formatU()})"
                       alt: "Tag #{t(n)[1]}"
-                      src: "undefined"
+                      src: "./images/selectors/tag-#{n+32}.svg"
         m Toggler
 
 Social =
