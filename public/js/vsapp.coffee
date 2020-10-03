@@ -213,6 +213,184 @@ hint =
     m.request
       type: "get"
       url: "./utils/#{lang}.json"
+messages =
+  langname:
+    'ja': '日本語'
+    'en-us': 'English'
+    'zh-hans': '简体中文'
+    'zh-hant': '繁體中文'
+  lang:
+    'ja': '言語'
+    'en-us': 'Language'
+    'zh-hans': '语言'
+    'zh-hant': '語言'
+  title:
+    'ja': '異体字セレクタセレクタ'
+    'en-us': 'Variation Selector Selector'
+    'zh-hans': '选异选'
+    'zh-hant': '選異選'
+  help:
+    'ja': '説明'
+    'en-us': 'Help'
+    'zh-hans': '简易指南'
+    'zh-hant': '簡易指南'
+  github:
+    'ja': 'GitHub'
+    'en-us': 'GitHub'
+    'zh-hans': 'GitHub'
+    'zh-hant': 'GitHub'
+  tab_ivs:
+    'ja': 'IVS'
+    'en-us': 'IVS'
+    'zh-hans': 'IVS'
+    'zh-hant': 'IVS'
+  tab_vs:
+    'ja': '(F)VS'
+    'en-us': '(F)VS'
+    'zh-hans': '(F)VS'
+    'zh-hant': '(F)VS'
+  tab_emoji:
+    'ja': '絵文字'
+    'en-us': 'Emoji'
+    'zh-hans': 'Emoji'
+    'zh-hant': '表情圖示'
+  tab_utils:
+    'ja': '補助'
+    'en-us': 'Utils'
+    'zh-hans': '辅助'
+    'zh-hant': '輔助'
+  paste_left:
+    'ja': '🡠クリックで挿入'
+    'en-us': 'Click to paste to left'
+    'zh-hans': '点字放进左栏'
+    'zh-hant': '點字放進左欄'
+  paste_up:
+    'ja': '🡡クリックで挿入'
+    'en-us': 'Click to paste up'
+    'zh-hans': '点字放进上栏'
+    'zh-hant': '點字放進上欄'
+  share:
+    'ja': '内容をシェア'
+    'en-us': 'Share to:'
+    'zh-hans': '分享到'
+    'zh-hant': '分享到'
+  share_tag:
+    'ja': '異体字セレクタセレクタ'
+    'en-us': 'vsselector'
+    'zh-hans': '选异选'
+    'zh-hant': '選異選'
+  external:
+    'ja': '%(site)s で「%(char)s」を表示'
+    'en-us': 'Lookup ‹%(char)s› on %(site)s'
+    'zh-hans': '%(site)s 上查看“%(char)s”字'
+    'zh-hant': '%(site)s 上查看「%(char)s」字'
+  insert:
+    'ja': '🡡挿入'
+    'en-us': 'Insert ↑'
+    'zh-hans': '🡡粘贴'
+    'zh-hant': '🡡貼上'
+  copy:
+    'ja': 'コピー'
+    'en-us': 'Copy'
+    'zh-hans': '复制'
+    'zh-hant': '複製'
+  open_seq:
+    'ja': 'この字から始まるシークエンス'
+    'en-us': 'Sequences starting with this variant'
+    'zh-hans': '展开以此字开头的序列'
+    'zh-hant': '展開以此字開頭的序列'
+  close_seq:
+    'ja': 'このシークエンスを閉じる'
+    'en-us': 'Hide sequences'
+    'zh-hans': '关闭序列列表'
+    'zh-hant': '關閉序列列表'
+  col_actual:
+    'ja': '表示'
+    'en-us': 'Rendering'
+    'zh-hans': '字符'
+    'zh-hant': '字符'
+  col_code:
+    'ja': 'コード'
+    'en-us': 'Code Point'
+    'zh-hans': '主字码位'
+    'zh-hant': '主字碼位'
+  col_var:
+    'ja': 'セレクタ'
+    'en-us': 'Selector'
+    'zh-hans': '选择符'
+    'zh-hant': '選擇符'
+  col_image:
+    'ja': '画像'
+    'en-us': 'Image'
+    'zh-hans': '图像'
+    'zh-hant': '圖像'
+  col_collection:
+    'ja': 'コレクション'
+    'en-us': 'Collection'
+    'zh-hans': '集合'
+    'zh-hant': '集合'
+  col_source:
+    'ja': '識別名'
+    'en-us': 'Identifier'
+    'zh-hans': '标识名称'
+    'zh-hant': '識別名稱'
+  not_found:
+    'ja': '見つかりませんでした'
+    'en-us': 'Not found.'
+    'zh-hans': '无查询结果可显示'
+    'zh-hant': '無查詢結果可顯示'
+  search_init:
+    'ja': '以下に検索結果が表示されます'
+    'en-us': 'Your search results will show up here.'
+    'zh-hans': '这里显示查询结果'
+    'zh-hant': '此處顯示查詢結果'
+  example:
+    'ja': '例　1F468:ハート:葛飾'
+    'en-us': 'ex. 1F468:heart:葛飾'
+    'zh-hans': '例　1F468:heart:葛飾'
+    'zh-hant': '例　1F468:heart:葛飾'
+  search_button:
+    'ja': '登録済の異体字を検索'
+    'en-us': 'Search available variants'
+    'zh-hans': '查询已编码的变体'
+    'zh-hant': '查詢已編碼的變體'
+  collections:
+    'ja': 'コレクションを表示 (IVS)'
+    'en-us': 'Toggle by collection (IVS)'
+    'zh-hans': '按 IVS 集合筛选'
+    'zh-hant': '依 IVS 集合篩選'
+  coll_base:
+    'ja': '基底文字'
+    'en-us': 'Base'
+    'zh-hans': '基本字符'
+    'zh-hant': '基本字符'
+  coll_parent:
+    'ja': '親文字'
+    'en-us': 'Parent'
+    'zh-hans': '父字符'
+    'zh-hant': '父字符'
+  coll_standardized:
+    'ja': '標準異体字'
+    'en-us': 'Standardized'
+    'zh-hans': '标准变体'
+    'zh-hant': '標準變體'
+  coll_modifier:
+    'ja': '修飾文字'
+    'en-us': 'Modifier'
+    'zh-hans': '修饰符'
+    'zh-hant': '修飾符'
+  coll_unknown:
+    'ja': '不明'
+    'en-us': 'Unknown'
+    'zh-hans': '未知'
+    'zh-hant': '未知'
+
+I = (key)->
+  k = key.toLowerCase()
+  if messages[k]
+    messages[k][uiLang.value] or messages[k]['ja']
+  else
+    "Message <<#{k}>>?"
 ###
 # == VDOM components ==
 ###
@@ -233,19 +411,40 @@ Header =
   view: ->
     m '.navbar.is-dark',
       m '.navbar-brand',
-        m 'p.navbar-item', document.title
+        m 'p.navbar-item',
+          m 'b', I 'title'
+          "\u00A0(β)"
         # below are quickfix for mobile view in current ver of Bulma CSS
+        m 'a.navbar-item.dropdown.is-hoverable.is-hidden-desktop',
+          m 'img.icon.is-large[src="images/language.svg"]', title: I 'lang', alt: I 'lang'
+          m '.dropdown-menu',
+            m '.dropdown-content', do ->
+              for t, l of messages['langname'] when t isnt uiLang.value
+                m "a.dropdown-item[href=.][data-lang=#{t}]", onclick: Header.lang, l
         m 'a.navbar-item.modality.is-hidden-desktop',
           onclick: Header.modal
-          '説明'
-        m 'a.navbar-item.is-hidden-desktop', href: "https://github.com/747/vsselector", target: "_blank", 'GitHub'
+          I 'help'
+        m 'a.navbar-item.is-hidden-desktop', href: "https://github.com/747/vsselector", target: "_blank",
+          m 'img.icon.is-large[src="images/github"]', title: I 'github', alt: I 'github'
       m '.navbar-menu',
         m '.navbar-start'
         m '.navbar-end',
+          m 'a.navbar-item.dropdown.is-hoverable',
+            m 'img.icon.is-large[src="images/language.svg"]', title: I 'lang', alt: I 'lang'
+            m '.dropdown-menu',
+              m '.dropdown-content', do ->
+                for t, l of messages['langname'] when t isnt uiLang.value
+                  m "a.dropdown-item[href=.][data-lang=#{t}]", onclick: Header.lang, l
           m 'a.navbar-item.modality',
             onclick: Header.modal
-            '説明'
-          m 'a.navbar-item', href: "https://github.com/747/vsselector", target: "_blank", 'GitHub'
+            I 'help'
+          m 'a.navbar-item', href: "https://github.com/747/vsselector", target: "_blank",
+            m 'img.icon.is-large[src="images/github.svg"]', title: I 'github', alt: I 'github'
+  lang: (e)->
+    t = e.target.dataset.lang
+    uiLang.set t
+    m.route.set "/#{t}/#{query.box.encodeAsParam()}"
+    false
 
 #::: Picker Area (top) :::#
 
@@ -297,16 +496,16 @@ Toggler =
       onclick: Toggler.f
     m '#groups.tabs.is-centered.is-toggle',
       m 'ul',
-        m 'li[data-tab="ivs"]', m 'a.toggler', props, 'IVS'
-        m 'li[data-tab="vs"]', m 'a.toggler', props, '(F)VS'
-        m 'li[data-tab="emod"]', m 'a.toggler', props, 'Emoji'
-        m 'li[data-tab="util"]', m 'a.toggler', props, 'Utils'
+        m 'li[data-tab="ivs"]', m 'a.toggler', props, I 'tab_ivs'
+        m 'li[data-tab="vs"]', m 'a.toggler', props, I 'tab_vs'
+        m 'li[data-tab="emod"]', m 'a.toggler', props, I 'tab_emoji'
+        m 'li[data-tab="util"]', m 'a.toggler', props, I 'tab_utils'
 Picker =
   view: ->
     m '#picker.column.is-5.message.is-success',
       m 'p.message-header',
-        m 'span.is-inline-tablet.is-hidden-mobile', '←クリックで挿入'
-        m 'span.touch-picker-leader.is-hidden-tablet.is-inline-mobile.has-text-centered', '↑クリックで挿入'
+        m 'span.is-inline-tablet.is-hidden-mobile', I 'paste_left'
+        m 'span.touch-picker-leader.is-hidden-tablet.is-inline-mobile.has-text-centered', I 'paste_up'
       m '#catalog.message-body',
         do ->
           switch pickerTab.source
@@ -401,7 +600,7 @@ Social =
     m '.level.is-mobile',
       m '.level-left'
       m 'p#shares.content.is-small.level-right',
-        m 'span#to_share.level-item', '内容をシェア'
+        m 'span#to_share.level-item', I 'share'
         m 'a#twitter-share.level-item',
           onclick: (e)-> Social.share e, 'twitter'
           m 'img.glyph[alt="Twitter"]',
@@ -416,7 +615,7 @@ Social =
       when 'twitter'
         url = encodeURIComponent window.location.href
         content = encodeURIComponent signboard.value
-        tag = encodeURIComponent "異体字セレクタセレクタ"
+        tag = encodeURIComponent I 'share_tag'
         window.open "https://twitter.com/intent/tweet?text=#{content}&url=#{url}&hashtags=#{tag}", "tweet", "width=550,height=480,location=yes,resizable=yes,scrollbars=yes"
       when 'line'
         message = encodeURIComponent "#{signboard.value} #{window.location.href}"
@@ -461,7 +660,7 @@ External =
         list.push m 'a.button.is-info',
           href: s[1] + id[s[2]]()
           target: '_blank'
-          "#{s[0]}で「#{id.toUcs2()}」を表示"
+          sprintf I('external'), site: s[0], char: id.toUcs2()
       list
   sites: [
     ['CHISE', 'http://www.chise.org/est/view/character/', 'toUcs2']
@@ -481,7 +680,7 @@ Row =
               class: (if seq then 'is-small'),
               char: Row.calcChar(seq, base, id)
               onclick: m.withAttr 'char', signboard.ins
-              '↑挿入'
+              I 'insert'
           m '.control',
             m 'input.autocopy.input.has-text-centered',
               class: do ->
@@ -498,7 +697,7 @@ Row =
             m 'button.button.clipboard.is-primary',
               class: (if seq then 'is-small'),
               'data-clipboard-text': Row.calcChar(seq, base, id)
-              'コピー'
+              I 'copy'
       do ->
         if seq
           code = seq.eachToHex().join('-')
@@ -524,12 +723,12 @@ Row =
                       if MISSING.indexOf(code) > 0 then "./images/te/supp/#{code}.png" else "./images/te/#{code}.svg"
                     else "./images/noimage.png"
             m 'td', do ->
-              if cid then m 'span', class: cid, cid
+              if cid then m 'span.named', I "coll_#{cid}"
               else coll
             m 'td', name
           ]
   header: (id, open)->
-    txt = if open then 'このシークエンスを閉じる' else 'この字から始まるシークエンス'
+    txt = if open then I('close_seq') else I('open_seq')
     m 'tr.content.message.is-small.is-warning.seq-header',
       id: id
       onclick: m.withAttr 'id', query.toggleSeq
@@ -554,14 +753,14 @@ VResult =
         ]
         if query.results[current]?
           fragment.push(
-            m 'table#found.table.is-fullwidth.is-marginless',
+            m 'table#found.table.is-fullwidth.is-marginless.transparent',
               m 'thead', m 'tr',
-                m 'th#copy', '表示'
-                m 'th#codepoint', 'コード'
-                m 'th#variation', 'セレクタ'
-                m 'th#image', '画像'
-                m 'th#collection', 'コレクション'
-                m 'th#internal', '識別名'
+                m 'th#copy',       I 'col_actual'
+                m 'th#codepoint',  I 'col_code'
+                m 'th#variation',  I 'col_var'
+                m 'th#image',      I 'col_image'
+                m 'th#collection', I 'col_collection'
+                m 'th#internal',   I 'col_source'
               m 'tbody#charlist', do ->
                 rows = []
                 for row, i in query.results[current] when query.allowed row['coll']
@@ -580,7 +779,7 @@ VResult =
         else
           fragment.push(
             m '#notfound.message.is-warning',
-              m 'p.has-text-centered.message-body', '見つかりませんでした'
+              m 'p.has-text-centered.message-body', I 'not_found'
           )
 
         fragment
@@ -592,7 +791,7 @@ VResult =
           m 'p.message-body', query.error
       else
         m '.message.is-info',
-          m 'p.has-text-centered.message-body', '以下に検索結果が表示されます'
+          m 'p.has-text-centered.message-body', I 'search_init'
 
 SearchBox =
   oninit: ->
@@ -643,7 +842,7 @@ SearchBox =
   view: ->
     [
       m 'input#searchbox.input[type=text]',
-        placeholder: "例　1F468:ハート:葛飾"
+        placeholder: I 'example'
         value: query.box
         onchange: SearchBox.f()
         onkeypress: SearchBox.keypress
@@ -727,10 +926,10 @@ Search =
               m 'p.control',
                 m 'button#searchbutton.button.is-primary',
                   onclick: Search.submit
-                  m 'span#searchlabel', '登録済の異体字を検索'
+                  m 'span#searchlabel', I 'search_button'
         m '.level-right',
           m 'p.has-text-weight-bold.control.level-item',
-            m 'span#selectcol', 'コレクションを指定 (IVS)'
+            m 'span#selectcol', I 'collections'
           for ivd in NAMES
             m '.level-item.collection-selector.control.checkbox',
               m 'input.is-checkradio.is-block.is-success.search-filter[type=checkbox]',

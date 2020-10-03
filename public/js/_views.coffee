@@ -18,19 +18,40 @@ Header =
   view: ->
     m '.navbar.is-dark',
       m '.navbar-brand',
-        m 'p.navbar-item', document.title
+        m 'p.navbar-item',
+          m 'b', I 'title'
+          "\u00A0(β)"
         # below are quickfix for mobile view in current ver of Bulma CSS
+        m 'a.navbar-item.dropdown.is-hoverable.is-hidden-desktop',
+          m 'img.icon.is-large[src="images/language.svg"]', title: I 'lang', alt: I 'lang'
+          m '.dropdown-menu',
+            m '.dropdown-content', do ->
+              for t, l of messages['langname'] when t isnt uiLang.value
+                m "a.dropdown-item[href=.][data-lang=#{t}]", onclick: Header.lang, l
         m 'a.navbar-item.modality.is-hidden-desktop',
           onclick: Header.modal
-          '説明'
-        m 'a.navbar-item.is-hidden-desktop', href: "https://github.com/747/vsselector", target: "_blank", 'GitHub'
+          I 'help'
+        m 'a.navbar-item.is-hidden-desktop', href: "https://github.com/747/vsselector", target: "_blank",
+          m 'img.icon.is-large[src="images/github"]', title: I 'github', alt: I 'github'
       m '.navbar-menu',
         m '.navbar-start'
         m '.navbar-end',
+          m 'a.navbar-item.dropdown.is-hoverable',
+            m 'img.icon.is-large[src="images/language.svg"]', title: I 'lang', alt: I 'lang'
+            m '.dropdown-menu',
+              m '.dropdown-content', do ->
+                for t, l of messages['langname'] when t isnt uiLang.value
+                  m "a.dropdown-item[href=.][data-lang=#{t}]", onclick: Header.lang, l
           m 'a.navbar-item.modality',
             onclick: Header.modal
-            '説明'
-          m 'a.navbar-item', href: "https://github.com/747/vsselector", target: "_blank", 'GitHub'
+            I 'help'
+          m 'a.navbar-item', href: "https://github.com/747/vsselector", target: "_blank",
+            m 'img.icon.is-large[src="images/github.svg"]', title: I 'github', alt: I 'github'
+  lang: (e)->
+    t = e.target.dataset.lang
+    uiLang.set t
+    m.route.set "/#{t}/#{query.box.encodeAsParam()}"
+    false
 
 #::: Picker Area (top) :::#
 
@@ -82,16 +103,16 @@ Toggler =
       onclick: Toggler.f
     m '#groups.tabs.is-centered.is-toggle',
       m 'ul',
-        m 'li[data-tab="ivs"]', m 'a.toggler', props, 'IVS'
-        m 'li[data-tab="vs"]', m 'a.toggler', props, '(F)VS'
-        m 'li[data-tab="emod"]', m 'a.toggler', props, 'Emoji'
-        m 'li[data-tab="util"]', m 'a.toggler', props, 'Utils'
+        m 'li[data-tab="ivs"]', m 'a.toggler', props, I 'tab_ivs'
+        m 'li[data-tab="vs"]', m 'a.toggler', props, I 'tab_vs'
+        m 'li[data-tab="emod"]', m 'a.toggler', props, I 'tab_emoji'
+        m 'li[data-tab="util"]', m 'a.toggler', props, I 'tab_utils'
 Picker =
   view: ->
     m '#picker.column.is-5.message.is-success',
       m 'p.message-header',
-        m 'span.is-inline-tablet.is-hidden-mobile', '←クリックで挿入'
-        m 'span.touch-picker-leader.is-hidden-tablet.is-inline-mobile.has-text-centered', '↑クリックで挿入'
+        m 'span.is-inline-tablet.is-hidden-mobile', I 'paste_left'
+        m 'span.touch-picker-leader.is-hidden-tablet.is-inline-mobile.has-text-centered', I 'paste_up'
       m '#catalog.message-body',
         do ->
           switch pickerTab.source
@@ -186,7 +207,7 @@ Social =
     m '.level.is-mobile',
       m '.level-left'
       m 'p#shares.content.is-small.level-right',
-        m 'span#to_share.level-item', '内容をシェア'
+        m 'span#to_share.level-item', I 'share'
         m 'a#twitter-share.level-item',
           onclick: (e)-> Social.share e, 'twitter'
           m 'img.glyph[alt="Twitter"]',
@@ -201,7 +222,7 @@ Social =
       when 'twitter'
         url = encodeURIComponent window.location.href
         content = encodeURIComponent signboard.value
-        tag = encodeURIComponent "異体字セレクタセレクタ"
+        tag = encodeURIComponent I 'share_tag'
         window.open "https://twitter.com/intent/tweet?text=#{content}&url=#{url}&hashtags=#{tag}", "tweet", "width=550,height=480,location=yes,resizable=yes,scrollbars=yes"
       when 'line'
         message = encodeURIComponent "#{signboard.value} #{window.location.href}"
@@ -246,7 +267,7 @@ External =
         list.push m 'a.button.is-info',
           href: s[1] + id[s[2]]()
           target: '_blank'
-          "#{s[0]}で「#{id.toUcs2()}」を表示"
+          sprintf I('external'), site: s[0], char: id.toUcs2()
       list
   sites: [
     ['CHISE', 'http://www.chise.org/est/view/character/', 'toUcs2']
@@ -266,7 +287,7 @@ Row =
               class: (if seq then 'is-small'),
               char: Row.calcChar(seq, base, id)
               onclick: m.withAttr 'char', signboard.ins
-              '↑挿入'
+              I 'insert'
           m '.control',
             m 'input.autocopy.input.has-text-centered',
               class: do ->
@@ -283,7 +304,7 @@ Row =
             m 'button.button.clipboard.is-primary',
               class: (if seq then 'is-small'),
               'data-clipboard-text': Row.calcChar(seq, base, id)
-              'コピー'
+              I 'copy'
       do ->
         if seq
           code = seq.eachToHex().join('-')
@@ -309,12 +330,12 @@ Row =
                       if MISSING.indexOf(code) > 0 then "./images/te/supp/#{code}.png" else "./images/te/#{code}.svg"
                     else "./images/noimage.png"
             m 'td', do ->
-              if cid then m 'span', class: cid, cid
+              if cid then m 'span.named', I "coll_#{cid}"
               else coll
             m 'td', name
           ]
   header: (id, open)->
-    txt = if open then 'このシークエンスを閉じる' else 'この字から始まるシークエンス'
+    txt = if open then I('close_seq') else I('open_seq')
     m 'tr.content.message.is-small.is-warning.seq-header',
       id: id
       onclick: m.withAttr 'id', query.toggleSeq
@@ -339,14 +360,14 @@ VResult =
         ]
         if query.results[current]?
           fragment.push(
-            m 'table#found.table.is-fullwidth.is-marginless',
+            m 'table#found.table.is-fullwidth.is-marginless.transparent',
               m 'thead', m 'tr',
-                m 'th#copy', '表示'
-                m 'th#codepoint', 'コード'
-                m 'th#variation', 'セレクタ'
-                m 'th#image', '画像'
-                m 'th#collection', 'コレクション'
-                m 'th#internal', '識別名'
+                m 'th#copy',       I 'col_actual'
+                m 'th#codepoint',  I 'col_code'
+                m 'th#variation',  I 'col_var'
+                m 'th#image',      I 'col_image'
+                m 'th#collection', I 'col_collection'
+                m 'th#internal',   I 'col_source'
               m 'tbody#charlist', do ->
                 rows = []
                 for row, i in query.results[current] when query.allowed row['coll']
@@ -365,7 +386,7 @@ VResult =
         else
           fragment.push(
             m '#notfound.message.is-warning',
-              m 'p.has-text-centered.message-body', '見つかりませんでした'
+              m 'p.has-text-centered.message-body', I 'not_found'
           )
 
         fragment
@@ -377,7 +398,7 @@ VResult =
           m 'p.message-body', query.error
       else
         m '.message.is-info',
-          m 'p.has-text-centered.message-body', '以下に検索結果が表示されます'
+          m 'p.has-text-centered.message-body', I 'search_init'
 
 SearchBox =
   oninit: ->
@@ -428,7 +449,7 @@ SearchBox =
   view: ->
     [
       m 'input#searchbox.input[type=text]',
-        placeholder: "例　1F468:ハート:葛飾"
+        placeholder: I 'example'
         value: query.box
         onchange: SearchBox.f()
         onkeypress: SearchBox.keypress
@@ -512,10 +533,10 @@ Search =
               m 'p.control',
                 m 'button#searchbutton.button.is-primary',
                   onclick: Search.submit
-                  m 'span#searchlabel', '登録済の異体字を検索'
+                  m 'span#searchlabel', I 'search_button'
         m '.level-right',
           m 'p.has-text-weight-bold.control.level-item',
-            m 'span#selectcol', 'コレクションを指定 (IVS)'
+            m 'span#selectcol', I 'collections'
           for ivd in NAMES
             m '.level-item.collection-selector.control.checkbox',
               m 'input.is-checkradio.is-block.is-success.search-filter[type=checkbox]',

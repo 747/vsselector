@@ -32,9 +32,11 @@ $message-header-body-border-width: 0 2px 2px 0
 // .collapsible
 //   display: none
 
+// header style fix
+.navbar-item .icon
+  max-width: $navbar-item-img-max-height
+
 // table style fix
-table#found
-  background-color: unset
 table td, table th
   vertical-align: middle !important
 table .message, table .message-header, table .message-body
@@ -81,7 +83,8 @@ $td-x-paddings: nth($table-cell-padding, 2) * 2
   min-width: $glyph-m + $td-x-paddings
   .is-small &
     min-width: $glyph-s + $td-x-paddings
-
+.named
+  font-weight: bold
 
 .transparent
   background: transparent
@@ -99,16 +102,6 @@ $td-x-paddings: nth($table-cell-padding, 2) * 2
   font-family: IPAmjMincho, HanaMinA, HanaMinB, serif
 .ivs-etc
   font-family: HanaMinA, HanaMinB, serif
-
-// .ui-menu-item
-//   background: $white
-//   &.ui-state-focus
-//     $pair: map-get($colors, "info")
-//     background: nth($pair, 1)
-//     *
-//       color: nth($pair, 2)
-// .ui-helper-hidden-accessible
-//   display: none
 
 #autocomplete
   position: absolute
