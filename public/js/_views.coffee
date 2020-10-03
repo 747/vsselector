@@ -503,7 +503,7 @@ SearchBox =
 Search =
   view: ->
     m '#search.section',
-      m '#query.level.is-block-touch',
+      m '#query.level.is-block-touch is-block-desktop-only is-block-widescreen-only',
         m '.level-left',
           m '.level-item',
             m '.field.has-addons',
