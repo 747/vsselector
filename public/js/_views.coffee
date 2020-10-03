@@ -32,7 +32,7 @@ Header =
           onclick: Header.modal
           I 'help'
         m 'a.navbar-item.is-hidden-desktop', href: "https://github.com/747/vsselector", target: "_blank",
-          m 'img.icon.is-large[src="images/github"]', title: I 'github', alt: I 'github'
+          m 'img.icon.is-large[src="images/github.svg"]', title: I 'github', alt: I 'github'
       m '.navbar-menu',
         m '.navbar-start'
         m '.navbar-end',
