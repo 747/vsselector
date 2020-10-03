@@ -49,7 +49,6 @@ Header =
             m 'img.icon.is-large[src="images/github.svg"]', title: I 'github', alt: I 'github'
   lang: (e)->
     t = e.target.dataset.lang
-    uiLang.set t
     m.route.set "/#{t}/#{query.box.encodeAsParam()}"
     false
 
@@ -549,7 +548,6 @@ Search =
                 ivd
       m VResult
   submit: ->
-    query.fetch()
     m.route.set "/#{uiLang.value}/#{query.box.encodeAsParam()}"
 
 #::: Main App :::#
@@ -560,10 +558,3 @@ TheApp =
     m Workspace
     m Search
   ]
-  oninit: (v)->
-    a = v.attrs
-    uiLang.set a.lang if a.lang
-    signboard.set a.bbtxt.decodeAsParam() if a.bbtxt
-    if a.qstr
-      query.input a.qstr.decodeAsParam()
-      query.fetch()

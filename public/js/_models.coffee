@@ -4,7 +4,7 @@
 
 uiLang =
   value: "ja"
-  set: (v)-> uiLang.value = v
+  set: (v)-> uiLang.value = if v then v else 'ja'
 
 signboard =
   value: ""
@@ -25,6 +25,7 @@ pickerTab =
 
 query =
   box: ""
+  boxed: ""
   word: []
   phase: ""
   results: []

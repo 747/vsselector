@@ -75,7 +75,7 @@ document.getElementById('unmodal').onclick = ->
 
 uiLang =
   value: "ja"
-  set: (v)-> uiLang.value = v
+  set: (v)-> uiLang.value = if v then v else 'ja'
 
 signboard =
   value: ""
@@ -96,6 +96,7 @@ pickerTab =
 
 query =
   box: ""
+  boxed: ""
   word: []
   phase: ""
   results: []
@@ -442,7 +443,6 @@ Header =
             m 'img.icon.is-large[src="images/github.svg"]', title: I 'github', alt: I 'github'
   lang: (e)->
     t = e.target.dataset.lang
-    uiLang.set t
     m.route.set "/#{t}/#{query.box.encodeAsParam()}"
     false
 
@@ -942,7 +942,6 @@ Search =
                 ivd
       m VResult
   submit: ->
-    query.fetch()
     m.route.set "/#{uiLang.value}/#{query.box.encodeAsParam()}"
 
 #::: Main App :::#
@@ -953,19 +952,23 @@ TheApp =
     m Workspace
     m Search
   ]
-  oninit: (v)->
-    a = v.attrs
-    uiLang.set a.lang if a.lang
-    signboard.set a.bbtxt.decodeAsParam() if a.bbtxt
-    if a.qstr
-      query.input a.qstr.decodeAsParam()
-      query.fetch()
 ###
 # run!
 ###
 
+onMatch = (a)->
+  uiLang.set a.lang
+  signboard.set a.bbtxt.decodeAsParam() if a.bbtxt
+  if a.qstr
+    decode = a.qstr.decodeAsParam()
+    unless query.boxed is decode
+      query.input decode
+      query.fetch()
+    query.boxed = decode
+  TheApp
+
 m.route document.getElementById('app'), '',
-  '': TheApp
-  '/:lang': TheApp
-  '/:lang/:qstr': TheApp
-  '/:lang/:qstr/:bbtxt': TheApp
+  '':                    onmatch: (a, p)-> onMatch a
+  '/:lang':              onmatch: (a, p)-> onMatch a
+  '/:lang/:qstr':        onmatch: (a, p)-> onMatch a
+  '/:lang/:qstr/:bbtxt': onmatch: (a, p)-> onMatch a
