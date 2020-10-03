@@ -27,7 +27,7 @@ Header =
           m '.dropdown-menu',
             m '.dropdown-content', do ->
               for t, l of messages['langname'] when t isnt uiLang.value
-                m "a.dropdown-item[href=.][data-lang=#{t}]", onclick: Header.lang, l
+                m "a.dropdown-item[href=/#{t}/#{query.box.encodeAsParam()}]", oncreate: m.route.link, l
         m 'a.navbar-item.modality.is-hidden-desktop',
           onclick: Header.modal
           I 'help'
@@ -41,16 +41,12 @@ Header =
             m '.dropdown-menu',
               m '.dropdown-content', do ->
                 for t, l of messages['langname'] when t isnt uiLang.value
-                  m "a.dropdown-item[href=.][data-lang=#{t}]", onclick: Header.lang, l
+                  m "a.dropdown-item[href=/#{t}/#{query.box.encodeAsParam()}]", oncreate: m.route.link, l
           m 'a.navbar-item.modality',
             onclick: Header.modal
             I 'help'
           m 'a.navbar-item', href: "https://github.com/747/vsselector", target: "_blank",
             m 'img.icon.is-large[src="images/github.svg"]', title: I 'github', alt: I 'github'
-  lang: (e)->
-    t = e.target.dataset.lang
-    m.route.set "/#{t}/#{query.box.encodeAsParam()}"
-    false
 
 #::: Picker Area (top) :::#
 
