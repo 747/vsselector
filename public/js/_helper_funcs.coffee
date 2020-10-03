@@ -44,6 +44,10 @@ String::toCodepoints = ->
     first = @getFirstCodePoint()
     range = if first and first > 0xFFFF then 2 else 1
     [first].concat @substr(range).toCodepoints()
+String::encodeAsParam = ->
+  @toCodepoints().eachToHex().join('-')
+String::decodeAsParam = ->
+  (parseInt(e, 16).toUcs2() for e in @split('-')).join ''
 Array::eachToUcs2 = ->
   (e.toUcs2() for e in @)
 Array::eachToHex = ->

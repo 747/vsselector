@@ -2,6 +2,10 @@
 # == VDOM models ==
 ###
 
+uiLang =
+  value: "ja"
+  set: (v)-> uiLang.value = v
+
 signboard =
   value: ""
   set: (v)-> signboard.value = v

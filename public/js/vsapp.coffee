@@ -44,6 +44,10 @@ String::toCodepoints = ->
     first = @getFirstCodePoint()
     range = if first and first > 0xFFFF then 2 else 1
     [first].concat @substr(range).toCodepoints()
+String::encodeAsParam = ->
+  @toCodepoints().eachToHex().join('-')
+String::decodeAsParam = ->
+  (parseInt(e, 16).toUcs2() for e in @split('-')).join ''
 Array::eachToUcs2 = ->
   (e.toUcs2() for e in @)
 Array::eachToHex = ->
@@ -68,6 +72,10 @@ document.getElementById('unmodal').onclick = ->
 ###
 # == VDOM models ==
 ###
+
+uiLang =
+  value: "ja"
+  set: (v)-> uiLang.value = v
 
 signboard =
   value: ""
@@ -607,7 +615,7 @@ SearchBox =
         return SearchBox.replaceBySuggestion SearchBox.suggestionsCache[curr].attrs['data-char'] if curr?
         SearchBox.clearSuggestions()
         query.input e.currentTarget.value
-        query.fetch()
+        Search.submit()
     else if e.key is 'ArrowDown' or e.keyCode is 40 or e.which is 40
       if last?
         SearchBox.selecting = if not curr? or curr >= last then 0 else curr + 1
@@ -718,7 +726,7 @@ Search =
                 m SearchBox
               m 'p.control',
                 m 'button#searchbutton.button.is-primary',
-                  onclick: query.fetch
+                  onclick: Search.submit
                   m 'span#searchlabel', '登録済の異体字を検索'
         m '.level-right',
           m 'p.has-text-weight-bold.control.level-item',
@@ -734,6 +742,9 @@ Search =
                 onclick: m.withAttr 'for', query.filter # because it shadows the checkbox
                 ivd
       m VResult
+  submit: ->
+    query.fetch()
+    m.route.set "/#{uiLang.value}/#{query.box.encodeAsParam()}"
 
 #::: Main App :::#
 
@@ -743,8 +754,19 @@ TheApp =
     m Workspace
     m Search
   ]
+  oninit: (v)->
+    a = v.attrs
+    uiLang.set a.lang if a.lang
+    signboard.set a.bbtxt.decodeAsParam() if a.bbtxt
+    if a.qstr
+      query.input a.qstr.decodeAsParam()
+      query.fetch()
 ###
 # run!
 ###
 
-m.mount document.getElementById('app'), TheApp
+m.route document.getElementById('app'), '',
+  '': TheApp
+  '/:lang': TheApp
+  '/:lang/:qstr': TheApp
+  '/:lang/:qstr/:bbtxt': TheApp
