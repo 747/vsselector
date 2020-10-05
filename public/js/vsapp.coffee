@@ -410,32 +410,20 @@ Header =
     e.redraw = false
     popup()
   view: ->
-    m '.navbar.is-dark',
-      m '.navbar-brand',
-        m 'p.navbar-item',
-          m 'b', I 'title'
+    m '.navbar.is-dark.is-fixed-top',
+      m '.navbar-brand.is-clipped',
+        m 'p.site-title.navbar-item.is-clipped.has-background-link',
+          m 'b.is-clipped', I 'title'
           "\u00A0(β)"
-        # below are quickfix for mobile view in current ver of Bulma CSS
-        m 'a.navbar-item.dropdown.is-hoverable.is-hidden-desktop',
-          m 'img.icon.is-large[src="images/language.svg"]', title: I 'lang', alt: I 'lang'
-          m '.dropdown-menu',
-            m '.dropdown-content', do ->
-              for t, l of messages['langname'] when t isnt uiLang.value
-                m "a.dropdown-item[href=/#{t}/#{query.box.encodeAsParam()}]", oncreate: m.route.link, l
-        m 'a.navbar-item.modality.is-hidden-desktop',
-          onclick: Header.modal
-          I 'help'
-        m 'a.navbar-item.is-hidden-desktop', href: "https://github.com/747/vsselector", target: "_blank",
-          m 'img.icon.is-large[src="images/github.svg"]', title: I 'github', alt: I 'github'
       m '.navbar-menu',
         m '.navbar-start'
         m '.navbar-end',
-          m 'a.navbar-item.dropdown.is-hoverable',
-            m 'img.icon.is-large[src="images/language.svg"]', title: I 'lang', alt: I 'lang'
-            m '.dropdown-menu',
-              m '.dropdown-content', do ->
-                for t, l of messages['langname'] when t isnt uiLang.value
-                  m "a.dropdown-item[href=/#{t}/#{query.box.encodeAsParam()}]", oncreate: m.route.link, l
+          m '.navbar-item.has-dropdown.is-hoverable',
+            m 'a.navbar-link',
+              m 'img.icon.is-large[src="images/language.svg"]', title: I 'lang', alt: I 'lang'
+            m '.navbar-dropdown', do ->
+              for t, l of messages['langname'] when t isnt uiLang.value
+                m "a.navbar-item[href=/#{t}/#{query.box.encodeAsParam()}]", oncreate: m.route.link, l
           m 'a.navbar-item.modality',
             onclick: Header.modal
             I 'help'
@@ -954,6 +942,7 @@ TheApp =
 
 onMatch = (a)->
   uiLang.set a.lang
+  document.title = I 'title'
   signboard.set a.bbtxt.decodeAsParam() if a.bbtxt
   if a.qstr
     decode = a.qstr.decodeAsParam()

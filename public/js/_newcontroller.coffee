@@ -4,6 +4,7 @@
 
 onMatch = (a)->
   uiLang.set a.lang
+  document.title = I 'title'
   signboard.set a.bbtxt.decodeAsParam() if a.bbtxt
   if a.qstr
     decode = a.qstr.decodeAsParam()

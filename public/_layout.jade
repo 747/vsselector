@@ -11,7 +11,7 @@ html(lang='ja')
       != 'NAMES = [' + public._data.knownnames.ivdcollections.map(function(t){return '"'+t+'"'}).join(',') + '];'
       != 'MISSING = [' + public._data.tempmissing.codes.map(function(t){return '"'+t+'"'}).join(',') + '];'
     script(src="js/library.js")
-  body#view
+  body#view.has-navbar-fixed-top
     #app
     #about.modal
       #unmodal.modal-background

@@ -2,6 +2,7 @@
 
 $message-body-border-width: 0 2px 2px 0
 $message-header-body-border-width: 0 2px 2px 0
+$navbar-breakpoint: 0px // always display navbar-menu
 
 @import "_bulma"
 /* end Bulma */
@@ -33,8 +34,17 @@ $message-header-body-border-width: 0 2px 2px 0
 //   display: none
 
 // header style fix
-.navbar-item .icon
-  max-width: $navbar-item-img-max-height
+.navbar-item:not(.site-title)
+  flex-shrink: 0
+  .icon
+    max-width: $navbar-item-img-max-height
+.navbar-brand
+  flex-shrink: 1 !important
+  .site-title
+    flex-shrink: 1
+    white-space: nowrap
+    b
+      text-overflow: ellipsis
 
 // table style fix
 table td, table th
