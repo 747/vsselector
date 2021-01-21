@@ -292,7 +292,7 @@ open("#{DATAPATH}/emoji-sequences.txt", "r:utf-8") do |emj|
     case line
     when /^#\s*Version:\s*(\d[\d\.]*\d|\d)*/
       versions[:emo] = $1
-    when /^#\s*Emoji[ _](Keycap|Flag|Tag|Modifier)[ _]Sequence/
+    when /^#\s*(?:RGI_)?Emoji[ _](Keycap|Flag|Tag|Modifier)[ _]Sequence/
       trailing = true if %w(Keycap Flag Tag).include? $1
       inrange = true
     when /^#\s*={5,}/
@@ -310,7 +310,7 @@ open("#{DATAPATH}/emoji-sequences.txt", "r:utf-8") do |emj|
         data2, desc = data1.splip('      ') # Is there a better way?
         bname, mname = desc.splip(',')
         # p [base, var, type, data1, data2, bname, mname].join("\t")
-      when "4.0", "5.0", "11.0", "12.0"
+      when "4.0", "5.0", "11.0", "12.0", "12.1", "13.0", "13.1"
         record, comment = line.splip('#')
         seq, type, desc = record.splip(';')
         base, var, *extra = seq.spliph # Expect possible longer sequence
@@ -349,7 +349,7 @@ open("#{DATAPATH}/emoji-zwj-sequences.txt", "r:utf-8") do |ezs|
         type, data1 = data.splip('#')
         data2, desc = data1.splip(/\s{3,}/)
         # bname, mname = desc.splip(',')
-      when "4.0", "5.0", "11.0", "12.0"
+      when "4.0", "5.0", "11.0", "12.0", "12.1", "13.0", "13.1"
         record, comment = line.splip('#')
         seq, type, desc = record.splip(';')
         base, var, *extra = seq.spliph
@@ -383,12 +383,12 @@ chunks.save
 
 puts "generates VERSIONS"
 vers = TYPESJSON["versions"]
-vers["standardized"] = versions[:std],
-vers["ideographic"] = versions[:ivd],
-vers["emojivs"] = versions[:evs],
-vers["emojisequences"] = versions[:emo],
-vers["emojizwj"] = versions[:ezs],
-vers["generated"] = Time.now.strftime("%Y/%m/%d %R %Z"),
+vers["standardized"] = versions[:std]
+vers["ideographic"] = versions[:ivd]
+vers["emojivs"] = versions[:evs]
+vers["emojisequences"] = versions[:emo]
+vers["emojizwj"] = versions[:ezs]
+vers["generated"] = Time.now.strftime("%Y/%m/%d %R %Z")
 
 puts "generates KNOWNNAMES"
 TYPESJSON["knownnames"]["ivdcollections"] = ivdcols.sort
