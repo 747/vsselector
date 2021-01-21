@@ -1,0 +1,59 @@
+p
+  | 同じ字でも Unicode に微妙な字形の区別が登録されている#[b 漢字]・#[b 絵文字]・数学記号・モンゴル系文字などを簡単に検索・入力できるようにしたものです。
+  | コピーした文字は一般のソフトでも利用できますが、違いを目で見るためには対応したフォントが必要な場合があります。
+  | 詳しい情報は#[a(href="http://www.shuiren.org/chuden/teach/ms-ime2010/ime2010-8.htm" target="_blank") こちら]などを参照してください。
+
+h5.about-instruction 使い方
+dl
+  dt 下書き欄
+  dd ここに文字を入力したり、検索結果や異体字セレクタを挿入できます。欄内の文字の一覧が下に表示されるので、不可視の文字でも選んで削除できます。
+  dt セレクタ類一覧
+  dd 字形を制御する（多くは不可視の）文字の一覧です。文字をクリックすると下書き欄のカーソル位置に挿入されます。
+  dt 検索
+  dd
+    | 文字や Unicode 番号を入力すると、登録のある異体字がある場合は結果が表示されます。一度に複数文字入力して一括検索ができます。また、絵文字の入力補助として #[code= ":東京:"] のように半角コロンで囲むことで、連想される絵文字の候補が出ます。
+    ul
+      li.control.
+        #[span.button.is-dark 🡡挿入] を押すと、上の欄に字が挿入されます。
+      li.control.
+        #[span.button.is-primary コピー] を押すと、文字をコピーして他の場所に貼り付けできるようにします。
+      li #[b 表示]欄にあるものが実際の文字で、#[b 画像]欄にあるのがサンプル画像です。
+
+h5.about-env 動作環境
+p
+  | ブラウザは Internet Explorer 10 以上。IE9（Windows 7 付属）では一部動作に支障が出ます。
+  | その他のブラウザ (Firefox, Chrome, Opera...) はなるべく最新のバージョンに更新してください。
+p
+  | Windows 7 や Mac OS X 10.6 より古い OS は、そのままでは異体字の表示が困難です。
+
+h5.about-license ライセンス
+ul
+  li このページの内容を利用する場合は、#[a(href="https://creativecommons.org/licenses/by/4.0/deed.ja") CC BY 4.0] に従ってください。ただし、生成した文字列のコードポイントデータのみを使用する場合は許諾も出典の明記も必要ありません。
+  li このページのソースコードを利用する場合は、#[a(href="https://github.com/747/vsselector/tree/master/LICENSE.md") GitHub ページのライセンス情報]を参照してください。
+  li 字形のサンプル画像の多くは、#[a(href="http://glyphwiki.org/") GlyphWiki] および #[a(href="https://twemoji.twitter.com/") Twemoji] に由来します。アイコンは #[a(href="https://remixicon.com/") Remix Icon] を使用しています。
+.columns
+  a.column.is-4.is-offset-4(target="_blank" href="https://twitter.com/meso_cacase/status/322522301608382464"): img(src="images/shihi.png")
+
+h5.about-version データバージョン
+- ver = public._data.versions
+p
+  span#last-build 最終ビルド: 
+  = ver.generated
+p
+  | StandardizedVariants.txt: 
+  a(href="http://www.unicode.org/Public/#{ver.standardized}/ucd/StandardizedVariants.txt")= ver.standardized
+p
+  | IVD_Sequences.txt: 
+  a(href="http://www.unicode.org/ivd/data/#{ver.ideographic}/IVD_Sequences.txt")= ver.ideographic
+p
+  | emoji-variation-sequences.txt: 
+  a(href="http://unicode.org/Public/emoji/#{ver.emojivs}/emoji-variation-sequences.txt")= ver.emojivs
+p
+  | emoji-sequences.txt: 
+  a(href="http://unicode.org/Public/emoji/#{ver.emojisequences}/emoji-sequences.txt")= ver.emojisequences
+p
+  | emoji-zwj-sequences.txt: 
+  a(href="http://unicode.org/Public/emoji/#{ver.emojizwj}/emoji-zwj-sequences.txt")= ver.emojizwj
+p
+  | CLDR: 
+  a(href="https://unicode.org/repos/cldr/tags/release-#{ver.cldr}/")= ver.cldr

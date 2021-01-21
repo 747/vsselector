@@ -91,7 +91,7 @@ messages =
     'zh-hant': '關閉序列列表'
   col_actual:
     'ja': '表示'
-    'en-us': 'Rendering'
+    'en-us': 'Output'
     'zh-hans': '字符'
     'zh-hant': '字符'
   col_code:
@@ -107,8 +107,8 @@ messages =
   col_image:
     'ja': '画像'
     'en-us': 'Image'
-    'zh-hans': '图像'
-    'zh-hant': '圖像'
+    'zh-hans': '字样'
+    'zh-hant': '字樣'
   col_collection:
     'ja': 'コレクション'
     'en-us': 'Collection'

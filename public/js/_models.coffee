@@ -4,7 +4,11 @@
 
 uiLang =
   value: "ja"
-  set: (v)-> uiLang.value = if v then v else 'ja'
+  reset: true
+  set: (v)->
+    old = uiLang.value
+    uiLang.value = if v then v else 'ja'
+    uiLang.reset = if uiLang.value is old then false else true
 
 signboard =
   value: ""
@@ -122,7 +126,9 @@ hint =
     @searcher.search(text).slice(0, @max)
 
   load: ->
-    langs = ['en', 'ja']
+    langs = ['en']
+    langs.push uiLang.value unless uiLang.value is 'en-us'
+    hint.loaded = false
     Promise.all (hint.request(ln) for ln in langs)
     .then (results)->
       for res in results

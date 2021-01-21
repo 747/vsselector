@@ -1,0 +1,59 @@
+p
+  | 【#[b 选]择#[b 异]体#[b 选]择符】本站为 Unicode 中通过修饰符机制所定义的许多#[b 汉字]、#[b 表情 (Emoji)]、数学符号、蒙古文等异体（变体）字形提供检字、输入支持。
+  | 使用本站生成的字符串粘贴到所有软件上有效，但很可能需要特定字体支持才能显示出所期望的字形。
+  | 关于技术背景，请参看这些#[a(href="https://www.zhihu.com/question/347650604/answer/854441419" target="_blank") 知乎]以及 #[a(href="https://segmentfault.com/a/1190000022100299" target="_blank") SegmentFault] 专栏等。
+
+h5.about-instruction 使用方法
+dl
+  dt 写作框
+  dd 可以直接打字或把字符从查询结果或修饰符列表添加到这里。框内的所有字符（包括不可见的）都将在下面列出来，你可以个别确认并删除它们。
+  dt 修饰符类列表
+  dd 有关控制字形功能的字符列表（大多数是不可见的）。点选字样即被复制到写作框的当前插入位置。
+  dt 查询
+  dd
+    | 输入文字或 Unicode 号码查询，如有已编码的变体的话，会显示结果。可以一次查询多个字符。为了支援输入 Emoji，以半角冒号包围词语（如 #[code= ":东京:"]）时会出现相关 Emoji 提示。
+    ul
+      li.control.
+        #[span.button.is-dark 🡡粘贴] 把这个字加进上面的写作框中。
+      li.control.
+        #[span.button.is-primary 复制] 把这个字复制下来，以便于粘贴到其它地方。
+      li #[b 字符]列中所看到的是实际显示的字符，#[b 字样]列中的是示例。
+
+h5.about-env 系统要求
+p
+  | 浏览器版本至少 Internet Explorer 10 以上。IE9（Windows 7 默认版本）一部分功能不能正常运行。
+  | 其它浏览器 (Firefox, Chrome, Opera...) 尽量使用目前最新版本。
+p
+  | Windows 7 或 Mac OS X 10.6 之前的操作系统初始状态下不支持异体选择符处理。
+
+h5.about-license 使用条件
+ul
+  li 本站页面内容以 #[a(href="https://creativecommons.org/licenses/by/4.0/deed.zh") CC BY 4.0] 协议下提供。使用本站生成的纯文本字符串数据并不需要任何许可，署名。
+  li 使用本站代码时，请确认 #[a(href="https://github.com/747/vsselector/tree/master/LICENSE.md") GitHub 仓库页的许可协议]。
+  li 字形示例图片的绝大部分都依靠 #[a(href="http://glyphwiki.org/") GlyphWiki] 以及 #[a(href="https://twemoji.twitter.com/") Twemoji]。图标使用了 #[a(href="https://remixicon.com/") Remix Icon]。
+.columns
+  a.column.is-4.is-offset-4(target="_blank" href="https://twitter.com/meso_cacase/status/322522301608382464"): img(src="images/shihi.png")
+
+h5.about-version 数据版本信息
+- ver = public._data.versions
+p
+  span#last-build 最近生成日期: 
+  = ver.generated
+p
+  | StandardizedVariants.txt: 
+  a(href="http://www.unicode.org/Public/#{ver.standardized}/ucd/StandardizedVariants.txt")= ver.standardized
+p
+  | IVD_Sequences.txt: 
+  a(href="http://www.unicode.org/ivd/data/#{ver.ideographic}/IVD_Sequences.txt")= ver.ideographic
+p
+  | emoji-variation-sequences.txt: 
+  a(href="http://unicode.org/Public/emoji/#{ver.emojivs}/emoji-variation-sequences.txt")= ver.emojivs
+p
+  | emoji-sequences.txt: 
+  a(href="http://unicode.org/Public/emoji/#{ver.emojisequences}/emoji-sequences.txt")= ver.emojisequences
+p
+  | emoji-zwj-sequences.txt: 
+  a(href="http://unicode.org/Public/emoji/#{ver.emojizwj}/emoji-zwj-sequences.txt")= ver.emojizwj
+p
+  | CLDR: 
+  a(href="https://unicode.org/repos/cldr/tags/release-#{ver.cldr}/")= ver.cldr

@@ -4,7 +4,9 @@
 
 onMatch = (a)->
   uiLang.set a.lang
+  document.body.setAttribute 'lang', uiLang.value
   document.title = I 'title'
+  document.getElementById('about-title').textContent = (I 'title') + ' (β)'
   signboard.set a.bbtxt.decodeAsParam() if a.bbtxt
   if a.qstr
     decode = a.qstr.decodeAsParam()

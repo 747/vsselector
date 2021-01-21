@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE ldml SYSTEM "../../common/dtd/ldml.dtd">
-<!-- Copyright © 1991-2018 Unicode, Inc.
+<!-- Copyright © 1991-2020 Unicode, Inc.
 For terms of use, see http://www.unicode.org/copyright.html
 Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
 CLDR data files are interpreted according to the LDML specification (http://unicode.org/reports/tr35/)
 -->
 <ldml>
 	<identity>
-		<version number="$Revision: 14453 $"/>
+		<version number="$Revision$"/>
 		<language type="en"/>
 		<territory type="AU"/>
 	</identity>
 	<annotations>
-		<annotation cp="😱">face | face screaming in fear | fear | Munch | scared | scream</annotation>
-		<annotation cp="🥵">feverish | flushed | heat stroke | hot | hot face | red-faced | sweating</annotation>
 		<annotation cp="🤭">face with hand over mouth | whoops</annotation>
-		<annotation cp="😈">devil | face | fantasy | horns | smile</annotation>
+		<annotation cp="🤫">quiet | shooshing face | shush | shushing face</annotation>
+		<annotation cp="🤫" type="tts">shooshing face</annotation>
+		<annotation cp="🥵">feverish | flushed | heat stroke | hot | hot face | red-faced | sweating</annotation>
+		<annotation cp="😱">face | face screaming in fear | fear | Munch | scared | scream</annotation>
+		<annotation cp="😈">devil | face | fantasy | horns | smile | smiling face with horns</annotation>
+		<annotation cp="🖖">finger | hand | spock | vulcan | Vulcan salute</annotation>
+		<annotation cp="🖖" type="tts">Vulcan salute</annotation>
+		<annotation cp="🤙">call | call-me hand | hand | shaka</annotation>
 		<annotation cp="👦">boy | young | young person</annotation>
 		<annotation cp="👧">girl | Virgo | young person | zodiac</annotation>
-		<annotation cp="👨‍💼">business man | manager | office worker | white collar</annotation>
-		<annotation cp="👩‍💼">business woman | manager | office worker | white collar</annotation>
-		<annotation cp="👨‍🎤">entertainer | man | performer | rock singer | star</annotation>
-		<annotation cp="👩‍🎤">entertainer | performer | rock singer | star | woman</annotation>
+		<annotation cp="🧑‍🔧">electrician | mechanic | plumber | tradesperson | tradie</annotation>
+		<annotation cp="👨‍💼">business man | man office worker | manager | office worker | white collar</annotation>
+		<annotation cp="👩‍💼">business woman | manager | office worker | white collar | woman office worker</annotation>
+		<annotation cp="👨‍🎤">entertainer | man | man singer | performer | rock singer | star</annotation>
+		<annotation cp="👩‍🎤">entertainer | performer | rock singer | star | woman | woman singer</annotation>
 		<annotation cp="👨‍🎨">artist | man | painter | palette</annotation>
 		<annotation cp="👩‍🎨">artist | painter | palette | woman</annotation>
 		<annotation cp="👨‍🚒">fire truck | firefighter | man</annotation>
@@ -29,17 +35,25 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 		<annotation cp="🕵">detective | investigator | sleuth | spy</annotation>
 		<annotation cp="🕵‍♂">detective | investigator | man | sleuth | spy</annotation>
 		<annotation cp="🕵‍♀">detective | investigator | sleuth | spy | woman</annotation>
+		<annotation cp="🤵‍♂">man | man in tux | man in tuxedo | tux | tuxedo</annotation>
+		<annotation cp="👰‍♀">bride | veil | woman | woman with veil</annotation>
 		<annotation cp="🎅">celebration | Christmas | Father Christmas | Santa | Santa Claus</annotation>
 		<annotation cp="🎅" type="tts">Santa</annotation>
 		<annotation cp="🤶">celebration | Christmas | Mrs Claus | Mrs Santa Claus</annotation>
 		<annotation cp="💇‍♂">haircut | hairdresser | man | man getting haircut</annotation>
 		<annotation cp="💇‍♀">haircut | hairdresser | woman | woman getting haircut</annotation>
-		<annotation cp="🧖‍♀">sauna | steam room | woman in steam room | woman in steamy room</annotation>
-		<annotation cp="🧖‍♀" type="tts">woman in steam room</annotation>
+		<annotation cp="🧑‍🦯">accessibility | blind | person with guide cane | person with long mobility cane</annotation>
+		<annotation cp="🧑‍🦯" type="tts">person with long mobility cane</annotation>
+		<annotation cp="🧑‍🦼" draft="contributed">person in motorised wheelchair</annotation>
+		<annotation cp="🧑‍🦼" type="tts">person in motorised wheelchair</annotation>
+		<annotation cp="👨‍🦼" draft="contributed">man in motorised wheelchair</annotation>
+		<annotation cp="👨‍🦼" type="tts">man in motorised wheelchair</annotation>
+		<annotation cp="👩‍🦼" draft="contributed">woman in motorised wheelchair</annotation>
+		<annotation cp="👩‍🦼" type="tts">woman in motorised wheelchair</annotation>
 		<annotation cp="🧖‍♂">man in steam room | man in steamy room | sauna | steam room</annotation>
 		<annotation cp="🧖‍♂" type="tts">man in steam room</annotation>
-		<annotation cp="🛀">bath | bathtub | person taking bath | tub</annotation>
-		<annotation cp="🛌">hotel | person in bed | sleep | sleeping</annotation>
+		<annotation cp="🧖‍♀">sauna | steam room | woman in steam room | woman in steamy room</annotation>
+		<annotation cp="🧖‍♀" type="tts">woman in steam room</annotation>
 		<annotation cp="🏌">ball | golf | golfer | person golfing</annotation>
 		<annotation cp="🏌‍♂">golf | golfer | man | man golfing</annotation>
 		<annotation cp="🏌‍♀">golf | golfer | woman | woman golfing</annotation>
@@ -56,25 +70,11 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 		<annotation cp="🚴‍♂" type="tts">man riding a bike</annotation>
 		<annotation cp="🚴‍♀">bicycle | biking | cyclist | woman | woman riding a bike</annotation>
 		<annotation cp="🚴‍♀" type="tts">woman riding a bike</annotation>
-		<annotation cp="🤹">balance | juggle | multi-task | skill</annotation>
+		<annotation cp="🤹">balance | juggle | multi-task | person juggling | skill</annotation>
 		<annotation cp="🤹‍♂">juggling | man | multi-task</annotation>
 		<annotation cp="🤹‍♀">juggling | multi-task | woman</annotation>
-		<annotation cp="🖖">finger | hand | spock | vulcan | Vulcan salute</annotation>
-		<annotation cp="🖖" type="tts">Vulcan salute</annotation>
-		<annotation cp="👔" type="tts">tie</annotation>
-		<annotation cp="👕">clothing | shirt | t-shirt | tee | tshirt</annotation>
-		<annotation cp="👖">clothing | jeans | pants | trousers</annotation>
-		<annotation cp="👗">clothing | dress | woman’s clothes</annotation>
-		<annotation cp="👙">bikini | clothing | swim suit | two-piece</annotation>
-		<annotation cp="👚">blouse | clothing | top | woman | woman’s clothes</annotation>
-		<annotation cp="👚" type="tts">blouse</annotation>
-		<annotation cp="👛">accessories | coin | purse</annotation>
-		<annotation cp="👜">accessories | bag | handbag | tote</annotation>
-		<annotation cp="👝">accessories | bag | clutch bag | pouch</annotation>
-		<annotation cp="👝" type="tts">pouch</annotation>
-		<annotation cp="👟">athletic | clothing | running shoe | shoe | sneaker | trainer</annotation>
-		<annotation cp="👟" type="tts">sneaker</annotation>
-		<annotation cp="🧢" type="tts">baseball cap</annotation>
+		<annotation cp="🛀">bath | bathtub | person taking bath | tub</annotation>
+		<annotation cp="🛌">hotel | person in bed | sleep | sleeping</annotation>
 		<annotation cp="🦌">deer | stag</annotation>
 		<annotation cp="🦏">rhino | rhinoceros</annotation>
 		<annotation cp="🐭">face | mouse | pet</annotation>
@@ -85,27 +85,25 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 		<annotation cp="🐔">bird | chicken | poultry</annotation>
 		<annotation cp="🦅">bird of prey | eagle</annotation>
 		<annotation cp="🦉">bird of prey | owl | wise</annotation>
-		<annotation cp="🦜">bird | pirate | talk</annotation>
 		<annotation cp="🐬">dolphin | porpoise</annotation>
 		<annotation cp="🐠">fish | reef fish | tropical</annotation>
 		<annotation cp="🐠" type="tts">reef fish</annotation>
-		<annotation cp="🦀">crab | crustacean | seafood | shellfish</annotation>
-		<annotation cp="🦞">bisque | claws | lobster | seafood | shellfish</annotation>
-		<annotation cp="🦐">prawn | seafood | shellfish | shrimp</annotation>
-		<annotation cp="🦐" type="tts">prawn</annotation>
-		<annotation cp="🦑">decapod | seafood | squid</annotation>
 		<annotation cp="🐌">mollusc | snail</annotation>
 		<annotation cp="🦋">butterfly | insect | moth</annotation>
 		<annotation cp="🐛">bug | caterpillar | insect | worm</annotation>
 		<annotation cp="🐛" type="tts">caterpillar</annotation>
 		<annotation cp="🕷">arachnid | spider</annotation>
-		<annotation cp="🦟">dengue | fever | insect | malaria | virus</annotation>
+		<annotation cp="🦟">dengue | fever | insect | malaria | mosquito | mozzie | virus</annotation>
+		<annotation cp="🪴">grow | house | nurturing | plant | pot plant</annotation>
+		<annotation cp="🪴" type="tts">pot plant</annotation>
 		<annotation cp="🍊">fruit | mandarin | orange</annotation>
 		<annotation cp="🍊" type="tts">mandarin</annotation>
+		<annotation cp="🍆" type="tts">eggplant</annotation>
 		<annotation cp="🌶">chilli | pepper</annotation>
 		<annotation cp="🥖">baguette | bread | food | french | French stick</annotation>
 		<annotation cp="🥖" type="tts">French stick</annotation>
 		<annotation cp="🥯">bagel | bakery</annotation>
+		<annotation cp="🧇">waffle | waffle with butter</annotation>
 		<annotation cp="🍔" type="tts">hamburger</annotation>
 		<annotation cp="🍟">chips | fries</annotation>
 		<annotation cp="🥙">falafel | flatbread | food | gyro | kebab | pita | pita roll | stuffed</annotation>
@@ -117,6 +115,11 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 		<annotation cp="🥟">dumpling | empanada | gyōza | pastie | samosa</annotation>
 		<annotation cp="🥡">takeaway container | takeout</annotation>
 		<annotation cp="🥡" type="tts">takeaway container</annotation>
+		<annotation cp="🦀">crab | crustacean | seafood | shellfish</annotation>
+		<annotation cp="🦞">bisque | claws | lobster | seafood | shellfish</annotation>
+		<annotation cp="🦐">prawn | seafood | shellfish | shrimp</annotation>
+		<annotation cp="🦐" type="tts">prawn</annotation>
+		<annotation cp="🦑">decapod | seafood | squid</annotation>
 		<annotation cp="🍦">cream | dessert | ice cream | soft serve | sweet</annotation>
 		<annotation cp="🍦" type="tts">soft serve</annotation>
 		<annotation cp="🍧">dessert | granita | ice | sweet</annotation>
@@ -125,6 +128,8 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 		<annotation cp="🍪" type="tts">cookie</annotation>
 		<annotation cp="🍮">baked custard | dessert | pudding | sweet</annotation>
 		<annotation cp="🍮" type="tts">baked custard</annotation>
+		<annotation cp="🧃">drink carton | juice box | popper</annotation>
+		<annotation cp="🧃" type="tts">drink carton</annotation>
 		<annotation cp="🥢">chopsticks | pair of chopsticks</annotation>
 		<annotation cp="🗻">Fuji | mount Fuji | mountain</annotation>
 		<annotation cp="🗻" type="tts">mount Fuji</annotation>
@@ -134,8 +139,6 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 		<annotation cp="⛩" type="tts">Shinto shrine</annotation>
 		<annotation cp="🕋">Islam | Kaaba | Muslim | religion</annotation>
 		<annotation cp="🕋" type="tts">Kaaba</annotation>
-		<annotation cp="🌌">Milky Way | space</annotation>
-		<annotation cp="🌌" type="tts">Milky Way</annotation>
 		<annotation cp="🎠" type="tts">merry-go-round</annotation>
 		<annotation cp="🎪">big top | circus</annotation>
 		<annotation cp="🎪" type="tts">big top</annotation>
@@ -149,8 +152,14 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 		<annotation cp="🚒" type="tts">fire truck</annotation>
 		<annotation cp="🚙">4WD | four-wheel drive</annotation>
 		<annotation cp="🚙" type="tts">four-wheel drive</annotation>
+		<annotation cp="🛻">pick-up | pickup | truck | ute</annotation>
+		<annotation cp="🛻" type="tts">ute</annotation>
 		<annotation cp="🚛">articulated truck | lorry | semi | truck</annotation>
 		<annotation cp="🚛" type="tts">articulated truck</annotation>
+		<annotation cp="🦼" draft="contributed">mobility scooter</annotation>
+		<annotation cp="🦼" type="tts" draft="contributed">mobility scooter</annotation>
+		<annotation cp="🛼">roller | rollerskate | skate</annotation>
+		<annotation cp="🛼" type="tts">rollerskate</annotation>
 		<annotation cp="🛣">freeway | highway | road</annotation>
 		<annotation cp="🛣" type="tts">freeway</annotation>
 		<annotation cp="⛽">diesel | fuel | gas | petrol pump | pump | station</annotation>
@@ -166,43 +175,67 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 		<annotation cp="🚡" type="tts">cable car</annotation>
 		<annotation cp="🛎">bell | hotel | porter</annotation>
 		<annotation cp="🛎" type="tts">porter bell</annotation>
-		<annotation cp="⌛">hourglass | sand | timer</annotation>
+		<annotation cp="⌛">hourglass | hourglass done | sand | timer</annotation>
 		<annotation cp="⏲" type="tts">timer</annotation>
 		<annotation cp="🕰">clock</annotation>
 		<annotation cp="🕰" type="tts">clock</annotation>
+		<annotation cp="🌌">Milky Way | space</annotation>
+		<annotation cp="🌌" type="tts">Milky Way</annotation>
 		<annotation cp="⛱">beach | sand | sun | umbrella</annotation>
 		<annotation cp="⛱" type="tts">beach umbrella</annotation>
 		<annotation cp="🎉">celebration | party | popper | ta-da</annotation>
 		<annotation cp="🎍">bamboo | celebration | decoration | Japanese</annotation>
 		<annotation cp="🎍" type="tts">bamboo decoration</annotation>
 		<annotation cp="🎁" type="tts">gift</annotation>
-		<annotation cp="🎟">admission | entry | ticket</annotation>
+		<annotation cp="🎟">admission | admission tickets | entry | ticket</annotation>
 		<annotation cp="🏆">celebration | prize | trophy</annotation>
 		<annotation cp="🏅">celebration | medal | sports</annotation>
+		<annotation cp="⚽">ball | football | soccer</annotation>
+		<annotation cp="⚽" type="tts">soccer ball</annotation>
+		<annotation cp="🏉">australian football | rugby ball | rugby league | rugby union</annotation>
+		<annotation cp="🏉" type="tts">rugby ball</annotation>
 		<annotation cp="🎳">ball | game | tenpin bowling</annotation>
 		<annotation cp="🎳" type="tts">tenpin bowling</annotation>
-		<annotation cp="🏏" draft="contributed">cricket game</annotation>
 		<annotation cp="🥅">goal cage</annotation>
 		<annotation cp="🥅" type="tts">goal cage</annotation>
-		<annotation cp="⛳">flag | golf | hole</annotation>
+		<annotation cp="⛳">flag | flag in hole | golf | hole</annotation>
 		<annotation cp="⛸">ice | ice skating | skate</annotation>
 		<annotation cp="🎣">fish | fishing | pole | rod</annotation>
 		<annotation cp="🎣" type="tts">fishing rod</annotation>
-		<annotation cp="🎿">ski | skiing | snow</annotation>
-		<annotation cp="🛷">sled | sledge | sleigh</annotation>
+		<annotation cp="🎿">ski | skiing | skis | snow</annotation>
 		<annotation cp="🛷" type="tts">sled</annotation>
 		<annotation cp="🥌">curling | game | rock | stone</annotation>
 		<annotation cp="🧿">amulet | charm | evil-eye | nazar | talisman</annotation>
 		<annotation cp="🧿" type="tts">evil-eye amulet</annotation>
 		<annotation cp="🎰">game | pokie | pokies</annotation>
 		<annotation cp="🎰" type="tts">pokie</annotation>
-		<annotation cp="♦">card | diamonds | game</annotation>
-		<annotation cp="♣">card | clubs | game</annotation>
+		<annotation cp="♦">card | diamond suit | diamonds | game</annotation>
+		<annotation cp="♣">card | club suit | clubs | game</annotation>
+		<annotation cp="🪡">embroidery | needle | needle and thread | sewing | stitches | sutures | tailoring</annotation>
+		<annotation cp="🪡" type="tts">needle and thread</annotation>
+		<annotation cp="🕶">dark | eye | eyewear | glasses | sunglasses | sunnies</annotation>
+		<annotation cp="👕">clothing | shirt | t-shirt | T-shirt | tee | tshirt</annotation>
+		<annotation cp="👖">clothing | jeans | pants | trousers</annotation>
+		<annotation cp="👗">clothing | dress | woman’s clothes</annotation>
+		<annotation cp="🩲">bathers | briefs | speedos | underwear</annotation>
+		<annotation cp="🩳">bathing suit | boardies | boardshorts | shorts | swim shorts | underwear</annotation>
+		<annotation cp="👙">bikini | clothing | swim suit | two-piece</annotation>
+		<annotation cp="👚">blouse | clothing | top | woman | woman’s clothes</annotation>
+		<annotation cp="👚" type="tts">blouse</annotation>
+		<annotation cp="👛">accessories | coin | purse</annotation>
+		<annotation cp="👜">accessories | bag | handbag | tote</annotation>
+		<annotation cp="👝">accessories | bag | clutch bag | pouch</annotation>
+		<annotation cp="👝" type="tts">pouch</annotation>
+		<annotation cp="🩴" type="tts">thongs</annotation>
+		<annotation cp="👟">athletic | clothing | runners | running shoe | shoe | sneaker | trainer</annotation>
+		<annotation cp="👟" type="tts">sneaker</annotation>
+		<annotation cp="🧢" type="tts">baseball cap</annotation>
+		<annotation cp="💄">cosmetics | lipstick | make-up</annotation>
 		<annotation cp="🔈">low | quiet | soft | speaker | volume</annotation>
 		<annotation cp="📻">AM | FM | radio | wireless</annotation>
-		<annotation cp="🎹">instrument | keyboard | music | organ | piano</annotation>
+		<annotation cp="🎹">instrument | keyboard | music | musical keyboard | organ | piano</annotation>
 		<annotation cp="🥁">drum | drumsticks | music | percussions</annotation>
-		<annotation cp="☎">land line | phone | telephone</annotation>
+		<annotation cp="☎">landline | phone | telephone</annotation>
 		<annotation cp="💻">computer | laptop | PC | personal</annotation>
 		<annotation cp="💾">computer | disk | diskette | floppy</annotation>
 		<annotation cp="💿">CD | computer | disk | optical</annotation>
@@ -210,7 +243,7 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 		<annotation cp="📀" type="tts">DVD</annotation>
 		<annotation cp="🎥">camera | cinema | movie</annotation>
 		<annotation cp="🎥" type="tts">movie camera</annotation>
-		<annotation cp="🎬">clapper | film</annotation>
+		<annotation cp="🎬">clapper | clapperboard | film</annotation>
 		<annotation cp="📺">television | TV | video</annotation>
 		<annotation cp="📼">tape | VHS | video | videocassette</annotation>
 		<annotation cp="💡">bulb | comic | electric | globe | idea | light</annotation>
@@ -242,17 +275,27 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 		<annotation cp="📍" type="tts">round drawing-pin</annotation>
 		<annotation cp="🗄" type="tts">filing cabinet</annotation>
 		<annotation cp="🛠">hammer | hammer and spanner | spanner | tool | wrench</annotation>
-		<annotation cp="🔫" type="tts">gun</annotation>
+		<annotation cp="🔫">toy | water pistol</annotation>
+		<annotation cp="🦯">accessibility | long mobility cane | white cane</annotation>
+		<annotation cp="🦯" type="tts">long mobility cane</annotation>
+		<annotation cp="🪝">catch | crook | curve | ensnare | fishing | hook | selling point</annotation>
 		<annotation cp="🧬">biologist | dna | DNA | evolution | gene | genetics | life</annotation>
 		<annotation cp="🧬" type="tts">DNA</annotation>
 		<annotation cp="📡" type="tts">satellite dish</annotation>
+		<annotation cp="🩹">adhesive bandage | bandage | bandaid | dressing</annotation>
+		<annotation cp="🩹" type="tts">bandaid</annotation>
+		<annotation cp="🪞">looking glass | mirror | reflection | reflector</annotation>
 		<annotation cp="🛋">couch | couch and lamp | hotel | lamp | sofa | sofa and lamp</annotation>
 		<annotation cp="🛋" type="tts">couch and lamp</annotation>
 		<annotation cp="🚽">facilities | loo | toilet | WC</annotation>
+		<annotation cp="🪤" type="tts">mouse trap</annotation>
 		<annotation cp="♿">access | disabled access | wheelchair symbol</annotation>
+		<annotation cp="🚺">ladies room | lavatory | restroom | wc | woman | women’s toilet</annotation>
 		<annotation cp="🚼">baby | baby symbol | change room | changing</annotation>
 		<annotation cp="🚾">amenities | bathroom | restroom | toilet | water closet | wc | WC</annotation>
 		<annotation cp="🚾" type="tts">WC</annotation>
+		<annotation cp="🛂">border | control | passport | security</annotation>
+		<annotation cp="🛂" type="tts">border security</annotation>
 		<annotation cp="⛔">denied | entry | forbidden | no | prohibited | traffic</annotation>
 		<annotation cp="🚫">denied | entry | forbidden | no | prohibited</annotation>
 		<annotation cp="🚭">denied | forbidden | no | prohibited | smoking</annotation>
@@ -260,24 +303,30 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 		<annotation cp="🚱">non-drinkable water | non-drinking | non-potable | water</annotation>
 		<annotation cp="🚱" type="tts">non-drinkable water</annotation>
 		<annotation cp="🚷">denied | forbidden | no | no pedestrians | pedestrian | prohibited</annotation>
+		<annotation cp="⬆">arrow | cardinal | direction | north | up</annotation>
 		<annotation cp="✝">Christian | cross | religion</annotation>
 		<annotation cp="✝" type="tts">Christian cross</annotation>
 		<annotation cp="♍">virgin | Virgo | zodiac</annotation>
 		<annotation cp="♐">archer | centaur | Sagittarius | zodiac</annotation>
 		<annotation cp="♒">Aquarius | water bearer | zodiac</annotation>
-		<annotation cp="⏩" draft="contributed">fast forward button</annotation>
-		<annotation cp="⏩" type="tts" draft="contributed">fast forward button</annotation>
+		<annotation cp="⏩">fast forward button</annotation>
+		<annotation cp="⏩" type="tts">fast forward button</annotation>
 		<annotation cp="🔆">bright button | brightness | brightness button</annotation>
-		<annotation cp="♾">eternal | forever | unbound | universal</annotation>
-		<annotation cp="☑">ballot | ballot box with check | box | tick</annotation>
-		<annotation cp="✔">heavy tick mark | mark | tick</annotation>
+		<annotation cp="➕">+ | add | addition | math | maths | plus | sign</annotation>
+		<annotation cp="➖">- | – | math | maths | minus | sign | subtraction</annotation>
+		<annotation cp="➗">÷ | divide | division | math | sign</annotation>
+		<annotation cp="♾">eternal | forever | infinity | unbound | universal</annotation>
 		<annotation cp="‼">double exclamation mark | exclamation | mark | punctuation</annotation>
 		<annotation cp="⁉">exclamation | mark | punctuation | question</annotation>
-		<annotation cp="🔠" draft="contributed">input Latin uppercase</annotation>
-		<annotation cp="🔠" type="tts" draft="contributed">input Latin uppercase</annotation>
-		<annotation cp="🔡" draft="contributed">input Latin lowercase</annotation>
-		<annotation cp="🔡" type="tts" draft="contributed">input Latin lowercase</annotation>
-		<annotation cp="🔤" draft="contributed">input Latin letters</annotation>
-		<annotation cp="🔤" type="tts" draft="contributed">input Latin letters</annotation>
+		<annotation cp="☑">ballot | box | tick | tick box with tick</annotation>
+		<annotation cp="✔">heavy tick mark | mark | tick</annotation>
+		<annotation cp="🔠">input Latin uppercase</annotation>
+		<annotation cp="🔠" type="tts">input Latin uppercase</annotation>
+		<annotation cp="🔡">input Latin lowercase</annotation>
+		<annotation cp="🔡" type="tts">input Latin lowercase</annotation>
+		<annotation cp="🔤">input Latin letters</annotation>
+		<annotation cp="🔤" type="tts">input Latin letters</annotation>
+		<annotation cp="$">AUD | dollar | money</annotation>
+		<annotation cp="₹">currency | indian rupee | INR | rupee</annotation>
 	</annotations>
 </ldml>

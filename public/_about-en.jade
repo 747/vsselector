@@ -1,0 +1,60 @@
+p
+  | An utility for searching & inputting variants of the same character that have different appearances defined in Unicode, coming from scripts like #[b Chinese (Han)], #[b Emoji], Math, Mongolian etc.
+  | Copied strings as such are platform-agnostic, but may need specific font support to see the intended glyph.
+  | For how it works, recommend reading the detailed explanation by #[a(href="https://unicode.org/faq/vs.html" target="_blank") Unicode] or #[a(href="https://www.babelstone.co.uk/Blog/2007/06/secret-life-of-variation-selectors.html" target="_blank") BabelStone].
+
+h5.about-instruction How to use
+dl
+  dt Memo Area
+  dd You can directly type characters in or insert from search results and Selectors Picker. All individual code points the text area currently contains are shown below, that helps you to check and delete invisible characters.
+  dt Selectors Picker
+  dd The list of (mostly invisible) glyph control characters. Click to paste the character into the caret position in Memo Area.
+  dt Search Function
+  dd
+    | Input characters and Unicode code points (can be mixed) to show all existing registered variants for each. Emoji suggestion is activated with the format enclosed by colons, such as #[code= ":tokyo:"].
+    ul
+      li.control.
+        #[span.button.is-dark Insert ↑] : insert the character into the text area above.
+      li.control.
+        #[span.button.is-primary Copy] : copy the character data that can be pasted to elsewhere.
+      li The #[b Output] column shows the actual character, and the #[b Image] column a sample image.
+
+h5.about-env Requirements
+p
+  | #[b For IE]: version 10 or above. Some features are not functional on IE9 (Windows 7 default).
+  br
+  | #[b Others]: Firefox, Chrome, Opera etc. should be updated to the newest possible version.
+p
+  | Note that OSes older than Windows 7 or Mac OS X 10.6 cannot fully handle variants out of the box.
+
+h5.about-license License
+ul
+  li The content of this page is available under #[a(href="https://creativecommons.org/licenses/by/4.0/deed.en") CC BY 4.0]. The generated plain text data can be used without any attribution and restrictions.
+  li If you want to use the page's source code, please follow #[a(href="https://github.com/747/vsselector/tree/master/LICENSE.md") the license information in the GitHub repository].
+  li Most sample images of the glyphs are owed to #[a(href="http://glyphwiki.org/") GlyphWiki] and #[a(href="https://twemoji.twitter.com/") Twemoji]. Icons are from #[a(href="https://remixicon.com/") Remix Icon].
+.columns
+  a.column.is-4.is-offset-4(target="_blank" href="https://twitter.com/meso_cacase/status/322522301608382464"): img(src="images/shihi.png")
+
+h5.about-version Data Versions
+- ver = public._data.versions
+p
+  span#last-build Last build at: 
+  = ver.generated
+p
+  | StandardizedVariants.txt: 
+  a(href="http://www.unicode.org/Public/#{ver.standardized}/ucd/StandardizedVariants.txt")= ver.standardized
+p
+  | IVD_Sequences.txt: 
+  a(href="http://www.unicode.org/ivd/data/#{ver.ideographic}/IVD_Sequences.txt")= ver.ideographic
+p
+  | emoji-variation-sequences.txt: 
+  a(href="http://unicode.org/Public/emoji/#{ver.emojivs}/emoji-variation-sequences.txt")= ver.emojivs
+p
+  | emoji-sequences.txt: 
+  a(href="http://unicode.org/Public/emoji/#{ver.emojisequences}/emoji-sequences.txt")= ver.emojisequences
+p
+  | emoji-zwj-sequences.txt: 
+  a(href="http://unicode.org/Public/emoji/#{ver.emojizwj}/emoji-zwj-sequences.txt")= ver.emojizwj
+p
+  | CLDR: 
+  a(href="https://unicode.org/repos/cldr/tags/release-#{ver.cldr}/")= ver.cldr

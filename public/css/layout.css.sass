@@ -131,6 +131,13 @@ $td-x-paddings: nth($table-cell-padding, 2) * 2
     +mobile
       margin-top: 0 !important
       margin-bottom: 0.1em !important
-// no longer needed with checkradio extension
-// .collection-selector-desc::before
-//   content: '\A0' // hack to compensate for implicit spaces eaten by .level-item (display: flex)
+
+@each $ln in ("en-us", "ja", "zh-hans", "zh-hant")
+  body[lang=#{$ln}] .about:not([lang=#{$ln}])
+    display: none
+
+// hack: mysterious padding bug on Trident and Firefox
+_:-ms-input-placeholder, :root .modal-padding-fix
+  height: $box-padding
+_:lang(x)::-moz-placeholder, .modal-padding-fix
+  height: $box-padding

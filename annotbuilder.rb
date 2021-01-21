@@ -5,19 +5,20 @@ require 'json'
 
 cpath = "data/cldr-common/common"
 dirs = ["annotations", "annotationsDerived"]
-langs = {en: ['en'], ja: ['ja']}
+langs = {en: ['en'], ja: ['ja'], :'zh-hans' => ['zh', '-'], :'zh-hant' => ['zh', 'Hant']}
 
 langs.each do |lang, tags|
   dict = {} # {<cp>: [<tts>, <name>...]}
   fill = -> x, y, f { dict.key?(x) ? (f ? (dict[x][0] = y) : dict[x] << y) : (dict[x] = f ? [y] : [nil, y]) }
   dirs.each { |dir|
-    Dir.glob("#{cpath}/#{dir}/#{lang}*.xml") do |file|
+    Dir.glob("#{cpath}/#{dir}/#{tags[0]}*.xml") do |file|
       xml = REXML::Document.new IO.read(file, mode: "r:utf-8")
       locale = ['language', 'script', 'territory'].map { |e|
-        xml.get_elements("/ldml/identity/#{e}").first.try(:attribute, 'type').try(:value)
+        xml.get_elements("/ldml/identity/#{e}").first.try(:attribute, 'type').try(:value) || '-'
       }
-      next if tags.find.with_index { |e, i| e.present? && locale[i].blank? }
+      next if tags.find.with_index { |e, i| e.present? && e != locale[i] }
 
+      puts "#{lang}: reading #{file}"
       xml.each_element("/ldml/annotations/annotation") { |a|
         char = a.attribute('cp').to_s.intern
         names = a.get_text.to_s.split("|")
@@ -59,6 +60,7 @@ langs.each do |lang, tags|
     version = "public/_data.json"
     vers = JSON.parse(IO.read(version, mode: "r:utf-8"))
     vers["versions"]["cldr"] = m[1]
+    vers["versions"]["generated"] = Time.now.strftime("%Y/%m/%d %R %Z")
     open(version, "w:utf-8") { |ver| JSON.dump vers, ver }
   end
 end

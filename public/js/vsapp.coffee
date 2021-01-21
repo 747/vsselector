@@ -75,7 +75,11 @@ document.getElementById('unmodal').onclick = ->
 
 uiLang =
   value: "ja"
-  set: (v)-> uiLang.value = if v then v else 'ja'
+  reset: true
+  set: (v)->
+    old = uiLang.value
+    uiLang.value = if v then v else 'ja'
+    uiLang.reset = if uiLang.value is old then false else true
 
 signboard =
   value: ""
@@ -193,7 +197,9 @@ hint =
     @searcher.search(text).slice(0, @max)
 
   load: ->
-    langs = ['en', 'ja']
+    langs = ['en']
+    langs.push uiLang.value unless uiLang.value is 'en-us'
+    hint.loaded = false
     Promise.all (hint.request(ln) for ln in langs)
     .then (results)->
       for res in results
@@ -307,7 +313,7 @@ messages =
     'zh-hant': '關閉序列列表'
   col_actual:
     'ja': '表示'
-    'en-us': 'Rendering'
+    'en-us': 'Output'
     'zh-hans': '字符'
     'zh-hant': '字符'
   col_code:
@@ -323,8 +329,8 @@ messages =
   col_image:
     'ja': '画像'
     'en-us': 'Image'
-    'zh-hans': '图像'
-    'zh-hant': '圖像'
+    'zh-hans': '字样'
+    'zh-hant': '字樣'
   col_collection:
     'ja': 'コレクション'
     'en-us': 'Collection'
@@ -420,7 +426,7 @@ Header =
         m '.navbar-end',
           m '.navbar-item.has-dropdown.is-hoverable',
             m 'a.navbar-link',
-              m 'img.icon.is-large[src="images/language.svg"]', title: I 'lang', alt: I 'lang'
+              m 'img.icon.is-large[src="images/translate-2.svg"]', title: I 'lang', alt: I 'lang'
             m '.navbar-dropdown', do ->
               for t, l of messages['langname'] when t isnt uiLang.value
                 m "a.navbar-item[href=/#{t}/#{query.box.encodeAsParam()}]", oncreate: m.route.link, l
@@ -685,7 +691,7 @@ Row =
       do ->
         if seq
           code = seq.eachToHex().join('-')
-          path = if MISSING.indexOf(code) > 0 then "./images/te/supp/#{code}.png" else "./images/te/#{code}.svg"
+          path = if MISSING.indexOf(code) >= 0 then "./images/te/supp/#{code}.svg" else "./images/te/#{code}.svg"
           [
             m 'td', colSpan: 2, seq.eachToUpperU().join ' '
             m 'td.glyph-col',
@@ -704,8 +710,8 @@ Row =
                       "https://glyphwiki.org/glyph/u#{if base then base.toLowerU() + '-u' else ''}#{id.toLowerU()}.svg"
                     when "emoji"
                       code = "#{if base then base.toString(16) + '-' else ''}#{id.toString(16)}"
-                      if MISSING.indexOf(code) > 0 then "./images/te/supp/#{code}.png" else "./images/te/#{code}.svg"
-                    else "./images/noimage.png"
+                      if MISSING.indexOf(code) >= 0 then "./images/te/supp/#{code}.svg" else "./images/te/#{code}.svg"
+                    else "./images/noimage.svg"
             m 'td', do ->
               if cid then m 'span.named', I "coll_#{cid}"
               else coll
@@ -780,6 +786,10 @@ VResult =
 SearchBox =
   oninit: ->
     hint.load()
+  onupdate: ->
+    if uiLang.reset
+      uiLang.reset = false
+      hint.load()
 
   f: ->
     m.withAttr 'value', query.input
@@ -942,7 +952,9 @@ TheApp =
 
 onMatch = (a)->
   uiLang.set a.lang
+  document.body.setAttribute 'lang', uiLang.value
   document.title = I 'title'
+  document.getElementById('about-title').textContent = (I 'title') + ' (β)'
   signboard.set a.bbtxt.decodeAsParam() if a.bbtxt
   if a.qstr
     decode = a.qstr.decodeAsParam()

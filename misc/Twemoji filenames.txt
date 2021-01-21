@@ -244,6 +244,7 @@ ae.svg should be ae-fe0f.svg (fully-qualified) ®️
 2653.svg should be 2653-fe0f.svg
 2693.svg should be 2693-fe0f.svg
 26a1.svg should be 26a1-fe0f.svg
+26a7.svg should be 26a7-fe0f.svg # 13.0
 26aa.svg should be 26aa-fe0f.svg
 26ab.svg should be 26ab-fe0f.svg
 26bd.svg should be 26bd-fe0f.svg

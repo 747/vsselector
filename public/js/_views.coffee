@@ -26,7 +26,7 @@ Header =
         m '.navbar-end',
           m '.navbar-item.has-dropdown.is-hoverable',
             m 'a.navbar-link',
-              m 'img.icon.is-large[src="images/language.svg"]', title: I 'lang', alt: I 'lang'
+              m 'img.icon.is-large[src="images/translate-2.svg"]', title: I 'lang', alt: I 'lang'
             m '.navbar-dropdown', do ->
               for t, l of messages['langname'] when t isnt uiLang.value
                 m "a.navbar-item[href=/#{t}/#{query.box.encodeAsParam()}]", oncreate: m.route.link, l
@@ -291,7 +291,7 @@ Row =
       do ->
         if seq
           code = seq.eachToHex().join('-')
-          path = if MISSING.indexOf(code) > 0 then "./images/te/supp/#{code}.png" else "./images/te/#{code}.svg"
+          path = if MISSING.indexOf(code) >= 0 then "./images/te/supp/#{code}.svg" else "./images/te/#{code}.svg"
           [
             m 'td', colSpan: 2, seq.eachToUpperU().join ' '
             m 'td.glyph-col',
@@ -310,8 +310,8 @@ Row =
                       "https://glyphwiki.org/glyph/u#{if base then base.toLowerU() + '-u' else ''}#{id.toLowerU()}.svg"
                     when "emoji"
                       code = "#{if base then base.toString(16) + '-' else ''}#{id.toString(16)}"
-                      if MISSING.indexOf(code) > 0 then "./images/te/supp/#{code}.png" else "./images/te/#{code}.svg"
-                    else "./images/noimage.png"
+                      if MISSING.indexOf(code) >= 0 then "./images/te/supp/#{code}.svg" else "./images/te/#{code}.svg"
+                    else "./images/noimage.svg"
             m 'td', do ->
               if cid then m 'span.named', I "coll_#{cid}"
               else coll
@@ -386,6 +386,10 @@ VResult =
 SearchBox =
   oninit: ->
     hint.load()
+  onupdate: ->
+    if uiLang.reset
+      uiLang.reset = false
+      hint.load()
 
   f: ->
     m.withAttr 'value', query.input

@@ -66,3 +66,22 @@ context.show_text "ZWJ"
 
 context.show_page
 surface.finish
+
+surface = Cairo::SVGSurface.new "public/images/noimage.svg", w, h
+context = Cairo::Context.new surface
+context.set_source_color "#B2B2B2"
+
+context.fill { context.rounded_rectangle rx, ry, rw, rh, rr }
+
+context.select_font_face 'Aileron', nil, Cairo::FontWeight::BOLD
+context.set_source_color "#FFFFFF"
+context.set_font_size 38
+ext1 = context.text_extents "NO"
+context.move_to cx - ext1.width / 2 - ext1.x_bearing, h * 1.0/3 - ext1.height / 2 - ext1.y_bearing
+context.show_text "NO"
+ext2 = context.text_extents "IMAGE"
+context.move_to cx - ext2.width / 2 - ext2.x_bearing, h * 2.0/3 - ext2.height / 2 - ext2.y_bearing
+context.show_text "IMAGE"
+
+context.show_page
+surface.finish
