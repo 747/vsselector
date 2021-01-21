@@ -45,12 +45,12 @@ messages =
     'zh-hans': '辅助'
     'zh-hant': '輔助'
   paste_left:
-    'ja': '🡠クリックで挿入'
+    'ja': '⬅クリックで挿入'
     'en-us': 'Click to paste to left'
     'zh-hans': '点字放进左栏'
     'zh-hant': '點字放進左欄'
   paste_up:
-    'ja': '🡡クリックで挿入'
+    'ja': '⬆クリックで挿入'
     'en-us': 'Click to paste up'
     'zh-hans': '点字放进上栏'
     'zh-hant': '點字放進上欄'
@@ -70,10 +70,10 @@ messages =
     'zh-hans': '%(site)s 上查看“%(char)s”字'
     'zh-hant': '%(site)s 上查看「%(char)s」字'
   insert:
-    'ja': '🡡挿入'
-    'en-us': 'Insert ↑'
-    'zh-hans': '🡡粘贴'
-    'zh-hant': '🡡貼上'
+    'ja': '⬆挿入'
+    'en-us': 'Insert ⬆'
+    'zh-hans': '⬆粘贴'
+    'zh-hant': '⬆貼上'
   copy:
     'ja': 'コピー'
     'en-us': 'Copy'

@@ -282,8 +282,7 @@ Row =
                     when "Hanyo-Denshi", "MSARG", "KRName" then 'ivs-etc'
                 (n for n in classes when n isnt undefined).join ' '
               value: Row.calcChar(seq, base, id)
-
-          m '.control'
+          m '.control',
             m 'button.button.clipboard.is-primary',
               class: (if seq then 'is-small'),
               'data-clipboard-text': Row.calcChar(seq, base, id)
