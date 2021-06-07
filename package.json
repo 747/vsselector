@@ -1,6 +1,6 @@
 {
   "name": "vsselector",
   "dependencies": {
-    "harp": "^0.33.0"
+    "harp": "^0.40.3"
   }
 }
