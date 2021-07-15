@@ -1,6 +1,7 @@
 {
   "name": "vsselector",
   "dependencies": {
+    "coffeescript": "^2.5.1",
     "harp": "^0.40.3"
   }
 }
