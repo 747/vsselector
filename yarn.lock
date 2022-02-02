@@ -5,6 +5,13 @@ __metadata:
   version: 4
   cacheKey: 7
 
+"@dabh/colors@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "@dabh/colors@npm:1.4.0"
+  checksum: 0f3dda74b2b5c34585822a4eae4ca8e73465baf7310f693380fbac563f5d67ca5b864ba08b8dd881c3a54701207e3491abc9ac202bb6ede527aec5067330457b
+  languageName: node
+  linkType: hard
+
 "@npmcli/move-file@npm:^1.0.1":
   version: 1.1.2
   resolution: "@npmcli/move-file@npm:1.1.2"
@@ -70,6 +77,13 @@ __metadata:
   version: 3.0.0
   resolution: "ansi-regex@npm:3.0.0"
   checksum: 2e3c40d42904366e4a1a7b906ea3ae7968179a50916dfa0fd3e59fd12333c5d95970a9a59067ac3406d97c78784d591f0b841a4efd365dafb261327ae1ea3478
+  languageName: node
+  linkType: hard
+
+"ansi-regex@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "ansi-regex@npm:5.0.1"
+  checksum: c944e1229f022a2071f7477ea425964328c577d2c752083fe564ea0513b6d733c9ec65102f6d4d2b54cba0cb2dc969648b60d567abeff13dc95ecc0b9b97737d
   languageName: node
   linkType: hard
 
@@ -146,12 +160,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"boxt@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "boxt@npm:1.0.0"
+"boxt@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "boxt@npm:1.1.2"
   dependencies:
-    colors: ^1.3.2
-  checksum: 94dcd2f56f3c164a2082e3a93a15cad691047e18499fe4bcafee75ab8f5e895b424a85f2d8712dca71c75483ec90ecfb8e87ad623956e36da774e9084db84626
+    strip-ansi: ^6.0.1
+  checksum: ed1c7e793d2ef1bc424d35d7578de297dec61b751dbc8b0354f1dc18c2d7dab20ff75147bfa0175f614c77cdef7cbb08d262adc893c9f784cf44ff44b64d7d30
   languageName: node
   linkType: hard
 
@@ -276,7 +290,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"colors@npm:^1.3.2, colors@npm:^1.4.0":
+"colors@npm:^1.4.0":
   version: 1.4.0
   resolution: "colors@npm:1.4.0"
   checksum: a0f266ac041a9774d92cc9624a984707678d2eeec125d54e8d8231075ce36c24c5352fb5d0f90c6ee420d0f63e354417cec716386ad341309334aad18e32b933
@@ -422,7 +436,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"escape-html@npm:1.0.3, escape-html@npm:~1.0.3":
+"escape-html@npm:~1.0.3":
   version: 1.0.3
   resolution: "escape-html@npm:1.0.3"
   checksum: 900a7f2b80b9f89c85b7a303d1b7a4d354b93e328871414f165f13c5c209a80eab787e3a63429e596877def69fe4dcb3d1b55af655207a901a9ec99f7f148743
@@ -574,27 +588,27 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"harp@npm:^0.40.3":
-  version: 0.40.3
-  resolution: "harp@npm:0.40.3"
+"harp@npm:^0.41.2":
+  version: 0.41.2
+  resolution: "harp@npm:0.41.2"
   dependencies:
+    "@dabh/colors": ^1.4.0
     async: 0.2.9
     basic-auth: ^2.0.1
-    boxt: ^1.0.0
+    boxt: ^1.1.2
     colors: ^1.4.0
     connect: ^3.6.6
     envy-json: 0.2.1
-    escape-html: 1.0.3
     fs-extra: 1.x
     mime-types: ^2.1.24
     minimist: ^1.2.5
     parseurl: ^1.3.2
     pause: 0.1.0
     send: ^0.17.1
-    terraform: 1.20.*
+    terraform: ^1.20.2
   bin:
     harp: bin/harp
-  checksum: 9c076de24c9df72961c36f510d42863c9df878a26bbf77325d820072a8c7bbfed0ccab6ad34d69c32436c6dbe68d65b1f2e0804128ea1845d87c8e5d5c95a5bb
+  checksum: 29058bac88a1119cdd9d2618f596219e6a0f60dba0d172a9ef69682ba8dbe89e6d2f226c2f4dba309f4257847858327f68d131370c3f2fec49afa3f80105fb13
   languageName: node
   linkType: hard
 
@@ -883,12 +897,12 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"marked@npm:^2.0.6":
-  version: 2.1.3
-  resolution: "marked@npm:2.1.3"
+"marked@npm:^4.0.10":
+  version: 4.0.12
+  resolution: "marked@npm:4.0.12"
   bin:
-    marked: bin/marked
-  checksum: 9779b758ae413186be535109fe695be4fac23a671c6565b855606bb1ea70f796b580f10a9588a130e7b676a085916ef90c82982ef6a382a06b14864cbf802afb
+    marked: bin/marked.js
+  checksum: b026d6dc5ab8beb6fbb3bac6d20061aa1d845b8668a077797a1fd985c973da7be819c6fd29f7054d0d644a1ba32bd4fa4789b8cb254b299e7bf4ad3629f63560
   languageName: node
   linkType: hard
 
@@ -1419,6 +1433,15 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"strip-ansi@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "strip-ansi@npm:6.0.1"
+  dependencies:
+    ansi-regex: ^5.0.1
+  checksum: 9d3061240b03abe5beaf403893464fdc924f43664debe822d5e9146b56c1398b88003f8afdb97eb0cea955c568f6bbfa4923d2b2a08a3a079fd09ee3b5402efb
+  languageName: node
+  linkType: hard
+
 "supports-color@npm:^5.3.0":
   version: 5.5.0
   resolution: "supports-color@npm:5.5.0"
@@ -1442,18 +1465,18 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"terraform@npm:1.20.*":
-  version: 1.20.1
-  resolution: "terraform@npm:1.20.1"
+"terraform@npm:^1.20.2":
+  version: 1.20.2
+  resolution: "terraform@npm:1.20.2"
   dependencies:
     ejs: ^3.1.6
     esbuild: ^0.12.1
     lru-cache: 4.1.1
-    marked: ^2.0.6
+    marked: ^4.0.10
     react: ^17.0.2
     sass: ^1.29.0
     through: 2.3.8
-  checksum: 13fed8356951c5277cc0c8d9ac3501bf2c88fa704fc0859a4cbeb0c56b30d78fd90a64661bfd77382f78d8e2c302fd7e2ba03fd7ab5f8c8825896b0a9761ede4
+  checksum: df3ba16df1046323c0d1ba4d3529dd473da7ec13493f739ab8812ef913622652a141149bc34165e0ac6875dd4fe9af62343e862884674659451cdaa5ca08e3a5
   languageName: node
   linkType: hard
 
@@ -1524,7 +1547,7 @@ fsevents@~2.3.2:
   resolution: "vsselector@workspace:."
   dependencies:
     coffeescript: ^2.5.1
-    harp: ^0.40.3
+    harp: ^0.41.2
   languageName: unknown
   linkType: soft
 
