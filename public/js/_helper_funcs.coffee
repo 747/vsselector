@@ -54,6 +54,8 @@ Array::eachToHex = ->
   (e.toString(16) for e in @)
 Array::eachToUpperU = ->
   (e.toUpperU() for e in @)
+Array::eachToLowerU = ->
+  (e.toLowerU() for e in @)
 
 numlike = (x)-> +x is +x
 isObject = (value)->

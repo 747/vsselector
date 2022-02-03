@@ -54,6 +54,8 @@ Array::eachToHex = ->
   (e.toString(16) for e in @)
 Array::eachToUpperU = ->
   (e.toUpperU() for e in @)
+Array::eachToLowerU = ->
+  (e.toLowerU() for e in @)
 
 numlike = (x)-> +x is +x
 isObject = (value)->
@@ -571,7 +573,7 @@ Picker =
                       data: ris n
                       title: "Regional letter #{(n+65).toUcs2()} (#{ris(n).formatU()})"
                       alt: "RIS #{(n+65).toUcs2()}"
-                      src: "./images/te/#{ris(n).toLowerU()}.svg"
+                      src: "./images/ne/emoji_u#{ris(n).toLowerU()}.svg"
                 do ->
                   emo = (x)-> 0x1F3FB + x - 2
                   sc = (x)-> if x is 2 then "1-2" else n
@@ -581,7 +583,7 @@ Picker =
                       data: emo n
                       title: "Fitzgerald #{sc(n)} (#{emo(n).formatU()})"
                       alt: "Fitz #{sc(n)}"
-                      src: "./images/te/#{emo(n).toLowerU()}.svg"
+                      src: "./images/ne/emoji_u#{emo(n).toLowerU()}.svg"
                 do ->
                   emc = (x)-> 0x1F9B0 + x
                   tx = (x)-> ['red hair', 'curly hair', 'bald', 'white hair'][x]
@@ -591,7 +593,7 @@ Picker =
                       data: emc n
                       title: "Emoji component #{tx(n)} (#{emc(n).formatU()})"
                       alt: tx(n).charAt(0).toUpperCase() + tx(n).slice(1)
-                      src: "./images/te/#{emc(n).toLowerU()}.svg"
+                      src: "./images/ne/emoji_u#{emc(n).toLowerU()}.svg"
             when "util"
               m 'ul#util',
                 m PickChar,
@@ -723,8 +725,13 @@ Row =
               I 'copy'
       do ->
         if seq
-          code = seq.eachToHex().join('-')
-          path = if MISSING.indexOf(code) >= 0 then "./images/te/supp/#{code}.svg" else "./images/te/#{code}.svg"
+          code = seq.eachToLowerU().join('_')
+          path = if 0x1F1E6 <= seq[0] <= 0x1F1FF or seq[0] is 0x1F3F4
+            "./images/te/#{code.replace(/_/g, '-')}.svg"
+          else if MISSING.indexOf(code) >= 0
+            "./images/ne/supp/emoji_u#{code}.svg"
+          else
+            "./images/ne/emoji_u#{code}.svg"
           [
             m 'td', colSpan: 2, seq.eachToUpperU().join ' '
             m 'td.glyph-col',
@@ -742,8 +749,8 @@ Row =
                     when "ideograph", "compat"
                       "https://glyphwiki.org/glyph/u#{if base then base.toLowerU() + '-u' else ''}#{id.toLowerU()}.svg"
                     when "emoji"
-                      code = "#{if base then base.toString(16) + '-' else ''}#{id.toString(16)}"
-                      if MISSING.indexOf(code) >= 0 then "./images/te/supp/#{code}.svg" else "./images/te/#{code}.svg"
+                      code = "#{if base then base.toLowerU() + '_' else ''}#{id.toLowerU()}"
+                      "./images/ne#{if MISSING.indexOf(code) >= 0 then '/supp' else ''}/emoji_u#{code}.svg"
                     else "./images/noimage.svg"
             m 'td', do ->
               if cid then m 'span.named', I "coll_#{cid}"
