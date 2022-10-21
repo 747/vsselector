@@ -1,5 +1,4 @@
 GEM
-  remote: https://rubygems.org/
   specs:
     activesupport (5.2.4.4)
       concurrent-ruby (~> 1.0, >= 1.0.2)
@@ -27,7 +26,7 @@ GEM
       gobject-introspection (= 3.4.3)
     pkg-config (1.4.4)
     thread_safe (0.3.6)
-    tzinfo (1.2.7)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
 
 PLATFORMS
@@ -39,4 +38,4 @@ DEPENDENCIES
   pango
 
 BUNDLED WITH
-   1.16.4
+   2.3.24

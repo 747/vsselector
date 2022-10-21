@@ -393,11 +393,6 @@ messages =
     'en-us': 'Unknown'
     'zh-hans': '未知'
     'zh-hant': '未知'
-  very_useful_content:
-    'ja': '常中：'
-    'en-us': 'Constant: '
-    'zh-hans': '常中：'
-    'zh-hant': '常中：'
 
 I = (key)->
   k = key.toLowerCase()
@@ -442,32 +437,6 @@ Header =
             I 'help'
           m 'a.navbar-item', href: "https://github.com/747/vsselector", target: "_blank",
             m 'img.icon.is-large[src="images/github.svg"]', title: I 'github', alt: I 'github'
-
-#::: Very Useful Shortcuts :::#
-
-UsefulBar =
-  view: ->
-    m '.notification.has-text-white.transparent',
-      m 'strong.has-text-black.has-text-weight-bold', I 'very_useful_content'
-      m 'a.tag.is-info',
-        txt: '竈門禰󠄀豆子　※「禰󠄀」は「ネ＋爾」が正しい表記となります。',
-        onclick: m.withAttr 'txt', signboard.ins
-        '竈門禰󠄀豆子'
-      ' '
-      m 'a.tag.is-info',
-        txt: '煉󠄁獄杏寿郎　※「煉󠄁」は「火＋東」が正しい表記となります。',
-        onclick: m.withAttr 'txt', signboard.ins
-        '煉󠄁獄杏寿郎'
-      ' '
-      m 'a.tag.is-info',
-        txt: '鬼舞辻󠄀無惨　※「辻󠄀」はしんにょうの点が1つの字が正しい表記となります。',
-        onclick: m.withAttr 'txt', signboard.ins
-        '鬼舞辻󠄀無惨'
-      ' '
-      m 'a.tag.is-info',
-        txt: '鋼鐡塚蛍',
-        onclick: m.withAttr 'txt', signboard.ins
-        '(鋼鐡塚蛍)'
 
 #::: Picker Area (top) :::#
 
@@ -647,8 +616,6 @@ Social =
 Workspace =
   view: ->
     m '#workspace.columns.is-multiline.section.transparent',
-      m '#useful.column.is-full',
-        m UsefulBar
       m '.columns.is-full',
         m '#viewer.column.is-7',
           m BigBox

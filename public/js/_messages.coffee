@@ -169,11 +169,6 @@ messages =
     'en-us': 'Unknown'
     'zh-hans': '未知'
     'zh-hant': '未知'
-  very_useful_content:
-    'ja': '常中：'
-    'en-us': 'Constant: '
-    'zh-hans': '常中：'
-    'zh-hant': '常中：'
 
 I = (key)->
   k = key.toLowerCase()

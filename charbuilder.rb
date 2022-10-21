@@ -266,8 +266,10 @@ open("#{DATAPATH}/emoji-variation-sequences.txt", "r:utf-8") do |evs|
     case line
     when /^#\semoji-variation-sequences-(\d+(?:\.\d+)*)\.txt/ # v14 format
       versions[:evs] = $1
+    when /^#\s*Used with Emoji Version \s*(\d[\d\.]*\d|\d)*/ # v15 format
+      versions[:evs] = $1
     when /^#\s*Version:\s*(\d[\d\.]*\d|\d)*/
-      versions[:evs] ||= $1
+      versions[:evs] = $1
     when /^\s*$|^#/; next
     else
       seq, desc, third = line.splip(';')
@@ -312,7 +314,7 @@ open("#{DATAPATH}/emoji-sequences.txt", "r:utf-8") do |emj|
         data2, desc = data1.splip('      ') # Is there a better way?
         bname, mname = desc.splip(',')
         # p [base, var, type, data1, data2, bname, mname].join("\t")
-      when "4.0", "5.0", "11.0", "12.0", "12.1", "13.0", "13.1", "14.0"
+      when "4.0", "5.0", "11.0", "12.0", "12.1", "13.0", "13.1", "14.0", "15.0"
         record, comment = line.splip('#')
         seq, type, desc = record.splip(';')
         base, var, *extra = seq.spliph # Expect possible longer sequence
@@ -351,7 +353,7 @@ open("#{DATAPATH}/emoji-zwj-sequences.txt", "r:utf-8") do |ezs|
         type, data1 = data.splip('#')
         data2, desc = data1.splip(/\s{3,}/)
         # bname, mname = desc.splip(',')
-      when "4.0", "5.0", "11.0", "12.0", "12.1", "13.0", "13.1", "14.0"
+      when "4.0", "5.0", "11.0", "12.0", "12.1", "13.0", "13.1", "14.0", "15.0"
         record, comment = line.splip('#')
         seq, type, desc = record.splip(';')
         base, var, *extra = seq.spliph
