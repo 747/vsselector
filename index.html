@@ -2,8 +2,10 @@
 <head>
 <meta charset="utf-8">
 <title>Redirecting to https://747.codeberg.page/vsselector/</title>
-<meta http-equiv="refresh" content="0; URL=https://747.codeberg.page/vsselector/">
 <link rel="canonical" href="https://747.codeberg.page/vsselector/">
+<noscript>
+    <meta http-equiv="refresh" content="0; URL=https://747.codeberg.page/vsselector/">
+</noscript>
 </head>
 <body style="block-size:100vb;margin:0;display:flex;justify-content:center;align-items:center">
     <div>
@@ -12,4 +14,19 @@
     <p lang="zh-hans">已搬迁到<a href="https://747.codeberg.page/vsselector/">https://747.codeberg.page/vsselector/</a></p>
     <p lang="zh-hant">已轉移到<a href="https://747.codeberg.page/vsselector/">https://747.codeberg.page/vsselector/</a></p>
     </div>
+    <script>
+        function redirect() {
+            location.replace("https://747.codeberg.page/vsselector/" + location.hash);
+        }
+        function jumpWithFragment() {
+            var hash = location.hash;
+            var links = document.body.getElementsByTagName("a");
+            for (let i = 0; i < links.length; i++) {
+                links[i].href += hash;
+                links[i].innerText += hash;
+            }
+            setTimeout(redirect, 1000);
+        }
+        window.addEventListener("DOMContentLoaded", jumpWithFragment);
+    </script>
 </body>
